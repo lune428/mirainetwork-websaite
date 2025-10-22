@@ -5,8 +5,10 @@ export const users = mysqlTable("users", {
   id: varchar("id", { length: 255 }).primaryKey(),
   name: varchar("name", { length: 255 }),
   email: varchar("email", { length: 255 }),
+  password: varchar("password", { length: 255 }), // Hashed password
   loginMethod: varchar("login_method", { length: 50 }),
   role: mysqlEnum("role", ["user", "admin"]).default("user"),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]),
   lastSignedIn: timestamp("last_signed_in"),
   createdAt: timestamp("created_at").defaultNow(),
 });
@@ -19,7 +21,11 @@ export const announcements = mysqlTable("announcements", {
   id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
   content: text("content").notNull(),
-  publishedAt: timestamp("published_at").defaultNow(),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).default("corporate"),
+  isPublished: mysqlEnum("is_published", ["draft", "pending", "published", "rejected"]).default("draft"),
+  authorId: varchar("author_id", { length: 255 }),
+  images: text("images"), // JSON array of image URLs
+  publishedAt: timestamp("published_at"),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });
