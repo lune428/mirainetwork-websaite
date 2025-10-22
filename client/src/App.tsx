@@ -14,6 +14,7 @@ import Admin from "./pages/Admin";
 import AdminAnnouncements from "./pages/AdminAnnouncements";
 import AdminAnnouncementForm from "./pages/AdminAnnouncementForm";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
 import AdminUserRegister from "./pages/AdminUserRegister";
 import AnnouncementDetail from "./pages/AnnouncementDetail";
 import Contact from "./pages/Contact";
@@ -34,6 +35,7 @@ function Router() {
       <Route path="/announcements/:id" component={AnnouncementDetail} />
       <Route path="/contact" component={Contact} />
       <Route path="/login" component={Login} />
+      <Route path="/register" component={Register} />
       <Route path="/admin" component={Admin} />
       <Route path="/admin/announcements" component={AdminAnnouncements} />
       <Route path="/admin/announcements/new" component={AdminAnnouncementForm} />
