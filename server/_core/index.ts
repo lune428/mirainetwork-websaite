@@ -54,10 +54,15 @@ const port = ENV.port;
 
 if (ENV.nodeEnv === "production") {
   // Production mode: serve built files
-  app.use(express.static("dist/client"));
+  app.use(express.static("dist/public"));
   
-  app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+  // Serve index.html for all other routes (SPA)
+  app.get("*", (req, res) => {
+    res.sendFile("index.html", { root: "dist/public" });
+  });
+  
+  app.listen(port, "0.0.0.0", () => {
+    console.log(`Server running on http://0.0.0.0:${port}`);
   });
 } else {
   // Development mode: use Vite dev server
