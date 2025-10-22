@@ -1,13 +1,44 @@
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Building2, Target, Heart, Users, Shield, TrendingUp, Globe, User, CheckCircle2 } from "lucide-react";
+import { Building2, Target, Heart, Users, Shield, Sparkles, TrendingUp, Globe, Calendar, User, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "wouter";
 
 export default function About() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
-      <Header currentPage="about" />
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div className="container py-4">
+          <div className="flex items-center justify-between">
+            <Link href="/">
+              <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center p-1">
+                  <img src="/mirai-logo.webp" alt="未来ネットワーク" className="w-full h-full object-contain" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-foreground">一般社団法人未来ネットワーク</h1>
+                  <p className="text-sm text-muted-foreground">障害福祉サービス</p>
+                </div>
+              </a>
+            </Link>
+            <nav className="hidden md:flex gap-6">
+              <Link href="/">
+                <a className="text-sm font-medium hover:text-primary transition-colors">ホーム</a>
+              </Link>
+              <Link href="/about">
+                <a className="text-sm font-medium text-primary">未来ネットワークについて</a>
+              </Link>
+              <Link href="/mirai">
+                <a className="text-sm font-medium hover:text-primary transition-colors">MIRAI</a>
+              </Link>
+              <Link href="/hikari">
+                <a className="text-sm font-medium hover:text-primary transition-colors">HIKARI</a>
+              </Link>
+              <Link href="/studio-m">
+                <a className="text-sm font-medium hover:text-primary transition-colors">studio M</a>
+              </Link>
+            </nav>
+          </div>
+        </div>
+      </header>
 
       {/* ヒーローセクション - モダンなデザイン */}
       <section className="relative py-32 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white overflow-hidden">
@@ -143,7 +174,7 @@ export default function About() {
                     {/* コンテンツ */}
                     <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'}`}>
                       <div className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200">
-                        <div className={`inline-block px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full font-bold text-lg mb-4 shadow-md`}>
+                        <div className={`inline-block px-4 py-2 bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 text-white rounded-full font-bold text-lg mb-4 shadow-md`}>
                           {item.year}{item.month && `年${item.month}`}
                         </div>
                         <p className="text-gray-800 text-lg leading-relaxed">{item.event}</p>
@@ -186,7 +217,7 @@ export default function About() {
                   gradient: "from-indigo-500 to-purple-500"
                 },
                 {
-                  icon: Heart,
+                  icon: Users,
                   title: "豊かな生活の実現",
                   description: "利用者様と職員の双方が、安心して働き、豊かに暮らせる環境を創ります",
                   gradient: "from-purple-500 to-pink-500"
@@ -457,67 +488,44 @@ export default function About() {
                 </table>
               </div>
             </div>
-
-            <div className="text-center mt-12">
-              <Button size="lg" asChild>
-                <Link href="/">
-                  <a>運営事業所を見る</a>
-                </Link>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section - 一緒に未来を創りませんか */}
-      <section className="py-24 bg-gradient-to-br from-blue-500 via-indigo-600 to-purple-700 text-white relative overflow-hidden">
-        {/* 背景装飾 */}
-        <div className="absolute inset-0 opacity-10">
+      {/* CTAセクション */}
+      <section className="py-24 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               一緒に未来を創りませんか？
             </h2>
-            <p className="text-xl md:text-2xl text-blue-100 mb-12 leading-relaxed">
+            <p className="text-xl text-blue-100 mb-10 leading-relaxed">
               見学・ご相談はいつでも承っております。<br />
               お気軽にお問い合わせください。
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-6 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-                asChild
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="mailto:mirainet2017@gmail.com"
+                className="group bg-white text-blue-600 px-10 py-5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-2xl flex items-center justify-center gap-2"
               >
-                <Link href="/#contact">
-                  <a className="flex items-center gap-2">
-                    お問い合わせ
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M5 12h14"/>
-                      <path d="m12 5 7 7-7 7"/>
-                    </svg>
-                  </a>
-                </Link>
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline"
-                className="border-2 border-white/30 text-white hover:bg-white/10 px-8 py-6 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300"
-                asChild
+                お問い合わせ
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="/"
+                className="bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all border-2 border-white/30"
               >
-                <Link href="/">
-                  <a>トップページへ</a>
-                </Link>
-              </Button>
+                トップページへ
+              </a>
             </div>
           </div>
         </div>
       </section>
-
-      <Footer />
     </div>
   );
 }

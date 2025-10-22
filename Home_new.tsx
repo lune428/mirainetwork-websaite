@@ -6,7 +6,7 @@ import { APP_TITLE } from "@/const";
 import { Building2, Heart, Users, Mail, Phone, MapPin, ChevronRight, Calendar, Clock, Megaphone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
-
+import InstagramFeed from "@/components/InstagramFeed";
 import AnnouncementsList from "@/components/AnnouncementsList";
 
 export default function Home() {
@@ -16,10 +16,12 @@ export default function Home() {
 
   // 背景画像スライドショー
   const heroImages = [
-    "/slide1.jpg",  // HIKARI内観
-    "/slide2.jpg",  // MIRAI内観
-    "/slide3.jpg",  // HIKARI内観2
-    "/slide4.jpg",  // studio M内観
+    "/mirai-products.webp",
+    "/hikari-main-room.webp",
+    "/studio-m-main.webp",
+    "/mirai-green-logo.webp",
+    "/hikari-interior.webp",
+    "/studio-m-reception.webp",
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -41,10 +43,10 @@ export default function Home() {
       tel: "042-519-2942",
       fax: "042-519-4290",
       email: "info@mirainetwork2017.com",
-      color: "bg-sky-50 border-sky-200",
-      hoverColor: "hover:border-sky-300",
+      color: "bg-blue-50 border-blue-200",
+      hoverColor: "hover:border-blue-300",
       icon: Building2,
-      image: "/mirai-interior-hq.jpg",
+      image: "/mirai-products.webp",
       link: "/mirai",
     },
     {
@@ -55,10 +57,10 @@ export default function Home() {
       tel: "042-519-1905",
       fax: "042-519-1906",
       email: "hikarinet2019@gmail.com",
-      color: "bg-emerald-50 border-emerald-200",
-      hoverColor: "hover:border-emerald-300",
+      color: "bg-cyan-50 border-cyan-200",
+      hoverColor: "hover:border-cyan-300",
       icon: Heart,
-      image: "/hikari-interior-hq.jpg",
+      image: "/hikari-main-room.webp",
       link: "/hikari",
     },
     {
@@ -69,10 +71,10 @@ export default function Home() {
       tel: "042-519-7916",
       fax: "042-519-7917",
       email: "info@studiom.jp",
-      color: "bg-yellow-50 border-yellow-700/30",
-      hoverColor: "hover:border-yellow-800/40",
+      color: "bg-teal-50 border-teal-200",
+      hoverColor: "hover:border-teal-300",
       icon: Users,
-      image: "/studio-m-interior-hq.jpg",
+      image: "/studio-m-main.webp",
       link: "/studio-m",
     },
   ];
@@ -119,41 +121,25 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 丸いボタン - 建物写真入りデザイン */}
-          <div className="flex flex-wrap gap-12 md:gap-16 justify-center items-center">
+          {/* 丸いボタン - デザイン強化版 */}
+          <div className="flex flex-wrap gap-8 justify-center items-center">
             {/* MIRAI - ブルー */}
             <Link href="/mirai">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-sky-200 rounded-full blur-md"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-sky-300 rounded-full blur-md"></div>
-                </div>
+                {/* 外側の光る輪 */}
+                <div className="absolute inset-0 rounded-full bg-blue-400/30 blur-xl group-hover:bg-blue-400/50 transition-all duration-500 animate-pulse"></div>
                 
                 {/* メインボタン */}
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl group-hover:scale-110 transition-all duration-500 border-4 border-sky-200/60 group-hover:border-sky-300/80">
-                  {/* 建物写真 */}
-                  <img 
-                    src="/mirai-exterior.jpg" 
-                    alt="MIRAI" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-600 hover:to-blue-700 transition-all duration-500 flex flex-col items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:shadow-blue-500/50 group-hover:rotate-6">
+                  {/* 光沢効果 */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-transparent to-transparent"></div>
                   
-                  {/* オーバーレイ */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-sky-300/30 to-sky-400/30 group-hover:from-sky-300/15 group-hover:to-sky-400/15 transition-all duration-500"></div>
-                  
-                  {/* テキスト */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <div className="text-2xl md:text-3xl font-bold drop-shadow-lg">MIRAI</div>
-                    <div className="text-sm md:text-base opacity-90 drop-shadow-md">就労継続支援B型</div>
+                  {/* コンテンツ */}
+                  <div className="relative z-10">
+                    <Building2 className="w-12 h-12 md:w-14 md:h-14 mb-2 mx-auto group-hover:scale-110 transition-transform" />
+                    <div className="text-xl md:text-2xl font-bold">MIRAI</div>
+                    <div className="text-xs md:text-sm opacity-90">就労継続支援B型</div>
                   </div>
-                </div>
-                
-                {/* クリックテキスト */}
-                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-sky-600 font-semibold whitespace-nowrap text-sm">ここをクリック</span>
                 </div>
               </div>
             </Link>
@@ -161,36 +147,20 @@ export default function Home() {
             {/* HIKARI - 黄緑 */}
             <Link href="/hikari">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-200 rounded-full blur-md"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-300 rounded-full blur-md"></div>
-                </div>
+                {/* 外側の光る輪 */}
+                <div className="absolute inset-0 rounded-full bg-lime-400/30 blur-xl group-hover:bg-lime-400/50 transition-all duration-500 animate-pulse"></div>
                 
                 {/* メインボタン */}
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl group-hover:scale-110 transition-all duration-500 border-4 border-emerald-200/60 group-hover:border-emerald-300/80">
-                  {/* 建物写真 */}
-                  <img 
-                    src="/hikari-exterior.jpg" 
-                    alt="HIKARI" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-lime-400 via-lime-500 to-lime-600 hover:from-lime-500 hover:via-lime-600 hover:to-lime-700 transition-all duration-500 flex flex-col items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:shadow-lime-500/50 group-hover:rotate-6">
+                  {/* 光沢効果 */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-transparent to-transparent"></div>
                   
-                  {/* オーバーレイ */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-emerald-300/30 to-emerald-400/30 group-hover:from-emerald-300/15 group-hover:to-emerald-400/15 transition-all duration-500"></div>
-                  
-                  {/* テキスト */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <div className="text-2xl md:text-3xl font-bold drop-shadow-lg">HIKARI</div>
-                    <div className="text-sm md:text-base opacity-90 drop-shadow-md">生活介護</div>
+                  {/* コンテンツ */}
+                  <div className="relative z-10">
+                    <Heart className="w-12 h-12 md:w-14 md:h-14 mb-2 mx-auto group-hover:scale-110 transition-transform" />
+                    <div className="text-xl md:text-2xl font-bold">HIKARI</div>
+                    <div className="text-xs md:text-sm opacity-90">生活介護</div>
                   </div>
-                </div>
-                
-                {/* クリックテキスト */}
-                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-emerald-600 font-semibold whitespace-nowrap text-sm">ここをクリック</span>
                 </div>
               </div>
             </Link>
@@ -198,36 +168,20 @@ export default function Home() {
             {/* studio M - ブラウン */}
             <Link href="/studio-m">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-700/40 rounded-full blur-md"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-yellow-800/40 rounded-full blur-md"></div>
-                </div>
+                {/* 外側の光る輪 */}
+                <div className="absolute inset-0 rounded-full bg-amber-600/30 blur-xl group-hover:bg-amber-600/50 transition-all duration-500 animate-pulse"></div>
                 
                 {/* メインボタン */}
-                <div className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-2xl group-hover:scale-110 transition-all duration-500 border-4 border-yellow-700/50 group-hover:border-yellow-800/70">
-                  {/* 建物写真 */}
-                  <img 
-                    src="/studio-m-main.webp" 
-                    alt="studio M" 
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-amber-600 via-amber-700 to-amber-800 hover:from-amber-700 hover:via-amber-800 hover:to-amber-900 transition-all duration-500 flex flex-col items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:shadow-amber-700/50 group-hover:rotate-6">
+                  {/* 光沢効果 */}
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white/30 via-transparent to-transparent"></div>
                   
-                  {/* オーバーレイ */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-700/25 to-yellow-800/25 group-hover:from-yellow-700/12 group-hover:to-yellow-800/12 transition-all duration-500"></div>
-                  
-                  {/* テキスト */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-                    <div className="text-2xl md:text-3xl font-bold drop-shadow-lg">studio M</div>
-                    <div className="text-sm md:text-base opacity-90 drop-shadow-md">就労継続支援B型</div>
+                  {/* コンテンツ */}
+                  <div className="relative z-10">
+                    <Users className="w-12 h-12 md:w-14 md:h-14 mb-2 mx-auto group-hover:scale-110 transition-transform" />
+                    <div className="text-xl md:text-2xl font-bold">studio M</div>
+                    <div className="text-xs md:text-sm opacity-90">就労継続支援B型</div>
                   </div>
-                </div>
-                
-                {/* クリックテキスト */}
-                <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <span className="text-yellow-800 font-semibold whitespace-nowrap text-sm">ここをクリック</span>
                 </div>
               </div>
             </Link>
@@ -350,6 +304,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Instagram Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+        <InstagramFeed username="studio.m2022" />
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-16 md:py-24 bg-white">
         <div className="container">
@@ -364,7 +323,7 @@ export default function Home() {
             <div className="mb-12">
               <h4 className="text-xl font-semibold mb-6 text-center">各事業所へのお問い合わせ</h4>
               <p className="text-center text-muted-foreground mb-8">
-                各事業所ごとに、見学や体験を随時受け付けております。
+                各事業所ごとに、見学や体験、セッションを随時受け付けております。
               </p>
               <div className="grid gap-6 md:grid-cols-3">
                 {facilities.map((facility) => (
@@ -374,11 +333,14 @@ export default function Home() {
                       <h5 className="font-bold text-lg">{facility.name}</h5>
                       <p className="text-sm text-muted-foreground">{facility.type}</p>
                     </div>
-
+                    <div className="space-y-2 text-sm mb-4">
+                      <div className="flex items-center justify-center gap-2">
+                        <Mail className="w-4 h-4 text-muted-foreground" />
+                        <span className="text-muted-foreground">メール送信</span>
+                      </div>
+                    </div>
                     <Button variant="outline" asChild className="w-full">
-                      <Link href="/contact">
-                        <a>お問い合わせ</a>
-                      </Link>
+                      <a href={`mailto:${facility.email}`}>お問い合わせ</a>
                     </Button>
                   </Card>
                 ))}
