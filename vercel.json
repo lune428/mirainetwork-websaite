@@ -6,6 +6,10 @@
   "framework": null,
   "routes": [
     {
+      "src": "/api/auth/(.*)",
+      "dest": "/api/auth"
+    },
+    {
       "src": "/api/trpc/(.*)",
       "dest": "/api/trpc"
     },
