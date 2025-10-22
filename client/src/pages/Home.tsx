@@ -126,11 +126,13 @@ export default function Home() {
             <Link href="/mirai">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-6 pointer-events-none">
-                  {/* 左上の装飾 */}
-                  <div className="absolute -top-4 -left-4 w-20 h-20 bg-sky-300/50 rounded-full blur-xl transition-all duration-300 group-hover:w-24 group-hover:h-24 group-hover:bg-sky-400/70 group-hover:-top-6 group-hover:-left-6"></div>
-                  {/* 右下の装飾 */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-sky-400/50 rounded-full blur-xl transition-all duration-300 group-hover:w-28 group-hover:h-28 group-hover:bg-sky-500/70 group-hover:-bottom-6 group-hover:-right-6"></div>
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* 左側の装飾 */}
+                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-sky-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-500/80"></div>
+                  {/* 右側の装飾 */}
+                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-sky-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-500/80"></div>
+                  {/* 下側の装飾 */}
+                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-sky-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-400/70"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -163,11 +165,13 @@ export default function Home() {
             <Link href="/hikari">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-6 pointer-events-none">
-                  {/* 左上の装飾 */}
-                  <div className="absolute -top-4 -left-4 w-20 h-20 bg-emerald-300/50 rounded-full blur-xl transition-all duration-300 group-hover:w-24 group-hover:h-24 group-hover:bg-emerald-400/70 group-hover:-top-6 group-hover:-left-6"></div>
-                  {/* 右下の装飾 */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-emerald-400/50 rounded-full blur-xl transition-all duration-300 group-hover:w-28 group-hover:h-28 group-hover:bg-emerald-500/70 group-hover:-bottom-6 group-hover:-right-6"></div>
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* 左側の装飾 */}
+                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-emerald-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-500/80"></div>
+                  {/* 右側の装飾 */}
+                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-emerald-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-500/80"></div>
+                  {/* 下側の装飾 */}
+                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-emerald-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-400/70"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -200,11 +204,13 @@ export default function Home() {
             <Link href="/studio-m">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-6 pointer-events-none">
-                  {/* 左上の装飾 */}
-                  <div className="absolute -top-4 -left-4 w-20 h-20 bg-yellow-300/50 rounded-full blur-xl transition-all duration-300 group-hover:w-24 group-hover:h-24 group-hover:bg-yellow-400/70 group-hover:-top-6 group-hover:-left-6"></div>
-                  {/* 右下の装飾 */}
-                  <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-yellow-400/50 rounded-full blur-xl transition-all duration-300 group-hover:w-28 group-hover:h-28 group-hover:bg-yellow-500/70 group-hover:-bottom-6 group-hover:-right-6"></div>
+                <div className="absolute inset-0 pointer-events-none">
+                  {/* 左側の装飾 */}
+                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-yellow-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-500/80"></div>
+                  {/* 右側の装飾 */}
+                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-yellow-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-500/80"></div>
+                  {/* 下側の装飾 */}
+                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-yellow-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-400/70"></div>
                 </div>
                 
                 {/* メインボタン */}
