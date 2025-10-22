@@ -1,0 +1,1881 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/pages/About.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import {Target, Heart, Users, Shield, TrendingUp, Globe, User, ArrowRight, CheckCircle2} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import {Link} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+export default function About() {
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/pages/About.tsx:6",
+        className: "min-h-screen bg-white",
+        children: [/* @__PURE__ */
+        jsxDEV("header", {
+            "data-loc": "client/src/pages/About.tsx:8",
+            className: "border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:9",
+                className: "container py-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:10",
+                    className: "flex items-center justify-between",
+                    children: [/* @__PURE__ */
+                    jsxDEV(Link, {
+                        "data-loc": "client/src/pages/About.tsx:11",
+                        href: "/",
+                        children: /* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/About.tsx:12",
+                            className: "flex items-center gap-3 hover:opacity-80 transition-opacity",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:13",
+                                className: "w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center p-1",
+                                children: /* @__PURE__ */
+                                jsxDEV("img", {
+                                    "data-loc": "client/src/pages/About.tsx:14",
+                                    src: "/mirai-logo.webp",
+                                    alt: "未来ネットワーク",
+                                    className: "w-full h-full object-contain"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 14,
+                                    columnNumber: 19
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 13,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:16",
+                                children: [/* @__PURE__ */
+                                jsxDEV("h1", {
+                                    "data-loc": "client/src/pages/About.tsx:17",
+                                    className: "text-xl font-bold text-foreground",
+                                    children: "一般社団法人未来ネットワーク"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 17,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:18",
+                                    className: "text-sm text-muted-foreground",
+                                    children: "障害福祉サービス"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 18,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 16,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 12,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 11,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("nav", {
+                        "data-loc": "client/src/pages/About.tsx:22",
+                        className: "hidden md:flex gap-6",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/About.tsx:23",
+                            href: "/",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/About.tsx:24",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "ホーム"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 24,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 23,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/About.tsx:26",
+                            href: "/about",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/About.tsx:27",
+                                className: "text-sm font-medium text-primary",
+                                children: "未来ネットワークについて"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 27,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 26,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/About.tsx:29",
+                            href: "/mirai",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/About.tsx:30",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "MIRAI"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 30,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 29,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/About.tsx:32",
+                            href: "/hikari",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/About.tsx:33",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "HIKARI"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 33,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 32,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/About.tsx:35",
+                            href: "/studio-m",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/About.tsx:36",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "studio M"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 36,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 35,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 22,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 10,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 9,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 8,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:44",
+            className: "relative py-32 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white overflow-hidden",
+            children: [/* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:46",
+                className: "absolute inset-0 opacity-20",
+                children: [/* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:47",
+                    className: "absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 47,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:48",
+                    className: "absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 48,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 46,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:51",
+                className: "container mx-auto px-4 relative z-10",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:52",
+                    className: "max-w-4xl mx-auto text-center",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:53",
+                        className: "inline-block mb-6 px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20",
+                        children: /* @__PURE__ */
+                        jsxDEV("span", {
+                            "data-loc": "client/src/pages/About.tsx:54",
+                            className: "text-sm font-semibold tracking-wider",
+                            children: "ABOUT US"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 54,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 53,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("h1", {
+                        "data-loc": "client/src/pages/About.tsx:56",
+                        className: "text-5xl md:text-6xl font-bold mb-8 leading-tight",
+                        children: "未来ネットワークについて"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 56,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/About.tsx:59",
+                        className: "text-2xl md:text-3xl text-blue-100 leading-relaxed font-light mb-8",
+                        children: ["縁（つながり）を力に変え、", /* @__PURE__ */
+                        jsxDEV("br", {
+                            "data-loc": "client/src/pages/About.tsx:60"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 60,
+                            columnNumber: 28
+                        }, this), "誰もが安心して働き・暮らせる", /* @__PURE__ */
+                        jsxDEV("br", {
+                            "data-loc": "client/src/pages/About.tsx:61",
+                            className: "md:hidden"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 61,
+                            columnNumber: 29
+                        }, this), "未来を創る"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 59,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:63",
+                        className: "flex items-center justify-center gap-2 text-blue-100",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:64",
+                            className: "w-12 h-px bg-blue-300"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 64,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("span", {
+                            "data-loc": "client/src/pages/About.tsx:65",
+                            className: "text-sm",
+                            children: "Our Mission"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 65,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:66",
+                            className: "w-12 h-px bg-blue-300"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 66,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 63,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 52,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 44,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:73",
+            className: "py-24 bg-gradient-to-b from-gray-50 to-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:74",
+                className: "container mx-auto px-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:75",
+                    className: "max-w-6xl mx-auto",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:76",
+                        className: "grid md:grid-cols-5 gap-12 items-center",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:78",
+                            className: "md:col-span-2",
+                            children: /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:79",
+                                className: "relative",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:80",
+                                    className: "absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl opacity-20 blur-2xl"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 80,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:81",
+                                    className: "relative bg-white rounded-3xl p-10 shadow-2xl border border-gray-100",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:82",
+                                        className: "w-40 h-40 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-full mx-auto mb-6 flex items-center justify-center shadow-xl",
+                                        children: /* @__PURE__ */
+                                        jsxDEV(User, {
+                                            "data-loc": "client/src/pages/About.tsx:83",
+                                            className: "w-20 h-20 text-white"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 83,
+                                            columnNumber: 23
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 82,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:85",
+                                        className: "text-center",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("h3", {
+                                            "data-loc": "client/src/pages/About.tsx:86",
+                                            className: "text-2xl font-bold text-gray-800 mb-2",
+                                            children: "北村 陽朗"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 86,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/About.tsx:89",
+                                            className: "text-gray-600 mb-1",
+                                            children: "代表理事"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 89,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/About.tsx:92",
+                                            className: "text-sm text-gray-500",
+                                            children: "Hiiro Kitamura"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 92,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/About.tsx:95",
+                                            className: "mt-6 pt-6 border-t border-gray-200",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/About.tsx:96",
+                                                className: "text-xs text-gray-500",
+                                                children: "設立"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                lineNumber: 96,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/About.tsx:97",
+                                                className: "text-sm font-semibold text-gray-700",
+                                                children: "2016年7月"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                lineNumber: 97,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 85,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 81,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 79,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 78,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:105",
+                            className: "md:col-span-3",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:106",
+                                className: "inline-block mb-4 px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold",
+                                children: "Message"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 106,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("h2", {
+                                "data-loc": "client/src/pages/About.tsx:109",
+                                className: "text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight",
+                                children: ["一人ひとりの", /* @__PURE__ */
+                                jsxDEV("br", {
+                                    "data-loc": "client/src/pages/About.tsx:110"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 110,
+                                    columnNumber: 25
+                                }, this), "「あたりまえの幸せ」に", /* @__PURE__ */
+                                jsxDEV("br", {
+                                    "data-loc": "client/src/pages/About.tsx:111"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 111,
+                                    columnNumber: 30
+                                }, this), "寄り添います"]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 109,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:115",
+                                className: "space-y-5 text-gray-700 leading-relaxed",
+                                children: [/* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:116",
+                                    className: "text-lg",
+                                    children: "私たちは、障害を持った方々が地域で安心して暮らし、働くことができる社会の実現を目指しています。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 116,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:119",
+                                    children: "2016年の法人設立以来、「縁（つながり）を力に変える」という想いのもと、 利用者様一人ひとりの個性と希望を大切にし、その人らしい生活を支援してきました。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 119,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:123",
+                                    children: "現在、3つの事業所（MIRAI、HIKARI、studio M）を運営し、 就労継続支援B型と生活介護のサービスを通じて、多くの方々の「あたりまえの幸せ」を支えています。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 123,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:127",
+                                    className: "bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border-l-4 border-blue-500",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:128",
+                                        className: "font-semibold text-blue-900",
+                                        children: "今後も事業所の展開、多角的な展開を目指し、障害を持った方々はもちろん、 法人の職員の生活を豊かに、雇用を守るために、法人をスケールアップしていきます。"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 128,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 127,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:133",
+                                    className: "text-gray-600",
+                                    children: "私たちと共に、誰もが安心して働き・暮らせる未来を創っていきましょう。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 133,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 115,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 105,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 76,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 75,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 74,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 73,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:144",
+            className: "py-24 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:145",
+                className: "container mx-auto px-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:146",
+                    className: "max-w-5xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:147",
+                        className: "text-center mb-16",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:148",
+                            className: "inline-block mb-4 px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold",
+                            children: "History"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 148,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h2", {
+                            "data-loc": "client/src/pages/About.tsx:151",
+                            className: "text-4xl md:text-5xl font-bold text-gray-800 mb-4",
+                            children: "沿革"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 151,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/About.tsx:154",
+                            className: "text-gray-600",
+                            children: "私たちの歩み"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 154,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 147,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:157",
+                        className: "relative",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:159",
+                            className: "absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-blue-200 via-indigo-300 to-purple-200 transform -translate-x-1/2 hidden md:block"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 159,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:162",
+                            className: "space-y-16",
+                            children: [{
+                                year: "2016",
+                                month: "7月",
+                                event: "一般社団法人未来ネットワーク 設立",
+                                color: "blue"
+                            }, {
+                                year: "2017",
+                                month: "1月",
+                                event: "東京都昭島市に就労継続支援B型事業所「MIRAI」開設",
+                                color: "indigo"
+                            }, {
+                                year: "2019",
+                                month: "",
+                                event: "昭島市に生活介護事業所「HIKARI」開設",
+                                color: "purple"
+                            }, {
+                                year: "2022",
+                                month: "",
+                                event: "昭島市に就労継続支援B型事業所「studio M」開設",
+                                color: "pink"
+                            }, {
+                                year: "2025",
+                                month: "",
+                                event: "3事業所で障害福祉サービスを展開中",
+                                color: "green"
+                            }].map( (item, index) => /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:170",
+                                className: `relative flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`,
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:172",
+                                    className: "absolute left-1/2 w-6 h-6 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full border-4 border-white shadow-lg transform -translate-x-1/2 z-10 hidden md:block"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 172,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:175",
+                                    className: `w-full md:w-5/12 ${index % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`,
+                                    children: /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:176",
+                                        className: "group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:border-blue-200",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/About.tsx:177",
+                                            className: `inline-block px-4 py-2 bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 text-white rounded-full font-bold text-lg mb-4 shadow-md`,
+                                            children: [item.year, item.month && `年${item.month}`]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 177,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/About.tsx:180",
+                                            className: "text-gray-800 text-lg leading-relaxed",
+                                            children: item.event
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 180,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 176,
+                                        columnNumber: 23
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 175,
+                                    columnNumber: 21
+                                }, this)]
+                            }, index, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 170,
+                                columnNumber: 17
+                            }, this))
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 162,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 157,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 146,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 145,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 144,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:192",
+            className: "py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:193",
+                className: "container mx-auto px-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:194",
+                    className: "max-w-6xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:195",
+                        className: "text-center mb-16",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:196",
+                            className: "inline-block mb-4 px-4 py-1 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-full text-sm font-semibold",
+                            children: "Future"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 196,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h2", {
+                            "data-loc": "client/src/pages/About.tsx:199",
+                            className: "text-4xl md:text-5xl font-bold text-gray-800 mb-4",
+                            children: "未来への展望"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 199,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/About.tsx:202",
+                            className: "text-gray-600 text-lg",
+                            children: "私たちが目指す未来"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 202,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 195,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:205",
+                        className: "grid md:grid-cols-3 gap-8 mb-16",
+                        children: [{
+                            icon: TrendingUp,
+                            title: "事業所の拡大",
+                            description: "より多くの方々に質の高いサービスを提供するため、新たな事業所の開設を計画しています",
+                            gradient: "from-blue-500 to-cyan-500"
+                        }, {
+                            icon: Globe,
+                            title: "多角的な展開",
+                            description: "福祉サービスの枠を超え、地域社会に新しい価値を提供する事業を創出します",
+                            gradient: "from-indigo-500 to-purple-500"
+                        }, {
+                            icon: Users,
+                            title: "豊かな生活の実現",
+                            description: "利用者様と職員の双方が、安心して働き、豊かに暮らせる環境を創ります",
+                            gradient: "from-purple-500 to-pink-500"
+                        }].map( (item, index) => /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:226",
+                            className: "group relative",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:227",
+                                className: "absolute -inset-1 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-300"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 227,
+                                columnNumber: 19
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:228",
+                                className: "relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:229",
+                                    className: `w-16 h-16 bg-gradient-to-br ${item.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`,
+                                    children: /* @__PURE__ */
+                                    jsxDEV(item.icon, {
+                                        "data-loc": "client/src/pages/About.tsx:230",
+                                        className: "w-8 h-8 text-white"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 230,
+                                        columnNumber: 23
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 229,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("h3", {
+                                    "data-loc": "client/src/pages/About.tsx:232",
+                                    className: "text-xl font-bold text-gray-800 mb-4",
+                                    children: item.title
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 232,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:235",
+                                    className: "text-gray-600 leading-relaxed",
+                                    children: item.description
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 235,
+                                    columnNumber: 21
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 228,
+                                columnNumber: 19
+                            }, this)]
+                        }, index, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 226,
+                            columnNumber: 15
+                        }, this))
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 205,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:243",
+                        className: "relative",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:244",
+                            className: "absolute -inset-4 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-3xl opacity-10 blur-2xl"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 244,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:245",
+                            className: "relative bg-white rounded-3xl p-10 md:p-16 shadow-2xl border border-gray-100",
+                            children: /* @__PURE__ */
+                            jsxDEV("p", {
+                                "data-loc": "client/src/pages/About.tsx:246",
+                                className: "text-xl md:text-2xl text-gray-700 leading-relaxed text-center",
+                                children: ["私たちは、", /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/pages/About.tsx:247",
+                                    className: "font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600",
+                                    children: "障害を持った方々の生活を豊かにする"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 247,
+                                    columnNumber: 24
+                                }, this), "ことはもちろん、", /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/pages/About.tsx:248",
+                                    className: "font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-600",
+                                    children: "法人の職員の雇用を守り、安定した生活を支える"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 248,
+                                    columnNumber: 19
+                                }, this), "ことも重要な使命と考えています。", /* @__PURE__ */
+                                jsxDEV("br", {
+                                    "data-loc": "client/src/pages/About.tsx:249"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 249,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("br", {
+                                    "data-loc": "client/src/pages/About.tsx:249"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 249,
+                                    columnNumber: 67
+                                }, this), "そのために、法人をスケールアップし、より多くの方々に希望と安心を届けられる組織へと成長していきます。"]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 246,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 245,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 243,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 194,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 193,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 192,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:259",
+            className: "py-24 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:260",
+                className: "container mx-auto px-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:261",
+                    className: "max-w-6xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:262",
+                        className: "text-center mb-20",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:263",
+                            className: "inline-block mb-4 px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold",
+                            children: "Philosophy"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 263,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h2", {
+                            "data-loc": "client/src/pages/About.tsx:266",
+                            className: "text-4xl md:text-5xl font-bold text-gray-800 mb-4",
+                            children: "法人理念"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 266,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/About.tsx:269",
+                            className: "text-gray-600 text-lg",
+                            children: "私たちの価値観と約束"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 269,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 262,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:273",
+                        className: "mb-20",
+                        children: /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:274",
+                            className: "relative",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:275",
+                                className: "absolute -inset-4 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 rounded-3xl opacity-20 blur-2xl"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 275,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:276",
+                                className: "relative bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 rounded-3xl p-12 md:p-16 text-white shadow-2xl",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:277",
+                                    className: "flex items-center gap-4 mb-8",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:278",
+                                        className: "w-14 h-14 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center",
+                                        children: /* @__PURE__ */
+                                        jsxDEV(Target, {
+                                            "data-loc": "client/src/pages/About.tsx:279",
+                                            className: "w-8 h-8"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 279,
+                                            columnNumber: 23
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 278,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("h3", {
+                                        "data-loc": "client/src/pages/About.tsx:281",
+                                        className: "text-2xl md:text-3xl font-bold",
+                                        children: "法人ミッション"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 281,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 277,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:285",
+                                    className: "text-2xl md:text-3xl leading-relaxed font-bold mb-6",
+                                    children: ["「縁（つながり）を力に変え、", /* @__PURE__ */
+                                    jsxDEV("br", {
+                                        "data-loc": "client/src/pages/About.tsx:286"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 286,
+                                        columnNumber: 35
+                                    }, this), "誰もが安心して働き・暮らせる未来を創る」"]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 285,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/About.tsx:289",
+                                    className: "text-lg text-blue-100",
+                                    children: "— 一人ひとりの尊厳と選択を守り、地域と共に新しい価値を生み出します。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 289,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 276,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 274,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 273,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:297",
+                        className: "mb-20",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/About.tsx:298",
+                            className: "text-3xl font-bold text-gray-800 mb-10 text-center",
+                            children: "法人ビジョン"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 298,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:302",
+                            className: "grid md:grid-cols-3 gap-8",
+                            children: [{
+                                number: "01",
+                                title: "未来を拓く法人",
+                                description: "社会課題に正面から向き合い、果敢に新しい事業・活動に挑みます。",
+                                gradient: "from-blue-500 to-cyan-500"
+                            }, {
+                                number: "02",
+                                title: "希望の拠点",
+                                description: "福祉を起点に、働くこと・暮らすことで得られる経験と、地域との連携が有機的に結びつき、誰もが豊かさと希望を持てる場を創造します。",
+                                gradient: "from-indigo-500 to-purple-500"
+                            }, {
+                                number: "03",
+                                title: "笑顔の循環",
+                                description: "利用者と職員の双方が安心と誇りを感じ、満足度を高めながら、地域社会全体に笑顔を広げる好循環を築きます。",
+                                gradient: "from-purple-500 to-pink-500"
+                            }].map( (item, index) => /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:323",
+                                className: "relative group",
+                                children: /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:324",
+                                    className: "bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 h-full",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:325",
+                                        className: `text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${item.gradient} mb-4`,
+                                        children: item.number
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 325,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("h4", {
+                                        "data-loc": "client/src/pages/About.tsx:328",
+                                        className: "text-xl font-bold text-gray-800 mb-4",
+                                        children: item.title
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 328,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:331",
+                                        className: "text-gray-600 leading-relaxed",
+                                        children: item.description
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 331,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 324,
+                                    columnNumber: 21
+                                }, this)
+                            }, index, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 323,
+                                columnNumber: 17
+                            }, this))
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 302,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 297,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:341",
+                        className: "mb-20",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/About.tsx:342",
+                            className: "text-3xl font-bold text-gray-800 mb-4 text-center",
+                            children: "法人バリュー"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 342,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/About.tsx:345",
+                            className: "text-gray-600 text-center mb-12",
+                            children: "核となる3原則"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 345,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:347",
+                            className: "grid md:grid-cols-3 gap-8 mb-12",
+                            children: [{
+                                icon: Heart,
+                                title: "信頼",
+                                subtitle: "Trust",
+                                description: "互いを信じ合い、安心できる関係を築きます。",
+                                color: "red"
+                            }, {
+                                icon: Shield,
+                                title: "誠実",
+                                subtitle: "Integrity",
+                                description: "正直さと一貫性をもって、透明で公正な行動を続けます。",
+                                color: "blue"
+                            }, {
+                                icon: Users,
+                                title: "謙虚",
+                                subtitle: "Humility",
+                                description: "心から謙虚であること。自分の足りなさを認め、隣にいる人の長所に目を向け、感謝を忘れません。",
+                                color: "green"
+                            }].map( (item, index) => /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:353",
+                                className: "group relative",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:354",
+                                    className: `absolute -inset-1 bg-gradient-to-r from-${item.color}-500 to-${item.color}-600 rounded-3xl opacity-0 group-hover:opacity-100 blur transition-all duration-300`
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 354,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:355",
+                                    className: "relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-100 group-hover:border-transparent",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:356",
+                                        className: `w-16 h-16 bg-${item.color}-100 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`,
+                                        children: /* @__PURE__ */
+                                        jsxDEV(item.icon, {
+                                            "data-loc": "client/src/pages/About.tsx:357",
+                                            className: `w-8 h-8 text-${item.color}-600`
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 357,
+                                            columnNumber: 25
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 356,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("h5", {
+                                        "data-loc": "client/src/pages/About.tsx:359",
+                                        className: "text-2xl font-bold text-gray-800 mb-2",
+                                        children: item.title
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 359,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:362",
+                                        className: "text-sm text-gray-500 mb-4 font-semibold",
+                                        children: item.subtitle
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 362,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:365",
+                                        className: "text-gray-600 leading-relaxed",
+                                        children: item.description
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 365,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 355,
+                                    columnNumber: 21
+                                }, this)]
+                            }, index, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 353,
+                                columnNumber: 17
+                            }, this))
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 347,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h4", {
+                            "data-loc": "client/src/pages/About.tsx:374",
+                            className: "text-2xl font-bold text-gray-800 mb-8 text-center",
+                            children: "実践における4つの行動指針"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 374,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:377",
+                            className: "grid md:grid-cols-2 gap-6",
+                            children: [{
+                                title: "尊厳と公平",
+                                description: "すべての人の人権を守り、ライフステージに応じた支援を大切にします。"
+                            }, {
+                                title: "挑戦と創造",
+                                description: "常に変化を恐れず、新しい試みに果敢に挑みます。"
+                            }, {
+                                title: "地域との共生",
+                                description: "地域社会と共に歩み、支え合い、新しい価値を共創します。"
+                            }, {
+                                title: "共に挑み、成長する",
+                                description: "挑戦を続け、利用者・職員・地域とともに夢や希望を育みます。"
+                            }].map( (item, index) => /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:384",
+                                className: "flex items-start gap-4 bg-gradient-to-br from-gray-50 to-white rounded-2xl p-6 border border-gray-200 hover:border-blue-300 transition-colors",
+                                children: [/* @__PURE__ */
+                                jsxDEV(CheckCircle2, {
+                                    "data-loc": "client/src/pages/About.tsx:385",
+                                    className: "w-6 h-6 text-blue-600 flex-shrink-0 mt-1"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 385,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:386",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("h5", {
+                                        "data-loc": "client/src/pages/About.tsx:387",
+                                        className: "text-lg font-bold text-gray-800 mb-2",
+                                        children: item.title
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 387,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:390",
+                                        className: "text-gray-600 leading-relaxed",
+                                        children: item.description
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 390,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 386,
+                                    columnNumber: 21
+                                }, this)]
+                            }, index, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 384,
+                                columnNumber: 17
+                            }, this))
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 377,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 341,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:400",
+                        children: /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:401",
+                            className: "relative",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:402",
+                                className: "absolute -inset-4 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-3xl opacity-20 blur-2xl"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 402,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/About.tsx:403",
+                                className: "relative bg-gradient-to-r from-indigo-600 to-purple-700 rounded-3xl p-12 md:p-16 text-white shadow-2xl",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:404",
+                                    className: "text-center mb-12",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("h3", {
+                                        "data-loc": "client/src/pages/About.tsx:405",
+                                        className: "text-3xl md:text-4xl font-bold mb-4",
+                                        children: "未来 Core"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 405,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/About.tsx:408",
+                                        className: "text-indigo-100 text-lg mb-4",
+                                        children: "私たちが大切にする4つの約束"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 408,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:411",
+                                        className: "max-w-3xl mx-auto",
+                                        children: /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/About.tsx:412",
+                                            className: "text-indigo-50 leading-relaxed",
+                                            children: ["この4つの原則は、2016年の法人設立時から変わることなく大切にしてきた、私たちの根本理念です。", /* @__PURE__ */
+                                            jsxDEV("br", {
+                                                "data-loc": "client/src/pages/About.tsx:413"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                lineNumber: 413,
+                                                columnNumber: 73
+                                            }, this), "時代が変わっても、事業が拡大しても、この「未来Core」は私たちの活動の中心であり続けます。"]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 412,
+                                            columnNumber: 23
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 411,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 404,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/About.tsx:419",
+                                    className: "grid md:grid-cols-2 gap-6",
+                                    children: [{
+                                        number: "01",
+                                        title: "希望の実現",
+                                        description: "おひとりおひとりの希望をできる限り叶えます。"
+                                    }, {
+                                        number: "02",
+                                        title: "尊厳の尊重",
+                                        description: "尊厳を守り、その人の個性と人生を尊重し、その人らしさを守ります。"
+                                    }, {
+                                        number: "03",
+                                        title: "虐待・人権侵害の防止",
+                                        description: "虐待・差別・人権侵害を決して許しません。"
+                                    }, {
+                                        number: "04",
+                                        title: "福祉接遇マナーの徹底",
+                                        description: "礼節ある言葉と態度で信頼を築きます。"
+                                    }].map( (item, index) => /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/About.tsx:426",
+                                        className: "bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-colors",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/About.tsx:427",
+                                            className: "text-4xl font-bold text-white/40 mb-3",
+                                            children: item.number
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 427,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("h5", {
+                                            "data-loc": "client/src/pages/About.tsx:428",
+                                            className: "text-xl font-bold mb-3",
+                                            children: item.title
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 428,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/About.tsx:429",
+                                            className: "text-indigo-100",
+                                            children: item.description
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 429,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, index, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 426,
+                                        columnNumber: 21
+                                    }, this))
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 419,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 403,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 401,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 400,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 261,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 260,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 259,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:443",
+            className: "py-24 bg-gradient-to-b from-gray-50 to-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:444",
+                className: "container mx-auto px-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:445",
+                    className: "max-w-4xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:446",
+                        className: "text-center mb-16",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:447",
+                            className: "inline-block mb-4 px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold",
+                            children: "Overview"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 447,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h2", {
+                            "data-loc": "client/src/pages/About.tsx:450",
+                            className: "text-4xl md:text-5xl font-bold text-gray-800 mb-4",
+                            children: "法人概要"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 450,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 446,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:455",
+                        className: "bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100",
+                        children: /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/About.tsx:456",
+                            className: "p-10 md:p-14",
+                            children: /* @__PURE__ */
+                            jsxDEV("table", {
+                                "data-loc": "client/src/pages/About.tsx:457",
+                                className: "w-full",
+                                children: /* @__PURE__ */
+                                jsxDEV("tbody", {
+                                    "data-loc": "client/src/pages/About.tsx:458",
+                                    className: "divide-y divide-gray-200",
+                                    children: [{
+                                        label: "法人名",
+                                        value: "一般社団法人未来ネットワーク"
+                                    }, {
+                                        label: "設立",
+                                        value: "2016年7月"
+                                    }, {
+                                        label: "代表理事",
+                                        value: "北村 陽朗"
+                                    }, {
+                                        label: "所在地",
+                                        value: "東京都昭島市"
+                                    }, {
+                                        label: "事業内容",
+                                        value: ["就労継続支援B型事業（MIRAI、studio M）", "生活介護事業（HIKARI）", "障害福祉サービス事業"]
+                                    }, {
+                                        label: "事業所",
+                                        value: ["MIRAI（就労継続支援B型）", "HIKARI（生活介護）", "studio M（就労継続支援B型）"]
+                                    }].map( (row, index) => /* @__PURE__ */
+                                    jsxDEV("tr", {
+                                        "data-loc": "client/src/pages/About.tsx:467",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("td", {
+                                            "data-loc": "client/src/pages/About.tsx:468",
+                                            className: "py-6 pr-8 text-gray-600 font-bold whitespace-nowrap align-top text-lg",
+                                            children: row.label
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 468,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("td", {
+                                            "data-loc": "client/src/pages/About.tsx:471",
+                                            className: "py-6 text-gray-800",
+                                            children: Array.isArray(row.value) ? /* @__PURE__ */
+                                            jsxDEV("ul", {
+                                                "data-loc": "client/src/pages/About.tsx:473",
+                                                className: "space-y-2",
+                                                children: row.value.map( (item, i) => /* @__PURE__ */
+                                                jsxDEV("li", {
+                                                    "data-loc": "client/src/pages/About.tsx:475",
+                                                    className: "flex items-start gap-2",
+                                                    children: [/* @__PURE__ */
+                                                    jsxDEV("span", {
+                                                        "data-loc": "client/src/pages/About.tsx:476",
+                                                        className: "text-blue-600 mt-1",
+                                                        children: "•"
+                                                    }, void 0, false, {
+                                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                        lineNumber: 476,
+                                                        columnNumber: 35
+                                                    }, this), /* @__PURE__ */
+                                                    jsxDEV("span", {
+                                                        "data-loc": "client/src/pages/About.tsx:477",
+                                                        children: item
+                                                    }, void 0, false, {
+                                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                        lineNumber: 477,
+                                                        columnNumber: 35
+                                                    }, this)]
+                                                }, i, true, {
+                                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                    lineNumber: 475,
+                                                    columnNumber: 27
+                                                }, this))
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                                lineNumber: 473,
+                                                columnNumber: 25
+                                            }, this) : row.value
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                            lineNumber: 471,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, index, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                        lineNumber: 467,
+                                        columnNumber: 21
+                                    }, this))
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                    lineNumber: 458,
+                                    columnNumber: 19
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 457,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 456,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 455,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 445,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 444,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 443,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/About.tsx:496",
+            className: "py-24 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white relative overflow-hidden",
+            children: [/* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:497",
+                className: "absolute inset-0 opacity-20",
+                children: [/* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:498",
+                    className: "absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 498,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:499",
+                    className: "absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 499,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 497,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/About.tsx:502",
+                className: "container mx-auto px-4 relative z-10",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/About.tsx:503",
+                    className: "max-w-3xl mx-auto text-center",
+                    children: [/* @__PURE__ */
+                    jsxDEV("h2", {
+                        "data-loc": "client/src/pages/About.tsx:504",
+                        className: "text-4xl md:text-5xl font-bold mb-6",
+                        children: "一緒に未来を創りませんか？"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 504,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/About.tsx:507",
+                        className: "text-xl text-blue-100 mb-10 leading-relaxed",
+                        children: ["見学・ご相談はいつでも承っております。", /* @__PURE__ */
+                        jsxDEV("br", {
+                            "data-loc": "client/src/pages/About.tsx:508"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 508,
+                            columnNumber: 34
+                        }, this), "お気軽にお問い合わせください。"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 507,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/About.tsx:511",
+                        className: "flex flex-col sm:flex-row gap-4 justify-center",
+                        children: [/* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/About.tsx:512",
+                            href: "mailto:mirainet2017@gmail.com",
+                            className: "group bg-white text-blue-600 px-10 py-5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-2xl flex items-center justify-center gap-2",
+                            children: ["お問い合わせ", /* @__PURE__ */
+                            jsxDEV(ArrowRight, {
+                                "data-loc": "client/src/pages/About.tsx:517",
+                                className: "w-5 h-5 group-hover:translate-x-1 transition-transform"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                                lineNumber: 517,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 512,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/About.tsx:519",
+                            href: "/",
+                            className: "bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all border-2 border-white/30",
+                            children: "トップページへ"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                            lineNumber: 519,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                        lineNumber: 511,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                    lineNumber: 503,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+                lineNumber: 502,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+            lineNumber: 496,
+            columnNumber: 7
+        }, this)]
+    }, void 0, true, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this);
+}
+_c = About;
+var _c;
+$RefreshReg$(_c, "About");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/pages/About.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/pages/About.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/pages/About.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QkFBQyxxREFBRSxXQUFVLCtDQUE2QztBQUFBO0FBQUEsVUFDckMsdUJBQUMsd0RBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBRztBQUFBO0FBQUEsYUFEeEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUdBO0FBQUEsUUFDQSx1QkFBQyx1REFBSSxXQUFVLGtEQUNiO0FBQUE7QUFBQSxZQUFDO0FBQUE7QUFBQTtBQUFBLGNBQ0MsTUFBSztBQUFBLGNBQ0wsV0FBVTtBQUFBLGNBQWtKO0FBQUE7QUFBQSxnQkFHNUosdUJBQUMsNERBQVcsV0FBVSw0REFBdEI7QUFBQTtBQUFBO0FBQUE7QUFBQSx1QkFBOEU7QUFBQTtBQUFBO0FBQUEsWUFMaEY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBTUE7QUFBQSxVQUNBO0FBQUEsWUFBQztBQUFBO0FBQUE7QUFBQSxjQUNDLE1BQUs7QUFBQSxjQUNMLFdBQVU7QUFBQSxjQUFxSTtBQUFBO0FBQUEsWUFGako7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBS0E7QUFBQSxhQWJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFjQTtBQUFBLFdBdEJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUF1QkEsS0F4QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQXlCQTtBQUFBLFNBL0JGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FnQ0E7QUFBQSxPQTFnQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQTJnQkE7QUFFSjtBQUFDYSxLQS9nQnVCcEI7QUFBSyxJQUFBb0I7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIlRhcmdldCIsIkhlYXJ0IiwiVXNlcnMiLCJTaGllbGQiLCJUcmVuZGluZ1VwIiwiR2xvYmUiLCJVc2VyIiwiQXJyb3dSaWdodCIsIkNoZWNrQ2lyY2xlMiIsIkxpbmsiLCJBYm91dCIsInllYXIiLCJtb250aCIsImV2ZW50IiwiY29sb3IiLCJtYXAiLCJpdGVtIiwiaW5kZXgiLCJpY29uIiwidGl0bGUiLCJkZXNjcmlwdGlvbiIsImdyYWRpZW50IiwibnVtYmVyIiwic3VidGl0bGUiLCJsYWJlbCIsInZhbHVlIiwicm93IiwiQXJyYXkiLCJpc0FycmF5IiwiaSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkFib3V0LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCdWlsZGluZzIsIFRhcmdldCwgSGVhcnQsIFVzZXJzLCBTaGllbGQsIFNwYXJrbGVzLCBUcmVuZGluZ1VwLCBHbG9iZSwgQ2FsZW5kYXIsIFVzZXIsIEFycm93UmlnaHQsIENoZWNrQ2lyY2xlMiB9IGZyb20gXCJsdWNpZGUtcmVhY3RcIjtcbmltcG9ydCB7IExpbmsgfSBmcm9tIFwid291dGVyXCI7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEFib3V0KCkge1xuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLWgtc2NyZWVuIGJnLXdoaXRlXCI+XG4gICAgICB7LyogSGVhZGVyICovfVxuICAgICAgPGhlYWRlciBjbGFzc05hbWU9XCJib3JkZXItYiBiZy13aGl0ZS84MCBiYWNrZHJvcC1ibHVyLXNtIHN0aWNreSB0b3AtMCB6LTUwXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyIHB5LTRcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktYmV0d2VlblwiPlxuICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cbiAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTMgaG92ZXI6b3BhY2l0eS04MCB0cmFuc2l0aW9uLW9wYWNpdHlcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTIgaC0xMiByb3VuZGVkLWZ1bGwgYmctd2hpdGUgc2hhZG93LXNtIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIHAtMVwiPlxuICAgICAgICAgICAgICAgICAgPGltZyBzcmM9XCIvbWlyYWktbG9nby53ZWJwXCIgYWx0PVwi5pyq5p2l44ON44OD44OI44Ov44O844KvXCIgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY29udGFpblwiIC8+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtYm9sZCB0ZXh0LWZvcmVncm91bmRcIj7kuIDoiKznpL7lm6Pms5XkurrmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq88L2gxPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmRcIj7pmpzlrrPnpo/npYnjgrXjg7zjg5Pjgrk8L3A+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgIDxuYXYgY2xhc3NOYW1lPVwiaGlkZGVuIG1kOmZsZXggZ2FwLTZcIj5cbiAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9cIj5cbiAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbWVkaXVtIGhvdmVyOnRleHQtcHJpbWFyeSB0cmFuc2l0aW9uLWNvbG9yc1wiPuODm+ODvOODoDwvYT5cbiAgICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICAgICA8TGluayBocmVmPVwiL2Fib3V0XCI+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXByaW1hcnlcIj7mnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq/jgavjgaTjgYTjgaY8L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9taXJhaVwiPlxuICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gaG92ZXI6dGV4dC1wcmltYXJ5IHRyYW5zaXRpb24tY29sb3JzXCI+TUlSQUk8L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9oaWthcmlcIj5cbiAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbWVkaXVtIGhvdmVyOnRleHQtcHJpbWFyeSB0cmFuc2l0aW9uLWNvbG9yc1wiPkhJS0FSSTwvYT5cbiAgICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICAgICA8TGluayBocmVmPVwiL3N0dWRpby1tXCI+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSBob3Zlcjp0ZXh0LXByaW1hcnkgdHJhbnNpdGlvbi1jb2xvcnNcIj5zdHVkaW8gTTwvYT5cbiAgICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICAgPC9uYXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9oZWFkZXI+XG5cbiAgICAgIHsvKiDjg5Ljg7zjg63jg7zjgrvjgq/jgrfjg6fjg7MgLSDjg6Ljg4Djg7Pjgarjg4fjgrbjgqTjg7MgKi99XG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJyZWxhdGl2ZSBweS0zMiBiZy1ncmFkaWVudC10by1iciBmcm9tLWJsdWUtNjAwIHZpYS1pbmRpZ28tNjAwIHRvLXB1cnBsZS03MDAgdGV4dC13aGl0ZSBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgey8qIOiDjOaZr+ijhemjviAqL31cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC0wIG9wYWNpdHktMjBcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC0wIGxlZnQtMCB3LTk2IGgtOTYgYmctd2hpdGUgcm91bmRlZC1mdWxsIGJsdXItM3hsXCI+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBib3R0b20tMCByaWdodC0wIHctOTYgaC05NiBiZy1ibHVlLTMwMCByb3VuZGVkLWZ1bGwgYmx1ci0zeGxcIj48L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBteC1hdXRvIHB4LTQgcmVsYXRpdmUgei0xMFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNHhsIG14LWF1dG8gdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5saW5lLWJsb2NrIG1iLTYgcHgtNiBweS0yIGJnLXdoaXRlLzEwIGJhY2tkcm9wLWJsdXItc20gcm91bmRlZC1mdWxsIGJvcmRlciBib3JkZXItd2hpdGUvMjBcIj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LXNlbWlib2xkIHRyYWNraW5nLXdpZGVyXCI+QUJPVVQgVVM8L3NwYW4+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxoMSBjbGFzc05hbWU9XCJ0ZXh0LTV4bCBtZDp0ZXh0LTZ4bCBmb250LWJvbGQgbWItOCBsZWFkaW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICAgIOacquadpeODjeODg+ODiOODr+ODvOOCr+OBq+OBpOOBhOOBplxuICAgICAgICAgICAgPC9oMT5cbiAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtMnhsIG1kOnRleHQtM3hsIHRleHQtYmx1ZS0xMDAgbGVhZGluZy1yZWxheGVkIGZvbnQtbGlnaHQgbWItOFwiPlxuICAgICAgICAgICAgICDnuIHvvIjjgaTjgarjgYzjgorvvInjgpLlipvjgavlpInjgYjjgIE8YnIgLz5cbiAgICAgICAgICAgICAg6Kqw44KC44GM5a6J5b+D44GX44Gm5YON44GN44O75pqu44KJ44Gb44KLPGJyIGNsYXNzTmFtZT1cIm1kOmhpZGRlblwiIC8+5pyq5p2l44KS5Ym144KLXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0yIHRleHQtYmx1ZS0xMDBcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEyIGgtcHggYmctYmx1ZS0zMDBcIj48L2Rpdj5cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1zbVwiPk91ciBNaXNzaW9uPC9zcGFuPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMTIgaC1weCBiZy1ibHVlLTMwMFwiPjwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7Lyog5Luj6KGo44Oh44OD44K744O844K4IC0g44Ko44Os44Ks44Oz44OI44Gq44OH44K244Kk44OzICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMjQgYmctZ3JhZGllbnQtdG8tYiBmcm9tLWdyYXktNTAgdG8td2hpdGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXIgbXgtYXV0byBweC00XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy02eGwgbXgtYXV0b1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIG1kOmdyaWQtY29scy01IGdhcC0xMiBpdGVtcy1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgey8qIOW3puWBtDog44OX44Ot44OV44Kj44O844OrICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1kOmNvbC1zcGFuLTJcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlXCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIC1pbnNldC00IGJnLWdyYWRpZW50LXRvLXIgZnJvbS1ibHVlLTUwMCB0by1pbmRpZ28tNTAwIHJvdW5kZWQtM3hsIG9wYWNpdHktMjAgYmx1ci0yeGxcIj48L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgYmctd2hpdGUgcm91bmRlZC0zeGwgcC0xMCBzaGFkb3ctMnhsIGJvcmRlciBib3JkZXItZ3JheS0xMDBcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTQwIGgtNDAgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1ibHVlLTUwMCB2aWEtaW5kaWdvLTUwMCB0by1wdXJwbGUtNjAwIHJvdW5kZWQtZnVsbCBteC1hdXRvIG1iLTYgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgc2hhZG93LXhsXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPFVzZXIgY2xhc3NOYW1lPVwidy0yMCBoLTIwIHRleHQtd2hpdGVcIiAvPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlclwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGQgdGV4dC1ncmF5LTgwMCBtYi0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICDljJfmnZEg6Zm95pyXXG4gICAgICAgICAgICAgICAgICAgICAgPC9oMz5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIG1iLTFcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIOS7o+ihqOeQhuS6i1xuICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtZ3JheS01MDBcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIEhpaXJvIEtpdGFtdXJhXG4gICAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXQtNiBwdC02IGJvcmRlci10IGJvcmRlci1ncmF5LTIwMFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LWdyYXktNTAwXCI+6Kit56uLPC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LXNlbWlib2xkIHRleHQtZ3JheS03MDBcIj4yMDE25bm0N+aciDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgey8qIOWPs+WBtDog44Oh44OD44K744O844K4ICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1kOmNvbC1zcGFuLTNcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlubGluZS1ibG9jayBtYi00IHB4LTQgcHktMSBiZy1ibHVlLTEwMCB0ZXh0LWJsdWUtNzAwIHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGRcIj5cbiAgICAgICAgICAgICAgICAgIE1lc3NhZ2VcbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC0zeGwgbWQ6dGV4dC00eGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItNiBsZWFkaW5nLXRpZ2h0XCI+XG4gICAgICAgICAgICAgICAgICDkuIDkurrjgbLjgajjgorjga48YnIgLz5cbiAgICAgICAgICAgICAgICAgIOOAjOOBguOBn+OCiuOBvuOBiOOBruW5uOOBm+OAjeOBqzxiciAvPlxuICAgICAgICAgICAgICAgICAg5a+E44KK5re744GE44G+44GZXG4gICAgICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNSB0ZXh0LWdyYXktNzAwIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1sZ1wiPlxuICAgICAgICAgICAgICAgICAgICDnp4HjgZ/jgaHjga/jgIHpmpzlrrPjgpLmjIHjgaPjgZ/mlrnjgIXjgYzlnLDln5/jgaflronlv4PjgZfjgabmmq7jgonjgZfjgIHlg43jgY/jgZPjgajjgYzjgafjgY3jgovnpL7kvJrjga7lrp/nj77jgpLnm67mjIfjgZfjgabjgYTjgb7jgZnjgIJcbiAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgIDxwPlxuICAgICAgICAgICAgICAgICAgICAyMDE25bm044Gu5rOV5Lq66Kit56uL5Lul5p2l44CB44CM57iB77yI44Gk44Gq44GM44KK77yJ44KS5Yqb44Gr5aSJ44GI44KL44CN44Go44GE44GG5oOz44GE44Gu44KC44Go44CBXG4gICAgICAgICAgICAgICAgICAgIOWIqeeUqOiAheanmOS4gOS6uuOBsuOBqOOCiuOBruWAi+aAp+OBqOW4jOacm+OCkuWkp+WIh+OBq+OBl+OAgeOBneOBruS6uuOCieOBl+OBhOeUn+a0u+OCkuaUr+aPtOOBl+OBpuOBjeOBvuOBl+OBn+OAglxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPHA+XG4gICAgICAgICAgICAgICAgICAgIOePvuWcqOOAgTPjgaTjga7kuovmpa3miYDvvIhNSVJBSeOAgUhJS0FSSeOAgXN0dWRpbyBN77yJ44KS6YGL5Za244GX44CBXG4gICAgICAgICAgICAgICAgICAgIOWwseWKtOe2mee2muaUr+aPtELlnovjgajnlJ/mtLvku4vorbfjga7jgrXjg7zjg5PjgrnjgpLpgJrjgZjjgabjgIHlpJrjgY/jga7mlrnjgIXjga7jgIzjgYLjgZ/jgorjgb7jgYjjga7lubjjgZvjgI3jgpLmlK/jgYjjgabjgYTjgb7jgZnjgIJcbiAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctZ3JhZGllbnQtdG8tciBmcm9tLWJsdWUtNTAgdG8taW5kaWdvLTUwIHJvdW5kZWQtMnhsIHAtNiBib3JkZXItbC00IGJvcmRlci1ibHVlLTUwMFwiPlxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIHRleHQtYmx1ZS05MDBcIj5cbiAgICAgICAgICAgICAgICAgICAgICDku4rlvozjgoLkuovmpa3miYDjga7lsZXplovjgIHlpJrop5LnmoTjgarlsZXplovjgpLnm67mjIfjgZfjgIHpmpzlrrPjgpLmjIHjgaPjgZ/mlrnjgIXjga/jgoLjgaHjgo3jgpPjgIFcbiAgICAgICAgICAgICAgICAgICAgICDms5Xkurrjga7ogbflk6Hjga7nlJ/mtLvjgpLosYrjgYvjgavjgIHpm4fnlKjjgpLlrojjgovjgZ/jgoHjgavjgIHms5XkurrjgpLjgrnjgrHjg7zjg6vjgqLjg4Pjg5fjgZfjgabjgYTjgY3jgb7jgZnjgIJcbiAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwXCI+XG4gICAgICAgICAgICAgICAgICAgIOengeOBn+OBoeOBqOWFseOBq+OAgeiqsOOCguOBjOWuieW/g+OBl+OBpuWDjeOBjeODu+aaruOCieOBm+OCi+acquadpeOCkuWJteOBo+OBpuOBhOOBjeOBvuOBl+OCh+OBhuOAglxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvc2VjdGlvbj5cblxuICAgICAgey8qIOayv+mdqSAtIOOCv+OCpOODoOODqeOCpOODs+ODh+OCtuOCpOODsyAqL31cbiAgICAgIDxzZWN0aW9uIGNsYXNzTmFtZT1cInB5LTI0IGJnLXdoaXRlXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyIG14LWF1dG8gcHgtNFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNXhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItMTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtYmxvY2sgbWItNCBweC00IHB5LTEgYmctYmx1ZS0xMDAgdGV4dC1ibHVlLTcwMCByb3VuZGVkLWZ1bGwgdGV4dC1zbSBmb250LXNlbWlib2xkXCI+XG4gICAgICAgICAgICAgICAgSGlzdG9yeVxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtNHhsIG1kOnRleHQtNXhsIGZvbnQtYm9sZCB0ZXh0LWdyYXktODAwIG1iLTRcIj5cbiAgICAgICAgICAgICAgICDmsr/pnalcbiAgICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1ncmF5LTYwMFwiPuengeOBn+OBoeOBruatqeOBvzwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlXCI+XG4gICAgICAgICAgICAgIHsvKiDkuK3lpK7jga7nt5ogKi99XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgbGVmdC0xLzIgdG9wLTAgYm90dG9tLTAgdy1weCBiZy1ncmFkaWVudC10by1iIGZyb20tYmx1ZS0yMDAgdmlhLWluZGlnby0zMDAgdG8tcHVycGxlLTIwMCB0cmFuc2Zvcm0gLXRyYW5zbGF0ZS14LTEvMiBoaWRkZW4gbWQ6YmxvY2tcIj48L2Rpdj5cblxuICAgICAgICAgICAgICB7Lyog44K/44Kk44Og44Op44Kk44Oz44Ki44Kk44OG44OgICovfVxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktMTZcIj5cbiAgICAgICAgICAgICAgICB7W1xuICAgICAgICAgICAgICAgICAgeyB5ZWFyOiBcIjIwMTZcIiwgbW9udGg6IFwiN+aciFwiLCBldmVudDogXCLkuIDoiKznpL7lm6Pms5XkurrmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq8g6Kit56uLXCIsIGNvbG9yOiBcImJsdWVcIiB9LFxuICAgICAgICAgICAgICAgICAgeyB5ZWFyOiBcIjIwMTdcIiwgbW9udGg6IFwiMeaciFwiLCBldmVudDogXCLmnbHkuqzpg73mmK3ls7bluILjgavlsLHlirTntpnntprmlK/mj7RC5Z6L5LqL5qWt5omA44CMTUlSQUnjgI3plovoqK1cIiwgY29sb3I6IFwiaW5kaWdvXCIgfSxcbiAgICAgICAgICAgICAgICAgIHsgeWVhcjogXCIyMDE5XCIsIG1vbnRoOiBcIlwiLCBldmVudDogXCLmmK3ls7bluILjgavnlJ/mtLvku4vorbfkuovmpa3miYDjgIxISUtBUknjgI3plovoqK1cIiwgY29sb3I6IFwicHVycGxlXCIgfSxcbiAgICAgICAgICAgICAgICAgIHsgeWVhcjogXCIyMDIyXCIsIG1vbnRoOiBcIlwiLCBldmVudDogXCLmmK3ls7bluILjgavlsLHlirTntpnntprmlK/mj7RC5Z6L5LqL5qWt5omA44CMc3R1ZGlvIE3jgI3plovoqK1cIiwgY29sb3I6IFwicGlua1wiIH0sXG4gICAgICAgICAgICAgICAgICB7IHllYXI6IFwiMjAyNVwiLCBtb250aDogXCJcIiwgZXZlbnQ6IFwiM+S6i+alreaJgOOBp+manOWus+emj+elieOCteODvOODk+OCueOCkuWxlemWi+S4rVwiLCBjb2xvcjogXCJncmVlblwiIH0sXG4gICAgICAgICAgICAgICAgXS5tYXAoKGl0ZW0sIGluZGV4KSA9PiAoXG4gICAgICAgICAgICAgICAgICA8ZGl2IGtleT17aW5kZXh9IGNsYXNzTmFtZT17YHJlbGF0aXZlIGZsZXggaXRlbXMtY2VudGVyICR7aW5kZXggJSAyID09PSAwID8gJ21kOmZsZXgtcm93JyA6ICdtZDpmbGV4LXJvdy1yZXZlcnNlJ31gfT5cbiAgICAgICAgICAgICAgICAgICAgey8qIOODieODg+ODiCAqL31cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBsZWZ0LTEvMiB3LTYgaC02IGJnLWdyYWRpZW50LXRvLWJyIGZyb20tYmx1ZS01MDAgdG8taW5kaWdvLTYwMCByb3VuZGVkLWZ1bGwgYm9yZGVyLTQgYm9yZGVyLXdoaXRlIHNoYWRvdy1sZyB0cmFuc2Zvcm0gLXRyYW5zbGF0ZS14LTEvMiB6LTEwIGhpZGRlbiBtZDpibG9ja1wiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgICBcbiAgICAgICAgICAgICAgICAgICAgey8qIOOCs+ODs+ODhuODs+ODhCAqL31cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2B3LWZ1bGwgbWQ6dy01LzEyICR7aW5kZXggJSAyID09PSAwID8gJ21kOnByLTEyIG1kOnRleHQtcmlnaHQnIDogJ21kOnBsLTEyJ31gfT5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyb3VwIGJnLXdoaXRlIHJvdW5kZWQtMnhsIHAtOCBzaGFkb3ctbGcgaG92ZXI6c2hhZG93LTJ4bCB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0zMDAgYm9yZGVyIGJvcmRlci1ncmF5LTEwMCBob3Zlcjpib3JkZXItYmx1ZS0yMDBcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgaW5saW5lLWJsb2NrIHB4LTQgcHktMiBiZy1ncmFkaWVudC10by1yIGZyb20tJHtpdGVtLmNvbG9yfS01MDAgdG8tJHtpdGVtLmNvbG9yfS02MDAgdGV4dC13aGl0ZSByb3VuZGVkLWZ1bGwgZm9udC1ib2xkIHRleHQtbGcgbWItNCBzaGFkb3ctbWRgfT5cbiAgICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0ueWVhcn17aXRlbS5tb250aCAmJiBg5bm0JHtpdGVtLm1vbnRofWB9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS04MDAgdGV4dC1sZyBsZWFkaW5nLXJlbGF4ZWRcIj57aXRlbS5ldmVudH08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7LyogRnV0dXJlIC0g5pyq5p2l44G444Gu5bGV5pybICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMjQgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1ibHVlLTUwIHZpYS1pbmRpZ28tNTAgdG8tcHVycGxlLTUwXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyIG14LWF1dG8gcHgtNFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNnhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItMTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtYmxvY2sgbWItNCBweC00IHB5LTEgYmctZ3JhZGllbnQtdG8tciBmcm9tLWJsdWUtNjAwIHRvLWluZGlnby02MDAgdGV4dC13aGl0ZSByb3VuZGVkLWZ1bGwgdGV4dC1zbSBmb250LXNlbWlib2xkXCI+XG4gICAgICAgICAgICAgICAgRnV0dXJlXG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC00eGwgbWQ6dGV4dC01eGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItNFwiPlxuICAgICAgICAgICAgICAgIOacquadpeOBuOOBruWxleacm1xuICAgICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIHRleHQtbGdcIj7np4HjgZ/jgaHjgYznm67mjIfjgZnmnKrmnaU8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIG1kOmdyaWQtY29scy0zIGdhcC04IG1iLTE2XCI+XG4gICAgICAgICAgICAgIHtbXG4gICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgaWNvbjogVHJlbmRpbmdVcCxcbiAgICAgICAgICAgICAgICAgIHRpdGxlOiBcIuS6i+alreaJgOOBruaLoeWkp1wiLFxuICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb246IFwi44KI44KK5aSa44GP44Gu5pa544CF44Gr6LOq44Gu6auY44GE44K144O844OT44K544KS5o+Q5L6b44GZ44KL44Gf44KB44CB5paw44Gf44Gq5LqL5qWt5omA44Gu6ZaL6Kit44KS6KiI55S744GX44Gm44GE44G+44GZXCIsXG4gICAgICAgICAgICAgICAgICBncmFkaWVudDogXCJmcm9tLWJsdWUtNTAwIHRvLWN5YW4tNTAwXCJcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgIGljb246IEdsb2JlLFxuICAgICAgICAgICAgICAgICAgdGl0bGU6IFwi5aSa6KeS55qE44Gq5bGV6ZaLXCIsXG4gICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogXCLnpo/npYnjgrXjg7zjg5Pjgrnjga7mnqDjgpLotoXjgYjjgIHlnLDln5/npL7kvJrjgavmlrDjgZfjgYTkvqHlgKTjgpLmj5DkvpvjgZnjgovkuovmpa3jgpLlibXlh7rjgZfjgb7jgZlcIixcbiAgICAgICAgICAgICAgICAgIGdyYWRpZW50OiBcImZyb20taW5kaWdvLTUwMCB0by1wdXJwbGUtNTAwXCJcbiAgICAgICAgICAgICAgICB9LFxuICAgICAgICAgICAgICAgIHtcbiAgICAgICAgICAgICAgICAgIGljb246IFVzZXJzLFxuICAgICAgICAgICAgICAgICAgdGl0bGU6IFwi6LGK44GL44Gq55Sf5rS744Gu5a6f54++XCIsXG4gICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogXCLliKnnlKjogIXmp5jjgajogbflk6Hjga7lj4zmlrnjgYzjgIHlronlv4PjgZfjgablg43jgY3jgIHosYrjgYvjgavmmq7jgonjgZvjgovnkrDlooPjgpLlibXjgorjgb7jgZlcIixcbiAgICAgICAgICAgICAgICAgIGdyYWRpZW50OiBcImZyb20tcHVycGxlLTUwMCB0by1waW5rLTUwMFwiXG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgICBdLm1hcCgoaXRlbSwgaW5kZXgpID0+IChcbiAgICAgICAgICAgICAgICA8ZGl2IGtleT17aW5kZXh9IGNsYXNzTmFtZT1cImdyb3VwIHJlbGF0aXZlXCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIC1pbnNldC0xIGJnLWdyYWRpZW50LXRvLXIgZnJvbS1ibHVlLTYwMCB0by1pbmRpZ28tNjAwIHJvdW5kZWQtM3hsIG9wYWNpdHktMCBncm91cC1ob3ZlcjpvcGFjaXR5LTEwMCBibHVyIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMFwiPjwvZGl2PlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZSBiZy13aGl0ZSByb3VuZGVkLTN4bCBwLTggc2hhZG93LXhsIGhvdmVyOnNoYWRvdy0yeGwgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgdy0xNiBoLTE2IGJnLWdyYWRpZW50LXRvLWJyICR7aXRlbS5ncmFkaWVudH0gcm91bmRlZC0yeGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWItNiBzaGFkb3ctbGcgZ3JvdXAtaG92ZXI6c2NhbGUtMTEwIHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTMwMGB9PlxuICAgICAgICAgICAgICAgICAgICAgIDxpdGVtLmljb24gY2xhc3NOYW1lPVwidy04IGgtOCB0ZXh0LXdoaXRlXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtYm9sZCB0ZXh0LWdyYXktODAwIG1iLTRcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7aXRlbS50aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgPC9oMz5cbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1ncmF5LTYwMCBsZWFkaW5nLXJlbGF4ZWRcIj5cbiAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5kZXNjcmlwdGlvbn1cbiAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmVcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSAtaW5zZXQtNCBiZy1ncmFkaWVudC10by1yIGZyb20tYmx1ZS01MDAgdG8taW5kaWdvLTUwMCByb3VuZGVkLTN4bCBvcGFjaXR5LTEwIGJsdXItMnhsXCI+PC9kaXY+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgYmctd2hpdGUgcm91bmRlZC0zeGwgcC0xMCBtZDpwLTE2IHNoYWRvdy0yeGwgYm9yZGVyIGJvcmRlci1ncmF5LTEwMFwiPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteGwgbWQ6dGV4dC0yeGwgdGV4dC1ncmF5LTcwMCBsZWFkaW5nLXJlbGF4ZWQgdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgICAgIOengeOBn+OBoeOBr+OAgTxzcGFuIGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LXRyYW5zcGFyZW50IGJnLWNsaXAtdGV4dCBiZy1ncmFkaWVudC10by1yIGZyb20tYmx1ZS02MDAgdG8taW5kaWdvLTYwMFwiPumanOWus+OCkuaMgeOBo+OBn+aWueOAheOBrueUn+a0u+OCkuixiuOBi+OBq+OBmeOCizwvc3Bhbj7jgZPjgajjga/jgoLjgaHjgo3jgpPjgIFcbiAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LXRyYW5zcGFyZW50IGJnLWNsaXAtdGV4dCBiZy1ncmFkaWVudC10by1yIGZyb20taW5kaWdvLTYwMCB0by1wdXJwbGUtNjAwXCI+5rOV5Lq644Gu6IG35ZOh44Gu6ZuH55So44KS5a6I44KK44CB5a6J5a6a44GX44Gf55Sf5rS744KS5pSv44GI44KLPC9zcGFuPuOBk+OBqOOCgumHjeimgeOBquS9v+WRveOBqOiAg+OBiOOBpuOBhOOBvuOBmeOAglxuICAgICAgICAgICAgICAgICAgPGJyIC8+PGJyIC8+XG4gICAgICAgICAgICAgICAgICDjgZ3jga7jgZ/jgoHjgavjgIHms5XkurrjgpLjgrnjgrHjg7zjg6vjgqLjg4Pjg5fjgZfjgIHjgojjgorlpJrjgY/jga7mlrnjgIXjgavluIzmnJvjgajlronlv4PjgpLlsYrjgZHjgonjgozjgovntYTnuZTjgbjjgajmiJDplbfjgZfjgabjgYTjgY3jgb7jgZnjgIJcbiAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7Lyog5rOV5Lq655CG5b+1IC0g44Oi44OA44Oz44Gq44Kr44O844OJ44OH44K244Kk44OzICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMjQgYmctd2hpdGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXIgbXgtYXV0byBweC00XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy02eGwgbXgtYXV0b1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtYi0yMFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlubGluZS1ibG9jayBtYi00IHB4LTQgcHktMSBiZy1ibHVlLTEwMCB0ZXh0LWJsdWUtNzAwIHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGRcIj5cbiAgICAgICAgICAgICAgICBQaGlsb3NvcGh5XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC00eGwgbWQ6dGV4dC01eGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItNFwiPlxuICAgICAgICAgICAgICAgIOazleS6uueQhuW/tVxuICAgICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIHRleHQtbGdcIj7np4HjgZ/jgaHjga7kvqHlgKToprPjgajntITmnZ88L3A+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgey8qIOODn+ODg+OCt+ODp+ODsyAqL31cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWItMjBcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgLWluc2V0LTQgYmctZ3JhZGllbnQtdG8tciBmcm9tLWJsdWUtNjAwIHZpYS1pbmRpZ28tNjAwIHRvLXB1cnBsZS02MDAgcm91bmRlZC0zeGwgb3BhY2l0eS0yMCBibHVyLTJ4bFwiPjwvZGl2PlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgYmctZ3JhZGllbnQtdG8tciBmcm9tLWJsdWUtNjAwIHZpYS1pbmRpZ28tNjAwIHRvLXB1cnBsZS03MDAgcm91bmRlZC0zeGwgcC0xMiBtZDpwLTE2IHRleHQtd2hpdGUgc2hhZG93LTJ4bFwiPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtNCBtYi04XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xNCBoLTE0IGJnLXdoaXRlLzIwIGJhY2tkcm9wLWJsdXItc20gcm91bmRlZC0yeGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8VGFyZ2V0IGNsYXNzTmFtZT1cInctOCBoLThcIiAvPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtMnhsIG1kOnRleHQtM3hsIGZvbnQtYm9sZFwiPlxuICAgICAgICAgICAgICAgICAgICAgIOazleS6uuODn+ODg+OCt+ODp+ODs1xuICAgICAgICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBtZDp0ZXh0LTN4bCBsZWFkaW5nLXJlbGF4ZWQgZm9udC1ib2xkIG1iLTZcIj5cbiAgICAgICAgICAgICAgICAgICAg44CM57iB77yI44Gk44Gq44GM44KK77yJ44KS5Yqb44Gr5aSJ44GI44CBPGJyIC8+XG4gICAgICAgICAgICAgICAgICAgIOiqsOOCguOBjOWuieW/g+OBl+OBpuWDjeOBjeODu+aaruOCieOBm+OCi+acquadpeOCkuWJteOCi+OAjVxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1sZyB0ZXh0LWJsdWUtMTAwXCI+XG4gICAgICAgICAgICAgICAgICAgIOKAlCDkuIDkurrjgbLjgajjgorjga7lsIrljrPjgajpgbjmip7jgpLlrojjgorjgIHlnLDln5/jgajlhbHjgavmlrDjgZfjgYTkvqHlgKTjgpLnlJ/jgb/lh7rjgZfjgb7jgZnjgIJcbiAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgey8qIOODk+OCuOODp+ODsyAqL31cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWItMjBcIj5cbiAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtM3hsIGZvbnQtYm9sZCB0ZXh0LWdyYXktODAwIG1iLTEwIHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAg5rOV5Lq644OT44K444On44OzXG4gICAgICAgICAgICAgIDwvaDM+XG4gICAgICAgICAgICAgIFxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTMgZ2FwLThcIj5cbiAgICAgICAgICAgICAgICB7W1xuICAgICAgICAgICAgICAgICAge1xuICAgICAgICAgICAgICAgICAgICBudW1iZXI6IFwiMDFcIixcbiAgICAgICAgICAgICAgICAgICAgdGl0bGU6IFwi5pyq5p2l44KS5ouT44GP5rOV5Lq6XCIsXG4gICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uOiBcIuekvuS8muiqsumhjOOBq+ato+mdouOBi+OCieWQkeOBjeWQiOOBhOOAgeaenOaVouOBq+aWsOOBl+OBhOS6i+alreODu+a0u+WLleOBq+aMkeOBv+OBvuOBmeOAglwiLFxuICAgICAgICAgICAgICAgICAgICBncmFkaWVudDogXCJmcm9tLWJsdWUtNTAwIHRvLWN5YW4tNTAwXCJcbiAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIG51bWJlcjogXCIwMlwiLFxuICAgICAgICAgICAgICAgICAgICB0aXRsZTogXCLluIzmnJvjga7mi6DngrlcIixcbiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb246IFwi56aP56WJ44KS6LW354K544Gr44CB5YON44GP44GT44Go44O75pqu44KJ44GZ44GT44Go44Gn5b6X44KJ44KM44KL57WM6aiT44Go44CB5Zyw5Z+f44Go44Gu6YCj5pC644GM5pyJ5qmf55qE44Gr57WQ44Gz44Gk44GN44CB6Kqw44KC44GM6LGK44GL44GV44Go5biM5pyb44KS5oyB44Gm44KL5aC044KS5Ym16YCg44GX44G+44GZ44CCXCIsXG4gICAgICAgICAgICAgICAgICAgIGdyYWRpZW50OiBcImZyb20taW5kaWdvLTUwMCB0by1wdXJwbGUtNTAwXCJcbiAgICAgICAgICAgICAgICAgIH0sXG4gICAgICAgICAgICAgICAgICB7XG4gICAgICAgICAgICAgICAgICAgIG51bWJlcjogXCIwM1wiLFxuICAgICAgICAgICAgICAgICAgICB0aXRsZTogXCLnrJHpoZTjga7lvqrnkrBcIixcbiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb246IFwi5Yip55So6ICF44Go6IG35ZOh44Gu5Y+M5pa544GM5a6J5b+D44Go6KqH44KK44KS5oSf44GY44CB5rqA6Laz5bqm44KS6auY44KB44Gq44GM44KJ44CB5Zyw5Z+f56S+5Lya5YWo5L2T44Gr56yR6aGU44KS5bqD44GS44KL5aW95b6q55Kw44KS56+J44GN44G+44GZ44CCXCIsXG4gICAgICAgICAgICAgICAgICAgIGdyYWRpZW50OiBcImZyb20tcHVycGxlLTUwMCB0by1waW5rLTUwMFwiXG4gICAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICAgICAgXS5tYXAoKGl0ZW0sIGluZGV4KSA9PiAoXG4gICAgICAgICAgICAgICAgICA8ZGl2IGtleT17aW5kZXh9IGNsYXNzTmFtZT1cInJlbGF0aXZlIGdyb3VwXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctd2hpdGUgcm91bmRlZC0zeGwgcC04IHNoYWRvdy1sZyBob3ZlcjpzaGFkb3ctMnhsIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMCBib3JkZXIgYm9yZGVyLWdyYXktMTAwIGgtZnVsbFwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgdGV4dC02eGwgZm9udC1ib2xkIHRleHQtdHJhbnNwYXJlbnQgYmctY2xpcC10ZXh0IGJnLWdyYWRpZW50LXRvLXIgJHtpdGVtLmdyYWRpZW50fSBtYi00YH0+XG4gICAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5udW1iZXJ9XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItNFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0udGl0bGV9XG4gICAgICAgICAgICAgICAgICAgICAgPC9oND5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0uZGVzY3JpcHRpb259XG4gICAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICB7Lyog44OQ44Oq44Ol44O8ICovfVxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYi0yMFwiPlxuICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC0zeGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItNCB0ZXh0LWNlbnRlclwiPlxuICAgICAgICAgICAgICAgIOazleS6uuODkOODquODpeODvFxuICAgICAgICAgICAgICA8L2gzPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIHRleHQtY2VudGVyIG1iLTEyXCI+5qC444Go44Gq44KLM+WOn+WJhzwvcD5cblxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTMgZ2FwLTggbWItMTJcIj5cbiAgICAgICAgICAgICAgICB7W1xuICAgICAgICAgICAgICAgICAgeyBpY29uOiBIZWFydCwgdGl0bGU6IFwi5L+h6aC8XCIsIHN1YnRpdGxlOiBcIlRydXN0XCIsIGRlc2NyaXB0aW9uOiBcIuS6kuOBhOOCkuS/oeOBmOWQiOOBhOOAgeWuieW/g+OBp+OBjeOCi+mWouS/guOCkuevieOBjeOBvuOBmeOAglwiLCBjb2xvcjogXCJyZWRcIiB9LFxuICAgICAgICAgICAgICAgICAgeyBpY29uOiBTaGllbGQsIHRpdGxlOiBcIuiqoOWun1wiLCBzdWJ0aXRsZTogXCJJbnRlZ3JpdHlcIiwgZGVzY3JpcHRpb246IFwi5q2j55u044GV44Go5LiA6LKr5oCn44KS44KC44Gj44Gm44CB6YCP5piO44Gn5YWs5q2j44Gq6KGM5YuV44KS57aa44GR44G+44GZ44CCXCIsIGNvbG9yOiBcImJsdWVcIiB9LFxuICAgICAgICAgICAgICAgICAgeyBpY29uOiBVc2VycywgdGl0bGU6IFwi6KyZ6JmaXCIsIHN1YnRpdGxlOiBcIkh1bWlsaXR5XCIsIGRlc2NyaXB0aW9uOiBcIuW/g+OBi+OCieismeiZmuOBp+OBguOCi+OBk+OBqOOAguiHquWIhuOBrui2s+OCiuOBquOBleOCkuiqjeOCgeOAgemao+OBq+OBhOOCi+S6uuOBrumVt+aJgOOBq+ebruOCkuWQkeOBkeOAgeaEn+isneOCkuW/mOOCjOOBvuOBm+OCk+OAglwiLCBjb2xvcjogXCJncmVlblwiIH1cbiAgICAgICAgICAgICAgICBdLm1hcCgoaXRlbSwgaW5kZXgpID0+IChcbiAgICAgICAgICAgICAgICAgIDxkaXYga2V5PXtpbmRleH0gY2xhc3NOYW1lPVwiZ3JvdXAgcmVsYXRpdmVcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9e2BhYnNvbHV0ZSAtaW5zZXQtMSBiZy1ncmFkaWVudC10by1yIGZyb20tJHtpdGVtLmNvbG9yfS01MDAgdG8tJHtpdGVtLmNvbG9yfS02MDAgcm91bmRlZC0zeGwgb3BhY2l0eS0wIGdyb3VwLWhvdmVyOm9wYWNpdHktMTAwIGJsdXIgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwYH0+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicmVsYXRpdmUgYmctd2hpdGUgcm91bmRlZC0zeGwgcC04IHNoYWRvdy1sZyBob3ZlcjpzaGFkb3cteGwgdHJhbnNpdGlvbi1hbGwgZHVyYXRpb24tMzAwIGJvcmRlci0yIGJvcmRlci1ncmF5LTEwMCBncm91cC1ob3Zlcjpib3JkZXItdHJhbnNwYXJlbnRcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17YHctMTYgaC0xNiBiZy0ke2l0ZW0uY29sb3J9LTEwMCByb3VuZGVkLTJ4bCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi02IGdyb3VwLWhvdmVyOnNjYWxlLTExMCB0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi0zMDBgfT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxpdGVtLmljb24gY2xhc3NOYW1lPXtgdy04IGgtOCB0ZXh0LSR7aXRlbS5jb2xvcn0tNjAwYH0gLz5cbiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8aDUgY2xhc3NOYW1lPVwidGV4dC0yeGwgZm9udC1ib2xkIHRleHQtZ3JheS04MDAgbWItMlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0udGl0bGV9XG4gICAgICAgICAgICAgICAgICAgICAgPC9oNT5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtZ3JheS01MDAgbWItNCBmb250LXNlbWlib2xkXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5zdWJ0aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1ncmF5LTYwMCBsZWFkaW5nLXJlbGF4ZWRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIHtpdGVtLmRlc2NyaXB0aW9ufVxuICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgICAgey8qIDTjgaTjga7ooYzli5XmjIfph50gKi99XG4gICAgICAgICAgICAgIDxoNCBjbGFzc05hbWU9XCJ0ZXh0LTJ4bCBmb250LWJvbGQgdGV4dC1ncmF5LTgwMCBtYi04IHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAg5a6f6Le144Gr44GK44GR44KLNOOBpOOBruihjOWLleaMh+mHnVxuICAgICAgICAgICAgICA8L2g0PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTZcIj5cbiAgICAgICAgICAgICAgICB7W1xuICAgICAgICAgICAgICAgICAgeyB0aXRsZTogXCLlsIrljrPjgajlhazlubNcIiwgZGVzY3JpcHRpb246IFwi44GZ44G544Gm44Gu5Lq644Gu5Lq65qip44KS5a6I44KK44CB44Op44Kk44OV44K544OG44O844K444Gr5b+c44GY44Gf5pSv5o+044KS5aSn5YiH44Gr44GX44G+44GZ44CCXCIgfSxcbiAgICAgICAgICAgICAgICAgIHsgdGl0bGU6IFwi5oyR5oim44Go5Ym16YCgXCIsIGRlc2NyaXB0aW9uOiBcIuW4uOOBq+WkieWMluOCkuaBkOOCjOOBmuOAgeaWsOOBl+OBhOippuOBv+OBq+aenOaVouOBq+aMkeOBv+OBvuOBmeOAglwiIH0sXG4gICAgICAgICAgICAgICAgICB7IHRpdGxlOiBcIuWcsOWfn+OBqOOBruWFseeUn1wiLCBkZXNjcmlwdGlvbjogXCLlnLDln5/npL7kvJrjgajlhbHjgavmranjgb/jgIHmlK/jgYjlkIjjgYTjgIHmlrDjgZfjgYTkvqHlgKTjgpLlhbHlibXjgZfjgb7jgZnjgIJcIiB9LFxuICAgICAgICAgICAgICAgICAgeyB0aXRsZTogXCLlhbHjgavmjJHjgb/jgIHmiJDplbfjgZnjgotcIiwgZGVzY3JpcHRpb246IFwi5oyR5oim44KS57aa44GR44CB5Yip55So6ICF44O76IG35ZOh44O75Zyw5Z+f44Go44Go44KC44Gr5aSi44KE5biM5pyb44KS6IKy44G/44G+44GZ44CCXCIgfVxuICAgICAgICAgICAgICAgIF0ubWFwKChpdGVtLCBpbmRleCkgPT4gKFxuICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e2luZGV4fSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLXN0YXJ0IGdhcC00IGJnLWdyYWRpZW50LXRvLWJyIGZyb20tZ3JheS01MCB0by13aGl0ZSByb3VuZGVkLTJ4bCBwLTYgYm9yZGVyIGJvcmRlci1ncmF5LTIwMCBob3Zlcjpib3JkZXItYmx1ZS0zMDAgdHJhbnNpdGlvbi1jb2xvcnNcIj5cbiAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTYgaC02IHRleHQtYmx1ZS02MDAgZmxleC1zaHJpbmstMCBtdC0xXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8aDUgY2xhc3NOYW1lPVwidGV4dC1sZyBmb250LWJvbGQgdGV4dC1ncmF5LTgwMCBtYi0yXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICB7aXRlbS50aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgICA8L2g1PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS02MDAgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICB7aXRlbS5kZXNjcmlwdGlvbn1cbiAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIHsvKiDmnKrmnaVDb3JlICovfVxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgLWluc2V0LTQgYmctZ3JhZGllbnQtdG8tciBmcm9tLWluZGlnby02MDAgdG8tcHVycGxlLTYwMCByb3VuZGVkLTN4bCBvcGFjaXR5LTIwIGJsdXItMnhsXCI+PC9kaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZSBiZy1ncmFkaWVudC10by1yIGZyb20taW5kaWdvLTYwMCB0by1wdXJwbGUtNzAwIHJvdW5kZWQtM3hsIHAtMTIgbWQ6cC0xNiB0ZXh0LXdoaXRlIHNoYWRvdy0yeGxcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItMTJcIj5cbiAgICAgICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtM3hsIG1kOnRleHQtNHhsIGZvbnQtYm9sZCBtYi00XCI+XG4gICAgICAgICAgICAgICAgICAgICAg5pyq5p2lIENvcmVcbiAgICAgICAgICAgICAgICAgICAgPC9oMz5cbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1pbmRpZ28tMTAwIHRleHQtbGcgbWItNFwiPlxuICAgICAgICAgICAgICAgICAgICAgIOengeOBn+OBoeOBjOWkp+WIh+OBq+OBmeOCizTjgaTjga7ntITmnZ9cbiAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTN4bCBteC1hdXRvXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1pbmRpZ28tNTAgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICDjgZPjga4044Gk44Gu5Y6f5YmH44Gv44CBMjAxNuW5tOOBruazleS6uuioreeri+aZguOBi+OCieWkieOCj+OCi+OBk+OBqOOBquOBj+Wkp+WIh+OBq+OBl+OBpuOBjeOBn+OAgeengeOBn+OBoeOBruagueacrOeQhuW/teOBp+OBmeOAgjxiciAvPlxuICAgICAgICAgICAgICAgICAgICAgICAg5pmC5Luj44GM5aSJ44KP44Gj44Gm44KC44CB5LqL5qWt44GM5ouh5aSn44GX44Gm44KC44CB44GT44Gu44CM5pyq5p2lQ29yZeOAjeOBr+engeOBn+OBoeOBrua0u+WLleOBruS4reW/g+OBp+OBguOCiue2muOBkeOBvuOBmeOAglxuICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cblxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIG1kOmdyaWQtY29scy0yIGdhcC02XCI+XG4gICAgICAgICAgICAgICAgICAgIHtbXG4gICAgICAgICAgICAgICAgICAgICAgeyBudW1iZXI6IFwiMDFcIiwgdGl0bGU6IFwi5biM5pyb44Gu5a6f54++XCIsIGRlc2NyaXB0aW9uOiBcIuOBiuOBsuOBqOOCiuOBiuOBsuOBqOOCiuOBruW4jOacm+OCkuOBp+OBjeOCi+mZkOOCiuWPtuOBiOOBvuOBmeOAglwiIH0sXG4gICAgICAgICAgICAgICAgICAgICAgeyBudW1iZXI6IFwiMDJcIiwgdGl0bGU6IFwi5bCK5Y6z44Gu5bCK6YeNXCIsIGRlc2NyaXB0aW9uOiBcIuWwiuWOs+OCkuWuiOOCiuOAgeOBneOBruS6uuOBruWAi+aAp+OBqOS6uueUn+OCkuWwiumHjeOBl+OAgeOBneOBruS6uuOCieOBl+OBleOCkuWuiOOCiuOBvuOBmeOAglwiIH0sXG4gICAgICAgICAgICAgICAgICAgICAgeyBudW1iZXI6IFwiMDNcIiwgdGl0bGU6IFwi6JmQ5b6F44O75Lq65qip5L615a6z44Gu6Ziy5q2iXCIsIGRlc2NyaXB0aW9uOiBcIuiZkOW+heODu+W3ruWIpeODu+S6uuaoqeS+teWus+OCkuaxuuOBl+OBpuioseOBl+OBvuOBm+OCk+OAglwiIH0sXG4gICAgICAgICAgICAgICAgICAgICAgeyBudW1iZXI6IFwiMDRcIiwgdGl0bGU6IFwi56aP56WJ5o6l6YGH44Oe44OK44O844Gu5b655bqVXCIsIGRlc2NyaXB0aW9uOiBcIuekvOevgOOBguOCi+iogOiRieOBqOaFi+W6puOBp+S/oemgvOOCkuevieOBjeOBvuOBmeOAglwiIH1cbiAgICAgICAgICAgICAgICAgICAgXS5tYXAoKGl0ZW0sIGluZGV4KSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e2luZGV4fSBjbGFzc05hbWU9XCJiZy13aGl0ZS8xMCBiYWNrZHJvcC1ibHVyLXNtIHJvdW5kZWQtMnhsIHAtNiBib3JkZXIgYm9yZGVyLXdoaXRlLzIwIGhvdmVyOmJnLXdoaXRlLzIwIHRyYW5zaXRpb24tY29sb3JzXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtNHhsIGZvbnQtYm9sZCB0ZXh0LXdoaXRlLzQwIG1iLTNcIj57aXRlbS5udW1iZXJ9PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8aDUgY2xhc3NOYW1lPVwidGV4dC14bCBmb250LWJvbGQgbWItM1wiPntpdGVtLnRpdGxlfTwvaDU+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWluZGlnby0xMDBcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAge2l0ZW0uZGVzY3JpcHRpb259XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7Lyog5rOV5Lq65qaC6KaBICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMjQgYmctZ3JhZGllbnQtdG8tYiBmcm9tLWdyYXktNTAgdG8td2hpdGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXIgbXgtYXV0byBweC00XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy00eGwgbXgtYXV0b1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtYi0xNlwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlubGluZS1ibG9jayBtYi00IHB4LTQgcHktMSBiZy1ibHVlLTEwMCB0ZXh0LWJsdWUtNzAwIHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGRcIj5cbiAgICAgICAgICAgICAgICBPdmVydmlld1xuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtNHhsIG1kOnRleHQtNXhsIGZvbnQtYm9sZCB0ZXh0LWdyYXktODAwIG1iLTRcIj5cbiAgICAgICAgICAgICAgICDms5XkurrmpoLopoFcbiAgICAgICAgICAgICAgPC9oMj5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXdoaXRlIHJvdW5kZWQtM3hsIHNoYWRvdy0yeGwgb3ZlcmZsb3ctaGlkZGVuIGJvcmRlciBib3JkZXItZ3JheS0xMDBcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwLTEwIG1kOnAtMTRcIj5cbiAgICAgICAgICAgICAgICA8dGFibGUgY2xhc3NOYW1lPVwidy1mdWxsXCI+XG4gICAgICAgICAgICAgICAgICA8dGJvZHkgY2xhc3NOYW1lPVwiZGl2aWRlLXkgZGl2aWRlLWdyYXktMjAwXCI+XG4gICAgICAgICAgICAgICAgICAgIHtbXG4gICAgICAgICAgICAgICAgICAgICAgeyBsYWJlbDogXCLms5XkurrlkI1cIiwgdmFsdWU6IFwi5LiA6Iis56S+5Zuj5rOV5Lq65pyq5p2l44ON44OD44OI44Ov44O844KvXCIgfSxcbiAgICAgICAgICAgICAgICAgICAgICB7IGxhYmVsOiBcIuioreeri1wiLCB2YWx1ZTogXCIyMDE25bm0N+aciFwiIH0sXG4gICAgICAgICAgICAgICAgICAgICAgeyBsYWJlbDogXCLku6PooajnkIbkuotcIiwgdmFsdWU6IFwi5YyX5p2RIOmZveacl1wiIH0sXG4gICAgICAgICAgICAgICAgICAgICAgeyBsYWJlbDogXCLmiYDlnKjlnLBcIiwgdmFsdWU6IFwi5p2x5Lqs6YO95pit5bO25biCXCIgfSxcbiAgICAgICAgICAgICAgICAgICAgICB7IGxhYmVsOiBcIuS6i+alreWGheWuuVwiLCB2YWx1ZTogW1wi5bCx5Yq057aZ57aa5pSv5o+0QuWei+S6i+alre+8iE1JUkFJ44CBc3R1ZGlvIE3vvIlcIiwgXCLnlJ/mtLvku4vorbfkuovmpa3vvIhISUtBUknvvIlcIiwgXCLpmpzlrrPnpo/npYnjgrXjg7zjg5Pjgrnkuovmpa1cIl0gfSxcbiAgICAgICAgICAgICAgICAgICAgICB7IGxhYmVsOiBcIuS6i+alreaJgFwiLCB2YWx1ZTogW1wiTUlSQUnvvIjlsLHlirTntpnntprmlK/mj7RC5Z6L77yJXCIsIFwiSElLQVJJ77yI55Sf5rS75LuL6K2377yJXCIsIFwic3R1ZGlvIE3vvIjlsLHlirTntpnntprmlK/mj7RC5Z6L77yJXCJdIH1cbiAgICAgICAgICAgICAgICAgICAgXS5tYXAoKHJvdywgaW5kZXgpID0+IChcbiAgICAgICAgICAgICAgICAgICAgICA8dHIga2V5PXtpbmRleH0+XG4gICAgICAgICAgICAgICAgICAgICAgICA8dGQgY2xhc3NOYW1lPVwicHktNiBwci04IHRleHQtZ3JheS02MDAgZm9udC1ib2xkIHdoaXRlc3BhY2Utbm93cmFwIGFsaWduLXRvcCB0ZXh0LWxnXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIHtyb3cubGFiZWx9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3RkPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHRkIGNsYXNzTmFtZT1cInB5LTYgdGV4dC1ncmF5LTgwMFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICB7QXJyYXkuaXNBcnJheShyb3cudmFsdWUpID8gKFxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJzcGFjZS15LTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHtyb3cudmFsdWUubWFwKChpdGVtLCBpKSA9PiAoXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxsaSBrZXk9e2l9IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWJsdWUtNjAwIG10LTFcIj7igKI8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4+e2l0ZW19PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgPC91bD5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgKSA6IChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgICByb3cudmFsdWVcbiAgICAgICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+XG4gICAgICAgICAgICAgICAgICAgICAgPC90cj5cbiAgICAgICAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICAgICAgICA8L3Rib2R5PlxuICAgICAgICAgICAgICAgIDwvdGFibGU+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7LyogQ1RB44K744Kv44K344On44OzICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMjQgYmctZ3JhZGllbnQtdG8tciBmcm9tLWJsdWUtNjAwIHZpYS1pbmRpZ28tNjAwIHRvLXB1cnBsZS03MDAgdGV4dC13aGl0ZSByZWxhdGl2ZSBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC0wIG9wYWNpdHktMjBcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIHRvcC0wIGxlZnQtMCB3LTk2IGgtOTYgYmctd2hpdGUgcm91bmRlZC1mdWxsIGJsdXItM3hsXCI+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBib3R0b20tMCByaWdodC0wIHctOTYgaC05NiBiZy1ibHVlLTMwMCByb3VuZGVkLWZ1bGwgYmx1ci0zeGxcIj48L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICAgIFxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBteC1hdXRvIHB4LTQgcmVsYXRpdmUgei0xMFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctM3hsIG14LWF1dG8gdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LTR4bCBtZDp0ZXh0LTV4bCBmb250LWJvbGQgbWItNlwiPlxuICAgICAgICAgICAgICDkuIDnt5LjgavmnKrmnaXjgpLlibXjgorjgb7jgZvjgpPjgYvvvJ9cbiAgICAgICAgICAgIDwvaDI+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhsIHRleHQtYmx1ZS0xMDAgbWItMTAgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICAgIOimi+WtpuODu+OBlOebuOirh+OBr+OBhOOBpOOBp+OCguaJv+OBo+OBpuOBiuOCiuOBvuOBmeOAgjxiciAvPlxuICAgICAgICAgICAgICDjgYrmsJfou73jgavjgYrllY/jgYTlkIjjgo/jgZvjgY/jgaDjgZXjgYTjgIJcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBnYXAtNCBqdXN0aWZ5LWNlbnRlclwiPlxuICAgICAgICAgICAgICA8YVxuICAgICAgICAgICAgICAgIGhyZWY9XCJtYWlsdG86bWlyYWluZXQyMDE3QGdtYWlsLmNvbVwiXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiZ3JvdXAgYmctd2hpdGUgdGV4dC1ibHVlLTYwMCBweC0xMCBweS01IHJvdW5kZWQtZnVsbCBmb250LWJvbGQgaG92ZXI6YmctYmx1ZS01MCB0cmFuc2l0aW9uLWFsbCBzaGFkb3ctMnhsIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGdhcC0yXCJcbiAgICAgICAgICAgICAgPlxuICAgICAgICAgICAgICAgIOOBiuWVj+OBhOWQiOOCj+OBm1xuICAgICAgICAgICAgICAgIDxBcnJvd1JpZ2h0IGNsYXNzTmFtZT1cInctNSBoLTUgZ3JvdXAtaG92ZXI6dHJhbnNsYXRlLXgtMSB0cmFuc2l0aW9uLXRyYW5zZm9ybVwiIC8+XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgPGFcbiAgICAgICAgICAgICAgICBocmVmPVwiL1wiXG4gICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwiYmctd2hpdGUvMTAgYmFja2Ryb3AtYmx1ci1zbSB0ZXh0LXdoaXRlIHB4LTEwIHB5LTUgcm91bmRlZC1mdWxsIGZvbnQtYm9sZCBob3ZlcjpiZy13aGl0ZS8yMCB0cmFuc2l0aW9uLWFsbCBib3JkZXItMiBib3JkZXItd2hpdGUvMzBcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAg44OI44OD44OX44Oa44O844K444G4XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvc2VjdGlvbj5cbiAgICA8L2Rpdj5cbiAgKTtcbn1cblxuIl0sImZpbGUiOiIvaG9tZS91YnVudHUvbWlyYWktbmV0d29yay13ZWJzaXRlL2NsaWVudC9zcmMvcGFnZXMvQWJvdXQudHN4In0=

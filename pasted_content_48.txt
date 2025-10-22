@@ -1,0 +1,314 @@
+Text file: pasted_content_48.txt
+Reading lines: 1-500 (file has 1093 lines)
+Latest content with line numbers:
+1	import "/@fs/home/ubuntu/mirai-network-website/node_modules/.pnpm/vite@7.1.9_@types+node@24.7.0_jiti@2.6.1_lightningcss@1.30.1_tsx@4.20.6/node_modules/vite/dist/client/env.mjs";
+2	
+3	//#region \0@oxc-project+runtime@0.93.0/helpers/typeof.js
+4	function _typeof(o) {
+5		"@babel/helpers - typeof";
+6		return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(o$1) {
+7			return typeof o$1;
+8		} : function(o$1) {
+9			return o$1 && "function" == typeof Symbol && o$1.constructor === Symbol && o$1 !== Symbol.prototype ? "symbol" : typeof o$1;
+10		}, _typeof(o);
+11	}
+12	
+13	//#endregion
+14	//#region \0@oxc-project+runtime@0.93.0/helpers/toPrimitive.js
+15	function toPrimitive(t, r) {
+16		if ("object" != _typeof(t) || !t) return t;
+17		var e = t[Symbol.toPrimitive];
+18		if (void 0 !== e) {
+19			var i = e.call(t, r || "default");
+20			if ("object" != _typeof(i)) return i;
+21			throw new TypeError("@@toPrimitive must return a primitive value.");
+22		}
+23		return ("string" === r ? String : Number)(t);
+24	}
+25	
+26	//#endregion
+27	//#region \0@oxc-project+runtime@0.93.0/helpers/toPropertyKey.js
+28	function toPropertyKey(t) {
+29		var i = toPrimitive(t, "string");
+30		return "symbol" == _typeof(i) ? i : i + "";
+31	}
+32	
+33	//#endregion
+34	//#region \0@oxc-project+runtime@0.93.0/helpers/defineProperty.js
+35	function _defineProperty(e, r, t) {
+36		return (r = toPropertyKey(r)) in e ? Object.defineProperty(e, r, {
+37			value: t,
+38			enumerable: !0,
+39			configurable: !0,
+40			writable: !0
+41		}) : e[r] = t, e;
+42	}
+43	
+44	//#endregion
+45	//#region src/shared/hmr.ts
+46	var HMRContext = class {
+47		constructor(hmrClient$1, ownerPath) {
+48			this.hmrClient = hmrClient$1;
+49			this.ownerPath = ownerPath;
+50			_defineProperty(this, "newListeners", void 0);
+51			if (!hmrClient$1.dataMap.has(ownerPath)) hmrClient$1.dataMap.set(ownerPath, {});
+52			const mod = hmrClient$1.hotModulesMap.get(ownerPath);
+53			if (mod) mod.callbacks = [];
+54			const staleListeners = hmrClient$1.ctxToListenersMap.get(ownerPath);
+55			if (staleListeners) for (const [event, staleFns] of staleListeners) {
+56				const listeners = hmrClient$1.customListenersMap.get(event);
+57				if (listeners) hmrClient$1.customListenersMap.set(event, listeners.filter((l) => !staleFns.includes(l)));
+58			}
+59			this.newListeners = /* @__PURE__ */ new Map();
+60			hmrClient$1.ctxToListenersMap.set(ownerPath, this.newListeners);
+61		}
+62		get data() {
+63			return this.hmrClient.dataMap.get(this.ownerPath);
+64		}
+65		accept(deps, callback) {
+66			if (typeof deps === "function" || !deps) this.acceptDeps([this.ownerPath], ([mod]) => deps?.(mod));
+67			else if (typeof deps === "string") this.acceptDeps([deps], ([mod]) => callback?.(mod));
+68			else if (Array.isArray(deps)) this.acceptDeps(deps, callback);
+69			else throw new Error(`invalid hot.accept() usage.`);
+70		}
+71		acceptExports(_, callback) {
+72			this.acceptDeps([this.ownerPath], ([mod]) => callback?.(mod));
+73		}
+74		dispose(cb) {
+75			this.hmrClient.disposeMap.set(this.ownerPath, cb);
+76		}
+77		prune(cb) {
+78			this.hmrClient.pruneMap.set(this.ownerPath, cb);
+79		}
+80		decline() {}
+81		invalidate(message) {
+82			const firstInvalidatedBy = this.hmrClient.currentFirstInvalidatedBy ?? this.ownerPath;
+83			this.hmrClient.notifyListeners("vite:invalidate", {
+84				path: this.ownerPath,
+85				message,
+86				firstInvalidatedBy
+87			});
+88			this.send("vite:invalidate", {
+89				path: this.ownerPath,
+90				message,
+91				firstInvalidatedBy
+92			});
+93			this.hmrClient.logger.debug(`invalidate ${this.ownerPath}${message ? `: ${message}` : ""}`);
+94		}
+95		on(event, cb) {
+96			const addToMap = (map) => {
+97				const existing = map.get(event) || [];
+98				existing.push(cb);
+99				map.set(event, existing);
+100			};
+101			addToMap(this.hmrClient.customListenersMap);
+102			addToMap(this.newListeners);
+103		}
+104		off(event, cb) {
+105			const removeFromMap = (map) => {
+106				const existing = map.get(event);
+107				if (existing === void 0) return;
+108				const pruned = existing.filter((l) => l !== cb);
+109				if (pruned.length === 0) {
+110					map.delete(event);
+111					return;
+112				}
+113				map.set(event, pruned);
+114			};
+115			removeFromMap(this.hmrClient.customListenersMap);
+116			removeFromMap(this.newListeners);
+117		}
+118		send(event, data) {
+119			this.hmrClient.send({
+120				type: "custom",
+121				event,
+122				data
+123			});
+124		}
+125		acceptDeps(deps, callback = () => {}) {
+126			const mod = this.hmrClient.hotModulesMap.get(this.ownerPath) || {
+127				id: this.ownerPath,
+128				callbacks: []
+129			};
+130			mod.callbacks.push({
+131				deps,
+132				fn: callback
+133			});
+134			this.hmrClient.hotModulesMap.set(this.ownerPath, mod);
+135		}
+136	};
+137	var HMRClient = class {
+138		constructor(logger, transport$1, importUpdatedModule) {
+139			this.logger = logger;
+140			this.transport = transport$1;
+141			this.importUpdatedModule = importUpdatedModule;
+142			_defineProperty(this, "hotModulesMap", /* @__PURE__ */ new Map());
+143			_defineProperty(this, "disposeMap", /* @__PURE__ */ new Map());
+144			_defineProperty(this, "pruneMap", /* @__PURE__ */ new Map());
+145			_defineProperty(this, "dataMap", /* @__PURE__ */ new Map());
+146			_defineProperty(this, "customListenersMap", /* @__PURE__ */ new Map());
+147			_defineProperty(this, "ctxToListenersMap", /* @__PURE__ */ new Map());
+148			_defineProperty(this, "currentFirstInvalidatedBy", void 0);
+149			_defineProperty(this, "updateQueue", []);
+150			_defineProperty(this, "pendingUpdateQueue", false);
+151		}
+152		async notifyListeners(event, data) {
+153			const cbs = this.customListenersMap.get(event);
+154			if (cbs) await Promise.allSettled(cbs.map((cb) => cb(data)));
+155		}
+156		send(payload) {
+157			this.transport.send(payload).catch((err) => {
+158				this.logger.error(err);
+159			});
+160		}
+161		clear() {
+162			this.hotModulesMap.clear();
+163			this.disposeMap.clear();
+164			this.pruneMap.clear();
+165			this.dataMap.clear();
+166			this.customListenersMap.clear();
+167			this.ctxToListenersMap.clear();
+168		}
+169		async prunePaths(paths) {
+170			await Promise.all(paths.map((path) => {
+171				const disposer = this.disposeMap.get(path);
+172				if (disposer) return disposer(this.dataMap.get(path));
+173			}));
+174			await Promise.all(paths.map((path) => {
+175				const fn = this.pruneMap.get(path);
+176				if (fn) return fn(this.dataMap.get(path));
+177			}));
+178		}
+179		warnFailedUpdate(err, path) {
+180			if (!(err instanceof Error) || !err.message.includes("fetch")) this.logger.error(err);
+181			this.logger.error(`Failed to reload ${path}. This could be due to syntax errors or importing non-existent modules. (see errors above)`);
+182		}
+183		/**
+184		* buffer multiple hot updates triggered by the same src change
+185		* so that they are invoked in the same order they were sent.
+186		* (otherwise the order may be inconsistent because of the http request round trip)
+187		*/
+188		async queueUpdate(payload) {
+189			this.updateQueue.push(this.fetchUpdate(payload));
+190			if (!this.pendingUpdateQueue) {
+191				this.pendingUpdateQueue = true;
+192				await Promise.resolve();
+193				this.pendingUpdateQueue = false;
+194				const loading = [...this.updateQueue];
+195				this.updateQueue = [];
+196				(await Promise.all(loading)).forEach((fn) => fn && fn());
+197			}
+198		}
+199		async fetchUpdate(update) {
+200			const { path, acceptedPath, firstInvalidatedBy } = update;
+201			const mod = this.hotModulesMap.get(path);
+202			if (!mod) return;
+203			let fetchedModule;
+204			const isSelfUpdate = path === acceptedPath;
+205			const qualifiedCallbacks = mod.callbacks.filter(({ deps }) => deps.includes(acceptedPath));
+206			if (isSelfUpdate || qualifiedCallbacks.length > 0) {
+207				const disposer = this.disposeMap.get(acceptedPath);
+208				if (disposer) await disposer(this.dataMap.get(acceptedPath));
+209				try {
+210					fetchedModule = await this.importUpdatedModule(update);
+211				} catch (e) {
+212					this.warnFailedUpdate(e, acceptedPath);
+213				}
+214			}
+215			return () => {
+216				try {
+217					this.currentFirstInvalidatedBy = firstInvalidatedBy;
+218					for (const { deps, fn } of qualifiedCallbacks) fn(deps.map((dep) => dep === acceptedPath ? fetchedModule : void 0));
+219					const loggedPath = isSelfUpdate ? path : `${acceptedPath} via ${path}`;
+220					this.logger.debug(`hot updated: ${loggedPath}`);
+221				} finally {
+222					this.currentFirstInvalidatedBy = void 0;
+223				}
+224			};
+225		}
+226	};
+227	
+228	//#endregion
+229	//#region ../../node_modules/.pnpm/nanoid@5.1.6/node_modules/nanoid/non-secure/index.js
+230	let urlAlphabet = "useandom-26T198340PX75pxJACKVERYMINDBUSHWOLF_GQZbfghjklqvwyzrict";
+231	let nanoid = (size = 21) => {
+232		let id = "";
+233		let i = size | 0;
+234		while (i--) id += urlAlphabet[Math.random() * 64 | 0];
+235		return id;
+236	};
+237	
+238	//#endregion
+239	//#region src/shared/constants.ts
+240	let SOURCEMAPPING_URL = "sourceMa";
+241	SOURCEMAPPING_URL += "ppingURL";
+242	
+243	//#endregion
+244	//#region src/shared/utils.ts
+245	const isWindows = typeof process !== "undefined" && process.platform === "win32";
+246	const AsyncFunction = async function() {}.constructor;
+247	function promiseWithResolvers() {
+248		let resolve;
+249		let reject;
+250		return {
+251			promise: new Promise((_resolve, _reject) => {
+252				resolve = _resolve;
+253				reject = _reject;
+254			}),
+255			resolve,
+256			reject
+257		};
+258	}
+259	
+260	//#endregion
+261	//#region src/shared/moduleRunnerTransport.ts
+262	function reviveInvokeError(e) {
+263		const error = new Error(e.message || "Unknown invoke error");
+264		Object.assign(error, e, { runnerError: /* @__PURE__ */ new Error("RunnerError") });
+265		return error;
+266	}
+267	const createInvokeableTransport = (transport$1) => {
+268		if (transport$1.invoke) return {
+269			...transport$1,
+270			async invoke(name, data) {
+271				const result = await transport$1.invoke({
+272					type: "custom",
+273					event: "vite:invoke",
+274					data: {
+275						id: "send",
+276						name,
+277						data
+278					}
+279				});
+280				if ("error" in result) throw reviveInvokeError(result.error);
+281				return result.result;
+282			}
+283		};
+284		if (!transport$1.send || !transport$1.connect) throw new Error("transport must implement send and connect when invoke is not implemented");
+285		const rpcPromises = /* @__PURE__ */ new Map();
+286		return {
+287			...transport$1,
+288			connect({ onMessage, onDisconnection }) {
+289				return transport$1.connect({
+290					onMessage(payload) {
+291						if (payload.type === "custom" && payload.event === "vite:invoke") {
+292							const data = payload.data;
+293							if (data.id.startsWith("response:")) {
+294								const invokeId = data.id.slice(9);
+295								const promise = rpcPromises.get(invokeId);
+296								if (!promise) return;
+297								if (promise.timeoutId) clearTimeout(promise.timeoutId);
+298								rpcPromises.delete(invokeId);
+299								const { error, result } = data.data;
+300								if (error) promise.reject(error);
+301								else promise.resolve(result);
+302								return;
+303							}
+304						}
+305						onMessage(payload);
+306					},
+307					onDisconnection
+308				});
+309			},
+310			disconnect() {
+311	(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)

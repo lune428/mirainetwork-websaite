@@ -1,0 +1,174 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/pages/NotFound.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import {Button} from "/src/components/ui/button.tsx";
+import {Card, CardContent} from "/src/components/ui/card.tsx";
+import {AlertCircle, Home} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import {useLocation} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+export default function NotFound() {
+    _s();
+    const [,setLocation] = useLocation();
+    const handleGoHome = () => {
+        setLocation("/");
+    }
+    ;
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/pages/NotFound.tsx:14",
+        className: "min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100",
+        children: /* @__PURE__ */
+        jsxDEV(Card, {
+            "data-loc": "client/src/pages/NotFound.tsx:15",
+            className: "w-full max-w-lg mx-4 shadow-lg border-0 bg-white/80 backdrop-blur-sm",
+            children: /* @__PURE__ */
+            jsxDEV(CardContent, {
+                "data-loc": "client/src/pages/NotFound.tsx:16",
+                className: "pt-8 pb-8 text-center",
+                children: [/* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/NotFound.tsx:17",
+                    className: "flex justify-center mb-6",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/NotFound.tsx:18",
+                        className: "relative",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/NotFound.tsx:19",
+                            className: "absolute inset-0 bg-red-100 rounded-full animate-pulse"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                            lineNumber: 19,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(AlertCircle, {
+                            "data-loc": "client/src/pages/NotFound.tsx:20",
+                            className: "relative h-16 w-16 text-red-500"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                            lineNumber: 20,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                        lineNumber: 18,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                    lineNumber: 17,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("h1", {
+                    "data-loc": "client/src/pages/NotFound.tsx:24",
+                    className: "text-4xl font-bold text-slate-900 mb-2",
+                    children: "404"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                    lineNumber: 24,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("h2", {
+                    "data-loc": "client/src/pages/NotFound.tsx:26",
+                    className: "text-xl font-semibold text-slate-700 mb-4",
+                    children: "Page Not Found"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                    lineNumber: 26,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("p", {
+                    "data-loc": "client/src/pages/NotFound.tsx:30",
+                    className: "text-slate-600 mb-8 leading-relaxed",
+                    children: ["Sorry, the page you are looking for doesn't exist.", /* @__PURE__ */
+                    jsxDEV("br", {
+                        "data-loc": "client/src/pages/NotFound.tsx:32"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                        lineNumber: 32,
+                        columnNumber: 13
+                    }, this), "It may have been moved or deleted."]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                    lineNumber: 30,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/NotFound.tsx:36",
+                    id: "not-found-button-group",
+                    className: "flex flex-col sm:flex-row gap-3 justify-center",
+                    children: /* @__PURE__ */
+                    jsxDEV(Button, {
+                        "data-loc": "client/src/pages/NotFound.tsx:40",
+                        onClick: handleGoHome,
+                        className: "bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Home, {
+                            "data-loc": "client/src/pages/NotFound.tsx:44",
+                            className: "w-4 h-4 mr-2"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                            lineNumber: 44,
+                            columnNumber: 15
+                        }, this), "Go Home"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                        lineNumber: 40,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                    lineNumber: 36,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+                lineNumber: 16,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+            lineNumber: 15,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx",
+        lineNumber: 14,
+        columnNumber: 5
+    }, this);
+}
+_s(NotFound, "kuEs9bGb6wQTzkOxc/XisbWnnsg=", false, function() {
+    return [useLocation];
+});
+_c = NotFound;
+var _c;
+$RefreshReg$(_c, "NotFound");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/pages/NotFound.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBa0JjOztBQWxCZCxTQUFTQSxjQUFjO0FBQ3ZCLFNBQVNDLE1BQU1DLG1CQUFtQjtBQUNsQyxTQUFTQyxhQUFhQyxZQUFZO0FBQ2xDLFNBQVNDLG1CQUFtQjtBQUU1Qix3QkFBd0JDLFdBQVc7QUFBQUMsS0FBQTtBQUNqQyxRQUFNLEdBQUdDLFdBQVcsSUFBSUgsWUFBWTtBQUVwQyxRQUFNSSxlQUFlQSxNQUFNO0FBQ3pCRCxnQkFBWSxHQUFHO0FBQUEsRUFDakI7QUFFQSxTQUNFLHVCQUFDLHlEQUFJLFdBQVUscUdBQ2IsaUNBQUMsd0RBQUssV0FBVSx3RUFDZCxpQ0FBQywrREFBWSxXQUFVLHlCQUNyQjtBQUFBLDJCQUFDLHlEQUFJLFdBQVUsNEJBQ2IsaUNBQUMseURBQUksV0FBVSxZQUNiO0FBQUEsNkJBQUMseURBQUksV0FBVSw0REFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXVFO0FBQUEsTUFDdkUsdUJBQUMsK0RBQVksV0FBVSxxQ0FBdkI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUF3RDtBQUFBLFNBRjFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FHQSxLQUpGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FLQTtBQUFBLElBRUEsdUJBQUMsd0RBQUcsV0FBVSwwQ0FBeUMsbUJBQXZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBMEQ7QUFBQSxJQUUxRCx1QkFBQyx3REFBRyxXQUFVLDZDQUEyQyw4QkFBekQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUVBO0FBQUEsSUFFQSx1QkFBQyx1REFBRSxXQUFVLHVDQUFxQztBQUFBO0FBQUEsTUFFaEQsdUJBQUMsMERBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUFHO0FBQUE7QUFBQSxTQUZMO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FJQTtBQUFBLElBRUE7QUFBQSxNQUFDO0FBQUE7QUFBQTtBQUFBLFFBQ0MsSUFBRztBQUFBLFFBQ0gsV0FBVTtBQUFBLFFBRVY7QUFBQSxVQUFDO0FBQUE7QUFBQTtBQUFBLFlBQ0MsU0FBU0M7QUFBQUEsWUFDVCxXQUFVO0FBQUEsWUFFVjtBQUFBLHFDQUFDLHdEQUFLLFdBQVUsa0JBQWhCO0FBQUE7QUFBQTtBQUFBO0FBQUEscUJBQThCO0FBQUE7QUFBQTtBQUFBO0FBQUEsVUFKaEM7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFFBTUE7QUFBQTtBQUFBLE1BVkY7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLElBV0E7QUFBQSxPQS9CRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBZ0NBLEtBakNGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FrQ0EsS0FuQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQW9DQTtBQUVKO0FBQUNGLEdBOUN1QkQsVUFBUTtBQUFBLFVBQ05ELFdBQVc7QUFBQTtBQUFBSyxLQURiSjtBQUFRLElBQUFJO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJCdXR0b24iLCJDYXJkIiwiQ2FyZENvbnRlbnQiLCJBbGVydENpcmNsZSIsIkhvbWUiLCJ1c2VMb2NhdGlvbiIsIk5vdEZvdW5kIiwiX3MiLCJzZXRMb2NhdGlvbiIsImhhbmRsZUdvSG9tZSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIk5vdEZvdW5kLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCdXR0b24gfSBmcm9tIFwiQC9jb21wb25lbnRzL3VpL2J1dHRvblwiO1xuaW1wb3J0IHsgQ2FyZCwgQ2FyZENvbnRlbnQgfSBmcm9tIFwiQC9jb21wb25lbnRzL3VpL2NhcmRcIjtcbmltcG9ydCB7IEFsZXJ0Q2lyY2xlLCBIb21lIH0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xuaW1wb3J0IHsgdXNlTG9jYXRpb24gfSBmcm9tIFwid291dGVyXCI7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIE5vdEZvdW5kKCkge1xuICBjb25zdCBbLCBzZXRMb2NhdGlvbl0gPSB1c2VMb2NhdGlvbigpO1xuXG4gIGNvbnN0IGhhbmRsZUdvSG9tZSA9ICgpID0+IHtcbiAgICBzZXRMb2NhdGlvbihcIi9cIik7XG4gIH07XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cIm1pbi1oLXNjcmVlbiB3LWZ1bGwgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1zbGF0ZS01MCB0by1zbGF0ZS0xMDBcIj5cbiAgICAgIDxDYXJkIGNsYXNzTmFtZT1cInctZnVsbCBtYXgtdy1sZyBteC00IHNoYWRvdy1sZyBib3JkZXItMCBiZy13aGl0ZS84MCBiYWNrZHJvcC1ibHVyLXNtXCI+XG4gICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwdC04IHBiLTggdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgganVzdGlmeS1jZW50ZXIgbWItNlwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGluc2V0LTAgYmctcmVkLTEwMCByb3VuZGVkLWZ1bGwgYW5pbWF0ZS1wdWxzZVwiIC8+XG4gICAgICAgICAgICAgIDxBbGVydENpcmNsZSBjbGFzc05hbWU9XCJyZWxhdGl2ZSBoLTE2IHctMTYgdGV4dC1yZWQtNTAwXCIgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgPGgxIGNsYXNzTmFtZT1cInRleHQtNHhsIGZvbnQtYm9sZCB0ZXh0LXNsYXRlLTkwMCBtYi0yXCI+NDA0PC9oMT5cblxuICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LXhsIGZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS03MDAgbWItNFwiPlxuICAgICAgICAgICAgUGFnZSBOb3QgRm91bmRcbiAgICAgICAgICA8L2gyPlxuXG4gICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbGF0ZS02MDAgbWItOCBsZWFkaW5nLXJlbGF4ZWRcIj5cbiAgICAgICAgICAgIFNvcnJ5LCB0aGUgcGFnZSB5b3UgYXJlIGxvb2tpbmcgZm9yIGRvZXNuJ3QgZXhpc3QuXG4gICAgICAgICAgICA8YnIgLz5cbiAgICAgICAgICAgIEl0IG1heSBoYXZlIGJlZW4gbW92ZWQgb3IgZGVsZXRlZC5cbiAgICAgICAgICA8L3A+XG5cbiAgICAgICAgICA8ZGl2XG4gICAgICAgICAgICBpZD1cIm5vdC1mb3VuZC1idXR0b24tZ3JvdXBcIlxuICAgICAgICAgICAgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBnYXAtMyBqdXN0aWZ5LWNlbnRlclwiXG4gICAgICAgICAgPlxuICAgICAgICAgICAgPEJ1dHRvblxuICAgICAgICAgICAgICBvbkNsaWNrPXtoYW5kbGVHb0hvbWV9XG4gICAgICAgICAgICAgIGNsYXNzTmFtZT1cImJnLWJsdWUtNjAwIGhvdmVyOmJnLWJsdWUtNzAwIHRleHQtd2hpdGUgcHgtNiBweS0yLjUgcm91bmRlZC1sZyB0cmFuc2l0aW9uLWFsbCBkdXJhdGlvbi0yMDAgc2hhZG93LW1kIGhvdmVyOnNoYWRvdy1sZ1wiXG4gICAgICAgICAgICA+XG4gICAgICAgICAgICAgIDxIb21lIGNsYXNzTmFtZT1cInctNCBoLTQgbXItMlwiIC8+XG4gICAgICAgICAgICAgIEdvIEhvbWVcbiAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L0NhcmRDb250ZW50PlxuICAgICAgPC9DYXJkPlxuICAgIDwvZGl2PlxuICApO1xufVxuIl0sImZpbGUiOiIvaG9tZS91YnVudHUvbWlyYWktbmV0d29yay13ZWJzaXRlL2NsaWVudC9zcmMvcGFnZXMvTm90Rm91bmQudHN4In0=

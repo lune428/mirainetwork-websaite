@@ -1,0 +1,1213 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/pages/StudioM.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import {Button} from "/src/components/ui/button.tsx";
+import {Card, CardContent} from "/src/components/ui/card.tsx";
+import {Clock, Users, MapPin, Phone, Mail, Calendar, Utensils, Bus, Palette, Lightbulb, Sparkles} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import {Link} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+import InstagramCarousel from "/src/components/InstagramCarousel.tsx?t=1760935420053";
+export default function StudioM() {
+    const basicInfo = [{
+        icon: Users,
+        label: "定員",
+        value: "20名"
+    }, {
+        icon: Clock,
+        label: "開所時間",
+        value: "9時30分～15時30分"
+    }, {
+        icon: Calendar,
+        label: "開所日",
+        value: "平日（月1回程度祝日開所日あり）"
+    }, {
+        icon: Calendar,
+        label: "休日",
+        value: "土・日・祝（開所日あり）、年末年始"
+    }, {
+        icon: Bus,
+        label: "交通",
+        value: "昭島市内送迎対応（ご相談下さい）\n交通費支給あり（1日上限500円）"
+    }, {
+        icon: Utensils,
+        label: "昼食",
+        value: "基本提供サービスあります\n1食200円です"
+    }];
+    const features = [{
+        icon: Palette,
+        title: "創造的な活動",
+        description: "アート、クラフト、デザインなど、創造性を活かした様々な活動を通じて、利用者様の個性と才能を引き出します。"
+    }, {
+        icon: Lightbulb,
+        title: "スキル習得",
+        description: "各種作業を通じて実践的なスキルを身につけ、将来の就労に向けた準備をサポートします。"
+    }, {
+        icon: Sparkles,
+        title: "自己表現",
+        description: "制作活動を通じて自己表現の機会を提供し、達成感と自信を育みます。"
+    }];
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/pages/StudioM.tsx:37",
+        className: "min-h-screen flex flex-col",
+        children: [/* @__PURE__ */
+        jsxDEV("header", {
+            "data-loc": "client/src/pages/StudioM.tsx:39",
+            className: "border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:40",
+                className: "container py-4",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:41",
+                    className: "flex items-center justify-between",
+                    children: [/* @__PURE__ */
+                    jsxDEV(Link, {
+                        "data-loc": "client/src/pages/StudioM.tsx:42",
+                        href: "/",
+                        children: /* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/StudioM.tsx:43",
+                            className: "flex items-center gap-3 hover:opacity-80 transition-opacity",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/StudioM.tsx:44",
+                                className: "w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center p-1",
+                                children: /* @__PURE__ */
+                                jsxDEV("img", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:45",
+                                    src: "/mirai-logo.webp",
+                                    alt: "未来ネットワーク",
+                                    className: "w-full h-full object-contain"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 45,
+                                    columnNumber: 19
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 44,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/StudioM.tsx:47",
+                                children: [/* @__PURE__ */
+                                jsxDEV("h1", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:48",
+                                    className: "text-xl font-bold text-foreground",
+                                    children: "一般社団法人未来ネットワーク"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 48,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:49",
+                                    className: "text-sm text-muted-foreground",
+                                    children: "障害福祉サービス"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 49,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 47,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 43,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 42,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("nav", {
+                        "data-loc": "client/src/pages/StudioM.tsx:53",
+                        className: "hidden md:flex gap-6",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/StudioM.tsx:54",
+                            href: "/",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/StudioM.tsx:55",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "ホーム"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 55,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 54,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/StudioM.tsx:57",
+                            href: "/mirai",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/StudioM.tsx:58",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "MIRAI"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 58,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 57,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/StudioM.tsx:60",
+                            href: "/hikari",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/StudioM.tsx:61",
+                                className: "text-sm font-medium hover:text-primary transition-colors",
+                                children: "HIKARI"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 61,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 60,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Link, {
+                            "data-loc": "client/src/pages/StudioM.tsx:63",
+                            href: "/studio-m",
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/StudioM.tsx:64",
+                                className: "text-sm font-medium text-primary",
+                                children: "studio M"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 64,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 63,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 53,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 41,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 40,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 39,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:72",
+            className: "relative",
+            children: [/* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:73",
+                className: "w-full h-64 md:h-96 overflow-hidden",
+                children: /* @__PURE__ */
+                jsxDEV("img", {
+                    "data-loc": "client/src/pages/StudioM.tsx:74",
+                    src: "/studio-m-main.webp",
+                    alt: "studio M",
+                    className: "w-full h-full object-cover"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 74,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 73,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:76",
+                className: "absolute inset-0 bg-gradient-to-b from-transparent to-black/30 flex items-center justify-center",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:77",
+                    className: "text-center text-white",
+                    children: [/* @__PURE__ */
+                    jsxDEV("h2", {
+                        "data-loc": "client/src/pages/StudioM.tsx:78",
+                        className: "text-4xl md:text-5xl font-bold mb-2",
+                        children: "studio M"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 78,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/StudioM.tsx:79",
+                        className: "text-xl font-semibold",
+                        children: "就労継続支援B型事業所"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 79,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 77,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 76,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 72,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:85",
+            className: "py-16 bg-gradient-to-br from-teal-50 to-emerald-50",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:86",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:87",
+                    className: "max-w-4xl mx-auto text-center space-y-6",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:88",
+                        className: "inline-flex items-center justify-center w-20 h-20 rounded-full bg-white shadow-lg mb-4",
+                        children: /* @__PURE__ */
+                        jsxDEV(Users, {
+                            "data-loc": "client/src/pages/StudioM.tsx:89",
+                            className: "w-10 h-10 text-primary"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 89,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 88,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/StudioM.tsx:91",
+                        className: "text-lg text-muted-foreground leading-relaxed",
+                        children: "創造的な活動を通じて、利用者様の可能性を広げ、社会参加を支援します。 一人ひとりの個性を大切にしながら、楽しく充実した時間を提供しています。"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 91,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 87,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 86,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 85,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:100",
+            className: "py-12 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:101",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:102",
+                    className: "max-w-5xl mx-auto",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:103",
+                        className: "grid md:grid-cols-2 gap-6",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:104",
+                            className: "rounded-lg overflow-hidden shadow-md",
+                            children: /* @__PURE__ */
+                            jsxDEV("img", {
+                                "data-loc": "client/src/pages/StudioM.tsx:105",
+                                src: "/studio-m-reception.webp",
+                                alt: "studio M受付エリア",
+                                className: "w-full h-64 object-cover"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 105,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 104,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:107",
+                            className: "rounded-lg overflow-hidden shadow-md",
+                            children: /* @__PURE__ */
+                            jsxDEV("img", {
+                                "data-loc": "client/src/pages/StudioM.tsx:108",
+                                src: "/studio-m-interior.webp",
+                                alt: "studio M内観",
+                                className: "w-full h-64 object-cover"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 108,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 107,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 103,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 102,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 101,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 100,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:116",
+            className: "py-16 md:py-24 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:117",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:118",
+                    className: "max-w-5xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:119",
+                        className: "text-center mb-12",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/StudioM.tsx:120",
+                            className: "text-3xl md:text-4xl font-bold mb-4",
+                            children: "基本情報"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 120,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:121",
+                            className: "w-20 h-1 bg-primary mx-auto rounded-full"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 121,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 119,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:123",
+                        className: "grid md:grid-cols-2 gap-6",
+                        children: basicInfo.map( (item, index) => {
+                            const Icon = item.icon;
+                            return /* @__PURE__ */
+                            jsxDEV(Card, {
+                                "data-loc": "client/src/pages/StudioM.tsx:127",
+                                className: "border-2 hover:shadow-md transition-shadow",
+                                children: /* @__PURE__ */
+                                jsxDEV(CardContent, {
+                                    "data-loc": "client/src/pages/StudioM.tsx:128",
+                                    className: "p-6",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:129",
+                                        className: "flex items-start gap-4",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:130",
+                                            className: "w-12 h-12 rounded-full bg-teal-50 flex items-center justify-center flex-shrink-0",
+                                            children: /* @__PURE__ */
+                                            jsxDEV(Icon, {
+                                                "data-loc": "client/src/pages/StudioM.tsx:131",
+                                                className: "w-6 h-6 text-primary"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                                lineNumber: 131,
+                                                columnNumber: 27
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 130,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:133",
+                                            className: "flex-1",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/StudioM.tsx:134",
+                                                className: "text-sm text-muted-foreground mb-1",
+                                                children: item.label
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                                lineNumber: 134,
+                                                columnNumber: 27
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/StudioM.tsx:135",
+                                                className: "font-semibold whitespace-pre-line",
+                                                children: item.value
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                                lineNumber: 135,
+                                                columnNumber: 27
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 133,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 129,
+                                        columnNumber: 23
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 128,
+                                    columnNumber: 21
+                                }, this)
+                            }, index, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 127,
+                                columnNumber: 19
+                            }, this);
+                        }
+                        )
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 123,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 118,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 117,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 116,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:148",
+            className: "py-16 md:py-24 bg-gradient-to-br from-slate-50 to-teal-50/30",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:149",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:150",
+                    className: "max-w-5xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:151",
+                        className: "text-center mb-12",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/StudioM.tsx:152",
+                            className: "text-3xl md:text-4xl font-bold mb-4",
+                            children: "支援の特徴"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 152,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:153",
+                            className: "w-20 h-1 bg-primary mx-auto rounded-full mb-6"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 153,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/StudioM.tsx:154",
+                            className: "text-lg text-muted-foreground",
+                            children: "創造性を育み、可能性を広げる支援を提供します"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 154,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 151,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:158",
+                        className: "grid md:grid-cols-3 gap-6",
+                        children: features.map( (feature, index) => {
+                            const Icon = feature.icon;
+                            return /* @__PURE__ */
+                            jsxDEV(Card, {
+                                "data-loc": "client/src/pages/StudioM.tsx:162",
+                                className: "border-2 bg-white hover:shadow-lg transition-shadow",
+                                children: /* @__PURE__ */
+                                jsxDEV(CardContent, {
+                                    "data-loc": "client/src/pages/StudioM.tsx:163",
+                                    className: "p-8 text-center",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:164",
+                                        className: "w-16 h-16 rounded-full bg-teal-50 flex items-center justify-center mx-auto mb-4",
+                                        children: /* @__PURE__ */
+                                        jsxDEV(Icon, {
+                                            "data-loc": "client/src/pages/StudioM.tsx:165",
+                                            className: "w-8 h-8 text-primary"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 165,
+                                            columnNumber: 25
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 164,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("h4", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:167",
+                                        className: "text-xl font-bold mb-3",
+                                        children: feature.title
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 167,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:168",
+                                        className: "text-muted-foreground leading-relaxed",
+                                        children: feature.description
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 168,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 163,
+                                    columnNumber: 21
+                                }, this)
+                            }, index, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 162,
+                                columnNumber: 19
+                            }, this);
+                        }
+                        )
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 158,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 150,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 149,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 148,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:179",
+            className: "py-16 md:py-24 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:180",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:181",
+                    className: "max-w-5xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:182",
+                        className: "text-center mb-12",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/StudioM.tsx:183",
+                            className: "text-3xl md:text-4xl font-bold mb-4",
+                            children: "活動内容"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 183,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:184",
+                            className: "w-20 h-1 bg-primary mx-auto rounded-full mb-6"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 184,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 182,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV(Card, {
+                        "data-loc": "client/src/pages/StudioM.tsx:186",
+                        className: "border-2",
+                        children: /* @__PURE__ */
+                        jsxDEV(CardContent, {
+                            "data-loc": "client/src/pages/StudioM.tsx:187",
+                            className: "p-8 md:p-12",
+                            children: /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/StudioM.tsx:188",
+                                className: "prose prose-lg max-w-none",
+                                children: [/* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:189",
+                                    className: "text-muted-foreground leading-relaxed mb-6",
+                                    children: "studio Mでは、利用者様の創造性と個性を大切にしながら、様々な活動プログラムを提供しています。 制作活動を通じて達成感を味わい、自信を育むとともに、社会参加に向けたスキルアップをサポートします。"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 189,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:193",
+                                    className: "grid md:grid-cols-2 gap-6 mt-8",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:194",
+                                        className: "bg-teal-50 p-6 rounded-lg",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("h5", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:195",
+                                            className: "font-bold text-lg mb-3 text-foreground",
+                                            children: "アート・クラフト活動"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 195,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:196",
+                                            className: "text-muted-foreground",
+                                            children: "絵画、工作、手芸など、様々な創作活動を通じて表現力と創造性を育みます。"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 196,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 194,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:200",
+                                        className: "bg-teal-50 p-6 rounded-lg",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("h5", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:201",
+                                            className: "font-bold text-lg mb-3 text-foreground",
+                                            children: "製品制作"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 201,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:202",
+                                            className: "text-muted-foreground",
+                                            children: "オリジナル製品の企画・制作を通じて、実践的なスキルと達成感を得られます。"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 202,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 200,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:206",
+                                        className: "bg-teal-50 p-6 rounded-lg",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("h5", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:207",
+                                            className: "font-bold text-lg mb-3 text-foreground",
+                                            children: "軽作業"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 207,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:208",
+                                            className: "text-muted-foreground",
+                                            children: "各種軽作業を通じて、集中力や作業スキルを身につけることができます。"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 208,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 206,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:212",
+                                        className: "bg-teal-50 p-6 rounded-lg",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("h5", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:213",
+                                            className: "font-bold text-lg mb-3 text-foreground",
+                                            children: "イベント参加"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 213,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:214",
+                                            className: "text-muted-foreground",
+                                            children: "地域のイベントや販売会に参加し、社会とのつながりを深めます。"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 214,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 212,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 193,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 188,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 187,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 186,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 181,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 180,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 179,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/StudioM.tsx:227",
+            className: "py-16 md:py-24 bg-gradient-to-br from-teal-50 to-emerald-50",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:228",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:229",
+                    className: "max-w-4xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/StudioM.tsx:230",
+                        className: "text-center mb-12",
+                        children: [/* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/StudioM.tsx:231",
+                            className: "text-3xl md:text-4xl font-bold mb-4",
+                            children: "アクセス・お問い合わせ"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 231,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/StudioM.tsx:232",
+                            className: "w-20 h-1 bg-primary mx-auto rounded-full"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 232,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 230,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV(Card, {
+                        "data-loc": "client/src/pages/StudioM.tsx:234",
+                        className: "border-2 bg-white",
+                        children: /* @__PURE__ */
+                        jsxDEV(CardContent, {
+                            "data-loc": "client/src/pages/StudioM.tsx:235",
+                            className: "p-8 md:p-12",
+                            children: /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/StudioM.tsx:236",
+                                className: "space-y-6",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:237",
+                                    className: "flex items-start gap-4",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(MapPin, {
+                                        "data-loc": "client/src/pages/StudioM.tsx:238",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-1"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 238,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:239",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:240",
+                                            className: "font-semibold mb-1",
+                                            children: "住所"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 240,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:241",
+                                            className: "text-muted-foreground",
+                                            children: "〒196-0025 東京都昭島市朝日町1-6-2 haramo cuprum 302号室"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 241,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 239,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 237,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:244",
+                                    className: "flex items-start gap-4",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(Phone, {
+                                        "data-loc": "client/src/pages/StudioM.tsx:245",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-1"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 245,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:246",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:247",
+                                            className: "font-semibold mb-1",
+                                            children: "電話・FAX"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 247,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:248",
+                                            className: "text-muted-foreground",
+                                            children: "Tel: 042-519-7916"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 248,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:249",
+                                            className: "text-muted-foreground",
+                                            children: "Fax: 042-519-7917"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 249,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 246,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 244,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:252",
+                                    className: "flex items-start gap-4",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(Mail, {
+                                        "data-loc": "client/src/pages/StudioM.tsx:253",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-1"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 253,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/StudioM.tsx:254",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:255",
+                                            className: "font-semibold mb-1",
+                                            children: "メールアドレス"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 255,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("a", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:256",
+                                            href: "mailto:info@studiom.jp",
+                                            className: "text-primary hover:underline",
+                                            children: "info@studiom.jp"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 256,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 254,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 252,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/StudioM.tsx:261",
+                                    className: "pt-6 border-t",
+                                    children: /* @__PURE__ */
+                                    jsxDEV(Button, {
+                                        "data-loc": "client/src/pages/StudioM.tsx:262",
+                                        size: "lg",
+                                        className: "w-full md:w-auto",
+                                        asChild: true,
+                                        children: /* @__PURE__ */
+                                        jsxDEV("a", {
+                                            "data-loc": "client/src/pages/StudioM.tsx:263",
+                                            href: "mailto:info@studiom.jp",
+                                            children: "メールでお問い合わせ"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                            lineNumber: 263,
+                                            columnNumber: 23
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                        lineNumber: 262,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                    lineNumber: 261,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                                lineNumber: 236,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                            lineNumber: 235,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 234,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 229,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 228,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 227,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV(InstagramCarousel, {
+            "data-loc": "client/src/pages/StudioM.tsx:274"
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 274,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("footer", {
+            "data-loc": "client/src/pages/StudioM.tsx:277",
+            className: "bg-slate-900 text-slate-300 py-12",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/StudioM.tsx:278",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/StudioM.tsx:279",
+                    className: "text-center",
+                    children: /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/StudioM.tsx:280",
+                        className: "text-sm",
+                        children: "© 2016-2025 一般社団法人未来ネットワーク All rights reserved."
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                        lineNumber: 280,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                    lineNumber: 279,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+                lineNumber: 278,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+            lineNumber: 277,
+            columnNumber: 7
+        }, this)]
+    }, void 0, true, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx",
+        lineNumber: 37,
+        columnNumber: 5
+    }, this);
+}
+_c = StudioM;
+var _c;
+$RefreshReg$(_c, "StudioM");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/pages/StudioM.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBNENrQjtBQTNDbEIsU0FBU0EsY0FBYztBQUN2QixTQUFTQyxNQUFNQyxtQkFBbUI7QUFDbEMsU0FBb0JDLE9BQU9DLE9BQU9DLFFBQVFDLE9BQU9DLE1BQU1DLFVBQVVDLFVBQVVDLEtBQUtDLFNBQVNDLFdBQVdDLGdCQUFnQjtBQUNwSCxTQUFTQyxZQUFZO0FBQ3JCLE9BQU9DLHVCQUF1QjtBQUU5Qix3QkFBd0JDLFVBQVU7QUFDaEMsUUFBTUMsWUFBWTtBQUFBLElBQ2hCLEVBQUVDLE1BQU1kLE9BQU9lLE9BQU8sTUFBTUMsT0FBTyxNQUFNO0FBQUEsSUFDekMsRUFBRUYsTUFBTWYsT0FBT2dCLE9BQU8sUUFBUUMsT0FBTyxlQUFlO0FBQUEsSUFDcEQsRUFBRUYsTUFBTVYsVUFBVVcsT0FBTyxPQUFPQyxPQUFPLG1CQUFtQjtBQUFBLElBQzFELEVBQUVGLE1BQU1WLFVBQVVXLE9BQU8sTUFBTUMsT0FBTyxvQkFBb0I7QUFBQSxJQUMxRCxFQUFFRixNQUFNUixLQUFLUyxPQUFPLE1BQU1DLE9BQU8sc0NBQXNDO0FBQUEsSUFDdkUsRUFBRUYsTUFBTVQsVUFBVVUsT0FBTyxNQUFNQyxPQUFPLHlCQUF5QjtBQUFBLEVBQUM7QUFHbEUsUUFBTUMsV0FBVztBQUFBLElBQ2Y7QUFBQSxNQUNFSCxNQUFNUDtBQUFBQSxNQUNOVyxPQUFPO0FBQUEsTUFDUEMsYUFBYTtBQUFBLElBQ2Y7QUFBQSxJQUNBO0FBQUEsTUFDRUwsTUFBTU47QUFBQUEsTUFDTlUsT0FBTztBQUFBLE1BQ1BDLGFBQWE7QUFBQSxJQUNmO0FBQUEsSUFDQTtBQUFBLE1BQ0VMLE1BQU1MO0FBQUFBLE1BQ05TLE9BQU87QUFBQSxNQUNQQyxhQUFhO0FBQUEsSUFDZjtBQUFBLEVBQUM7QUFHSCxTQUNFLHVCQUFDLHdEQUFJLFdBQVUsOEJBRWI7QUFBQSwyQkFBQywyREFBTyxXQUFVLDJEQUNoQixpQ0FBQyx3REFBSSxXQUFVLGtCQUNiLGlDQUFDLHdEQUFJLFdBQVUscUNBQ2I7QUFBQSw2QkFBQyx1REFBSyxNQUFLLEtBQ1QsaUNBQUMsc0RBQUUsV0FBVSwrREFDWDtBQUFBLCtCQUFDLHdEQUFJLFdBQVUsa0ZBQ2IsaUNBQUMsd0RBQUksS0FBSSxvQkFBbUIsS0FBSSxZQUFXLFdBQVUsa0NBQXJEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBbUYsS0FEckY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUVBO0FBQUEsUUFDQSx1QkFBQyx3REFDQztBQUFBLGlDQUFDLHVEQUFHLFdBQVUscUNBQW9DLDhCQUFsRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUFnRTtBQUFBLFVBQ2hFLHVCQUFDLHNEQUFFLFdBQVUsaUNBQWdDLHdCQUE3QztBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUFxRDtBQUFBLGFBRnZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFHQTtBQUFBLFdBUEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQVFBLEtBVEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQVVBO0FBQUEsTUFDQSx1QkFBQyx3REFBSSxXQUFVLHdCQUNiO0FBQUEsK0JBQUMsdURBQUssTUFBSyxLQUNULGlDQUFDLHNEQUFFLFdBQVUsNERBQTJELG1CQUF4RTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQTJFLEtBRDdFO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFFQTtBQUFBLFFBQ0EsdUJBQUMsdURBQUssTUFBSyxVQUNULGlDQUFDLHNEQUFFLFdBQVUsNERBQTJELHFCQUF4RTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQTZFLEtBRC9FO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFFQTtBQUFBLFFBQ0EsdUJBQUMsdURBQUssTUFBSyxXQUNULGlDQUFDLHNEQUFFLFdBQVUsNERBQTJELHNCQUF4RTtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQThFLEtBRGhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFFQTtBQUFBLFFBQ0EsdUJBQUMsdURBQUssTUFBSyxhQUNULGlDQUFDLHNEQUFFLFdBQVUsb0NBQW1DLHdCQUFoRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQXdELEtBRDFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFFQTtBQUFBLFdBWkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQWFBO0FBQUEsU0F6QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQTBCQSxLQTNCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBNEJBLEtBN0JGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0E4QkE7QUFBQSxJQUdBLHVCQUFDLDREQUFRLFdBQVUsWUFDakI7QUFBQSw2QkFBQyx3REFBSSxXQUFVLHVDQUNiLGlDQUFDLHdEQUFJLEtBQUksdUJBQXNCLEtBQUksWUFBVyxXQUFVLGdDQUF4RDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQW9GLEtBRHRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFFQTtBQUFBLE1BQ0EsdUJBQUMsd0RBQUksV0FBVSxtR0FDYixpQ0FBQyx3REFBSSxXQUFVLDBCQUNiO0FBQUEsK0JBQUMsdURBQUcsV0FBVSx1Q0FBc0Msd0JBQXBEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBNEQ7QUFBQSxRQUM1RCx1QkFBQyxzREFBRSxXQUFVLHlCQUF3QiwyQkFBckM7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUFnRDtBQUFBLFdBRmxEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQSxLQUpGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFLQTtBQUFBLFNBVEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQVVBO0FBQUEsSUFHQSx1QkFBQyw0REFBUSxXQUFVLHNEQUNqQixpQ0FBQyx3REFBSSxXQUFVLGFBQ2IsaUNBQUMsd0RBQUksV0FBVSwyQ0FDYjtBQUFBLDZCQUFDLHdEQUFJLFdBQVUsMEZBQ2IsaUNBQUMsd0RBQU0sV0FBVSw0QkFBakI7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUF5QyxLQUQzQztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBRUE7QUFBQSxNQUNBLHVCQUFDLHNEQUFFLFdBQVUsaURBQStDLHNGQUE1RDtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBR0E7QUFBQSxTQVBGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FRQSxLQVRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FVQSxLQVhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FZQTtBQUFBLElBR0EsdUJBQUMsNkRBQVEsV0FBVSxrQkFDakIsaUNBQUMseURBQUksV0FBVSxhQUNiLGlDQUFDLHlEQUFJLFdBQVUscUJBQ2IsaUNBQUMseURBQUksV0FBVSw2QkFDYjtBQUFBLDZCQUFDLHlEQUFJLFdBQVUsd0NBQ2IsaUNBQUMseURBQUksS0FBSSw0QkFBMkIsS0FBSSxpQkFBZ0IsV0FBVSw4QkFBbEU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUE0RixLQUQ5RjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBRUE7QUFBQSxNQUNBLHVCQUFDLHlEQUFJLFdBQVUsd0NBQ2IsaUNBQUMseURBQUksS0FBSSwyQkFBMEIsS0FBSSxjQUFhLFdBQVUsOEJBQTlEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBd0YsS0FEMUY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUVBO0FBQUEsU0FORjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBT0EsS0FSRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBU0EsS0FWRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBV0EsS0FaRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBYUE7QUFBQSxJQUdBLHVCQUFDLDZEQUFRLFdBQVUsMkJBQ2pCLGlDQUFDLHlEQUFJLFdBQVUsYUFDYixpQ0FBQyx5REFBSSxXQUFVLHFCQUNiO0FBQUEsNkJBQUMseURBQUksV0FBVSxxQkFDYjtBQUFBLCtCQUFDLHdEQUFHLFdBQVUsdUNBQXNDLG9CQUFwRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQXdEO0FBQUEsUUFDeEQsdUJBQUMseURBQUksV0FBVSw4Q0FBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQTBEO0FBQUEsV0FGNUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUdBO0FBQUEsTUFDQSx1QkFBQyx5REFBSSxXQUFVLDZCQUNaTixvQkFBVU8sSUFBSSxDQUFDQyxNQUFNQyxVQUFVO0FBQzlCLGNBQU1DLE9BQU9GLEtBQUtQO0FBQ2xCLGVBQ0UsdUJBQUMsd0RBQWlCLFdBQVUsOENBQzFCLGlDQUFDLCtEQUFZLFdBQVUsT0FDckIsaUNBQUMseURBQUksV0FBVSwwQkFDYjtBQUFBLGlDQUFDLHlEQUFJLFdBQVUsb0ZBQ2IsaUNBQUMsd0RBQUssV0FBVSwwQkFBaEI7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBc0MsS0FEeEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFFQTtBQUFBLFVBQ0EsdUJBQUMseURBQUksV0FBVSxVQUNiO0FBQUEsbUNBQUMsdURBQUUsV0FBVSxzQ0FBc0NPLGVBQUtOLFNBQXhEO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQThEO0FBQUEsWUFDOUQsdUJBQUMsdURBQUUsV0FBVSxxQ0FBcUNNLGVBQUtMLFNBQXZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQTZEO0FBQUEsZUFGL0Q7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFHQTtBQUFBLGFBUEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVFBLEtBVEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVVBLEtBWFNNLE9BQVg7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVlBO0FBQUEsTUFFSixDQUFDLEtBbEJIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFtQkE7QUFBQSxTQXhCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBeUJBLEtBMUJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0EyQkEsS0E1QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQTZCQTtBQUFBLElBR0EsdUJBQUMsNkRBQVEsV0FBVSxnRUFDakIsaUNBQUMseURBQUksV0FBVSxhQUNiLGlDQUFDLHlEQUFJLFdBQVUscUJBQ2I7QUFBQSw2QkFBQyx5REFBSSxXQUFVLHFCQUNiO0FBQUEsK0JBQUMsd0RBQUcsV0FBVSx1Q0FBc0MscUJBQXBEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBeUQ7QUFBQSxRQUN6RCx1QkFBQyx5REFBSSxXQUFVLG1EQUFmO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBK0Q7QUFBQSxRQUMvRCx1QkFBQyx1REFBRSxXQUFVLGlDQUErQixzQ0FBNUM7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUVBO0FBQUEsV0FMRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBTUE7QUFBQSxNQUNBLHVCQUFDLHlEQUFJLFdBQVUsNkJBQ1pMLG1CQUFTRyxJQUFJLENBQUNJLFNBQVNGLFVBQVU7QUFDaEMsY0FBTUMsT0FBT0MsUUFBUVY7QUFDckIsZUFDRSx1QkFBQyx3REFBaUIsV0FBVSx1REFDMUIsaUNBQUMsK0RBQVksV0FBVSxtQkFDckI7QUFBQSxpQ0FBQyx5REFBSSxXQUFVLG1GQUNiLGlDQUFDLHdEQUFLLFdBQVUsMEJBQWhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQXNDLEtBRHhDO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBRUE7QUFBQSxVQUNBLHVCQUFDLHdEQUFHLFdBQVUsMEJBQTBCVSxrQkFBUU4sU0FBaEQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBc0Q7QUFBQSxVQUN0RCx1QkFBQyx1REFBRSxXQUFVLHlDQUF5Q00sa0JBQVFMLGVBQTlEO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQTBFO0FBQUEsYUFMNUU7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQU1BLEtBUFNHLE9BQVg7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVFBO0FBQUEsTUFFSixDQUFDLEtBZEg7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQWVBO0FBQUEsU0F2QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQXdCQSxLQXpCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBMEJBLEtBM0JGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0E0QkE7QUFBQSxJQUdBLHVCQUFDLDZEQUFRLFdBQVUsMkJBQ2pCLGlDQUFDLHlEQUFJLFdBQVUsYUFDYixpQ0FBQyx5REFBSSxXQUFVLHFCQUNiO0FBQUEsNkJBQUMseURBQUksV0FBVSxxQkFDYjtBQUFBLCtCQUFDLHdEQUFHLFdBQVUsdUNBQXNDLG9CQUFwRDtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQXdEO0FBQUEsUUFDeEQsdUJBQUMseURBQUksV0FBVSxtREFBZjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQStEO0FBQUEsV0FGakU7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQUdBO0FBQUEsTUFDQSx1QkFBQyx3REFBSyxXQUFVLFlBQ2QsaUNBQUMsK0RBQVksV0FBVSxlQUNyQixpQ0FBQyx5REFBSSxXQUFVLDZCQUNiO0FBQUEsK0JBQUMsdURBQUUsV0FBVSw4Q0FBNEMsb0hBQXpEO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFHQTtBQUFBLFFBQ0EsdUJBQUMseURBQUksV0FBVSxrQ0FDYjtBQUFBLGlDQUFDLHlEQUFJLFdBQVUsNkJBQ2I7QUFBQSxtQ0FBQyx3REFBRyxXQUFVLDBDQUF5QywwQkFBdkQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFBaUU7QUFBQSxZQUNqRSx1QkFBQyx1REFBRSxXQUFVLHlCQUF1QixtREFBcEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFFQTtBQUFBLGVBSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFLQTtBQUFBLFVBQ0EsdUJBQUMseURBQUksV0FBVSw2QkFDYjtBQUFBLG1DQUFDLHdEQUFHLFdBQVUsMENBQXlDLG9CQUF2RDtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUEyRDtBQUFBLFlBQzNELHVCQUFDLHVEQUFFLFdBQVUseUJBQXVCLG9EQUFwQztBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUVBO0FBQUEsZUFKRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUtBO0FBQUEsVUFDQSx1QkFBQyx5REFBSSxXQUFVLDZCQUNiO0FBQUEsbUNBQUMsd0RBQUcsV0FBVSwwQ0FBeUMsbUJBQXZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQTBEO0FBQUEsWUFDMUQsdUJBQUMsdURBQUUsV0FBVSx5QkFBdUIsaURBQXBDO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBRUE7QUFBQSxlQUpGO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBS0E7QUFBQSxVQUNBLHVCQUFDLHlEQUFJLFdBQVUsNkJBQ2I7QUFBQSxtQ0FBQyx3REFBRyxXQUFVLDBDQUF5QyxzQkFBdkQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFBNkQ7QUFBQSxZQUM3RCx1QkFBQyx1REFBRSxXQUFVLHlCQUF1Qiw4Q0FBcEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFFQTtBQUFBLGVBSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFLQTtBQUFBLGFBeEJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUF5QkE7QUFBQSxXQTlCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBK0JBLEtBaENGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFpQ0EsS0FsQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQW1DQTtBQUFBLFNBeENGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0F5Q0EsS0ExQ0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQTJDQSxLQTVDRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBNkNBO0FBQUEsSUFHQSx1QkFBQyw2REFBUSxXQUFVLCtEQUNqQixpQ0FBQyx5REFBSSxXQUFVLGFBQ2IsaUNBQUMseURBQUksV0FBVSxxQkFDYjtBQUFBLDZCQUFDLHlEQUFJLFdBQVUscUJBQ2I7QUFBQSwrQkFBQyx3REFBRyxXQUFVLHVDQUFzQywyQkFBcEQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUErRDtBQUFBLFFBQy9ELHVCQUFDLHlEQUFJLFdBQVUsOENBQWY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUEwRDtBQUFBLFdBRjVEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFHQTtBQUFBLE1BQ0EsdUJBQUMsd0RBQUssV0FBVSxxQkFDZCxpQ0FBQywrREFBWSxXQUFVLGVBQ3JCLGlDQUFDLHlEQUFJLFdBQVUsYUFDYjtBQUFBLCtCQUFDLHlEQUFJLFdBQVUsMEJBQ2I7QUFBQSxpQ0FBQywwREFBTyxXQUFVLDZDQUFsQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUEyRDtBQUFBLFVBQzNELHVCQUFDLHlEQUNDO0FBQUEsbUNBQUMsdURBQUUsV0FBVSxzQkFBcUIsa0JBQWxDO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQW9DO0FBQUEsWUFDcEMsdUJBQUMsdURBQUUsV0FBVSx5QkFBd0IsNERBQXJDO0FBQUE7QUFBQTtBQUFBO0FBQUEsbUJBQWlGO0FBQUEsZUFGbkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFHQTtBQUFBLGFBTEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQU1BO0FBQUEsUUFDQSx1QkFBQyx5REFBSSxXQUFVLDBCQUNiO0FBQUEsaUNBQUMseURBQU0sV0FBVSw2Q0FBakI7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFBMEQ7QUFBQSxVQUMxRCx1QkFBQyx5REFDQztBQUFBLG1DQUFDLHVEQUFFLFdBQVUsc0JBQXFCLHNCQUFsQztBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUF3QztBQUFBLFlBQ3hDLHVCQUFDLHVEQUFFLFdBQVUseUJBQXdCLGlDQUFyQztBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUFzRDtBQUFBLFlBQ3RELHVCQUFDLHVEQUFFLFdBQVUseUJBQXdCLGlDQUFyQztBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUFzRDtBQUFBLGVBSHhEO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBSUE7QUFBQSxhQU5GO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFPQTtBQUFBLFFBQ0EsdUJBQUMseURBQUksV0FBVSwwQkFDYjtBQUFBLGlDQUFDLHdEQUFLLFdBQVUsNkNBQWhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsaUJBQXlEO0FBQUEsVUFDekQsdUJBQUMseURBQ0M7QUFBQSxtQ0FBQyx1REFBRSxXQUFVLHNCQUFxQix1QkFBbEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFBeUM7QUFBQSxZQUN6Qyx1QkFBQyx1REFBRSxNQUFLLDBCQUF5QixXQUFVLGdDQUE4QiwrQkFBekU7QUFBQTtBQUFBO0FBQUE7QUFBQSxtQkFFQTtBQUFBLGVBSkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxpQkFLQTtBQUFBLGFBUEY7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQVFBO0FBQUEsUUFDQSx1QkFBQyx5REFBSSxXQUFVLGlCQUNiLGlDQUFDLDBEQUFPLE1BQUssTUFBSyxXQUFVLG9CQUFtQixTQUFPLE1BQ3BELGlDQUFDLHVEQUFFLE1BQUssMEJBQXlCLDBCQUFqQztBQUFBO0FBQUE7QUFBQTtBQUFBLGVBQTJDLEtBRDdDO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFFQSxLQUhGO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFJQTtBQUFBLFdBN0JGO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUE4QkEsS0EvQkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQWdDQSxLQWpDRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBa0NBO0FBQUEsU0F2Q0Y7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQXdDQSxLQXpDRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBMENBLEtBM0NGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0E0Q0E7QUFBQSxJQUdBLHVCQUFDLHVFQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBa0I7QUFBQSxJQUdsQix1QkFBQyw0REFBTyxXQUFVLHFDQUNoQixpQ0FBQyx5REFBSSxXQUFVLGFBQ2IsaUNBQUMseURBQUksV0FBVSxlQUNiLGlDQUFDLHVEQUFFLFdBQVUsV0FBVSwrREFBdkI7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUEyRSxLQUQ3RTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBRUEsS0FIRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBSUEsS0FMRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBTUE7QUFBQSxPQXRQRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBdVBBO0FBRUo7QUFBQ0csS0F0UnVCYjtBQUFPLElBQUFhO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJCdXR0b24iLCJDYXJkIiwiQ2FyZENvbnRlbnQiLCJDbG9jayIsIlVzZXJzIiwiTWFwUGluIiwiUGhvbmUiLCJNYWlsIiwiQ2FsZW5kYXIiLCJVdGVuc2lscyIsIkJ1cyIsIlBhbGV0dGUiLCJMaWdodGJ1bGIiLCJTcGFya2xlcyIsIkxpbmsiLCJJbnN0YWdyYW1DYXJvdXNlbCIsIlN0dWRpb00iLCJiYXNpY0luZm8iLCJpY29uIiwibGFiZWwiLCJ2YWx1ZSIsImZlYXR1cmVzIiwidGl0bGUiLCJkZXNjcmlwdGlvbiIsIm1hcCIsIml0ZW0iLCJpbmRleCIsIkljb24iLCJmZWF0dXJlIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiU3R1ZGlvTS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IEhlYWRlciBmcm9tIFwiQC9jb21wb25lbnRzL0hlYWRlclwiO1xuaW1wb3J0IHsgQnV0dG9uIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9idXR0b25cIjtcbmltcG9ydCB7IENhcmQsIENhcmRDb250ZW50IH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jYXJkXCI7XG5pbXBvcnQgeyBCdWlsZGluZzIsIENsb2NrLCBVc2VycywgTWFwUGluLCBQaG9uZSwgTWFpbCwgQ2FsZW5kYXIsIFV0ZW5zaWxzLCBCdXMsIFBhbGV0dGUsIExpZ2h0YnVsYiwgU3BhcmtsZXMgfSBmcm9tIFwibHVjaWRlLXJlYWN0XCI7XG5pbXBvcnQgeyBMaW5rIH0gZnJvbSBcIndvdXRlclwiO1xuaW1wb3J0IEluc3RhZ3JhbUNhcm91c2VsIGZyb20gXCJAL2NvbXBvbmVudHMvSW5zdGFncmFtQ2Fyb3VzZWxcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gU3R1ZGlvTSgpIHtcbiAgY29uc3QgYmFzaWNJbmZvID0gW1xuICAgIHsgaWNvbjogVXNlcnMsIGxhYmVsOiBcIuWumuWToVwiLCB2YWx1ZTogXCIyMOWQjVwiIH0sXG4gICAgeyBpY29uOiBDbG9jaywgbGFiZWw6IFwi6ZaL5omA5pmC6ZaTXCIsIHZhbHVlOiBcIjnmmYIzMOWIhu+9njE15pmCMzDliIZcIiB9LFxuICAgIHsgaWNvbjogQ2FsZW5kYXIsIGxhYmVsOiBcIumWi+aJgOaXpVwiLCB2YWx1ZTogXCLlubPml6XvvIjmnIgx5Zue56iL5bqm56Wd5pel6ZaL5omA5pel44GC44KK77yJXCIgfSxcbiAgICB7IGljb246IENhbGVuZGFyLCBsYWJlbDogXCLkvJHml6VcIiwgdmFsdWU6IFwi5Zyf44O75pel44O756Wd77yI6ZaL5omA5pel44GC44KK77yJ44CB5bm05pyr5bm05aeLXCIgfSxcbiAgICB7IGljb246IEJ1cywgbGFiZWw6IFwi5Lqk6YCaXCIsIHZhbHVlOiBcIuaYreWztuW4guWGhemAgei/juWvvuW/nO+8iOOBlOebuOirh+S4i+OBleOBhO+8iVxcbuS6pOmAmuiyu+aUr+e1puOBguOCiu+8iDHml6XkuIrpmZA1MDDlhobvvIlcIiB9LFxuICAgIHsgaWNvbjogVXRlbnNpbHMsIGxhYmVsOiBcIuaYvOmjn1wiLCB2YWx1ZTogXCLln7rmnKzmj5DkvpvjgrXjg7zjg5PjgrnjgYLjgorjgb7jgZlcXG4x6aOfMjAw5YaG44Gn44GZXCIgfSxcbiAgXTtcblxuICBjb25zdCBmZWF0dXJlcyA9IFtcbiAgICB7XG4gICAgICBpY29uOiBQYWxldHRlLFxuICAgICAgdGl0bGU6IFwi5Ym16YCg55qE44Gq5rS75YuVXCIsXG4gICAgICBkZXNjcmlwdGlvbjogXCLjgqLjg7zjg4jjgIHjgq/jg6njg5Xjg4jjgIHjg4fjgrbjgqTjg7PjgarjganjgIHlibXpgKDmgKfjgpLmtLvjgYvjgZfjgZ/mp5jjgIXjgarmtLvli5XjgpLpgJrjgZjjgabjgIHliKnnlKjogIXmp5jjga7lgIvmgKfjgajmiY3og73jgpLlvJXjgY3lh7rjgZfjgb7jgZnjgIJcIlxuICAgIH0sXG4gICAge1xuICAgICAgaWNvbjogTGlnaHRidWxiLFxuICAgICAgdGl0bGU6IFwi44K544Kt44Or57+S5b6XXCIsXG4gICAgICBkZXNjcmlwdGlvbjogXCLlkITnqK7kvZzmpa3jgpLpgJrjgZjjgablrp/ot7XnmoTjgarjgrnjgq3jg6vjgpLouqvjgavjgaTjgZHjgIHlsIbmnaXjga7lsLHlirTjgavlkJHjgZHjgZ/mupblgpnjgpLjgrXjg53jg7zjg4jjgZfjgb7jgZnjgIJcIlxuICAgIH0sXG4gICAge1xuICAgICAgaWNvbjogU3BhcmtsZXMsXG4gICAgICB0aXRsZTogXCLoh6rlt7Hooajnj75cIixcbiAgICAgIGRlc2NyaXB0aW9uOiBcIuWItuS9nOa0u+WLleOCkumAmuOBmOOBpuiHquW3seihqOePvuOBruapn+S8muOCkuaPkOS+m+OBl+OAgemBlOaIkOaEn+OBqOiHquS/oeOCkuiCsuOBv+OBvuOBmeOAglwiXG4gICAgfSxcbiAgXTtcblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLWgtc2NyZWVuIGZsZXggZmxleC1jb2xcIj5cbiAgICAgIHsvKiBIZWFkZXIgKi99XG4gICAgICA8aGVhZGVyIGNsYXNzTmFtZT1cImJvcmRlci1iIGJnLXdoaXRlLzgwIGJhY2tkcm9wLWJsdXItc20gc3RpY2t5IHRvcC0wIHotNTBcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXIgcHktNFwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1iZXR3ZWVuXCI+XG4gICAgICAgICAgICA8TGluayBocmVmPVwiL1wiPlxuICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMyBob3ZlcjpvcGFjaXR5LTgwIHRyYW5zaXRpb24tb3BhY2l0eVwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xMiBoLTEyIHJvdW5kZWQtZnVsbCBiZy13aGl0ZSBzaGFkb3ctc20gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgcC0xXCI+XG4gICAgICAgICAgICAgICAgICA8aW1nIHNyYz1cIi9taXJhaS1sb2dvLndlYnBcIiBhbHQ9XCLmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq9cIiBjbGFzc05hbWU9XCJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb250YWluXCIgLz5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1ib2xkIHRleHQtZm9yZWdyb3VuZFwiPuS4gOiIrOekvuWbo+azleS6uuacquadpeODjeODg+ODiOODr+ODvOOCrzwvaDE+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPumanOWus+emj+elieOCteODvOODk+OCuTwvcD5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgPC9MaW5rPlxuICAgICAgICAgICAgPG5hdiBjbGFzc05hbWU9XCJoaWRkZW4gbWQ6ZmxleCBnYXAtNlwiPlxuICAgICAgICAgICAgICA8TGluayBocmVmPVwiL1wiPlxuICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gaG92ZXI6dGV4dC1wcmltYXJ5IHRyYW5zaXRpb24tY29sb3JzXCI+44Ob44O844OgPC9hPlxuICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvbWlyYWlcIj5cbiAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbWVkaXVtIGhvdmVyOnRleHQtcHJpbWFyeSB0cmFuc2l0aW9uLWNvbG9yc1wiPk1JUkFJPC9hPlxuICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICAgIDxMaW5rIGhyZWY9XCIvaGlrYXJpXCI+XG4gICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSBob3Zlcjp0ZXh0LXByaW1hcnkgdHJhbnNpdGlvbi1jb2xvcnNcIj5ISUtBUkk8L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgICAgPExpbmsgaHJlZj1cIi9zdHVkaW8tbVwiPlxuICAgICAgICAgICAgICAgIDxhIGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gdGV4dC1wcmltYXJ5XCI+c3R1ZGlvIE08L2E+XG4gICAgICAgICAgICAgIDwvTGluaz5cbiAgICAgICAgICAgIDwvbmF2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvaGVhZGVyPlxuXG4gICAgICB7LyogSGVybyBTZWN0aW9uIHdpdGggQmFubmVyIEltYWdlICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicmVsYXRpdmVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LWZ1bGwgaC02NCBtZDpoLTk2IG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgICAgIDxpbWcgc3JjPVwiL3N0dWRpby1tLW1haW4ud2VicFwiIGFsdD1cInN0dWRpbyBNXCIgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXJcIiAvPlxuICAgICAgICA8L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC0wIGJnLWdyYWRpZW50LXRvLWIgZnJvbS10cmFuc3BhcmVudCB0by1ibGFjay8zMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgdGV4dC13aGl0ZVwiPlxuICAgICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtNHhsIG1kOnRleHQtNXhsIGZvbnQtYm9sZCBtYi0yXCI+c3R1ZGlvIE08L2gyPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14bCBmb250LXNlbWlib2xkXCI+5bCx5Yq057aZ57aa5pSv5o+0QuWei+S6i+alreaJgDwvcD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBJbnRyb2R1Y3Rpb24gKi99XG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJweS0xNiBiZy1ncmFkaWVudC10by1iciBmcm9tLXRlYWwtNTAgdG8tZW1lcmFsZC01MFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNHhsIG14LWF1dG8gdGV4dC1jZW50ZXIgc3BhY2UteS02XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciB3LTIwIGgtMjAgcm91bmRlZC1mdWxsIGJnLXdoaXRlIHNoYWRvdy1sZyBtYi00XCI+XG4gICAgICAgICAgICAgIDxVc2VycyBjbGFzc05hbWU9XCJ3LTEwIGgtMTAgdGV4dC1wcmltYXJ5XCIgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1sZyB0ZXh0LW11dGVkLWZvcmVncm91bmQgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICAgIOWJtemAoOeahOOBqua0u+WLleOCkumAmuOBmOOBpuOAgeWIqeeUqOiAheanmOOBruWPr+iDveaAp+OCkuW6g+OBkuOAgeekvuS8muWPguWKoOOCkuaUr+aPtOOBl+OBvuOBmeOAglxuICAgICAgICAgICAgICDkuIDkurrjgbLjgajjgorjga7lgIvmgKfjgpLlpKfliIfjgavjgZfjgarjgYzjgonjgIHmpb3jgZfjgY/lhYXlrp/jgZfjgZ/mmYLplpPjgpLmj5DkvpvjgZfjgabjgYTjgb7jgZnjgIJcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBGYWNpbGl0eSBJbWFnZXMgKi99XG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJweS0xMiBiZy13aGl0ZVwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNXhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtNlwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJvdW5kZWQtbGcgb3ZlcmZsb3ctaGlkZGVuIHNoYWRvdy1tZFwiPlxuICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL3N0dWRpby1tLXJlY2VwdGlvbi53ZWJwXCIgYWx0PVwic3R1ZGlvIE3lj5fku5jjgqjjg6rjgqJcIiBjbGFzc05hbWU9XCJ3LWZ1bGwgaC02NCBvYmplY3QtY292ZXJcIiAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyb3VuZGVkLWxnIG92ZXJmbG93LWhpZGRlbiBzaGFkb3ctbWRcIj5cbiAgICAgICAgICAgICAgICA8aW1nIHNyYz1cIi9zdHVkaW8tbS1pbnRlcmlvci53ZWJwXCIgYWx0PVwic3R1ZGlvIE3lhoXoprNcIiBjbGFzc05hbWU9XCJ3LWZ1bGwgaC02NCBvYmplY3QtY292ZXJcIiAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvc2VjdGlvbj5cblxuICAgICAgey8qIEJhc2ljIEluZm9ybWF0aW9uICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMTYgbWQ6cHktMjQgYmctd2hpdGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTV4bCBteC1hdXRvXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIG1iLTEyXCI+XG4gICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTN4bCBtZDp0ZXh0LTR4bCBmb250LWJvbGQgbWItNFwiPuWfuuacrOaDheWgsTwvaDM+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0yMCBoLTEgYmctcHJpbWFyeSBteC1hdXRvIHJvdW5kZWQtZnVsbFwiPjwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTIgZ2FwLTZcIj5cbiAgICAgICAgICAgICAge2Jhc2ljSW5mby5tYXAoKGl0ZW0sIGluZGV4KSA9PiB7XG4gICAgICAgICAgICAgICAgY29uc3QgSWNvbiA9IGl0ZW0uaWNvbjtcbiAgICAgICAgICAgICAgICByZXR1cm4gKFxuICAgICAgICAgICAgICAgICAgPENhcmQga2V5PXtpbmRleH0gY2xhc3NOYW1lPVwiYm9yZGVyLTIgaG92ZXI6c2hhZG93LW1kIHRyYW5zaXRpb24tc2hhZG93XCI+XG4gICAgICAgICAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLTZcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xMiBoLTEyIHJvdW5kZWQtZnVsbCBiZy10ZWFsLTUwIGZsZXggaXRlbXMtY2VudGVyIGp1c3RpZnktY2VudGVyIGZsZXgtc2hyaW5rLTBcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPEljb24gY2xhc3NOYW1lPVwidy02IGgtNiB0ZXh0LXByaW1hcnlcIiAvPlxuICAgICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXgtMVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYi0xXCI+e2l0ZW0ubGFiZWx9PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIHdoaXRlc3BhY2UtcHJlLWxpbmVcIj57aXRlbS52YWx1ZX08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgICAgICAgICApO1xuICAgICAgICAgICAgICB9KX1cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvc2VjdGlvbj5cblxuICAgICAgey8qIEZlYXR1cmVzICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMTYgbWQ6cHktMjQgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1zbGF0ZS01MCB0by10ZWFsLTUwLzMwXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtYXgtdy01eGwgbXgtYXV0b1wiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBtYi0xMlwiPlxuICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC0zeGwgbWQ6dGV4dC00eGwgZm9udC1ib2xkIG1iLTRcIj7mlK/mj7Tjga7nibnlvrQ8L2gzPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctMjAgaC0xIGJnLXByaW1hcnkgbXgtYXV0byByb3VuZGVkLWZ1bGwgbWItNlwiPjwvZGl2PlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWxnIHRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPlxuICAgICAgICAgICAgICAgIOWJtemAoOaAp+OCkuiCsuOBv+OAgeWPr+iDveaAp+OCkuW6g+OBkuOCi+aUr+aPtOOCkuaPkOS+m+OBl+OBvuOBmVxuICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBtZDpncmlkLWNvbHMtMyBnYXAtNlwiPlxuICAgICAgICAgICAgICB7ZmVhdHVyZXMubWFwKChmZWF0dXJlLCBpbmRleCkgPT4ge1xuICAgICAgICAgICAgICAgIGNvbnN0IEljb24gPSBmZWF0dXJlLmljb247XG4gICAgICAgICAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICAgICAgICAgIDxDYXJkIGtleT17aW5kZXh9IGNsYXNzTmFtZT1cImJvcmRlci0yIGJnLXdoaXRlIGhvdmVyOnNoYWRvdy1sZyB0cmFuc2l0aW9uLXNoYWRvd1wiPlxuICAgICAgICAgICAgICAgICAgICA8Q2FyZENvbnRlbnQgY2xhc3NOYW1lPVwicC04IHRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTE2IGgtMTYgcm91bmRlZC1mdWxsIGJnLXRlYWwtNTAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbXgtYXV0byBtYi00XCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8SWNvbiBjbGFzc05hbWU9XCJ3LTggaC04IHRleHQtcHJpbWFyeVwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1ib2xkIG1iLTNcIj57ZmVhdHVyZS50aXRsZX08L2g0PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtbXV0ZWQtZm9yZWdyb3VuZCBsZWFkaW5nLXJlbGF4ZWRcIj57ZmVhdHVyZS5kZXNjcmlwdGlvbn08L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvQ2FyZENvbnRlbnQ+XG4gICAgICAgICAgICAgICAgICA8L0NhcmQ+XG4gICAgICAgICAgICAgICAgKTtcbiAgICAgICAgICAgICAgfSl9XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBBY3Rpdml0aWVzICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicHktMTYgbWQ6cHktMjQgYmctd2hpdGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTV4bCBteC1hdXRvXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIG1iLTEyXCI+XG4gICAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTN4bCBtZDp0ZXh0LTR4bCBmb250LWJvbGQgbWItNFwiPua0u+WLleWGheWuuTwvaDM+XG4gICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0yMCBoLTEgYmctcHJpbWFyeSBteC1hdXRvIHJvdW5kZWQtZnVsbCBtYi02XCI+PC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT1cImJvcmRlci0yXCI+XG4gICAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLTggbWQ6cC0xMlwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicHJvc2UgcHJvc2UtbGcgbWF4LXctbm9uZVwiPlxuICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGxlYWRpbmctcmVsYXhlZCBtYi02XCI+XG4gICAgICAgICAgICAgICAgICAgIHN0dWRpbyBN44Gn44Gv44CB5Yip55So6ICF5qeY44Gu5Ym16YCg5oCn44Go5YCL5oCn44KS5aSn5YiH44Gr44GX44Gq44GM44KJ44CB5qeY44CF44Gq5rS75YuV44OX44Ot44Kw44Op44Og44KS5o+Q5L6b44GX44Gm44GE44G+44GZ44CCXG4gICAgICAgICAgICAgICAgICAgIOWItuS9nOa0u+WLleOCkumAmuOBmOOBpumBlOaIkOaEn+OCkuWRs+OCj+OBhOOAgeiHquS/oeOCkuiCsuOCgOOBqOOBqOOCguOBq+OAgeekvuS8muWPguWKoOOBq+WQkeOBkeOBn+OCueOCreODq+OCouODg+ODl+OCkuOCteODneODvOODiOOBl+OBvuOBmeOAglxuICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIG1kOmdyaWQtY29scy0yIGdhcC02IG10LThcIj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy10ZWFsLTUwIHAtNiByb3VuZGVkLWxnXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LWxnIG1iLTMgdGV4dC1mb3JlZ3JvdW5kXCI+44Ki44O844OI44O744Kv44Op44OV44OI5rS75YuVPC9oNT5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkLWZvcmVncm91bmRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIOe1teeUu+OAgeW3peS9nOOAgeaJi+iKuOOBquOBqeOAgeanmOOAheOBquWJteS9nOa0u+WLleOCkumAmuOBmOOBpuihqOePvuWKm+OBqOWJtemAoOaAp+OCkuiCsuOBv+OBvuOBmeOAglxuICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYmctdGVhbC01MCBwLTYgcm91bmRlZC1sZ1wiPlxuICAgICAgICAgICAgICAgICAgICAgIDxoNSBjbGFzc05hbWU9XCJmb250LWJvbGQgdGV4dC1sZyBtYi0zIHRleHQtZm9yZWdyb3VuZFwiPuijveWTgeWItuS9nDwvaDU+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1tdXRlZC1mb3JlZ3JvdW5kXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICDjgqrjg6rjgrjjg4rjg6voo73lk4Hjga7kvIHnlLvjg7vliLbkvZzjgpLpgJrjgZjjgabjgIHlrp/ot7XnmoTjgarjgrnjgq3jg6vjgajpgZTmiJDmhJ/jgpLlvpfjgonjgozjgb7jgZnjgIJcbiAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJnLXRlYWwtNTAgcC02IHJvdW5kZWQtbGdcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8aDUgY2xhc3NOYW1lPVwiZm9udC1ib2xkIHRleHQtbGcgbWItMyB0ZXh0LWZvcmVncm91bmRcIj7ou73kvZzmpa08L2g1PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAg5ZCE56iu6Lu95L2c5qWt44KS6YCa44GY44Gm44CB6ZuG5Lit5Yqb44KE5L2c5qWt44K544Kt44Or44KS6Lqr44Gr44Gk44GR44KL44GT44Go44GM44Gn44GN44G+44GZ44CCXG4gICAgICAgICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJiZy10ZWFsLTUwIHAtNiByb3VuZGVkLWxnXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LWxnIG1iLTMgdGV4dC1mb3JlZ3JvdW5kXCI+44Kk44OZ44Oz44OI5Y+C5YqgPC9oNT5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkLWZvcmVncm91bmRcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgIOWcsOWfn+OBruOCpOODmeODs+ODiOOChOiyqeWjsuS8muOBq+WPguWKoOOBl+OAgeekvuS8muOBqOOBruOBpOOBquOBjOOCiuOCkua3seOCgeOBvuOBmeOAglxuICAgICAgICAgICAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBBY2Nlc3MgKi99XG4gICAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJweS0xNiBtZDpweS0yNCBiZy1ncmFkaWVudC10by1iciBmcm9tLXRlYWwtNTAgdG8tZW1lcmFsZC01MFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNHhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItMTJcIj5cbiAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtM3hsIG1kOnRleHQtNHhsIGZvbnQtYm9sZCBtYi00XCI+44Ki44Kv44K744K544O744GK5ZWP44GE5ZCI44KP44GbPC9oMz5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTIwIGgtMSBiZy1wcmltYXJ5IG14LWF1dG8gcm91bmRlZC1mdWxsXCI+PC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT1cImJvcmRlci0yIGJnLXdoaXRlXCI+XG4gICAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLTggbWQ6cC0xMlwiPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTRcIj5cbiAgICAgICAgICAgICAgICAgICAgPE1hcFBpbiBjbGFzc05hbWU9XCJ3LTYgaC02IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wIG10LTFcIiAvPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtc2VtaWJvbGQgbWItMVwiPuS9j+aJgDwvcD5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LW11dGVkLWZvcmVncm91bmRcIj7jgJIxOTYtMDAyNSDmnbHkuqzpg73mmK3ls7bluILmnJ3ml6XnlLoxLTYtMiBoYXJhbW8gY3VwcnVtIDMwMuWPt+WupDwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1zdGFydCBnYXAtNFwiPlxuICAgICAgICAgICAgICAgICAgICA8UGhvbmUgY2xhc3NOYW1lPVwidy02IGgtNiB0ZXh0LXByaW1hcnkgZmxleC1zaHJpbmstMCBtdC0xXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIG1iLTFcIj7pm7voqbHjg7tGQVg8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1tdXRlZC1mb3JlZ3JvdW5kXCI+VGVsOiAwNDItNTE5LTc5MTY8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1tdXRlZC1mb3JlZ3JvdW5kXCI+RmF4OiAwNDItNTE5LTc5MTc8L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTRcIj5cbiAgICAgICAgICAgICAgICAgICAgPE1haWwgY2xhc3NOYW1lPVwidy02IGgtNiB0ZXh0LXByaW1hcnkgZmxleC1zaHJpbmstMCBtdC0xXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LXNlbWlib2xkIG1iLTFcIj7jg6Hjg7zjg6vjgqLjg4njg6zjgrk8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj1cIm1haWx0bzppbmZvQHN0dWRpb20uanBcIiBjbGFzc05hbWU9XCJ0ZXh0LXByaW1hcnkgaG92ZXI6dW5kZXJsaW5lXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICBpbmZvQHN0dWRpb20uanBcbiAgICAgICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB0LTYgYm9yZGVyLXRcIj5cbiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiBzaXplPVwibGdcIiBjbGFzc05hbWU9XCJ3LWZ1bGwgbWQ6dy1hdXRvXCIgYXNDaGlsZD5cbiAgICAgICAgICAgICAgICAgICAgICA8YSBocmVmPVwibWFpbHRvOmluZm9Ac3R1ZGlvbS5qcFwiPuODoeODvOODq+OBp+OBiuWVj+OBhOWQiOOCj+OBmzwvYT5cbiAgICAgICAgICAgICAgICAgICAgPC9CdXR0b24+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBJbnN0YWdyYW0gU2VjdGlvbiAqL31cbiAgICAgIDxJbnN0YWdyYW1DYXJvdXNlbCAvPlxuXG4gICAgICB7LyogRm9vdGVyICovfVxuICAgICAgPGZvb3RlciBjbGFzc05hbWU9XCJiZy1zbGF0ZS05MDAgdGV4dC1zbGF0ZS0zMDAgcHktMTJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtXCI+JmNvcHk7IDIwMTYtMjAyNSDkuIDoiKznpL7lm6Pms5XkurrmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq8gQWxsIHJpZ2h0cyByZXNlcnZlZC48L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9mb290ZXI+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL3BhZ2VzL1N0dWRpb00udHN4In0=

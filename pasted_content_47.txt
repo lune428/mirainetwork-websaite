@@ -1,0 +1,93 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/contexts/ThemeContext.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$()
+  , _s2 = $RefreshSig$();
+import __vite__cjsImport1_react from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react.js?v=912602c9";
+const createContext = __vite__cjsImport1_react["createContext"];
+const useContext = __vite__cjsImport1_react["useContext"];
+const useEffect = __vite__cjsImport1_react["useEffect"];
+const useState = __vite__cjsImport1_react["useState"];
+const ThemeContext = createContext(void 0);
+export function ThemeProvider({children, defaultTheme="light", switchable=false}) {
+    _s();
+    const [theme,setTheme] = useState( () => {
+        if (switchable) {
+            const stored = localStorage.getItem("theme");
+            return stored || defaultTheme;
+        }
+        return defaultTheme;
+    }
+    );
+    useEffect( () => {
+        const root = document.documentElement;
+        if (theme === "dark") {
+            root.classList.add("dark");
+        } else {
+            root.classList.remove("dark");
+        }
+        if (switchable) {
+            localStorage.setItem("theme", theme);
+        }
+    }
+    , [theme, switchable]);
+    const toggleTheme = switchable ? () => {
+        setTheme( (prev) => prev === "light" ? "dark" : "light");
+    }
+    : void 0;
+    return /* @__PURE__ */
+    jsxDEV(ThemeContext.Provider, {
+        "data-loc": "client/src/contexts/ThemeContext.tsx:52",
+        value: {
+            theme,
+            toggleTheme,
+            switchable
+        },
+        children
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/contexts/ThemeContext.tsx",
+        lineNumber: 52,
+        columnNumber: 5
+    }, this);
+}
+_s(ThemeProvider, "z+zMt7bDwqq4L9agKMwEm/qsg2c=");
+_c = ThemeProvider;
+export function useTheme() {
+    _s2();
+    const context = useContext(ThemeContext);
+    if (!context) {
+        throw new Error("useTheme must be used within ThemeProvider");
+    }
+    return context;
+}
+_s2(useTheme, "b9L3QQ+jgeyIrH0NfHrJ8nn7VMU=");
+var _c;
+$RefreshReg$(_c, "ThemeProvider");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/contexts/ThemeContext.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/contexts/ThemeContext.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/contexts/ThemeContext.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbURJOztBQW5ESixTQUFnQkEsZUFBZUMsWUFBWUMsV0FBV0MsZ0JBQWdCO0FBVXRFLE1BQU1DLGVBQWVKLGNBQTRDSyxNQUFTO0FBUW5FLGdCQUFTQyxjQUFjO0FBQUEsRUFDNUJDO0FBQUFBLEVBQ0FDLGVBQWU7QUFBQSxFQUNmQyxhQUFhO0FBQ0ssR0FBRztBQUFBQyxLQUFBO0FBQ3JCLFFBQU0sQ0FBQ0MsT0FBT0MsUUFBUSxJQUFJVCxTQUFnQixNQUFNO0FBQzlDLFFBQUlNLFlBQVk7QUFDZCxZQUFNSSxTQUFTQyxhQUFhQyxRQUFRLE9BQU87QUFDM0MsYUFBUUYsVUFBb0JMO0FBQUFBLElBQzlCO0FBQ0EsV0FBT0E7QUFBQUEsRUFDVCxDQUFDO0FBRUROLFlBQVUsTUFBTTtBQUNkLFVBQU1jLE9BQU9DLFNBQVNDO0FBQ3RCLFFBQUlQLFVBQVUsUUFBUTtBQUNwQkssV0FBS0csVUFBVUMsSUFBSSxNQUFNO0FBQUEsSUFDM0IsT0FBTztBQUNMSixXQUFLRyxVQUFVRSxPQUFPLE1BQU07QUFBQSxJQUM5QjtBQUVBLFFBQUlaLFlBQVk7QUFDZEssbUJBQWFRLFFBQVEsU0FBU1gsS0FBSztBQUFBLElBQ3JDO0FBQUEsRUFDRixHQUFHLENBQUNBLE9BQU9GLFVBQVUsQ0FBQztBQUV0QixRQUFNYyxjQUFjZCxhQUNoQixNQUFNO0FBQ0pHLGFBQVMsQ0FBQVksU0FBU0EsU0FBUyxVQUFVLFNBQVMsT0FBUTtBQUFBLEVBQ3hELElBQ0FuQjtBQUVKLFNBQ0UsdUJBQUMsYUFBYSxVQUFiLEVBQWEsdURBQVMsT0FBTyxFQUFFTSxPQUFPWSxhQUFhZCxXQUFXLEdBQzVERixZQURIO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNHLEdBckNlSixlQUFhO0FBQUFtQixLQUFibkI7QUF1Q1QsZ0JBQVNvQixXQUFXO0FBQUFDLE1BQUE7QUFDekIsUUFBTUMsVUFBVTNCLFdBQVdHLFlBQVk7QUFDdkMsTUFBSSxDQUFDd0IsU0FBUztBQUNaLFVBQU0sSUFBSUMsTUFBTSw0Q0FBNEM7QUFBQSxFQUM5RDtBQUNBLFNBQU9EO0FBQ1Q7QUFBQ0QsSUFOZUQsVUFBUTtBQUFBLElBQUFEO0FBQUFLLGFBQUFMLElBQUEiLCJuYW1lcyI6WyJjcmVhdGVDb250ZXh0IiwidXNlQ29udGV4dCIsInVzZUVmZmVjdCIsInVzZVN0YXRlIiwiVGhlbWVDb250ZXh0IiwidW5kZWZpbmVkIiwiVGhlbWVQcm92aWRlciIsImNoaWxkcmVuIiwiZGVmYXVsdFRoZW1lIiwic3dpdGNoYWJsZSIsIl9zIiwidGhlbWUiLCJzZXRUaGVtZSIsInN0b3JlZCIsImxvY2FsU3RvcmFnZSIsImdldEl0ZW0iLCJyb290IiwiZG9jdW1lbnQiLCJkb2N1bWVudEVsZW1lbnQiLCJjbGFzc0xpc3QiLCJhZGQiLCJyZW1vdmUiLCJzZXRJdGVtIiwidG9nZ2xlVGhlbWUiLCJwcmV2IiwiX2MiLCJ1c2VUaGVtZSIsIl9zMiIsImNvbnRleHQiLCJFcnJvciIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJUaGVtZUNvbnRleHQudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyBjcmVhdGVDb250ZXh0LCB1c2VDb250ZXh0LCB1c2VFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSBcInJlYWN0XCI7XG5cbnR5cGUgVGhlbWUgPSBcImxpZ2h0XCIgfCBcImRhcmtcIjtcblxuaW50ZXJmYWNlIFRoZW1lQ29udGV4dFR5cGUge1xuICB0aGVtZTogVGhlbWU7XG4gIHRvZ2dsZVRoZW1lPzogKCkgPT4gdm9pZDtcbiAgc3dpdGNoYWJsZTogYm9vbGVhbjtcbn1cblxuY29uc3QgVGhlbWVDb250ZXh0ID0gY3JlYXRlQ29udGV4dDxUaGVtZUNvbnRleHRUeXBlIHwgdW5kZWZpbmVkPih1bmRlZmluZWQpO1xuXG5pbnRlcmZhY2UgVGhlbWVQcm92aWRlclByb3BzIHtcbiAgY2hpbGRyZW46IFJlYWN0LlJlYWN0Tm9kZTtcbiAgZGVmYXVsdFRoZW1lPzogVGhlbWU7XG4gIHN3aXRjaGFibGU/OiBib29sZWFuO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gVGhlbWVQcm92aWRlcih7XG4gIGNoaWxkcmVuLFxuICBkZWZhdWx0VGhlbWUgPSBcImxpZ2h0XCIsXG4gIHN3aXRjaGFibGUgPSBmYWxzZSxcbn06IFRoZW1lUHJvdmlkZXJQcm9wcykge1xuICBjb25zdCBbdGhlbWUsIHNldFRoZW1lXSA9IHVzZVN0YXRlPFRoZW1lPigoKSA9PiB7XG4gICAgaWYgKHN3aXRjaGFibGUpIHtcbiAgICAgIGNvbnN0IHN0b3JlZCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKFwidGhlbWVcIik7XG4gICAgICByZXR1cm4gKHN0b3JlZCBhcyBUaGVtZSkgfHwgZGVmYXVsdFRoZW1lO1xuICAgIH1cbiAgICByZXR1cm4gZGVmYXVsdFRoZW1lO1xuICB9KTtcblxuICB1c2VFZmZlY3QoKCkgPT4ge1xuICAgIGNvbnN0IHJvb3QgPSBkb2N1bWVudC5kb2N1bWVudEVsZW1lbnQ7XG4gICAgaWYgKHRoZW1lID09PSBcImRhcmtcIikge1xuICAgICAgcm9vdC5jbGFzc0xpc3QuYWRkKFwiZGFya1wiKTtcbiAgICB9IGVsc2Uge1xuICAgICAgcm9vdC5jbGFzc0xpc3QucmVtb3ZlKFwiZGFya1wiKTtcbiAgICB9XG5cbiAgICBpZiAoc3dpdGNoYWJsZSkge1xuICAgICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oXCJ0aGVtZVwiLCB0aGVtZSk7XG4gICAgfVxuICB9LCBbdGhlbWUsIHN3aXRjaGFibGVdKTtcblxuICBjb25zdCB0b2dnbGVUaGVtZSA9IHN3aXRjaGFibGVcbiAgICA/ICgpID0+IHtcbiAgICAgICAgc2V0VGhlbWUocHJldiA9PiAocHJldiA9PT0gXCJsaWdodFwiID8gXCJkYXJrXCIgOiBcImxpZ2h0XCIpKTtcbiAgICAgIH1cbiAgICA6IHVuZGVmaW5lZDtcblxuICByZXR1cm4gKFxuICAgIDxUaGVtZUNvbnRleHQuUHJvdmlkZXIgdmFsdWU9e3sgdGhlbWUsIHRvZ2dsZVRoZW1lLCBzd2l0Y2hhYmxlIH19PlxuICAgICAge2NoaWxkcmVufVxuICAgIDwvVGhlbWVDb250ZXh0LlByb3ZpZGVyPlxuICApO1xufVxuXG5leHBvcnQgZnVuY3Rpb24gdXNlVGhlbWUoKSB7XG4gIGNvbnN0IGNvbnRleHQgPSB1c2VDb250ZXh0KFRoZW1lQ29udGV4dCk7XG4gIGlmICghY29udGV4dCkge1xuICAgIHRocm93IG5ldyBFcnJvcihcInVzZVRoZW1lIG11c3QgYmUgdXNlZCB3aXRoaW4gVGhlbWVQcm92aWRlclwiKTtcbiAgfVxuICByZXR1cm4gY29udGV4dDtcbn1cbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL2NvbnRleHRzL1RoZW1lQ29udGV4dC50c3gifQ==

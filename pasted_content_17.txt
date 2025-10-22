@@ -1,0 +1,1507 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/pages/HomeDesign2.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import {Button} from "/src/components/ui/button.tsx";
+import {Card, CardContent} from "/src/components/ui/card.tsx";
+import {APP_TITLE} from "/src/const.ts";
+import {Mail, Phone, MapPin, ArrowRight, CheckCircle2} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import {Link} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+export default function HomeDesign2() {
+    const facilities = [{
+        name: "MIRAI",
+        type: "就労継続支援B型事業所",
+        description: "一人ひとりの個性と能力を大切にし、自立した生活を目指すための就労支援を行っています。",
+        features: ["ハーバリウム制作", "軽作業", "創作活動", "社会参加支援"],
+        address: "東京都昭島市朝日町1-9-7 KKビル101",
+        tel: "042-519-2942",
+        email: "info@mirainetwork2017.com",
+        image: "/mirai-products.webp",
+        link: "/mirai",
+        color: "from-blue-500 to-cyan-500"
+    }, {
+        name: "HIKARI",
+        type: "生活介護事業所",
+        description: "日常生活の支援を通じて、利用者様が安心して充実した毎日を過ごせるようサポートいたします。",
+        features: ["日常生活支援", "レクリエーション", "健康管理", "個別支援計画"],
+        address: "東京都昭島市緑町5-1-6",
+        tel: "042-519-1905",
+        email: "hikarinet2019@gmail.com",
+        image: "/hikari-main-room.webp",
+        link: "/hikari",
+        color: "from-cyan-500 to-teal-500"
+    }, {
+        name: "studio M",
+        type: "就労継続支援B型事業所",
+        description: "創造的な活動を通じて、利用者様の可能性を広げ、社会参加を支援します。",
+        features: ["クリエイティブワーク", "PC作業", "デザイン制作", "スキル開発"],
+        address: "東京都昭島市朝日町1-6-2 haramo cuprum 302号室",
+        tel: "042-519-7916",
+        email: "info@studiom.jp",
+        image: "/studio-m-main.webp",
+        link: "/studio-m",
+        color: "from-teal-500 to-emerald-500"
+    }];
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/pages/HomeDesign2.tsx:54",
+        className: "min-h-screen flex flex-col bg-white",
+        children: [/* @__PURE__ */
+        jsxDEV("header", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:56",
+            className: "absolute top-0 left-0 right-0 z-50 bg-transparent",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:57",
+                className: "container py-6",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:58",
+                    className: "flex items-center justify-between",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:59",
+                        className: "flex items-center gap-3",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:60",
+                            className: "w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center p-1.5",
+                            children: /* @__PURE__ */
+                            jsxDEV("img", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:61",
+                                src: "/mirai-logo.webp",
+                                alt: "未来ネットワーク",
+                                className: "w-full h-full object-contain"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 61,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 60,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:63",
+                            className: "text-white",
+                            children: /* @__PURE__ */
+                            jsxDEV("h1", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:64",
+                                className: "text-lg font-bold drop-shadow-lg",
+                                children: APP_TITLE
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 64,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 63,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 59,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("nav", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:67",
+                        className: "hidden md:flex gap-8",
+                        children: [/* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:68",
+                            href: "#about",
+                            className: "text-sm font-medium text-white hover:text-white/80 transition-colors drop-shadow",
+                            children: "法人概要"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 68,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:71",
+                            href: "#facilities",
+                            className: "text-sm font-medium text-white hover:text-white/80 transition-colors drop-shadow",
+                            children: "事業所"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 71,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:74",
+                            href: "#contact",
+                            className: "text-sm font-medium text-white hover:text-white/80 transition-colors drop-shadow",
+                            children: "お問い合わせ"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 74,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 67,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 58,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 57,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 56,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:83",
+            className: "relative h-screen flex items-center justify-center overflow-hidden",
+            children: [/* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:84",
+                className: "absolute inset-0",
+                children: [/* @__PURE__ */
+                jsxDEV("img", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:85",
+                    src: "/hikari-interior.webp",
+                    alt: "施設内観",
+                    className: "w-full h-full object-cover"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 85,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:90",
+                    className: "absolute inset-0 bg-gradient-to-br from-blue-900/80 via-cyan-900/70 to-teal-900/80"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 90,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 84,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:92",
+                className: "container relative z-10 text-center text-white",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:93",
+                    className: "max-w-4xl mx-auto space-y-8",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:94",
+                        className: "inline-flex items-center justify-center w-32 h-32 rounded-full bg-white/10 backdrop-blur-md shadow-2xl mb-6 p-4 border-4 border-white/20",
+                        children: /* @__PURE__ */
+                        jsxDEV("img", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:95",
+                            src: "/mirai-logo.webp",
+                            alt: "未来ネットワーク",
+                            className: "w-full h-full object-contain"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 95,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 94,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("h2", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:97",
+                        className: "text-5xl md:text-7xl font-bold leading-tight drop-shadow-2xl",
+                        children: ["一人ひとりの未来を", /* @__PURE__ */
+                        jsxDEV("br", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:99"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 99,
+                            columnNumber: 15
+                        }, this), "共に創る"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 97,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:102",
+                        className: "text-xl md:text-2xl text-white/90 leading-relaxed max-w-2xl mx-auto drop-shadow-lg",
+                        children: ["障害福祉サービスを通じて、利用者様の自立と社会参加を支援する", /* @__PURE__ */
+                        jsxDEV("br", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:104"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 104,
+                            columnNumber: 15
+                        }, this), "3つの事業所を運営しています"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 102,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:107",
+                        className: "flex flex-col sm:flex-row gap-4 justify-center pt-6",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Button, {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:108",
+                            size: "lg",
+                            className: "bg-white text-primary hover:bg-white/90 text-lg px-8 py-6",
+                            asChild: true,
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:109",
+                                href: "#facilities",
+                                children: "事業所を見る"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 109,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 108,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Button, {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:111",
+                            size: "lg",
+                            variant: "outline",
+                            className: "border-2 border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6",
+                            asChild: true,
+                            children: /* @__PURE__ */
+                            jsxDEV("a", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:112",
+                                href: "#contact",
+                                children: "お問い合わせ"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 112,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 111,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 107,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 93,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 92,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:117",
+                className: "absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:118",
+                    className: "w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:119",
+                        className: "w-1 h-3 bg-white/50 rounded-full"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 119,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 118,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 117,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 83,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:125",
+            id: "about",
+            className: "py-24 bg-gradient-to-br from-slate-50 to-blue-50/30",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:126",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:127",
+                    className: "max-w-6xl mx-auto",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:128",
+                        className: "grid md:grid-cols-2 gap-12 items-center",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:129",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:130",
+                                className: "inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6",
+                                children: "About Us"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 130,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("h3", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:133",
+                                className: "text-4xl md:text-5xl font-bold mb-6",
+                                children: "法人概要"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 133,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("p", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:134",
+                                className: "text-lg text-muted-foreground leading-relaxed mb-8",
+                                children: "一般社団法人未来ネットワークは、2016年7月に設立され、障害福祉サービス事業を通じて、 利用者様一人ひとりの個性を大切にし、自立した生活と社会参加を支援しています。"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 134,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:138",
+                                className: "space-y-4",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:139",
+                                    className: "flex items-start gap-3",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(CheckCircle2, {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:140",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-0.5"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:141",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:142",
+                                            className: "font-semibold",
+                                            children: "3つの事業所を運営"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 142,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:143",
+                                            className: "text-sm text-muted-foreground",
+                                            children: "MIRAI、HIKARI、studio M"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 143,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 141,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 139,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:146",
+                                    className: "flex items-start gap-3",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(CheckCircle2, {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:147",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-0.5"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 147,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:148",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:149",
+                                            className: "font-semibold",
+                                            children: "個別支援計画に基づいたサポート"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 149,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:150",
+                                            className: "text-sm text-muted-foreground",
+                                            children: "一人ひとりに合わせた支援を提供"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 150,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 148,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 146,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:153",
+                                    className: "flex items-start gap-3",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV(CheckCircle2, {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:154",
+                                        className: "w-6 h-6 text-primary flex-shrink-0 mt-0.5"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 154,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:155",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:156",
+                                            className: "font-semibold",
+                                            children: "地域に根ざした活動"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 156,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:157",
+                                            className: "text-sm text-muted-foreground",
+                                            children: "東京都昭島市を中心に展開"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 157,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 155,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 153,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 138,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 129,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV(Card, {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:162",
+                            className: "border-2 shadow-xl",
+                            children: /* @__PURE__ */
+                            jsxDEV(CardContent, {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:163",
+                                className: "p-8",
+                                children: /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:164",
+                                    className: "space-y-6",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:165",
+                                        className: "grid grid-cols-2 gap-6",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:166",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:167",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "名称"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 167,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:168",
+                                                className: "font-bold",
+                                                children: "一般社団法人未来ネットワーク"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 168,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 166,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:170",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:171",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "法人番号"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 171,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:172",
+                                                className: "font-bold",
+                                                children: "9010105001875"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 172,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 170,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:174",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:175",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "代表理事"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 175,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:176",
+                                                className: "font-bold",
+                                                children: "北村 陽朗"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 176,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 174,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:178",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:179",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "設立年月日"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 179,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:180",
+                                                className: "font-bold",
+                                                children: "2016年7月1日"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 180,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 178,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:182",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:183",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "資本金"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 183,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:184",
+                                                className: "font-bold",
+                                                children: "500万円"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 184,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 182,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:186",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:187",
+                                                className: "text-xs text-muted-foreground mb-1",
+                                                children: "事業内容"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 187,
+                                                columnNumber: 25
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("p", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:188",
+                                                className: "font-bold",
+                                                children: "障害福祉サービス事業"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 188,
+                                                columnNumber: 25
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 186,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 165,
+                                        columnNumber: 21
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:191",
+                                        className: "pt-4 border-t",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:192",
+                                            className: "text-xs text-muted-foreground mb-1",
+                                            children: "法人登記所在地"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 192,
+                                            columnNumber: 23
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:193",
+                                            className: "font-bold text-sm",
+                                            children: "東京都八王子内小町1096-16"
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 193,
+                                            columnNumber: 23
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 191,
+                                        columnNumber: 21
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 164,
+                                    columnNumber: 19
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 163,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 162,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 128,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 127,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 126,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 125,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:204",
+            id: "facilities",
+            className: "py-24 bg-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:205",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:206",
+                    className: "max-w-6xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:207",
+                        className: "text-center mb-16",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:208",
+                            className: "inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-semibold mb-6",
+                            children: "Our Facilities"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 208,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:211",
+                            className: "text-4xl md:text-5xl font-bold mb-6",
+                            children: "運営事業所"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 211,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:212",
+                            className: "text-lg text-muted-foreground max-w-2xl mx-auto",
+                            children: "それぞれの特色を活かした3つの事業所で、利用者様の多様なニーズに応えます"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 212,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 207,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:217",
+                        className: "space-y-24",
+                        children: facilities.map( (facility, index) => /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:219",
+                            className: `grid md:grid-cols-2 gap-8 items-center ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`,
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:225",
+                                className: index % 2 === 1 ? "md:order-2" : "",
+                                children: /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:226",
+                                    className: "relative group overflow-hidden rounded-2xl shadow-2xl",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("img", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:227",
+                                        src: facility.image,
+                                        alt: facility.name,
+                                        className: "w-full h-96 object-cover group-hover:scale-110 transition-transform duration-500"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 227,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:232",
+                                        className: `absolute inset-0 bg-gradient-to-br ${facility.color} opacity-20 group-hover:opacity-30 transition-opacity`
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 232,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 226,
+                                    columnNumber: 21
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 225,
+                                columnNumber: 19
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:235",
+                                className: index % 2 === 1 ? "md:order-1" : "",
+                                children: /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:236",
+                                    className: "space-y-6",
+                                    children: [/* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:237",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:238",
+                                            className: "text-sm font-semibold text-primary mb-2",
+                                            children: facility.type
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 238,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("h4", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:239",
+                                            className: "text-4xl font-bold mb-4",
+                                            children: facility.name
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 239,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("p", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:240",
+                                            className: "text-lg text-muted-foreground leading-relaxed",
+                                            children: facility.description
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 240,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 237,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:245",
+                                        className: "grid grid-cols-2 gap-3",
+                                        children: facility.features.map( (feature, idx) => /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:247",
+                                            className: "flex items-center gap-2",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV("div", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:248",
+                                                className: `w-2 h-2 rounded-full bg-gradient-to-r ${facility.color}`
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 248,
+                                                columnNumber: 29
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("span", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:249",
+                                                className: "text-sm font-medium",
+                                                children: feature
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 249,
+                                                columnNumber: 29
+                                            }, this)]
+                                        }, idx, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 247,
+                                            columnNumber: 23
+                                        }, this))
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 245,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV("div", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:254",
+                                        className: "space-y-2 pt-4",
+                                        children: [/* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:255",
+                                            className: "flex items-start gap-2 text-sm",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV(MapPin, {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:256",
+                                                className: "w-4 h-4 text-primary flex-shrink-0 mt-0.5"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 256,
+                                                columnNumber: 27
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("span", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:257",
+                                                className: "text-muted-foreground",
+                                                children: facility.address
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 257,
+                                                columnNumber: 27
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 255,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:259",
+                                            className: "flex items-center gap-2 text-sm",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV(Phone, {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:260",
+                                                className: "w-4 h-4 text-primary flex-shrink-0"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 260,
+                                                columnNumber: 27
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("span", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:261",
+                                                className: "text-muted-foreground",
+                                                children: facility.tel
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 261,
+                                                columnNumber: 27
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 259,
+                                            columnNumber: 25
+                                        }, this), /* @__PURE__ */
+                                        jsxDEV("div", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:263",
+                                            className: "flex items-center gap-2 text-sm",
+                                            children: [/* @__PURE__ */
+                                            jsxDEV(Mail, {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:264",
+                                                className: "w-4 h-4 text-primary flex-shrink-0"
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 264,
+                                                columnNumber: 27
+                                            }, this), /* @__PURE__ */
+                                            jsxDEV("a", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:265",
+                                                href: `mailto:${facility.email}`,
+                                                className: "text-primary hover:underline",
+                                                children: facility.email
+                                            }, void 0, false, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 265,
+                                                columnNumber: 27
+                                            }, this)]
+                                        }, void 0, true, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 263,
+                                            columnNumber: 25
+                                        }, this)]
+                                    }, void 0, true, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 254,
+                                        columnNumber: 23
+                                    }, this), /* @__PURE__ */
+                                    jsxDEV(Button, {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:271",
+                                        className: `bg-gradient-to-r ${facility.color} text-white border-0 group/btn`,
+                                        asChild: true,
+                                        children: /* @__PURE__ */
+                                        jsxDEV(Link, {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:272",
+                                            href: facility.link,
+                                            children: /* @__PURE__ */
+                                            jsxDEV("a", {
+                                                "data-loc": "client/src/pages/HomeDesign2.tsx:273",
+                                                className: "flex items-center gap-2",
+                                                children: ["詳しく見る", /* @__PURE__ */
+                                                jsxDEV(ArrowRight, {
+                                                    "data-loc": "client/src/pages/HomeDesign2.tsx:275",
+                                                    className: "w-4 h-4 group-hover/btn:translate-x-1 transition-transform"
+                                                }, void 0, false, {
+                                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                    lineNumber: 275,
+                                                    columnNumber: 29
+                                                }, this)]
+                                            }, void 0, true, {
+                                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                                lineNumber: 273,
+                                                columnNumber: 27
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 272,
+                                            columnNumber: 25
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 271,
+                                        columnNumber: 23
+                                    }, this)]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 236,
+                                    columnNumber: 21
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 235,
+                                columnNumber: 19
+                            }, this)]
+                        }, index, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 219,
+                            columnNumber: 15
+                        }, this))
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 217,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 206,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 205,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 204,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("section", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:289",
+            id: "contact",
+            className: "py-24 bg-gradient-to-br from-slate-900 to-blue-900 text-white",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:290",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:291",
+                    className: "max-w-4xl mx-auto text-center",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:292",
+                        className: "inline-block px-4 py-2 bg-white/10 text-white rounded-full text-sm font-semibold mb-6",
+                        children: "Contact"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 292,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("h3", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:295",
+                        className: "text-4xl md:text-5xl font-bold mb-6",
+                        children: "お問い合わせ"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 295,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:296",
+                        className: "text-lg text-white/80 mb-12",
+                        children: "見学や体験、ご相談など、お気軽にお問い合わせください"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 296,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:299",
+                        className: "grid md:grid-cols-3 gap-6",
+                        children: facilities.map( (facility, index) => /* @__PURE__ */
+                        jsxDEV(Card, {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:301",
+                            className: "bg-white/10 backdrop-blur-md border-white/20 hover:bg-white/20 transition-all",
+                            children: /* @__PURE__ */
+                            jsxDEV(CardContent, {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:302",
+                                className: "p-6 text-center space-y-4",
+                                children: [/* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:303",
+                                    className: "font-bold text-xl",
+                                    children: facility.name
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 303,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:304",
+                                    className: "text-sm text-white/80",
+                                    children: facility.type
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 304,
+                                    columnNumber: 21
+                                }, this), /* @__PURE__ */
+                                jsxDEV(Button, {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:305",
+                                    variant: "outline",
+                                    className: "w-full border-white text-white hover:bg-white hover:text-primary",
+                                    asChild: true,
+                                    children: /* @__PURE__ */
+                                    jsxDEV("a", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:306",
+                                        href: `mailto:${facility.email}`,
+                                        children: "メールで問い合わせ"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 306,
+                                        columnNumber: 23
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 305,
+                                    columnNumber: 21
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 302,
+                                columnNumber: 19
+                            }, this)
+                        }, index, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 301,
+                            columnNumber: 15
+                        }, this))
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 299,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 291,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 290,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 289,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("footer", {
+            "data-loc": "client/src/pages/HomeDesign2.tsx:317",
+            className: "bg-slate-950 text-slate-400 py-12",
+            children: /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/pages/HomeDesign2.tsx:318",
+                className: "container",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/HomeDesign2.tsx:319",
+                    className: "max-w-6xl mx-auto",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:320",
+                        className: "grid md:grid-cols-4 gap-8 mb-8",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:321",
+                            className: "md:col-span-2",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:322",
+                                className: "flex items-center gap-3 mb-4",
+                                children: [/* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:323",
+                                    className: "w-10 h-10 rounded-full bg-white/10 flex items-center justify-center p-1.5",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("img", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:324",
+                                        src: "/mirai-logo.webp",
+                                        alt: "未来ネットワーク",
+                                        className: "w-full h-full object-contain opacity-80"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 324,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 323,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("p", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:326",
+                                    className: "font-bold text-white text-lg",
+                                    children: "一般社団法人未来ネットワーク"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 326,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 322,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("p", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:328",
+                                className: "text-sm mb-4",
+                                children: "障害福祉サービスを通じて、利用者様の自立と社会参加を支援しています。"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 328,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("p", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:331",
+                                className: "text-xs",
+                                children: "設立: 2016年7月1日 | 代表理事: 北村 陽朗"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 331,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 321,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:333",
+                            children: [/* @__PURE__ */
+                            jsxDEV("h5", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:334",
+                                className: "font-bold text-white mb-4",
+                                children: "運営事業所"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 334,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("ul", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:335",
+                                className: "space-y-2 text-sm",
+                                children: facilities.map( (facility, index) => /* @__PURE__ */
+                                jsxDEV("li", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:337",
+                                    children: /* @__PURE__ */
+                                    jsxDEV(Link, {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:338",
+                                        href: facility.link,
+                                        children: /* @__PURE__ */
+                                        jsxDEV("a", {
+                                            "data-loc": "client/src/pages/HomeDesign2.tsx:339",
+                                            className: "hover:text-white transition-colors",
+                                            children: facility.name
+                                        }, void 0, false, {
+                                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                            lineNumber: 339,
+                                            columnNumber: 25
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 338,
+                                        columnNumber: 23
+                                    }, this)
+                                }, index, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 337,
+                                    columnNumber: 19
+                                }, this))
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 335,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 333,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:345",
+                            children: [/* @__PURE__ */
+                            jsxDEV("h5", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:346",
+                                className: "font-bold text-white mb-4",
+                                children: "リンク"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 346,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("ul", {
+                                "data-loc": "client/src/pages/HomeDesign2.tsx:347",
+                                className: "space-y-2 text-sm",
+                                children: [/* @__PURE__ */
+                                jsxDEV("li", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:348",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("a", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:349",
+                                        href: "#about",
+                                        className: "hover:text-white transition-colors",
+                                        children: "法人概要"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 349,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 348,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("li", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:351",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("a", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:352",
+                                        href: "#facilities",
+                                        className: "hover:text-white transition-colors",
+                                        children: "事業所紹介"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 352,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 351,
+                                    columnNumber: 19
+                                }, this), /* @__PURE__ */
+                                jsxDEV("li", {
+                                    "data-loc": "client/src/pages/HomeDesign2.tsx:354",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("a", {
+                                        "data-loc": "client/src/pages/HomeDesign2.tsx:355",
+                                        href: "#contact",
+                                        className: "hover:text-white transition-colors",
+                                        children: "お問い合わせ"
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                        lineNumber: 355,
+                                        columnNumber: 21
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                    lineNumber: 354,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                                lineNumber: 347,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 345,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 320,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/HomeDesign2.tsx:360",
+                        className: "border-t border-slate-800 pt-8 text-center",
+                        children: /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/pages/HomeDesign2.tsx:361",
+                            className: "text-sm",
+                            children: "© 2016-2025 一般社団法人未来ネットワーク All rights reserved."
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                            lineNumber: 361,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                        lineNumber: 360,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                    lineNumber: 319,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+                lineNumber: 318,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+            lineNumber: 317,
+            columnNumber: 7
+        }, this)]
+    }, void 0, true, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx",
+        lineNumber: 54,
+        columnNumber: 5
+    }, this);
+}
+_c = HomeDesign2;
+var _c;
+$RefreshReg$(_c, "HomeDesign2");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/pages/HomeDesign2.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkJ1dHRvbiIsIkNhcmQiLCJDYXJkQ29udGVudCIsIkFQUF9USVRMRSIsIk1haWwiLCJQaG9uZSIsIk1hcFBpbiIsIkFycm93UmlnaHQiLCJDaGVja0NpcmNsZTIiLCJMaW5rIiwiSG9tZURlc2lnbjIiLCJmYWNpbGl0aWVzIiwibmFtZSIsInR5cGUiLCJkZXNjcmlwdGlvbiIsImZlYXR1cmVzIiwiYWRkcmVzcyIsInRlbCIsImVtYWlsIiwiaW1hZ2UiLCJsaW5rIiwiY29sb3IiLCJtYXAiLCJmYWNpbGl0eSIsImluZGV4IiwiZmVhdHVyZSIsImlkeCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkhvbWVEZXNpZ24yLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBCdXR0b24gfSBmcm9tIFwiQC9jb21wb25lbnRzL3VpL2J1dHRvblwiO1xuaW1wb3J0IHsgQ2FyZCwgQ2FyZENvbnRlbnQsIENhcmREZXNjcmlwdGlvbiwgQ2FyZEhlYWRlciwgQ2FyZFRpdGxlIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jYXJkXCI7XG5pbXBvcnQgeyBBUFBfVElUTEUgfSBmcm9tIFwiQC9jb25zdFwiO1xuaW1wb3J0IHsgQnVpbGRpbmcyLCBIZWFydCwgVXNlcnMsIE1haWwsIFBob25lLCBNYXBQaW4sIEFycm93UmlnaHQsIENoZWNrQ2lyY2xlMiB9IGZyb20gXCJsdWNpZGUtcmVhY3RcIjtcbmltcG9ydCB7IExpbmsgfSBmcm9tIFwid291dGVyXCI7XG5cbi8qKlxuICog44OH44K244Kk44Oz5qGIMjog5aSn44GN44Gq44OT44K444Ol44Ki44Or44Go44K544OX44Oq44OD44OI44Os44Kk44Ki44Km44OIXG4gKiAtIOODleODq+OCueOCr+ODquODvOODs+ODkuODvOODreODvOOCpOODoeODvOOCuFxuICogLSDlt6blj7PliIblibLjg6zjgqTjgqLjgqbjg4jjgafkuovmpa3miYDjgpLntLnku4tcbiAqIC0g44Of44OL44Oe44Or44Gn5rSX57e044GV44KM44Gf44OH44K244Kk44OzXG4gKi9cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEhvbWVEZXNpZ24yKCkge1xuICBjb25zdCBmYWNpbGl0aWVzID0gW1xuICAgIHtcbiAgICAgIG5hbWU6IFwiTUlSQUlcIixcbiAgICAgIHR5cGU6IFwi5bCx5Yq057aZ57aa5pSv5o+0QuWei+S6i+alreaJgFwiLFxuICAgICAgZGVzY3JpcHRpb246IFwi5LiA5Lq644Gy44Go44KK44Gu5YCL5oCn44Go6IO95Yqb44KS5aSn5YiH44Gr44GX44CB6Ieq56uL44GX44Gf55Sf5rS744KS55uu5oyH44GZ44Gf44KB44Gu5bCx5Yq05pSv5o+044KS6KGM44Gj44Gm44GE44G+44GZ44CCXCIsXG4gICAgICBmZWF0dXJlczogW1wi44OP44O844OQ44Oq44Km44Og5Yi25L2cXCIsIFwi6Lu95L2c5qWtXCIsIFwi5Ym15L2c5rS75YuVXCIsIFwi56S+5Lya5Y+C5Yqg5pSv5o+0XCJdLFxuICAgICAgYWRkcmVzczogXCLmnbHkuqzpg73mmK3ls7bluILmnJ3ml6XnlLoxLTktNyBLS+ODk+ODqzEwMVwiLFxuICAgICAgdGVsOiBcIjA0Mi01MTktMjk0MlwiLFxuICAgICAgZW1haWw6IFwiaW5mb0BtaXJhaW5ldHdvcmsyMDE3LmNvbVwiLFxuICAgICAgaW1hZ2U6IFwiL21pcmFpLXByb2R1Y3RzLndlYnBcIixcbiAgICAgIGxpbms6IFwiL21pcmFpXCIsXG4gICAgICBjb2xvcjogXCJmcm9tLWJsdWUtNTAwIHRvLWN5YW4tNTAwXCIsXG4gICAgfSxcbiAgICB7XG4gICAgICBuYW1lOiBcIkhJS0FSSVwiLFxuICAgICAgdHlwZTogXCLnlJ/mtLvku4vorbfkuovmpa3miYBcIixcbiAgICAgIGRlc2NyaXB0aW9uOiBcIuaXpeW4uOeUn+a0u+OBruaUr+aPtOOCkumAmuOBmOOBpuOAgeWIqeeUqOiAheanmOOBjOWuieW/g+OBl+OBpuWFheWun+OBl+OBn+avjuaXpeOCkumBjuOBlOOBm+OCi+OCiOOBhuOCteODneODvOODiOOBhOOBn+OBl+OBvuOBmeOAglwiLFxuICAgICAgZmVhdHVyZXM6IFtcIuaXpeW4uOeUn+a0u+aUr+aPtFwiLCBcIuODrOOCr+ODquOCqOODvOOCt+ODp+ODs1wiLCBcIuWBpeW6t+euoeeQhlwiLCBcIuWAi+WIpeaUr+aPtOioiOeUu1wiXSxcbiAgICAgIGFkZHJlc3M6IFwi5p2x5Lqs6YO95pit5bO25biC57eR55S6NS0xLTZcIixcbiAgICAgIHRlbDogXCIwNDItNTE5LTE5MDVcIixcbiAgICAgIGVtYWlsOiBcImhpa2FyaW5ldDIwMTlAZ21haWwuY29tXCIsXG4gICAgICBpbWFnZTogXCIvaGlrYXJpLW1haW4tcm9vbS53ZWJwXCIsXG4gICAgICBsaW5rOiBcIi9oaWthcmlcIixcbiAgICAgIGNvbG9yOiBcImZyb20tY3lhbi01MDAgdG8tdGVhbC01MDBcIixcbiAgICB9LFxuICAgIHtcbiAgICAgIG5hbWU6IFwic3R1ZGlvIE1cIixcbiAgICAgIHR5cGU6IFwi5bCx5Yq057aZ57aa5pSv5o+0QuWei+S6i+alreaJgFwiLFxuICAgICAgZGVzY3JpcHRpb246IFwi5Ym16YCg55qE44Gq5rS75YuV44KS6YCa44GY44Gm44CB5Yip55So6ICF5qeY44Gu5Y+v6IO95oCn44KS5bqD44GS44CB56S+5Lya5Y+C5Yqg44KS5pSv5o+044GX44G+44GZ44CCXCIsXG4gICAgICBmZWF0dXJlczogW1wi44Kv44Oq44Ko44Kk44OG44Kj44OW44Ov44O844KvXCIsIFwiUEPkvZzmpa1cIiwgXCLjg4fjgrbjgqTjg7PliLbkvZxcIiwgXCLjgrnjgq3jg6vplovnmbpcIl0sXG4gICAgICBhZGRyZXNzOiBcIuadseS6rOmDveaYreWztuW4guacneaXpeeUujEtNi0yIGhhcmFtbyBjdXBydW0gMzAy5Y+35a6kXCIsXG4gICAgICB0ZWw6IFwiMDQyLTUxOS03OTE2XCIsXG4gICAgICBlbWFpbDogXCJpbmZvQHN0dWRpb20uanBcIixcbiAgICAgIGltYWdlOiBcIi9zdHVkaW8tbS1tYWluLndlYnBcIixcbiAgICAgIGxpbms6IFwiL3N0dWRpby1tXCIsXG4gICAgICBjb2xvcjogXCJmcm9tLXRlYWwtNTAwIHRvLWVtZXJhbGQtNTAwXCIsXG4gICAgfSxcbiAgXTtcblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwibWluLWgtc2NyZWVuIGZsZXggZmxleC1jb2wgYmctd2hpdGVcIj5cbiAgICAgIHsvKiBNaW5pbWFsIEhlYWRlciAqL31cbiAgICAgIDxoZWFkZXIgY2xhc3NOYW1lPVwiYWJzb2x1dGUgdG9wLTAgbGVmdC0wIHJpZ2h0LTAgei01MCBiZy10cmFuc3BhcmVudFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciBweS02XCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWJldHdlZW5cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEwIGgtMTAgcm91bmRlZC1mdWxsIGJnLXdoaXRlIHNoYWRvdy1sZyBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBwLTEuNVwiPlxuICAgICAgICAgICAgICAgIDxpbWcgc3JjPVwiL21pcmFpLWxvZ28ud2VicFwiIGFsdD1cIuacquadpeODjeODg+ODiOODr+ODvOOCr1wiIGNsYXNzTmFtZT1cInctZnVsbCBoLWZ1bGwgb2JqZWN0LWNvbnRhaW5cIiAvPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LXdoaXRlXCI+XG4gICAgICAgICAgICAgICAgPGgxIGNsYXNzTmFtZT1cInRleHQtbGcgZm9udC1ib2xkIGRyb3Atc2hhZG93LWxnXCI+e0FQUF9USVRMRX08L2gxPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPG5hdiBjbGFzc05hbWU9XCJoaWRkZW4gbWQ6ZmxleCBnYXAtOFwiPlxuICAgICAgICAgICAgICA8YSBocmVmPVwiI2Fib3V0XCIgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LW1lZGl1bSB0ZXh0LXdoaXRlIGhvdmVyOnRleHQtd2hpdGUvODAgdHJhbnNpdGlvbi1jb2xvcnMgZHJvcC1zaGFkb3dcIj5cbiAgICAgICAgICAgICAgICDms5XkurrmpoLopoFcbiAgICAgICAgICAgICAgPC9hPlxuICAgICAgICAgICAgICA8YSBocmVmPVwiI2ZhY2lsaXRpZXNcIiBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbWVkaXVtIHRleHQtd2hpdGUgaG92ZXI6dGV4dC13aGl0ZS84MCB0cmFuc2l0aW9uLWNvbG9ycyBkcm9wLXNoYWRvd1wiPlxuICAgICAgICAgICAgICAgIOS6i+alreaJgFxuICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgIDxhIGhyZWY9XCIjY29udGFjdFwiIGNsYXNzTmFtZT1cInRleHQtc20gZm9udC1tZWRpdW0gdGV4dC13aGl0ZSBob3Zlcjp0ZXh0LXdoaXRlLzgwIHRyYW5zaXRpb24tY29sb3JzIGRyb3Atc2hhZG93XCI+XG4gICAgICAgICAgICAgICAg44GK5ZWP44GE5ZCI44KP44GbXG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgIDwvbmF2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgIDwvaGVhZGVyPlxuXG4gICAgICB7LyogRnVsbC1zY3JlZW4gSGVybyB3aXRoIEltYWdlICovfVxuICAgICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwicmVsYXRpdmUgaC1zY3JlZW4gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgb3ZlcmZsb3ctaGlkZGVuXCI+XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgaW5zZXQtMFwiPlxuICAgICAgICAgIDxpbWdcbiAgICAgICAgICAgIHNyYz1cIi9oaWthcmktaW50ZXJpb3Iud2VicFwiXG4gICAgICAgICAgICBhbHQ9XCLmlr3oqK3lhoXoprNcIlxuICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXJcIlxuICAgICAgICAgIC8+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJhYnNvbHV0ZSBpbnNldC0wIGJnLWdyYWRpZW50LXRvLWJyIGZyb20tYmx1ZS05MDAvODAgdmlhLWN5YW4tOTAwLzcwIHRvLXRlYWwtOTAwLzgwXCI+PC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lciByZWxhdGl2ZSB6LTEwIHRleHQtY2VudGVyIHRleHQtd2hpdGVcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTR4bCBteC1hdXRvIHNwYWNlLXktOFwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgdy0zMiBoLTMyIHJvdW5kZWQtZnVsbCBiZy13aGl0ZS8xMCBiYWNrZHJvcC1ibHVyLW1kIHNoYWRvdy0yeGwgbWItNiBwLTQgYm9yZGVyLTQgYm9yZGVyLXdoaXRlLzIwXCI+XG4gICAgICAgICAgICAgIDxpbWcgc3JjPVwiL21pcmFpLWxvZ28ud2VicFwiIGFsdD1cIuacquadpeODjeODg+ODiOODr+ODvOOCr1wiIGNsYXNzTmFtZT1cInctZnVsbCBoLWZ1bGwgb2JqZWN0LWNvbnRhaW5cIiAvPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8aDIgY2xhc3NOYW1lPVwidGV4dC01eGwgbWQ6dGV4dC03eGwgZm9udC1ib2xkIGxlYWRpbmctdGlnaHQgZHJvcC1zaGFkb3ctMnhsXCI+XG4gICAgICAgICAgICAgIOS4gOS6uuOBsuOBqOOCiuOBruacquadpeOCklxuICAgICAgICAgICAgICA8YnIgLz5cbiAgICAgICAgICAgICAg5YWx44Gr5Ym144KLXG4gICAgICAgICAgICA8L2gyPlxuICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14bCBtZDp0ZXh0LTJ4bCB0ZXh0LXdoaXRlLzkwIGxlYWRpbmctcmVsYXhlZCBtYXgtdy0yeGwgbXgtYXV0byBkcm9wLXNoYWRvdy1sZ1wiPlxuICAgICAgICAgICAgICDpmpzlrrPnpo/npYnjgrXjg7zjg5PjgrnjgpLpgJrjgZjjgabjgIHliKnnlKjogIXmp5jjga7oh6rnq4vjgajnpL7kvJrlj4LliqDjgpLmlK/mj7TjgZnjgotcbiAgICAgICAgICAgICAgPGJyIC8+XG4gICAgICAgICAgICAgIDPjgaTjga7kuovmpa3miYDjgpLpgYvllrbjgZfjgabjgYTjgb7jgZlcbiAgICAgICAgICAgIDwvcD5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBmbGV4LWNvbCBzbTpmbGV4LXJvdyBnYXAtNCBqdXN0aWZ5LWNlbnRlciBwdC02XCI+XG4gICAgICAgICAgICAgIDxCdXR0b24gc2l6ZT1cImxnXCIgY2xhc3NOYW1lPVwiYmctd2hpdGUgdGV4dC1wcmltYXJ5IGhvdmVyOmJnLXdoaXRlLzkwIHRleHQtbGcgcHgtOCBweS02XCIgYXNDaGlsZD5cbiAgICAgICAgICAgICAgICA8YSBocmVmPVwiI2ZhY2lsaXRpZXNcIj7kuovmpa3miYDjgpLopovjgos8L2E+XG4gICAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgICAgICA8QnV0dG9uIHNpemU9XCJsZ1wiIHZhcmlhbnQ9XCJvdXRsaW5lXCIgY2xhc3NOYW1lPVwiYm9yZGVyLTIgYm9yZGVyLXdoaXRlIHRleHQtd2hpdGUgaG92ZXI6Ymctd2hpdGUgaG92ZXI6dGV4dC1wcmltYXJ5IHRleHQtbGcgcHgtOCBweS02XCIgYXNDaGlsZD5cbiAgICAgICAgICAgICAgICA8YSBocmVmPVwiI2NvbnRhY3RcIj7jgYrllY/jgYTlkIjjgo/jgZs8L2E+XG4gICAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGJvdHRvbS04IGxlZnQtMS8yIC10cmFuc2xhdGUteC0xLzIgYW5pbWF0ZS1ib3VuY2VcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctNiBoLTEwIGJvcmRlci0yIGJvcmRlci13aGl0ZS81MCByb3VuZGVkLWZ1bGwgZmxleCBpdGVtcy1zdGFydCBqdXN0aWZ5LWNlbnRlciBwLTJcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xIGgtMyBiZy13aGl0ZS81MCByb3VuZGVkLWZ1bGxcIj48L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBBYm91dCBTZWN0aW9uIC0gU3BsaXQgTGF5b3V0ICovfVxuICAgICAgPHNlY3Rpb24gaWQ9XCJhYm91dFwiIGNsYXNzTmFtZT1cInB5LTI0IGJnLWdyYWRpZW50LXRvLWJyIGZyb20tc2xhdGUtNTAgdG8tYmx1ZS01MC8zMFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNnhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBtZDpncmlkLWNvbHMtMiBnYXAtMTIgaXRlbXMtY2VudGVyXCI+XG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtYmxvY2sgcHgtNCBweS0yIGJnLXByaW1hcnkvMTAgdGV4dC1wcmltYXJ5IHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgbWItNlwiPlxuICAgICAgICAgICAgICAgICAgQWJvdXQgVXNcbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC00eGwgbWQ6dGV4dC01eGwgZm9udC1ib2xkIG1iLTZcIj7ms5XkurrmpoLopoE8L2gzPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtbGcgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGxlYWRpbmctcmVsYXhlZCBtYi04XCI+XG4gICAgICAgICAgICAgICAgICDkuIDoiKznpL7lm6Pms5XkurrmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq/jga/jgIEyMDE25bm0N+aciOOBq+ioreeri+OBleOCjOOAgemanOWus+emj+elieOCteODvOODk+OCueS6i+alreOCkumAmuOBmOOBpuOAgVxuICAgICAgICAgICAgICAgICAg5Yip55So6ICF5qeY5LiA5Lq644Gy44Go44KK44Gu5YCL5oCn44KS5aSn5YiH44Gr44GX44CB6Ieq56uL44GX44Gf55Sf5rS744Go56S+5Lya5Y+C5Yqg44KS5pSv5o+044GX44Gm44GE44G+44GZ44CCXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS00XCI+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTYgaC02IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wIG10LTAuNVwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zZW1pYm9sZFwiPjPjgaTjga7kuovmpa3miYDjgpLpgYvllrY8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmRcIj5NSVJBSeOAgUhJS0FSSeOAgXN0dWRpbyBNPC9wPlxuICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLXN0YXJ0IGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICAgIDxDaGVja0NpcmNsZTIgY2xhc3NOYW1lPVwidy02IGgtNiB0ZXh0LXByaW1hcnkgZmxleC1zaHJpbmstMCBtdC0wLjVcIiAvPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtc2VtaWJvbGRcIj7lgIvliKXmlK/mj7ToqIjnlLvjgavln7rjgaXjgYTjgZ/jgrXjg53jg7zjg4g8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbSB0ZXh0LW11dGVkLWZvcmVncm91bmRcIj7kuIDkurrjgbLjgajjgorjgavlkIjjgo/jgZvjgZ/mlK/mj7TjgpLmj5Dkvps8L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTNcIj5cbiAgICAgICAgICAgICAgICAgICAgPENoZWNrQ2lyY2xlMiBjbGFzc05hbWU9XCJ3LTYgaC02IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wIG10LTAuNVwiIC8+XG4gICAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1zZW1pYm9sZFwiPuWcsOWfn+OBq+agueOBluOBl+OBn+a0u+WLlTwvcD5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtIHRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPuadseS6rOmDveaYreWztuW4guOCkuS4reW/g+OBq+WxlemWizwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxDYXJkIGNsYXNzTmFtZT1cImJvcmRlci0yIHNoYWRvdy14bFwiPlxuICAgICAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLThcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS02XCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBncmlkLWNvbHMtMiBnYXAtNlwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYi0xXCI+5ZCN56ewPC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2xkXCI+5LiA6Iis56S+5Zuj5rOV5Lq65pyq5p2l44ON44OD44OI44Ov44O844KvPC9wPlxuICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYi0xXCI+5rOV5Lq655Wq5Y+3PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2xkXCI+OTAxMDEwNTAwMTg3NTwvcD5cbiAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmQgbWItMVwiPuS7o+ihqOeQhuS6izwvcD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtYm9sZFwiPuWMl+adkSDpmb3mnJc8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIG1iLTFcIj7oqK3nq4vlubTmnIjml6U8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LWJvbGRcIj4yMDE25bm0N+aciDHml6U8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIG1iLTFcIj7os4fmnKzph5E8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LWJvbGRcIj41MDDkuIflhoY8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHMgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIG1iLTFcIj7kuovmpa3lhoXlrrk8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LWJvbGRcIj7pmpzlrrPnpo/npYnjgrXjg7zjg5Pjgrnkuovmpa08L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInB0LTQgYm9yZGVyLXRcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYi0xXCI+5rOV5Lq655m76KiY5omA5Zyo5ZywPC9wPlxuICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LXNtXCI+5p2x5Lqs6YO95YWr546L5a2Q5YaF5bCP55S6MTA5Ni0xNjwvcD5cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L0NhcmRDb250ZW50PlxuICAgICAgICAgICAgICA8L0NhcmQ+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L3NlY3Rpb24+XG5cbiAgICAgIHsvKiBGYWNpbGl0aWVzIFNlY3Rpb24gLSBBbHRlcm5hdGluZyBMYXlvdXQgKi99XG4gICAgICA8c2VjdGlvbiBpZD1cImZhY2lsaXRpZXNcIiBjbGFzc05hbWU9XCJweS0yNCBiZy13aGl0ZVwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNnhsIG14LWF1dG9cIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbWItMTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJpbmxpbmUtYmxvY2sgcHgtNCBweS0yIGJnLXByaW1hcnkvMTAgdGV4dC1wcmltYXJ5IHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgbWItNlwiPlxuICAgICAgICAgICAgICAgIE91ciBGYWNpbGl0aWVzXG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICA8aDMgY2xhc3NOYW1lPVwidGV4dC00eGwgbWQ6dGV4dC01eGwgZm9udC1ib2xkIG1iLTZcIj7pgYvllrbkuovmpa3miYA8L2gzPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWxnIHRleHQtbXV0ZWQtZm9yZWdyb3VuZCBtYXgtdy0yeGwgbXgtYXV0b1wiPlxuICAgICAgICAgICAgICAgIOOBneOCjOOBnuOCjOOBrueJueiJsuOCkua0u+OBi+OBl+OBnzPjgaTjga7kuovmpa3miYDjgafjgIHliKnnlKjogIXmp5jjga7lpJrmp5jjgarjg4vjg7zjgrrjgavlv5zjgYjjgb7jgZlcbiAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgPC9kaXY+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwic3BhY2UteS0yNFwiPlxuICAgICAgICAgICAgICB7ZmFjaWxpdGllcy5tYXAoKGZhY2lsaXR5LCBpbmRleCkgPT4gKFxuICAgICAgICAgICAgICAgIDxkaXZcbiAgICAgICAgICAgICAgICAgIGtleT17aW5kZXh9XG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9e2BncmlkIG1kOmdyaWQtY29scy0yIGdhcC04IGl0ZW1zLWNlbnRlciAke1xuICAgICAgICAgICAgICAgICAgICBpbmRleCAlIDIgPT09IDEgPyBcIm1kOmZsZXgtcm93LXJldmVyc2VcIiA6IFwiXCJcbiAgICAgICAgICAgICAgICAgIH1gfVxuICAgICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtpbmRleCAlIDIgPT09IDEgPyBcIm1kOm9yZGVyLTJcIiA6IFwiXCJ9PlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlIGdyb3VwIG92ZXJmbG93LWhpZGRlbiByb3VuZGVkLTJ4bCBzaGFkb3ctMnhsXCI+XG4gICAgICAgICAgICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICAgICAgICAgICAgc3JjPXtmYWNpbGl0eS5pbWFnZX1cbiAgICAgICAgICAgICAgICAgICAgICAgIGFsdD17ZmFjaWxpdHkubmFtZX1cbiAgICAgICAgICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInctZnVsbCBoLTk2IG9iamVjdC1jb3ZlciBncm91cC1ob3ZlcjpzY2FsZS0xMTAgdHJhbnNpdGlvbi10cmFuc2Zvcm0gZHVyYXRpb24tNTAwXCJcbiAgICAgICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPXtgYWJzb2x1dGUgaW5zZXQtMCBiZy1ncmFkaWVudC10by1iciAke2ZhY2lsaXR5LmNvbG9yfSBvcGFjaXR5LTIwIGdyb3VwLWhvdmVyOm9wYWNpdHktMzAgdHJhbnNpdGlvbi1vcGFjaXR5YH0+PC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17aW5kZXggJSAyID09PSAxID8gXCJtZDpvcmRlci0xXCIgOiBcIlwifT5cbiAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTZcIj5cbiAgICAgICAgICAgICAgICAgICAgICA8ZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC1zbSBmb250LXNlbWlib2xkIHRleHQtcHJpbWFyeSBtYi0yXCI+e2ZhY2lsaXR5LnR5cGV9PC9wPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGg0IGNsYXNzTmFtZT1cInRleHQtNHhsIGZvbnQtYm9sZCBtYi00XCI+e2ZhY2lsaXR5Lm5hbWV9PC9oND5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtbGcgdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIGxlYWRpbmctcmVsYXhlZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICB7ZmFjaWxpdHkuZGVzY3JpcHRpb259XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgICAgXG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJncmlkIGdyaWQtY29scy0yIGdhcC0zXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICB7ZmFjaWxpdHkuZmVhdHVyZXMubWFwKChmZWF0dXJlLCBpZHgpID0+IChcbiAgICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBrZXk9e2lkeH0gY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTJcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT17YHctMiBoLTIgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLXIgJHtmYWNpbGl0eS5jb2xvcn1gfT48L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LXNtIGZvbnQtbWVkaXVtXCI+e2ZlYXR1cmV9PC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTIgcHQtNFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLXN0YXJ0IGdhcC0yIHRleHQtc21cIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPE1hcFBpbiBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wIG10LTAuNVwiIC8+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPntmYWNpbGl0eS5hZGRyZXNzfTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiB0ZXh0LXNtXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDxQaG9uZSBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPVwidGV4dC1tdXRlZC1mb3JlZ3JvdW5kXCI+e2ZhY2lsaXR5LnRlbH08L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC1zbVwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8TWFpbCBjbGFzc05hbWU9XCJ3LTQgaC00IHRleHQtcHJpbWFyeSBmbGV4LXNocmluay0wXCIgLz5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj17YG1haWx0bzoke2ZhY2lsaXR5LmVtYWlsfWB9IGNsYXNzTmFtZT1cInRleHQtcHJpbWFyeSBob3Zlcjp1bmRlcmxpbmVcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAgICB7ZmFjaWxpdHkuZW1haWx9XG4gICAgICAgICAgICAgICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiBjbGFzc05hbWU9e2BiZy1ncmFkaWVudC10by1yICR7ZmFjaWxpdHkuY29sb3J9IHRleHQtd2hpdGUgYm9yZGVyLTAgZ3JvdXAvYnRuYH0gYXNDaGlsZD5cbiAgICAgICAgICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9e2ZhY2lsaXR5Lmxpbmt9PlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8YSBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICAgIOips+OBl+OBj+imi+OCi1xuICAgICAgICAgICAgICAgICAgICAgICAgICAgIDxBcnJvd1JpZ2h0IGNsYXNzTmFtZT1cInctNCBoLTQgZ3JvdXAtaG92ZXIvYnRuOnRyYW5zbGF0ZS14LTEgdHJhbnNpdGlvbi10cmFuc2Zvcm1cIiAvPlxuICAgICAgICAgICAgICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgICAgPC9CdXR0b24+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7LyogQ29udGFjdCBTZWN0aW9uICovfVxuICAgICAgPHNlY3Rpb24gaWQ9XCJjb250YWN0XCIgY2xhc3NOYW1lPVwicHktMjQgYmctZ3JhZGllbnQtdG8tYnIgZnJvbS1zbGF0ZS05MDAgdG8tYmx1ZS05MDAgdGV4dC13aGl0ZVwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImNvbnRhaW5lclwiPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibWF4LXctNHhsIG14LWF1dG8gdGV4dC1jZW50ZXJcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaW5saW5lLWJsb2NrIHB4LTQgcHktMiBiZy13aGl0ZS8xMCB0ZXh0LXdoaXRlIHJvdW5kZWQtZnVsbCB0ZXh0LXNtIGZvbnQtc2VtaWJvbGQgbWItNlwiPlxuICAgICAgICAgICAgICBDb250YWN0XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxoMyBjbGFzc05hbWU9XCJ0ZXh0LTR4bCBtZDp0ZXh0LTV4bCBmb250LWJvbGQgbWItNlwiPuOBiuWVj+OBhOWQiOOCj+OBmzwvaDM+XG4gICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWxnIHRleHQtd2hpdGUvODAgbWItMTJcIj5cbiAgICAgICAgICAgICAg6KaL5a2m44KE5L2T6aiT44CB44GU55u46KuH44Gq44Gp44CB44GK5rCX6Lu944Gr44GK5ZWP44GE5ZCI44KP44Gb44GP44Gg44GV44GEXG4gICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTMgZ2FwLTZcIj5cbiAgICAgICAgICAgICAge2ZhY2lsaXRpZXMubWFwKChmYWNpbGl0eSwgaW5kZXgpID0+IChcbiAgICAgICAgICAgICAgICA8Q2FyZCBrZXk9e2luZGV4fSBjbGFzc05hbWU9XCJiZy13aGl0ZS8xMCBiYWNrZHJvcC1ibHVyLW1kIGJvcmRlci13aGl0ZS8yMCBob3ZlcjpiZy13aGl0ZS8yMCB0cmFuc2l0aW9uLWFsbFwiPlxuICAgICAgICAgICAgICAgICAgPENhcmRDb250ZW50IGNsYXNzTmFtZT1cInAtNiB0ZXh0LWNlbnRlciBzcGFjZS15LTRcIj5cbiAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwiZm9udC1ib2xkIHRleHQteGxcIj57ZmFjaWxpdHkubmFtZX08L3A+XG4gICAgICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC13aGl0ZS84MFwiPntmYWNpbGl0eS50eXBlfTwvcD5cbiAgICAgICAgICAgICAgICAgICAgPEJ1dHRvbiB2YXJpYW50PVwib3V0bGluZVwiIGNsYXNzTmFtZT1cInctZnVsbCBib3JkZXItd2hpdGUgdGV4dC13aGl0ZSBob3ZlcjpiZy13aGl0ZSBob3Zlcjp0ZXh0LXByaW1hcnlcIiBhc0NoaWxkPlxuICAgICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9e2BtYWlsdG86JHtmYWNpbGl0eS5lbWFpbH1gfT7jg6Hjg7zjg6vjgafllY/jgYTlkIjjgo/jgZs8L2E+XG4gICAgICAgICAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgICAgICA8L0NhcmQ+XG4gICAgICAgICAgICAgICkpfVxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvZGl2PlxuICAgICAgPC9zZWN0aW9uPlxuXG4gICAgICB7LyogRm9vdGVyICovfVxuICAgICAgPGZvb3RlciBjbGFzc05hbWU9XCJiZy1zbGF0ZS05NTAgdGV4dC1zbGF0ZS00MDAgcHktMTJcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJjb250YWluZXJcIj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1heC13LTZ4bCBteC1hdXRvXCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgbWQ6Z3JpZC1jb2xzLTQgZ2FwLTggbWItOFwiPlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm1kOmNvbC1zcGFuLTJcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0zIG1iLTRcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidy0xMCBoLTEwIHJvdW5kZWQtZnVsbCBiZy13aGl0ZS8xMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBwLTEuNVwiPlxuICAgICAgICAgICAgICAgICAgICA8aW1nIHNyYz1cIi9taXJhaS1sb2dvLndlYnBcIiBhbHQ9XCLmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq9cIiBjbGFzc05hbWU9XCJ3LWZ1bGwgaC1mdWxsIG9iamVjdC1jb250YWluIG9wYWNpdHktODBcIiAvPlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJmb250LWJvbGQgdGV4dC13aGl0ZSB0ZXh0LWxnXCI+5LiA6Iis56S+5Zuj5rOV5Lq65pyq5p2l44ON44OD44OI44Ov44O844KvPC9wPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gbWItNFwiPlxuICAgICAgICAgICAgICAgICAg6Zqc5a6z56aP56WJ44K144O844OT44K544KS6YCa44GY44Gm44CB5Yip55So6ICF5qeY44Gu6Ieq56uL44Go56S+5Lya5Y+C5Yqg44KS5pSv5o+044GX44Gm44GE44G+44GZ44CCXG4gICAgICAgICAgICAgICAgPC9wPlxuICAgICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQteHNcIj7oqK3nq4s6IDIwMTblubQ35pyIMeaXpSB8IOS7o+ihqOeQhuS6izog5YyX5p2RIOmZveaclzwvcD5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDxkaXY+XG4gICAgICAgICAgICAgICAgPGg1IGNsYXNzTmFtZT1cImZvbnQtYm9sZCB0ZXh0LXdoaXRlIG1iLTRcIj7pgYvllrbkuovmpa3miYA8L2g1PlxuICAgICAgICAgICAgICAgIDx1bCBjbGFzc05hbWU9XCJzcGFjZS15LTIgdGV4dC1zbVwiPlxuICAgICAgICAgICAgICAgICAge2ZhY2lsaXRpZXMubWFwKChmYWNpbGl0eSwgaW5kZXgpID0+IChcbiAgICAgICAgICAgICAgICAgICAgPGxpIGtleT17aW5kZXh9PlxuICAgICAgICAgICAgICAgICAgICAgIDxMaW5rIGhyZWY9e2ZhY2lsaXR5Lmxpbmt9PlxuICAgICAgICAgICAgICAgICAgICAgICAgPGEgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9yc1wiPntmYWNpbGl0eS5uYW1lfTwvYT5cbiAgICAgICAgICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgICAgICApKX1cbiAgICAgICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgICA8aDUgY2xhc3NOYW1lPVwiZm9udC1ib2xkIHRleHQtd2hpdGUgbWItNFwiPuODquODs+OCrzwvaDU+XG4gICAgICAgICAgICAgICAgPHVsIGNsYXNzTmFtZT1cInNwYWNlLXktMiB0ZXh0LXNtXCI+XG4gICAgICAgICAgICAgICAgICA8bGk+XG4gICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjYWJvdXRcIiBjbGFzc05hbWU9XCJob3Zlcjp0ZXh0LXdoaXRlIHRyYW5zaXRpb24tY29sb3JzXCI+5rOV5Lq65qaC6KaBPC9hPlxuICAgICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgICAgIDxsaT5cbiAgICAgICAgICAgICAgICAgICAgPGEgaHJlZj1cIiNmYWNpbGl0aWVzXCIgY2xhc3NOYW1lPVwiaG92ZXI6dGV4dC13aGl0ZSB0cmFuc2l0aW9uLWNvbG9yc1wiPuS6i+alreaJgOe0ueS7izwvYT5cbiAgICAgICAgICAgICAgICAgIDwvbGk+XG4gICAgICAgICAgICAgICAgICA8bGk+XG4gICAgICAgICAgICAgICAgICAgIDxhIGhyZWY9XCIjY29udGFjdFwiIGNsYXNzTmFtZT1cImhvdmVyOnRleHQtd2hpdGUgdHJhbnNpdGlvbi1jb2xvcnNcIj7jgYrllY/jgYTlkIjjgo/jgZs8L2E+XG4gICAgICAgICAgICAgICAgICA8L2xpPlxuICAgICAgICAgICAgICAgIDwvdWw+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImJvcmRlci10IGJvcmRlci1zbGF0ZS04MDAgcHQtOCB0ZXh0LWNlbnRlclwiPlxuICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXNtXCI+JmNvcHk7IDIwMTYtMjAyNSDkuIDoiKznpL7lm6Pms5XkurrmnKrmnaXjg43jg4Pjg4jjg6/jg7zjgq8gQWxsIHJpZ2h0cyByZXNlcnZlZC48L3A+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Zvb3Rlcj5cbiAgICA8L2Rpdj5cbiAgKTtcbn1cblxuIl0sImZpbGUiOiIvaG9tZS91YnVudHUvbWlyYWktbmV0d29yay13ZWJzaXRlL2NsaWVudC9zcmMvcGFnZXMvSG9tZURlc2lnbjIudHN4In0=

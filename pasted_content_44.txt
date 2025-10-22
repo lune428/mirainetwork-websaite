@@ -1,0 +1,351 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/components/InstagramCarousel.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react.js?v=912602c9";
+const useState = __vite__cjsImport1_react["useState"];
+const useEffect = __vite__cjsImport1_react["useEffect"];
+const instagramPosts = [{
+    url: "https://www.instagram.com/reel/ClBdCWEgf5z/",
+    imageUrl: "https://scontent.cdninstagram.com/v/t51.29350-15/316199438_1280766959339026_7441372833464782137_n.jpg",
+    caption: "ハロウィンイベント🎃"
+}, {
+    url: "https://www.instagram.com/p/C1Jv5VIv2L-/",
+    imageUrl: "https://scontent.cdninstagram.com/v/t51.29350-15/418906628_1090476615392849_3123456789012345678_n.jpg",
+    caption: "クリスマスパーティー🎄"
+}, {
+    url: "https://www.instagram.com/p/DByKZtfTp08/",
+    imageUrl: "https://scontent.cdninstagram.com/v/t51.29350-15/462345678_901234567890123_4567890123456789012_n.jpg",
+    caption: "日々の活動✨"
+}, {
+    url: "https://www.instagram.com/p/C7TG3PLvtOa/",
+    imageUrl: "https://scontent.cdninstagram.com/v/t51.29350-15/445678901_234567890123456_7890123456789012345_n.jpg",
+    caption: "作品制作中🎨"
+}, {
+    url: "https://www.instagram.com/p/CqXqQBIPAKx/",
+    imageUrl: "https://scontent.cdninstagram.com/v/t51.29350-15/345678901_567890123456789_0123456789012345678_n.jpg",
+    caption: "イベント準備🎉"
+}];
+export default function InstagramCarousel() {
+    _s();
+    const [currentIndex,setCurrentIndex] = useState(0);
+    const [isHovered,setIsHovered] = useState(false);
+    const [isTransitioning,setIsTransitioning] = useState(true);
+    const extendedPosts = [...instagramPosts, ...instagramPosts, ...instagramPosts];
+    useEffect( () => {
+        if (!isHovered) {
+            const interval = setInterval( () => {
+                setCurrentIndex( (prevIndex) => prevIndex + 1);
+            }
+            , 3e3);
+            return () => clearInterval(interval);
+        }
+    }
+    , [isHovered]);
+    useEffect( () => {
+        if (currentIndex >= instagramPosts.length * 2) {
+            setTimeout( () => {
+                setIsTransitioning(false);
+                setCurrentIndex(instagramPosts.length);
+            }
+            , 500);
+            setTimeout( () => {
+                setIsTransitioning(true);
+            }
+            , 550);
+        } else if (currentIndex < instagramPosts.length) {
+            setTimeout( () => {
+                setIsTransitioning(false);
+                setCurrentIndex(instagramPosts.length + currentIndex);
+            }
+            , 500);
+            setTimeout( () => {
+                setIsTransitioning(true);
+            }
+            , 550);
+        }
+    }
+    , [currentIndex]);
+    return /* @__PURE__ */
+    jsxDEV("section", {
+        "data-loc": "client/src/components/InstagramCarousel.tsx:79",
+        className: "py-16 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50",
+        children: /* @__PURE__ */
+        jsxDEV("div", {
+            "data-loc": "client/src/components/InstagramCarousel.tsx:80",
+            className: "container mx-auto px-4",
+            children: [/* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/components/InstagramCarousel.tsx:81",
+                className: "text-center mb-12",
+                children: [/* @__PURE__ */
+                jsxDEV("h2", {
+                    "data-loc": "client/src/components/InstagramCarousel.tsx:82",
+                    className: "text-3xl md:text-4xl font-bold mb-4",
+                    children: ["Instagram", /* @__PURE__ */
+                    jsxDEV("span", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:84",
+                        className: "block h-1 w-20 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mt-2"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 84,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                    lineNumber: 82,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/components/InstagramCarousel.tsx:86",
+                    className: "flex items-center justify-center gap-3 mb-4",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:87",
+                        className: "w-12 h-12 rounded-full bg-gradient-to-tr from-purple-600 via-pink-600 to-orange-500 flex items-center justify-center",
+                        children: /* @__PURE__ */
+                        jsxDEV("svg", {
+                            "data-loc": "client/src/components/InstagramCarousel.tsx:88",
+                            className: "w-7 h-7 text-white",
+                            fill: "currentColor",
+                            viewBox: "0 0 24 24",
+                            children: /* @__PURE__ */
+                            jsxDEV("path", {
+                                "data-loc": "client/src/components/InstagramCarousel.tsx:89",
+                                d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                                lineNumber: 89,
+                                columnNumber: 17
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                            lineNumber: 88,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 87,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:92",
+                        children: [/* @__PURE__ */
+                        jsxDEV("a", {
+                            "data-loc": "client/src/components/InstagramCarousel.tsx:93",
+                            href: "https://www.instagram.com/studio.m2022/",
+                            target: "_blank",
+                            rel: "noopener noreferrer",
+                            className: "text-xl font-semibold hover:text-purple-600 transition-colors",
+                            children: "@studio.m2022"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                            lineNumber: 93,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/components/InstagramCarousel.tsx:101",
+                            className: "text-sm text-gray-600",
+                            children: "最新の投稿をチェック"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                            lineNumber: 101,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 92,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                    lineNumber: 86,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("a", {
+                    "data-loc": "client/src/components/InstagramCarousel.tsx:104",
+                    href: "https://www.instagram.com/studio.m2022/",
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    className: "inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-orange-500 text-white rounded-full hover:shadow-lg transition-all duration-300 hover:scale-105",
+                    children: [/* @__PURE__ */
+                    jsxDEV("svg", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:110",
+                        className: "w-5 h-5",
+                        fill: "currentColor",
+                        viewBox: "0 0 24 24",
+                        children: /* @__PURE__ */
+                        jsxDEV("path", {
+                            "data-loc": "client/src/components/InstagramCarousel.tsx:111",
+                            d: "M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                            lineNumber: 111,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 110,
+                        columnNumber: 13
+                    }, this), "Instagramをフォロー"]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                    lineNumber: 104,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                lineNumber: 81,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/components/InstagramCarousel.tsx:118",
+                className: "relative overflow-hidden max-w-6xl mx-auto",
+                onMouseEnter: () => setIsHovered(true),
+                onMouseLeave: () => setIsHovered(false),
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/components/InstagramCarousel.tsx:123",
+                    className: `flex gap-4 ${isTransitioning ? "transition-transform duration-500 ease-linear" : ""}`,
+                    style: {
+                        transform: `translateX(-${currentIndex * (100 / 3 + 1.33)}%)`
+                    },
+                    children: extendedPosts.map( (post, index) => /* @__PURE__ */
+                    jsxDEV("a", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:130",
+                        href: post.url,
+                        target: "_blank",
+                        rel: "noopener noreferrer",
+                        className: "flex-shrink-0 w-[calc(33.333%-11px)] group cursor-pointer",
+                        children: /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/components/InstagramCarousel.tsx:137",
+                            className: "relative aspect-square overflow-hidden rounded-lg shadow-lg bg-white",
+                            children: [/* @__PURE__ */
+                            jsxDEV("iframe", {
+                                "data-loc": "client/src/components/InstagramCarousel.tsx:138",
+                                src: `${post.url}embed/captioned`,
+                                className: "w-full h-full border-0",
+                                scrolling: "no",
+                                allowTransparency: true,
+                                allow: "encrypted-media"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                                lineNumber: 138,
+                                columnNumber: 19
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/components/InstagramCarousel.tsx:145",
+                                className: "absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none",
+                                children: /* @__PURE__ */
+                                jsxDEV("div", {
+                                    "data-loc": "client/src/components/InstagramCarousel.tsx:146",
+                                    className: "absolute bottom-0 left-0 right-0 p-4",
+                                    children: /* @__PURE__ */
+                                    jsxDEV("p", {
+                                        "data-loc": "client/src/components/InstagramCarousel.tsx:147",
+                                        className: "text-white text-sm font-medium",
+                                        children: post.caption
+                                    }, void 0, false, {
+                                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                                        lineNumber: 147,
+                                        columnNumber: 23
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                                    lineNumber: 146,
+                                    columnNumber: 21
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                                lineNumber: 145,
+                                columnNumber: 19
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                            lineNumber: 137,
+                            columnNumber: 17
+                        }, this)
+                    }, index, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 130,
+                        columnNumber: 13
+                    }, this))
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                    lineNumber: 123,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                lineNumber: 118,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/components/InstagramCarousel.tsx:157",
+                className: "text-center mt-8 max-w-2xl mx-auto",
+                children: /* @__PURE__ */
+                jsxDEV("p", {
+                    "data-loc": "client/src/components/InstagramCarousel.tsx:158",
+                    className: "text-gray-700 leading-relaxed",
+                    children: ["日々の活動の様子や作品、イベント情報などをInstagramで発信しています。", /* @__PURE__ */
+                    jsxDEV("br", {
+                        "data-loc": "client/src/components/InstagramCarousel.tsx:159"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                        lineNumber: 159,
+                        columnNumber: 52
+                    }, this), "ぜひフォローして最新情報をチェックしてください！"]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                    lineNumber: 158,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+                lineNumber: 157,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+            lineNumber: 80,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx",
+        lineNumber: 79,
+        columnNumber: 5
+    }, this);
+}
+_s(InstagramCarousel, "mxfALw1i1BnuhNnvNgoFu8ZqJak=");
+_c = InstagramCarousel;
+var _c;
+$RefreshReg$(_c, "InstagramCarousel");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/InstagramCarousel.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBQTtBQUFBO0FBQUEsU0FtRkEsS0FwRkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQXFGQTtBQUVKO0FBQUNqQixHQWpJdUJELG1CQUFpQjtBQUFBbUIsS0FBakJuQjtBQUFpQixJQUFBbUI7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbInVzZVN0YXRlIiwidXNlRWZmZWN0IiwiaW5zdGFncmFtUG9zdHMiLCJ1cmwiLCJpbWFnZVVybCIsImNhcHRpb24iLCJJbnN0YWdyYW1DYXJvdXNlbCIsIl9zIiwiY3VycmVudEluZGV4Iiwic2V0Q3VycmVudEluZGV4IiwiaXNIb3ZlcmVkIiwic2V0SXNIb3ZlcmVkIiwiaXNUcmFuc2l0aW9uaW5nIiwic2V0SXNUcmFuc2l0aW9uaW5nIiwiZXh0ZW5kZWRQb3N0cyIsImludGVydmFsIiwic2V0SW50ZXJ2YWwiLCJwcmV2SW5kZXgiLCJjbGVhckludGVydmFsIiwibGVuZ3RoIiwic2V0VGltZW91dCIsInRyYW5zZm9ybSIsIm1hcCIsInBvc3QiLCJpbmRleCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkluc3RhZ3JhbUNhcm91c2VsLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VTdGF0ZSwgdXNlRWZmZWN0IH0gZnJvbSAncmVhY3QnO1xuXG5pbnRlcmZhY2UgSW5zdGFncmFtUG9zdCB7XG4gIHVybDogc3RyaW5nO1xuICBpbWFnZVVybDogc3RyaW5nO1xuICBjYXB0aW9uOiBzdHJpbmc7XG59XG5cbmNvbnN0IGluc3RhZ3JhbVBvc3RzOiBJbnN0YWdyYW1Qb3N0W10gPSBbXG4gIHtcbiAgICB1cmw6ICdodHRwczovL3d3dy5pbnN0YWdyYW0uY29tL3JlZWwvQ2xCZENXRWdmNXovJyxcbiAgICBpbWFnZVVybDogJ2h0dHBzOi8vc2NvbnRlbnQuY2RuaW5zdGFncmFtLmNvbS92L3Q1MS4yOTM1MC0xNS8zMTYxOTk0MzhfMTI4MDc2Njk1OTMzOTAyNl83NDQxMzcyODMzNDY0NzgyMTM3X24uanBnJyxcbiAgICBjYXB0aW9uOiAn44OP44Ot44Km44Kj44Oz44Kk44OZ44Oz44OI8J+OgydcbiAgfSxcbiAge1xuICAgIHVybDogJ2h0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vcC9DMUp2NVZJdjJMLS8nLFxuICAgIGltYWdlVXJsOiAnaHR0cHM6Ly9zY29udGVudC5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzQxODkwNjYyOF8xMDkwNDc2NjE1MzkyODQ5XzMxMjM0NTY3ODkwMTIzNDU2Nzhfbi5qcGcnLFxuICAgIGNhcHRpb246ICfjgq/jg6rjgrnjg57jgrnjg5Hjg7zjg4bjgqPjg7zwn46EJ1xuICB9LFxuICB7XG4gICAgdXJsOiAnaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9wL0RCeUtadGZUcDA4LycsXG4gICAgaW1hZ2VVcmw6ICdodHRwczovL3Njb250ZW50LmNkbmluc3RhZ3JhbS5jb20vdi90NTEuMjkzNTAtMTUvNDYyMzQ1Njc4XzkwMTIzNDU2Nzg5MDEyM180NTY3ODkwMTIzNDU2Nzg5MDEyX24uanBnJyxcbiAgICBjYXB0aW9uOiAn5pel44CF44Gu5rS75YuV4pyoJ1xuICB9LFxuICB7XG4gICAgdXJsOiAnaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9wL0M3VEczUEx2dE9hLycsXG4gICAgaW1hZ2VVcmw6ICdodHRwczovL3Njb250ZW50LmNkbmluc3RhZ3JhbS5jb20vdi90NTEuMjkzNTAtMTUvNDQ1Njc4OTAxXzIzNDU2Nzg5MDEyMzQ1Nl83ODkwMTIzNDU2Nzg5MDEyMzQ1X24uanBnJyxcbiAgICBjYXB0aW9uOiAn5L2c5ZOB5Yi25L2c5Lit8J+OqCdcbiAgfSxcbiAge1xuICAgIHVybDogJ2h0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vcC9DcVhxUUJJUEFLeC8nLFxuICAgIGltYWdlVXJsOiAnaHR0cHM6Ly9zY29udGVudC5jZG5pbnN0YWdyYW0uY29tL3YvdDUxLjI5MzUwLTE1LzM0NTY3ODkwMV81Njc4OTAxMjM0NTY3ODlfMDEyMzQ1Njc4OTAxMjM0NTY3OF9uLmpwZycsXG4gICAgY2FwdGlvbjogJ+OCpOODmeODs+ODiOa6luWCmfCfjoknXG4gIH1cbl07XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEluc3RhZ3JhbUNhcm91c2VsKCkge1xuICBjb25zdCBbY3VycmVudEluZGV4LCBzZXRDdXJyZW50SW5kZXhdID0gdXNlU3RhdGUoMCk7XG4gIGNvbnN0IFtpc0hvdmVyZWQsIHNldElzSG92ZXJlZF0gPSB1c2VTdGF0ZShmYWxzZSk7XG4gIGNvbnN0IFtpc1RyYW5zaXRpb25pbmcsIHNldElzVHJhbnNpdGlvbmluZ10gPSB1c2VTdGF0ZSh0cnVlKTtcblxuICAvLyBEdXBsaWNhdGUgcG9zdHMgZm9yIGluZmluaXRlIGxvb3AgZWZmZWN0XG4gIGNvbnN0IGV4dGVuZGVkUG9zdHMgPSBbLi4uaW5zdGFncmFtUG9zdHMsIC4uLmluc3RhZ3JhbVBvc3RzLCAuLi5pbnN0YWdyYW1Qb3N0c107XG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBpZiAoIWlzSG92ZXJlZCkge1xuICAgICAgY29uc3QgaW50ZXJ2YWwgPSBzZXRJbnRlcnZhbCgoKSA9PiB7XG4gICAgICAgIHNldEN1cnJlbnRJbmRleCgocHJldkluZGV4KSA9PiBwcmV2SW5kZXggKyAxKTtcbiAgICAgIH0sIDMwMDApOyAvLyBTbGlkZSBldmVyeSAzIHNlY29uZHNcblxuICAgICAgcmV0dXJuICgpID0+IGNsZWFySW50ZXJ2YWwoaW50ZXJ2YWwpO1xuICAgIH1cbiAgfSwgW2lzSG92ZXJlZF0pO1xuXG4gIC8vIEhhbmRsZSBpbmZpbml0ZSBsb29wIHJlc2V0XG4gIHVzZUVmZmVjdCgoKSA9PiB7XG4gICAgaWYgKGN1cnJlbnRJbmRleCA+PSBpbnN0YWdyYW1Qb3N0cy5sZW5ndGggKiAyKSB7XG4gICAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgc2V0SXNUcmFuc2l0aW9uaW5nKGZhbHNlKTtcbiAgICAgICAgc2V0Q3VycmVudEluZGV4KGluc3RhZ3JhbVBvc3RzLmxlbmd0aCk7XG4gICAgICB9LCA1MDApO1xuICAgICAgXG4gICAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgc2V0SXNUcmFuc2l0aW9uaW5nKHRydWUpO1xuICAgICAgfSwgNTUwKTtcbiAgICB9IGVsc2UgaWYgKGN1cnJlbnRJbmRleCA8IGluc3RhZ3JhbVBvc3RzLmxlbmd0aCkge1xuICAgICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICAgIHNldElzVHJhbnNpdGlvbmluZyhmYWxzZSk7XG4gICAgICAgIHNldEN1cnJlbnRJbmRleChpbnN0YWdyYW1Qb3N0cy5sZW5ndGggKyBjdXJyZW50SW5kZXgpO1xuICAgICAgfSwgNTAwKTtcbiAgICAgIFxuICAgICAgc2V0VGltZW91dCgoKSA9PiB7XG4gICAgICAgIHNldElzVHJhbnNpdGlvbmluZyh0cnVlKTtcbiAgICAgIH0sIDU1MCk7XG4gICAgfVxuICB9LCBbY3VycmVudEluZGV4XSk7XG5cbiAgcmV0dXJuIChcbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJweS0xNiBiZy1ncmFkaWVudC10by1iciBmcm9tLXB1cnBsZS01MCB2aWEtcGluay01MCB0by1vcmFuZ2UtNTBcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwiY29udGFpbmVyIG14LWF1dG8gcHgtNFwiPlxuICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIG1iLTEyXCI+XG4gICAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtM3hsIG1kOnRleHQtNHhsIGZvbnQtYm9sZCBtYi00XCI+XG4gICAgICAgICAgICBJbnN0YWdyYW1cbiAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImJsb2NrIGgtMSB3LTIwIGJnLWdyYWRpZW50LXRvLXIgZnJvbS1wdXJwbGUtNTAwIHRvLXBpbmstNTAwIG14LWF1dG8gbXQtMlwiPjwvc3Bhbj5cbiAgICAgICAgICA8L2gyPlxuICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgZ2FwLTMgbWItNFwiPlxuICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJ3LTEyIGgtMTIgcm91bmRlZC1mdWxsIGJnLWdyYWRpZW50LXRvLXRyIGZyb20tcHVycGxlLTYwMCB2aWEtcGluay02MDAgdG8tb3JhbmdlLTUwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlclwiPlxuICAgICAgICAgICAgICA8c3ZnIGNsYXNzTmFtZT1cInctNyBoLTcgdGV4dC13aGl0ZVwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XG4gICAgICAgICAgICAgICAgPHBhdGggZD1cIk0xMiAyLjE2M2MzLjIwNCAwIDMuNTg0LjAxMiA0Ljg1LjA3IDMuMjUyLjE0OCA0Ljc3MSAxLjY5MSA0LjkxOSA0LjkxOS4wNTggMS4yNjUuMDY5IDEuNjQ1LjA2OSA0Ljg0OSAwIDMuMjA1LS4wMTIgMy41ODQtLjA2OSA0Ljg0OS0uMTQ5IDMuMjI1LTEuNjY0IDQuNzcxLTQuOTE5IDQuOTE5LTEuMjY2LjA1OC0xLjY0NC4wNy00Ljg1LjA3LTMuMjA0IDAtMy41ODQtLjAxMi00Ljg0OS0uMDctMy4yNi0uMTQ5LTQuNzcxLTEuNjk5LTQuOTE5LTQuOTItLjA1OC0xLjI2NS0uMDctMS42NDQtLjA3LTQuODQ5IDAtMy4yMDQuMDEzLTMuNTgzLjA3LTQuODQ5LjE0OS0zLjIyNyAxLjY2NC00Ljc3MSA0LjkxOS00LjkxOSAxLjI2Ni0uMDU3IDEuNjQ1LS4wNjkgNC44NDktLjA2OXptMC0yLjE2M2MtMy4yNTkgMC0zLjY2Ny4wMTQtNC45NDcuMDcyLTQuMzU4LjItNi43OCAyLjYxOC02Ljk4IDYuOTgtLjA1OSAxLjI4MS0uMDczIDEuNjg5LS4wNzMgNC45NDggMCAzLjI1OS4wMTQgMy42NjguMDcyIDQuOTQ4LjIgNC4zNTggMi42MTggNi43OCA2Ljk4IDYuOTggMS4yODEuMDU4IDEuNjg5LjA3MiA0Ljk0OC4wNzIgMy4yNTkgMCAzLjY2OC0uMDE0IDQuOTQ4LS4wNzIgNC4zNTQtLjIgNi43ODItMi42MTggNi45NzktNi45OC4wNTktMS4yOC4wNzMtMS42ODkuMDczLTQuOTQ4IDAtMy4yNTktLjAxNC0zLjY2Ny0uMDcyLTQuOTQ3LS4xOTYtNC4zNTQtMi42MTctNi43OC02Ljk3OS02Ljk4LTEuMjgxLS4wNTktMS42OS0uMDczLTQuOTQ5LS4wNzN6bTAgNS44MzhjLTMuNDAzIDAtNi4xNjIgMi43NTktNi4xNjIgNi4xNjJzMi43NTkgNi4xNjMgNi4xNjIgNi4xNjMgNi4xNjItMi43NTkgNi4xNjItNi4xNjNjMC0zLjQwMy0yLjc1OS02LjE2Mi02LjE2Mi02LjE2MnptMCAxMC4xNjJjLTIuMjA5IDAtNC0xLjc5LTQtNCAwLTIuMjA5IDEuNzkxLTQgNC00czQgMS43OTEgNCA0YzAgMi4yMS0xLjc5MSA0LTQgNHptNi40MDYtMTEuODQ1Yy0uNzk2IDAtMS40NDEuNjQ1LTEuNDQxIDEuNDRzLjY0NSAxLjQ0IDEuNDQxIDEuNDRjLjc5NSAwIDEuNDM5LS42NDUgMS40MzktMS40NHMtLjY0NC0xLjQ0LTEuNDM5LTEuNDR6XCIvPlxuICAgICAgICAgICAgICA8L3N2Zz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPGRpdj5cbiAgICAgICAgICAgICAgPGEgXG4gICAgICAgICAgICAgICAgaHJlZj1cImh0dHBzOi8vd3d3Lmluc3RhZ3JhbS5jb20vc3R1ZGlvLm0yMDIyL1wiIFxuICAgICAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiIFxuICAgICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQteGwgZm9udC1zZW1pYm9sZCBob3Zlcjp0ZXh0LXB1cnBsZS02MDAgdHJhbnNpdGlvbi1jb2xvcnNcIlxuICAgICAgICAgICAgICA+XG4gICAgICAgICAgICAgICAgQHN0dWRpby5tMjAyMlxuICAgICAgICAgICAgICA8L2E+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1ncmF5LTYwMFwiPuacgOaWsOOBruaKleeov+OCkuODgeOCp+ODg+OCrzwvcD5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxhXG4gICAgICAgICAgICBocmVmPVwiaHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9zdHVkaW8ubTIwMjIvXCJcbiAgICAgICAgICAgIHRhcmdldD1cIl9ibGFua1wiXG4gICAgICAgICAgICByZWw9XCJub29wZW5lciBub3JlZmVycmVyXCJcbiAgICAgICAgICAgIGNsYXNzTmFtZT1cImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBweC02IHB5LTMgYmctZ3JhZGllbnQtdG8tciBmcm9tLXB1cnBsZS02MDAgdmlhLXBpbmstNjAwIHRvLW9yYW5nZS01MDAgdGV4dC13aGl0ZSByb3VuZGVkLWZ1bGwgaG92ZXI6c2hhZG93LWxnIHRyYW5zaXRpb24tYWxsIGR1cmF0aW9uLTMwMCBob3ZlcjpzY2FsZS0xMDVcIlxuICAgICAgICAgID5cbiAgICAgICAgICAgIDxzdmcgY2xhc3NOYW1lPVwidy01IGgtNVwiIGZpbGw9XCJjdXJyZW50Q29sb3JcIiB2aWV3Qm94PVwiMCAwIDI0IDI0XCI+XG4gICAgICAgICAgICAgIDxwYXRoIGQ9XCJNMTIgMi4xNjNjMy4yMDQgMCAzLjU4NC4wMTIgNC44NS4wNyAzLjI1Mi4xNDggNC43NzEgMS42OTEgNC45MTkgNC45MTkuMDU4IDEuMjY1LjA2OSAxLjY0NS4wNjkgNC44NDkgMCAzLjIwNS0uMDEyIDMuNTg0LS4wNjkgNC44NDktLjE0OSAzLjIyNS0xLjY2NCA0Ljc3MS00LjkxOSA0LjkxOS0xLjI2Ni4wNTgtMS42NDQuMDctNC44NS4wNy0zLjIwNCAwLTMuNTg0LS4wMTItNC44NDktLjA3LTMuMjYtLjE0OS00Ljc3MS0xLjY5OS00LjkxOS00LjkyLS4wNTgtMS4yNjUtLjA3LTEuNjQ0LS4wNy00Ljg0OSAwLTMuMjA0LjAxMy0zLjU4My4wNy00Ljg0OS4xNDktMy4yMjcgMS42NjQtNC43NzEgNC45MTktNC45MTkgMS4yNjYtLjA1NyAxLjY0NS0uMDY5IDQuODQ5LS4wNjl6bTAtMi4xNjNjLTMuMjU5IDAtMy42NjcuMDE0LTQuOTQ3LjA3Mi00LjM1OC4yLTYuNzggMi42MTgtNi45OCA2Ljk4LS4wNTkgMS4yODEtLjA3MyAxLjY4OS0uMDczIDQuOTQ4IDAgMy4yNTkuMDE0IDMuNjY4LjA3MiA0Ljk0OC4yIDQuMzU4IDIuNjE4IDYuNzggNi45OCA2Ljk4IDEuMjgxLjA1OCAxLjY4OS4wNzIgNC45NDguMDcyIDMuMjU5IDAgMy42NjgtLjAxNCA0Ljk0OC0uMDcyIDQuMzU0LS4yIDYuNzgyLTIuNjE4IDYuOTc5LTYuOTguMDU5LTEuMjguMDczLTEuNjg5LjA3My00Ljk0OCAwLTMuMjU5LS4wMTQtMy42NjctLjA3Mi00Ljk0Ny0uMTk2LTQuMzU0LTIuNjE3LTYuNzgtNi45NzktNi45OC0xLjI4MS0uMDU5LTEuNjktLjA3My00Ljk0OS0uMDczem0wIDUuODM4Yy0zLjQwMyAwLTYuMTYyIDIuNzU5LTYuMTYyIDYuMTYyczIuNzU5IDYuMTYzIDYuMTYyIDYuMTYzIDYuMTYyLTIuNzU5IDYuMTYyLTYuMTYzYzAtMy40MDMtMi43NTktNi4xNjItNi4xNjItNi4xNjJ6bTAgMTAuMTYyYy0yLjIwOSAwLTQtMS43OS00LTQgMC0yLjIwOSAxLjc5MS00IDQtNHM0IDEuNzkxIDQgNGMwIDIuMjEtMS43OTEgNC00IDR6bTYuNDA2LTExLjg0NWMtLjc5NiAwLTEuNDQxLjY0NS0xLjQ0MSAxLjQ0cy42NDUgMS40NCAxLjQ0MSAxLjQ0Yy43OTUgMCAxLjQzOS0uNjQ1IDEuNDM5LTEuNDRzLS42NDQtMS40NC0xLjQzOS0xLjQ0elwiLz5cbiAgICAgICAgICAgIDwvc3ZnPlxuICAgICAgICAgICAgSW5zdGFncmFt44KS44OV44Kp44Ot44O8XG4gICAgICAgICAgPC9hPlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogQ2Fyb3VzZWwgLSAzIGltYWdlcyBzaWRlIGJ5IHNpZGUgKi99XG4gICAgICAgIDxkaXYgXG4gICAgICAgICAgY2xhc3NOYW1lPVwicmVsYXRpdmUgb3ZlcmZsb3ctaGlkZGVuIG1heC13LTZ4bCBteC1hdXRvXCJcbiAgICAgICAgICBvbk1vdXNlRW50ZXI9eygpID0+IHNldElzSG92ZXJlZCh0cnVlKX1cbiAgICAgICAgICBvbk1vdXNlTGVhdmU9eygpID0+IHNldElzSG92ZXJlZChmYWxzZSl9XG4gICAgICAgID5cbiAgICAgICAgICA8ZGl2IFxuICAgICAgICAgICAgY2xhc3NOYW1lPXtgZmxleCBnYXAtNCAke2lzVHJhbnNpdGlvbmluZyA/ICd0cmFuc2l0aW9uLXRyYW5zZm9ybSBkdXJhdGlvbi01MDAgZWFzZS1saW5lYXInIDogJyd9YH1cbiAgICAgICAgICAgIHN0eWxlPXt7IFxuICAgICAgICAgICAgICB0cmFuc2Zvcm06IGB0cmFuc2xhdGVYKC0ke2N1cnJlbnRJbmRleCAqICgxMDAgLyAzICsgMS4zMyl9JSlgLFxuICAgICAgICAgICAgfX1cbiAgICAgICAgICA+XG4gICAgICAgICAgICB7ZXh0ZW5kZWRQb3N0cy5tYXAoKHBvc3QsIGluZGV4KSA9PiAoXG4gICAgICAgICAgICAgIDxhXG4gICAgICAgICAgICAgICAga2V5PXtpbmRleH1cbiAgICAgICAgICAgICAgICBocmVmPXtwb3N0LnVybH1cbiAgICAgICAgICAgICAgICB0YXJnZXQ9XCJfYmxhbmtcIlxuICAgICAgICAgICAgICAgIHJlbD1cIm5vb3BlbmVyIG5vcmVmZXJyZXJcIlxuICAgICAgICAgICAgICAgIGNsYXNzTmFtZT1cImZsZXgtc2hyaW5rLTAgdy1bY2FsYygzMy4zMzMlLTExcHgpXSBncm91cCBjdXJzb3ItcG9pbnRlclwiXG4gICAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInJlbGF0aXZlIGFzcGVjdC1zcXVhcmUgb3ZlcmZsb3ctaGlkZGVuIHJvdW5kZWQtbGcgc2hhZG93LWxnIGJnLXdoaXRlXCI+XG4gICAgICAgICAgICAgICAgICA8aWZyYW1lXG4gICAgICAgICAgICAgICAgICAgIHNyYz17YCR7cG9zdC51cmx9ZW1iZWQvY2FwdGlvbmVkYH1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBib3JkZXItMFwiXG4gICAgICAgICAgICAgICAgICAgIHNjcm9sbGluZz1cIm5vXCJcbiAgICAgICAgICAgICAgICAgICAgYWxsb3dUcmFuc3BhcmVuY3k9e3RydWV9XG4gICAgICAgICAgICAgICAgICAgIGFsbG93PVwiZW5jcnlwdGVkLW1lZGlhXCJcbiAgICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImFic29sdXRlIGluc2V0LTAgYmctZ3JhZGllbnQtdG8tdCBmcm9tLWJsYWNrLzYwIHZpYS10cmFuc3BhcmVudCB0by10cmFuc3BhcmVudCBvcGFjaXR5LTAgZ3JvdXAtaG92ZXI6b3BhY2l0eS0xMDAgdHJhbnNpdGlvbi1vcGFjaXR5IGR1cmF0aW9uLTMwMCBwb2ludGVyLWV2ZW50cy1ub25lXCI+XG4gICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiYWJzb2x1dGUgYm90dG9tLTAgbGVmdC0wIHJpZ2h0LTAgcC00XCI+XG4gICAgICAgICAgICAgICAgICAgICAgPHAgY2xhc3NOYW1lPVwidGV4dC13aGl0ZSB0ZXh0LXNtIGZvbnQtbWVkaXVtXCI+e3Bvc3QuY2FwdGlvbn08L3A+XG4gICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgIDwvYT5cbiAgICAgICAgICAgICkpfVxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cblxuICAgICAgICB7LyogRGVzY3JpcHRpb24gKi99XG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGV4dC1jZW50ZXIgbXQtOCBtYXgtdy0yeGwgbXgtYXV0b1wiPlxuICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS03MDAgbGVhZGluZy1yZWxheGVkXCI+XG4gICAgICAgICAgICDml6XjgIXjga7mtLvli5Xjga7mp5jlrZDjgoTkvZzlk4HjgIHjgqTjg5njg7Pjg4jmg4XloLHjgarjganjgpJJbnN0YWdyYW3jgafnmbrkv6HjgZfjgabjgYTjgb7jgZnjgII8YnIgLz5cbiAgICAgICAgICAgIOOBnOOBsuODleOCqeODreODvOOBl+OBpuacgOaWsOaDheWgseOCkuODgeOCp+ODg+OCr+OBl+OBpuOBj+OBoOOBleOBhO+8gVxuICAgICAgICAgIDwvcD5cbiAgICAgICAgPC9kaXY+XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICk7XG59XG5cbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL2NvbXBvbmVudHMvSW5zdGFncmFtQ2Fyb3VzZWwudHN4In0=

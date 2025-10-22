@@ -1,0 +1,301 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/pages/PasswordLogin.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react.js?v=912602c9";
+const useState = __vite__cjsImport1_react["useState"];
+import {useLocation} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+import {Button} from "/src/components/ui/button.tsx";
+import {Input} from "/src/components/ui/input.tsx";
+import {Label} from "/src/components/ui/label.tsx";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "/src/components/ui/card.tsx";
+import {toast} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/sonner.js?v=912602c9";
+import {Lock, Mail} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+export default function PasswordLogin() {
+    _s();
+    const [,setLocation] = useLocation();
+    const [email,setEmail] = useState("");
+    const [password,setPassword] = useState("");
+    const [loading,setLoading] = useState(false);
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const response = await fetch("/api/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+            if (!response.ok) {
+                const error = await response.json();
+                throw new Error(error.error || "ログインに失敗しました");
+            }
+            const data = await response.json();
+            localStorage.setItem("user", JSON.stringify(data.user));
+            toast.success("ログインしました");
+            setLocation("/admin/cms");
+        } catch (error) {
+            toast.error(error.message);
+        } finally {
+            setLoading(false);
+        }
+    }
+    ;
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/pages/PasswordLogin.tsx:49",
+        className: "min-h-screen flex items-center justify-center bg-gray-50 px-4",
+        children: /* @__PURE__ */
+        jsxDEV(Card, {
+            "data-loc": "client/src/pages/PasswordLogin.tsx:50",
+            className: "w-full max-w-md",
+            children: [/* @__PURE__ */
+            jsxDEV(CardHeader, {
+                "data-loc": "client/src/pages/PasswordLogin.tsx:51",
+                className: "space-y-1",
+                children: [/* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/PasswordLogin.tsx:52",
+                    className: "flex items-center justify-center mb-4",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/PasswordLogin.tsx:53",
+                        className: "h-12 w-12 rounded-full bg-blue-600 flex items-center justify-center",
+                        children: /* @__PURE__ */
+                        jsxDEV(Lock, {
+                            "data-loc": "client/src/pages/PasswordLogin.tsx:54",
+                            className: "h-6 w-6 text-white"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                            lineNumber: 54,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                        lineNumber: 53,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                    lineNumber: 52,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV(CardTitle, {
+                    "data-loc": "client/src/pages/PasswordLogin.tsx:57",
+                    className: "text-2xl text-center",
+                    children: "管理者ログイン"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                    lineNumber: 57,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV(CardDescription, {
+                    "data-loc": "client/src/pages/PasswordLogin.tsx:58",
+                    className: "text-center",
+                    children: "メールアドレスとパスワードでログインしてください"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                    lineNumber: 58,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                lineNumber: 51,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV(CardContent, {
+                "data-loc": "client/src/pages/PasswordLogin.tsx:62",
+                children: [/* @__PURE__ */
+                jsxDEV("form", {
+                    "data-loc": "client/src/pages/PasswordLogin.tsx:63",
+                    onSubmit: handleSubmit,
+                    className: "space-y-4",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/PasswordLogin.tsx:64",
+                        className: "space-y-2",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Label, {
+                            "data-loc": "client/src/pages/PasswordLogin.tsx:65",
+                            htmlFor: "email",
+                            children: "メールアドレス"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                            lineNumber: 65,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/PasswordLogin.tsx:66",
+                            className: "relative",
+                            children: [/* @__PURE__ */
+                            jsxDEV(Mail, {
+                                "data-loc": "client/src/pages/PasswordLogin.tsx:67",
+                                className: "absolute left-3 top-3 h-4 w-4 text-gray-400"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                                lineNumber: 67,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV(Input, {
+                                "data-loc": "client/src/pages/PasswordLogin.tsx:68",
+                                id: "email",
+                                type: "email",
+                                placeholder: "example@example.com",
+                                value: email,
+                                onChange: (e) => setEmail(e.target.value),
+                                className: "pl-10",
+                                required: true,
+                                disabled: loading
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                                lineNumber: 68,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                            lineNumber: 66,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                        lineNumber: 64,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/pages/PasswordLogin.tsx:80",
+                        className: "space-y-2",
+                        children: [/* @__PURE__ */
+                        jsxDEV(Label, {
+                            "data-loc": "client/src/pages/PasswordLogin.tsx:81",
+                            htmlFor: "password",
+                            children: "パスワード"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                            lineNumber: 81,
+                            columnNumber: 15
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/pages/PasswordLogin.tsx:82",
+                            className: "relative",
+                            children: [/* @__PURE__ */
+                            jsxDEV(Lock, {
+                                "data-loc": "client/src/pages/PasswordLogin.tsx:83",
+                                className: "absolute left-3 top-3 h-4 w-4 text-gray-400"
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                                lineNumber: 83,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV(Input, {
+                                "data-loc": "client/src/pages/PasswordLogin.tsx:84",
+                                id: "password",
+                                type: "password",
+                                placeholder: "••••••••",
+                                value: password,
+                                onChange: (e) => setPassword(e.target.value),
+                                className: "pl-10",
+                                required: true,
+                                disabled: loading
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                                lineNumber: 84,
+                                columnNumber: 17
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                            lineNumber: 82,
+                            columnNumber: 15
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                        lineNumber: 80,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV(Button, {
+                        "data-loc": "client/src/pages/PasswordLogin.tsx:96",
+                        type: "submit",
+                        className: "w-full",
+                        disabled: loading,
+                        children: loading ? "ログイン中..." : "ログイン"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                        lineNumber: 96,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                    lineNumber: 63,
+                    columnNumber: 11
+                }, this), /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/pages/PasswordLogin.tsx:100",
+                    className: "mt-4 text-center text-sm text-gray-600",
+                    children: /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/pages/PasswordLogin.tsx:101",
+                        children: "事業所管理者用のログインページです"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                        lineNumber: 101,
+                        columnNumber: 13
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                    lineNumber: 100,
+                    columnNumber: 11
+                }, this)]
+            }, void 0, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+                lineNumber: 62,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+            lineNumber: 50,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx",
+        lineNumber: 49,
+        columnNumber: 5
+    }, this);
+}
+_s(PasswordLogin, "n9w15WiI9SJ74RI6lE5NBaJ4RhA=", false, function() {
+    return [useLocation];
+});
+_c = PasswordLogin;
+var _c;
+$RefreshReg$(_c, "PasswordLogin");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/pages/PasswordLogin.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUE7QUFBQTtBQUFBO0FBQUEsYUFFQTtBQUFBLFNBeENGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0F5Q0E7QUFBQSxPQXJERjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBc0RBLEtBdkRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0F3REE7QUFFSjtBQUFDTixHQWpHdUJELGVBQWE7QUFBQSxVQUNYWixXQUFXO0FBQUE7QUFBQTJDLEtBRGIvQjtBQUFhLElBQUErQjtBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsidXNlU3RhdGUiLCJ1c2VMb2NhdGlvbiIsIkJ1dHRvbiIsIklucHV0IiwiTGFiZWwiLCJDYXJkIiwiQ2FyZENvbnRlbnQiLCJDYXJkRGVzY3JpcHRpb24iLCJDYXJkSGVhZGVyIiwiQ2FyZFRpdGxlIiwidG9hc3QiLCJMb2NrIiwiTWFpbCIsIlBhc3N3b3JkTG9naW4iLCJfcyIsInNldExvY2F0aW9uIiwiZW1haWwiLCJzZXRFbWFpbCIsInBhc3N3b3JkIiwic2V0UGFzc3dvcmQiLCJsb2FkaW5nIiwic2V0TG9hZGluZyIsImhhbmRsZVN1Ym1pdCIsImUiLCJwcmV2ZW50RGVmYXVsdCIsInJlc3BvbnNlIiwiZmV0Y2giLCJtZXRob2QiLCJoZWFkZXJzIiwiYm9keSIsIkpTT04iLCJzdHJpbmdpZnkiLCJvayIsImVycm9yIiwianNvbiIsIkVycm9yIiwiZGF0YSIsImxvY2FsU3RvcmFnZSIsInNldEl0ZW0iLCJ1c2VyIiwic3VjY2VzcyIsIm1lc3NhZ2UiLCJ0YXJnZXQiLCJ2YWx1ZSIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIlBhc3N3b3JkTG9naW4udHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZVN0YXRlIH0gZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgeyB1c2VMb2NhdGlvbiB9IGZyb20gXCJ3b3V0ZXJcIjtcbmltcG9ydCB7IEJ1dHRvbiB9IGZyb20gXCJAL2NvbXBvbmVudHMvdWkvYnV0dG9uXCI7XG5pbXBvcnQgeyBJbnB1dCB9IGZyb20gXCJAL2NvbXBvbmVudHMvdWkvaW5wdXRcIjtcbmltcG9ydCB7IExhYmVsIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9sYWJlbFwiO1xuaW1wb3J0IHsgQ2FyZCwgQ2FyZENvbnRlbnQsIENhcmREZXNjcmlwdGlvbiwgQ2FyZEhlYWRlciwgQ2FyZFRpdGxlIH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jYXJkXCI7XG5pbXBvcnQgeyB0b2FzdCB9IGZyb20gXCJzb25uZXJcIjtcbmltcG9ydCB7IExvY2ssIE1haWwgfSBmcm9tIFwibHVjaWRlLXJlYWN0XCI7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBhc3N3b3JkTG9naW4oKSB7XG4gIGNvbnN0IFssIHNldExvY2F0aW9uXSA9IHVzZUxvY2F0aW9uKCk7XG4gIGNvbnN0IFtlbWFpbCwgc2V0RW1haWxdID0gdXNlU3RhdGUoXCJcIik7XG4gIGNvbnN0IFtwYXNzd29yZCwgc2V0UGFzc3dvcmRdID0gdXNlU3RhdGUoXCJcIik7XG4gIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKGZhbHNlKTtcblxuICBjb25zdCBoYW5kbGVTdWJtaXQgPSBhc3luYyAoZTogUmVhY3QuRm9ybUV2ZW50KSA9PiB7XG4gICAgZS5wcmV2ZW50RGVmYXVsdCgpO1xuICAgIHNldExvYWRpbmcodHJ1ZSk7XG5cbiAgICB0cnkge1xuICAgICAgY29uc3QgcmVzcG9uc2UgPSBhd2FpdCBmZXRjaChcIi9hcGkvYXV0aC9sb2dpblwiLCB7XG4gICAgICAgIG1ldGhvZDogXCJQT1NUXCIsXG4gICAgICAgIGhlYWRlcnM6IHsgXCJDb250ZW50LVR5cGVcIjogXCJhcHBsaWNhdGlvbi9qc29uXCIgfSxcbiAgICAgICAgYm9keTogSlNPTi5zdHJpbmdpZnkoeyBlbWFpbCwgcGFzc3dvcmQgfSksXG4gICAgICB9KTtcblxuICAgICAgaWYgKCFyZXNwb25zZS5vaykge1xuICAgICAgICBjb25zdCBlcnJvciA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTtcbiAgICAgICAgdGhyb3cgbmV3IEVycm9yKGVycm9yLmVycm9yIHx8IFwi44Ot44Kw44Kk44Oz44Gr5aSx5pWX44GX44G+44GX44GfXCIpO1xuICAgICAgfVxuXG4gICAgICBjb25zdCBkYXRhID0gYXdhaXQgcmVzcG9uc2UuanNvbigpO1xuICAgICAgXG4gICAgICAvLyBTdG9yZSB1c2VyIGRhdGEgaW4gbG9jYWxTdG9yYWdlIChpbiBwcm9kdWN0aW9uLCB1c2UgcHJvcGVyIHNlc3Npb24gbWFuYWdlbWVudClcbiAgICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKFwidXNlclwiLCBKU09OLnN0cmluZ2lmeShkYXRhLnVzZXIpKTtcbiAgICAgIFxuICAgICAgdG9hc3Quc3VjY2VzcyhcIuODreOCsOOCpOODs+OBl+OBvuOBl+OBn1wiKTtcbiAgICAgIFxuICAgICAgLy8gUmVkaXJlY3QgdG8gQ01TIGFkbWluIHBhZ2VcbiAgICAgIHNldExvY2F0aW9uKFwiL2FkbWluL2Ntc1wiKTtcbiAgICB9IGNhdGNoIChlcnJvcjogYW55KSB7XG4gICAgICB0b2FzdC5lcnJvcihlcnJvci5tZXNzYWdlKTtcbiAgICB9IGZpbmFsbHkge1xuICAgICAgc2V0TG9hZGluZyhmYWxzZSk7XG4gICAgfVxuICB9O1xuXG4gIHJldHVybiAoXG4gICAgPGRpdiBjbGFzc05hbWU9XCJtaW4taC1zY3JlZW4gZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgYmctZ3JheS01MCBweC00XCI+XG4gICAgICA8Q2FyZCBjbGFzc05hbWU9XCJ3LWZ1bGwgbWF4LXctbWRcIj5cbiAgICAgICAgPENhcmRIZWFkZXIgY2xhc3NOYW1lPVwic3BhY2UteS0xXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBtYi00XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtMTIgdy0xMiByb3VuZGVkLWZ1bGwgYmctYmx1ZS02MDAgZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXJcIj5cbiAgICAgICAgICAgICAgPExvY2sgY2xhc3NOYW1lPVwiaC02IHctNiB0ZXh0LXdoaXRlXCIgLz5cbiAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgIDxDYXJkVGl0bGUgY2xhc3NOYW1lPVwidGV4dC0yeGwgdGV4dC1jZW50ZXJcIj7nrqHnkIbogIXjg63jgrDjgqTjg7M8L0NhcmRUaXRsZT5cbiAgICAgICAgICA8Q2FyZERlc2NyaXB0aW9uIGNsYXNzTmFtZT1cInRleHQtY2VudGVyXCI+XG4gICAgICAgICAgICDjg6Hjg7zjg6vjgqLjg4njg6zjgrnjgajjg5Hjgrnjg6/jg7zjg4njgafjg63jgrDjgqTjg7PjgZfjgabjgY/jgaDjgZXjgYRcbiAgICAgICAgICA8L0NhcmREZXNjcmlwdGlvbj5cbiAgICAgICAgPC9DYXJkSGVhZGVyPlxuICAgICAgICA8Q2FyZENvbnRlbnQ+XG4gICAgICAgICAgPGZvcm0gb25TdWJtaXQ9e2hhbmRsZVN1Ym1pdH0gY2xhc3NOYW1lPVwic3BhY2UteS00XCI+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktMlwiPlxuICAgICAgICAgICAgICA8TGFiZWwgaHRtbEZvcj1cImVtYWlsXCI+44Oh44O844Or44Ki44OJ44Os44K5PC9MYWJlbD5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICAgIDxNYWlsIGNsYXNzTmFtZT1cImFic29sdXRlIGxlZnQtMyB0b3AtMyBoLTQgdy00IHRleHQtZ3JheS00MDBcIiAvPlxuICAgICAgICAgICAgICAgIDxJbnB1dFxuICAgICAgICAgICAgICAgICAgaWQ9XCJlbWFpbFwiXG4gICAgICAgICAgICAgICAgICB0eXBlPVwiZW1haWxcIlxuICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJleGFtcGxlQGV4YW1wbGUuY29tXCJcbiAgICAgICAgICAgICAgICAgIHZhbHVlPXtlbWFpbH1cbiAgICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXsoZSkgPT4gc2V0RW1haWwoZS50YXJnZXQudmFsdWUpfVxuICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwicGwtMTBcIlxuICAgICAgICAgICAgICAgICAgcmVxdWlyZWRcbiAgICAgICAgICAgICAgICAgIGRpc2FibGVkPXtsb2FkaW5nfVxuICAgICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktMlwiPlxuICAgICAgICAgICAgICA8TGFiZWwgaHRtbEZvcj1cInBhc3N3b3JkXCI+44OR44K544Ov44O844OJPC9MYWJlbD5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJyZWxhdGl2ZVwiPlxuICAgICAgICAgICAgICAgIDxMb2NrIGNsYXNzTmFtZT1cImFic29sdXRlIGxlZnQtMyB0b3AtMyBoLTQgdy00IHRleHQtZ3JheS00MDBcIiAvPlxuICAgICAgICAgICAgICAgIDxJbnB1dFxuICAgICAgICAgICAgICAgICAgaWQ9XCJwYXNzd29yZFwiXG4gICAgICAgICAgICAgICAgICB0eXBlPVwicGFzc3dvcmRcIlxuICAgICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCLigKLigKLigKLigKLigKLigKLigKLigKJcIlxuICAgICAgICAgICAgICAgICAgdmFsdWU9e3Bhc3N3b3JkfVxuICAgICAgICAgICAgICAgICAgb25DaGFuZ2U9eyhlKSA9PiBzZXRQYXNzd29yZChlLnRhcmdldC52YWx1ZSl9XG4gICAgICAgICAgICAgICAgICBjbGFzc05hbWU9XCJwbC0xMFwiXG4gICAgICAgICAgICAgICAgICByZXF1aXJlZFxuICAgICAgICAgICAgICAgICAgZGlzYWJsZWQ9e2xvYWRpbmd9XG4gICAgICAgICAgICAgICAgLz5cbiAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgIDxCdXR0b24gdHlwZT1cInN1Ym1pdFwiIGNsYXNzTmFtZT1cInctZnVsbFwiIGRpc2FibGVkPXtsb2FkaW5nfT5cbiAgICAgICAgICAgICAge2xvYWRpbmcgPyBcIuODreOCsOOCpOODs+S4rS4uLlwiIDogXCLjg63jgrDjgqTjg7NcIn1cbiAgICAgICAgICAgIDwvQnV0dG9uPlxuICAgICAgICAgIDwvZm9ybT5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm10LTQgdGV4dC1jZW50ZXIgdGV4dC1zbSB0ZXh0LWdyYXktNjAwXCI+XG4gICAgICAgICAgICA8cD7kuovmpa3miYDnrqHnkIbogIXnlKjjga7jg63jgrDjgqTjg7Pjg5rjg7zjgrjjgafjgZk8L3A+XG4gICAgICAgICAgPC9kaXY+XG4gICAgICAgIDwvQ2FyZENvbnRlbnQ+XG4gICAgICA8L0NhcmQ+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL3BhZ2VzL1Bhc3N3b3JkTG9naW4udHN4In0=

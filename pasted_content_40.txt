@@ -1,0 +1,258 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/components/AnnouncementsList.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import {Card, CardContent} from "/src/components/ui/card.tsx";
+import {trpc} from "/src/lib/trpc.ts";
+import {Calendar} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import {Link} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+export default function AnnouncementsList() {
+    _s();
+    const {data: announcements, isLoading} = trpc.announcements.list.useQuery({
+        publishedOnly: true
+    });
+    const facilityNames = {
+        organization: "法人",
+        mirai: "MIRAI",
+        hikari: "HIKARI",
+        studio_m: "studio M"
+    };
+    const getFacilityColor = (facility) => {
+        const colors = {
+            organization: "bg-yellow-100 text-yellow-700",
+            mirai: "bg-blue-100 text-blue-700",
+            hikari: "bg-lime-100 text-lime-700",
+            studio_m: "bg-orange-100 text-orange-700"
+        };
+        return colors[facility] || "bg-gray-100 text-gray-700";
+    }
+    ;
+    if (isLoading) {
+        return /* @__PURE__ */
+        jsxDEV("div", {
+            "data-loc": "client/src/components/AnnouncementsList.tsx:28",
+            className: "grid gap-6 md:grid-cols-2 lg:grid-cols-3",
+            children: [1, 2, 3].map( (i) => /* @__PURE__ */
+            jsxDEV(Card, {
+                "data-loc": "client/src/components/AnnouncementsList.tsx:30",
+                className: "animate-pulse",
+                children: [/* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/components/AnnouncementsList.tsx:31",
+                    className: "h-48 bg-slate-200"
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                    lineNumber: 31,
+                    columnNumber: 13
+                }, this), /* @__PURE__ */
+                jsxDEV(CardContent, {
+                    "data-loc": "client/src/components/AnnouncementsList.tsx:32",
+                    className: "p-6",
+                    children: [/* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/AnnouncementsList.tsx:33",
+                        className: "h-6 bg-slate-200 rounded w-3/4 mb-2"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                        lineNumber: 33,
+                        columnNumber: 15
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/AnnouncementsList.tsx:34",
+                        className: "h-4 bg-slate-200 rounded w-full mb-2"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                        lineNumber: 34,
+                        columnNumber: 15
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/AnnouncementsList.tsx:35",
+                        className: "h-4 bg-slate-200 rounded w-5/6"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                        lineNumber: 35,
+                        columnNumber: 15
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                    lineNumber: 32,
+                    columnNumber: 13
+                }, this)]
+            }, i, true, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                lineNumber: 30,
+                columnNumber: 9
+            }, this))
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+            lineNumber: 28,
+            columnNumber: 7
+        }, this);
+    }
+    if (!announcements || announcements.length === 0) {
+        return /* @__PURE__ */
+        jsxDEV(Card, {
+            "data-loc": "client/src/components/AnnouncementsList.tsx:45",
+            children: /* @__PURE__ */
+            jsxDEV(CardContent, {
+                "data-loc": "client/src/components/AnnouncementsList.tsx:46",
+                className: "py-12 text-center text-muted-foreground",
+                children: "現在、お知らせはありません"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                lineNumber: 46,
+                columnNumber: 9
+            }, this)
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+            lineNumber: 45,
+            columnNumber: 7
+        }, this);
+    }
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/components/AnnouncementsList.tsx:54",
+        className: "grid gap-6 md:grid-cols-2 lg:grid-cols-3",
+        children: announcements.slice(0, 6).map( (announcement) => {
+            const images = announcement.imageUrls ? JSON.parse(announcement.imageUrls) : [];
+            const thumbnailImage = images.length > 0 ? images[0] : null;
+            return /* @__PURE__ */
+            jsxDEV(Link, {
+                "data-loc": "client/src/components/AnnouncementsList.tsx:60",
+                href: `/announcements/${announcement.id}`,
+                children: /* @__PURE__ */
+                jsxDEV(Card, {
+                    "data-loc": "client/src/components/AnnouncementsList.tsx:61",
+                    className: "cursor-pointer hover:shadow-lg transition-shadow h-full overflow-hidden",
+                    children: [thumbnailImage && /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/AnnouncementsList.tsx:63",
+                        className: "w-full h-48 overflow-hidden",
+                        children: /* @__PURE__ */
+                        jsxDEV("img", {
+                            "data-loc": "client/src/components/AnnouncementsList.tsx:64",
+                            src: thumbnailImage,
+                            alt: announcement.title,
+                            className: "w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                            lineNumber: 64,
+                            columnNumber: 19
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                        lineNumber: 63,
+                        columnNumber: 15
+                    }, this), /* @__PURE__ */
+                    jsxDEV(CardContent, {
+                        "data-loc": "client/src/components/AnnouncementsList.tsx:71",
+                        className: "p-6",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/components/AnnouncementsList.tsx:72",
+                            className: "flex items-center gap-2 mb-3 flex-wrap",
+                            children: [/* @__PURE__ */
+                            jsxDEV("span", {
+                                "data-loc": "client/src/components/AnnouncementsList.tsx:73",
+                                className: `text-xs px-3 py-1 rounded-full font-medium ${getFacilityColor(announcement.facility)}`,
+                                children: facilityNames[announcement.facility] || announcement.facility
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                                lineNumber: 73,
+                                columnNumber: 19
+                            }, this), /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/components/AnnouncementsList.tsx:76",
+                                className: "flex items-center gap-1 text-xs text-muted-foreground",
+                                children: [/* @__PURE__ */
+                                jsxDEV(Calendar, {
+                                    "data-loc": "client/src/components/AnnouncementsList.tsx:77",
+                                    className: "w-3 h-3"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                                    lineNumber: 77,
+                                    columnNumber: 21
+                                }, this), new Date(announcement.publishedAt || announcement.createdAt).toLocaleDateString("ja-JP")]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                                lineNumber: 76,
+                                columnNumber: 19
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                            lineNumber: 72,
+                            columnNumber: 17
+                        }, this), /* @__PURE__ */
+                        jsxDEV("h3", {
+                            "data-loc": "client/src/components/AnnouncementsList.tsx:81",
+                            className: "text-lg font-semibold mb-2 line-clamp-2",
+                            children: announcement.title
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                            lineNumber: 81,
+                            columnNumber: 17
+                        }, this), /* @__PURE__ */
+                        jsxDEV("p", {
+                            "data-loc": "client/src/components/AnnouncementsList.tsx:82",
+                            className: "text-gray-600 text-sm line-clamp-3",
+                            children: announcement.content
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                            lineNumber: 82,
+                            columnNumber: 17
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                        lineNumber: 71,
+                        columnNumber: 15
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                    lineNumber: 61,
+                    columnNumber: 13
+                }, this)
+            }, announcement.id, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+                lineNumber: 60,
+                columnNumber: 11
+            }, this);
+        }
+        )
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx",
+        lineNumber: 54,
+        columnNumber: 5
+    }, this);
+}
+_s(AnnouncementsList, "hlSSK6SajD8lapDdYMFjDxjpsoQ=", true);
+_c = AnnouncementsList;
+var _c;
+$RefreshReg$(_c, "AnnouncementsList");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/AnnouncementsList.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBLGlCQUVBO0FBQUEsVUFDQSx1QkFBQyx1RUFBSSxXQUFVLHlEQUNiO0FBQUEsbUNBQUMsMEVBQVMsV0FBVSxhQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLG1CQUE2QjtBQUFBLFlBQzVCLElBQUljLEtBQUtSLGFBQWFTLGVBQWVULGFBQWFVLFNBQVMsRUFBRUMsbUJBQW1CLE9BQU87QUFBQSxlQUYxRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGlCQUdBO0FBQUEsYUFQRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBUUE7QUFBQSxRQUNBLHVCQUFDLHNFQUFHLFdBQVUsMkNBQTJDWCx1QkFBYU8sU0FBdEU7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUE0RTtBQUFBLFFBQzVFLHVCQUFDLHFFQUFFLFdBQVUsc0NBQXNDUCx1QkFBYVksV0FBaEU7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUF3RTtBQUFBLFdBWDFFO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFZQTtBQUFBLFNBdEJGO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0F1QkEsS0F4QlNaLGFBQWFNLElBQXhCO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0F5QkE7QUFBQSxFQUVKLENBQUMsS0FqQ0g7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQWtDQTtBQUVKO0FBQUN6QixHQXBGdUJELG1CQUFpQjtBQUFBaUMsS0FBakJqQztBQUFpQixJQUFBaUM7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbIkNhcmQiLCJDYXJkQ29udGVudCIsInRycGMiLCJDYWxlbmRhciIsIkxpbmsiLCJBbm5vdW5jZW1lbnRzTGlzdCIsIl9zIiwiZGF0YSIsImFubm91bmNlbWVudHMiLCJpc0xvYWRpbmciLCJsaXN0IiwidXNlUXVlcnkiLCJwdWJsaXNoZWRPbmx5IiwiZmFjaWxpdHlOYW1lcyIsIm9yZ2FuaXphdGlvbiIsIm1pcmFpIiwiaGlrYXJpIiwic3R1ZGlvX20iLCJnZXRGYWNpbGl0eUNvbG9yIiwiZmFjaWxpdHkiLCJjb2xvcnMiLCJtYXAiLCJpIiwibGVuZ3RoIiwic2xpY2UiLCJhbm5vdW5jZW1lbnQiLCJpbWFnZXMiLCJpbWFnZVVybHMiLCJKU09OIiwicGFyc2UiLCJ0aHVtYm5haWxJbWFnZSIsImlkIiwidGl0bGUiLCJEYXRlIiwicHVibGlzaGVkQXQiLCJjcmVhdGVkQXQiLCJ0b0xvY2FsZURhdGVTdHJpbmciLCJjb250ZW50IiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiQW5ub3VuY2VtZW50c0xpc3QudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IENhcmQsIENhcmRDb250ZW50IH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jYXJkXCI7XG5pbXBvcnQgeyB0cnBjIH0gZnJvbSBcIkAvbGliL3RycGNcIjtcbmltcG9ydCB7IENhbGVuZGFyIH0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xuaW1wb3J0IHsgTGluayB9IGZyb20gXCJ3b3V0ZXJcIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQW5ub3VuY2VtZW50c0xpc3QoKSB7XG4gIGNvbnN0IHsgZGF0YTogYW5ub3VuY2VtZW50cywgaXNMb2FkaW5nIH0gPSB0cnBjLmFubm91bmNlbWVudHMubGlzdC51c2VRdWVyeSh7IHB1Ymxpc2hlZE9ubHk6IHRydWUgfSk7XG5cbiAgY29uc3QgZmFjaWxpdHlOYW1lczogUmVjb3JkPHN0cmluZywgc3RyaW5nPiA9IHtcbiAgICBvcmdhbml6YXRpb246IFwi5rOV5Lq6XCIsXG4gICAgbWlyYWk6IFwiTUlSQUlcIixcbiAgICBoaWthcmk6IFwiSElLQVJJXCIsXG4gICAgc3R1ZGlvX206IFwic3R1ZGlvIE1cIixcbiAgfTtcblxuICBjb25zdCBnZXRGYWNpbGl0eUNvbG9yID0gKGZhY2lsaXR5OiBzdHJpbmcpID0+IHtcbiAgICBjb25zdCBjb2xvcnM6IFJlY29yZDxzdHJpbmcsIHN0cmluZz4gPSB7XG4gICAgICBvcmdhbml6YXRpb246IFwiYmcteWVsbG93LTEwMCB0ZXh0LXllbGxvdy03MDBcIixcbiAgICAgIG1pcmFpOiBcImJnLWJsdWUtMTAwIHRleHQtYmx1ZS03MDBcIixcbiAgICAgIGhpa2FyaTogXCJiZy1saW1lLTEwMCB0ZXh0LWxpbWUtNzAwXCIsXG4gICAgICBzdHVkaW9fbTogXCJiZy1vcmFuZ2UtMTAwIHRleHQtb3JhbmdlLTcwMFwiLFxuICAgIH07XG4gICAgcmV0dXJuIGNvbG9yc1tmYWNpbGl0eV0gfHwgXCJiZy1ncmF5LTEwMCB0ZXh0LWdyYXktNzAwXCI7XG4gIH07XG5cbiAgaWYgKGlzTG9hZGluZykge1xuICAgIHJldHVybiAoXG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImdyaWQgZ2FwLTYgbWQ6Z3JpZC1jb2xzLTIgbGc6Z3JpZC1jb2xzLTNcIj5cbiAgICAgICAge1sxLCAyLCAzXS5tYXAoKGkpID0+IChcbiAgICAgICAgICA8Q2FyZCBrZXk9e2l9IGNsYXNzTmFtZT1cImFuaW1hdGUtcHVsc2VcIj5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaC00OCBiZy1zbGF0ZS0yMDBcIj48L2Rpdj5cbiAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLTZcIj5cbiAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJoLTYgYmctc2xhdGUtMjAwIHJvdW5kZWQgdy0zLzQgbWItMlwiPjwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtNCBiZy1zbGF0ZS0yMDAgcm91bmRlZCB3LWZ1bGwgbWItMlwiPjwvZGl2PlxuICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImgtNCBiZy1zbGF0ZS0yMDAgcm91bmRlZCB3LTUvNlwiPjwvZGl2PlxuICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICA8L0NhcmQ+XG4gICAgICAgICkpfVxuICAgICAgPC9kaXY+XG4gICAgKTtcbiAgfVxuXG4gIGlmICghYW5ub3VuY2VtZW50cyB8fCBhbm5vdW5jZW1lbnRzLmxlbmd0aCA9PT0gMCkge1xuICAgIHJldHVybiAoXG4gICAgICA8Q2FyZD5cbiAgICAgICAgPENhcmRDb250ZW50IGNsYXNzTmFtZT1cInB5LTEyIHRleHQtY2VudGVyIHRleHQtbXV0ZWQtZm9yZWdyb3VuZFwiPlxuICAgICAgICAgIOePvuWcqOOAgeOBiuefpeOCieOBm+OBr+OBguOCiuOBvuOBm+OCk1xuICAgICAgICA8L0NhcmRDb250ZW50PlxuICAgICAgPC9DYXJkPlxuICAgICk7XG4gIH1cblxuICByZXR1cm4gKFxuICAgIDxkaXYgY2xhc3NOYW1lPVwiZ3JpZCBnYXAtNiBtZDpncmlkLWNvbHMtMiBsZzpncmlkLWNvbHMtM1wiPlxuICAgICAge2Fubm91bmNlbWVudHMuc2xpY2UoMCwgNikubWFwKChhbm5vdW5jZW1lbnQpID0+IHtcbiAgICAgICAgY29uc3QgaW1hZ2VzID0gYW5ub3VuY2VtZW50LmltYWdlVXJscyA/IEpTT04ucGFyc2UoYW5ub3VuY2VtZW50LmltYWdlVXJscykgOiBbXTtcbiAgICAgICAgY29uc3QgdGh1bWJuYWlsSW1hZ2UgPSBpbWFnZXMubGVuZ3RoID4gMCA/IGltYWdlc1swXSA6IG51bGw7XG5cbiAgICAgICAgcmV0dXJuIChcbiAgICAgICAgICA8TGluayBrZXk9e2Fubm91bmNlbWVudC5pZH0gaHJlZj17YC9hbm5vdW5jZW1lbnRzLyR7YW5ub3VuY2VtZW50LmlkfWB9PlxuICAgICAgICAgICAgPENhcmQgY2xhc3NOYW1lPVwiY3Vyc29yLXBvaW50ZXIgaG92ZXI6c2hhZG93LWxnIHRyYW5zaXRpb24tc2hhZG93IGgtZnVsbCBvdmVyZmxvdy1oaWRkZW5cIj5cbiAgICAgICAgICAgICAge3RodW1ibmFpbEltYWdlICYmIChcbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cInctZnVsbCBoLTQ4IG92ZXJmbG93LWhpZGRlblwiPlxuICAgICAgICAgICAgICAgICAgPGltZ1xuICAgICAgICAgICAgICAgICAgICBzcmM9e3RodW1ibmFpbEltYWdlfVxuICAgICAgICAgICAgICAgICAgICBhbHQ9e2Fubm91bmNlbWVudC50aXRsZX1cbiAgICAgICAgICAgICAgICAgICAgY2xhc3NOYW1lPVwidy1mdWxsIGgtZnVsbCBvYmplY3QtY292ZXIgaG92ZXI6c2NhbGUtMTA1IHRyYW5zaXRpb24tdHJhbnNmb3JtIGR1cmF0aW9uLTMwMFwiXG4gICAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICA8Q2FyZENvbnRlbnQgY2xhc3NOYW1lPVwicC02XCI+XG4gICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGl0ZW1zLWNlbnRlciBnYXAtMiBtYi0zIGZsZXgtd3JhcFwiPlxuICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPXtgdGV4dC14cyBweC0zIHB5LTEgcm91bmRlZC1mdWxsIGZvbnQtbWVkaXVtICR7Z2V0RmFjaWxpdHlDb2xvcihhbm5vdW5jZW1lbnQuZmFjaWxpdHkpfWB9PlxuICAgICAgICAgICAgICAgICAgICB7ZmFjaWxpdHlOYW1lc1thbm5vdW5jZW1lbnQuZmFjaWxpdHldIHx8IGFubm91bmNlbWVudC5mYWNpbGl0eX1cbiAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTEgdGV4dC14cyB0ZXh0LW11dGVkLWZvcmVncm91bmRcIj5cbiAgICAgICAgICAgICAgICAgICAgPENhbGVuZGFyIGNsYXNzTmFtZT1cInctMyBoLTNcIiAvPlxuICAgICAgICAgICAgICAgICAgICB7bmV3IERhdGUoYW5ub3VuY2VtZW50LnB1Ymxpc2hlZEF0IHx8IGFubm91bmNlbWVudC5jcmVhdGVkQXQpLnRvTG9jYWxlRGF0ZVN0cmluZyhcImphLUpQXCIpfVxuICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgPGgzIGNsYXNzTmFtZT1cInRleHQtbGcgZm9udC1zZW1pYm9sZCBtYi0yIGxpbmUtY2xhbXAtMlwiPnthbm5vdW5jZW1lbnQudGl0bGV9PC9oMz5cbiAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNjAwIHRleHQtc20gbGluZS1jbGFtcC0zXCI+e2Fubm91bmNlbWVudC5jb250ZW50fTwvcD5cbiAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgICA8L0xpbms+XG4gICAgICAgICk7XG4gICAgICB9KX1cbiAgICA8L2Rpdj5cbiAgKTtcbn1cblxuIl0sImZpbGUiOiIvaG9tZS91YnVudHUvbWlyYWktbmV0d29yay13ZWJzaXRlL2NsaWVudC9zcmMvY29tcG9uZW50cy9Bbm5vdW5jZW1lbnRzTGlzdC50c3gifQ==

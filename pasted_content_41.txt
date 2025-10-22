@@ -1,0 +1,123 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/components/ErrorBoundary.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import {cn} from "/src/lib/utils.ts";
+import {AlertTriangle, RotateCcw} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+import __vite__cjsImport3_react from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react.js?v=912602c9";
+const Component = __vite__cjsImport3_react["Component"];
+class ErrorBoundary extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hasError: false,
+            error: null
+        };
+    }
+    static getDerivedStateFromError(error) {
+        return {
+            hasError: true,
+            error
+        };
+    }
+    render() {
+        if (this.state.hasError) {
+            return /* @__PURE__ */
+            jsxDEV("div", {
+                "data-loc": "client/src/components/ErrorBoundary.tsx:27",
+                className: "flex items-center justify-center min-h-screen p-8 bg-background",
+                children: /* @__PURE__ */
+                jsxDEV("div", {
+                    "data-loc": "client/src/components/ErrorBoundary.tsx:28",
+                    className: "flex flex-col items-center w-full max-w-2xl p-8",
+                    children: [/* @__PURE__ */
+                    jsxDEV(AlertTriangle, {
+                        "data-loc": "client/src/components/ErrorBoundary.tsx:29",
+                        size: 48,
+                        className: "text-destructive mb-6 flex-shrink-0"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                        lineNumber: 29,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("h2", {
+                        "data-loc": "client/src/components/ErrorBoundary.tsx:34",
+                        className: "text-xl mb-4",
+                        children: "An unexpected error occurred."
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                        lineNumber: 34,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/ErrorBoundary.tsx:36",
+                        className: "p-4 w-full rounded bg-muted overflow-auto mb-6",
+                        children: /* @__PURE__ */
+                        jsxDEV("pre", {
+                            "data-loc": "client/src/components/ErrorBoundary.tsx:37",
+                            className: "text-sm text-muted-foreground whitespace-break-spaces",
+                            children: this.state.error?.stack
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                            lineNumber: 37,
+                            columnNumber: 15
+                        }, this)
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                        lineNumber: 36,
+                        columnNumber: 13
+                    }, this), /* @__PURE__ */
+                    jsxDEV("button", {
+                        "data-loc": "client/src/components/ErrorBoundary.tsx:42",
+                        onClick: () => window.location.reload(),
+                        className: cn("flex items-center gap-2 px-4 py-2 rounded-lg", "bg-primary text-primary-foreground", "hover:opacity-90 cursor-pointer"),
+                        children: [/* @__PURE__ */
+                        jsxDEV(RotateCcw, {
+                            "data-loc": "client/src/components/ErrorBoundary.tsx:50",
+                            size: 16
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                            lineNumber: 50,
+                            columnNumber: 15
+                        }, this), "Reload Page"]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                        lineNumber: 42,
+                        columnNumber: 13
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                    lineNumber: 28,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx",
+                lineNumber: 27,
+                columnNumber: 9
+            }, this);
+        }
+        return this.props.children;
+    }
+}
+export default ErrorBoundary;
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/ErrorBoundary.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBNEJZO0FBNUJaLFNBQVNBLFVBQVU7QUFDbkIsU0FBU0MsZUFBZUMsaUJBQWlCO0FBQ3pDLFNBQVNDLGlCQUE0QjtBQVdyQyxNQUFNQyxzQkFBc0JELFVBQXdCO0FBQUEsRUFDbERFLFlBQVlDLE9BQWM7QUFDeEIsVUFBTUEsS0FBSztBQUNYLFNBQUtDLFFBQVEsRUFBRUMsVUFBVSxPQUFPQyxPQUFPLEtBQUs7QUFBQSxFQUM5QztBQUFBLEVBRUEsT0FBT0MseUJBQXlCRCxPQUFxQjtBQUNuRCxXQUFPLEVBQUVELFVBQVUsTUFBTUMsTUFBTTtBQUFBLEVBQ2pDO0FBQUEsRUFFQUUsU0FBUztBQUNQLFFBQUksS0FBS0osTUFBTUMsVUFBVTtBQUN2QixhQUNFLHVCQUFDLG1FQUFJLFdBQVUsbUVBQ2IsaUNBQUMsbUVBQUksV0FBVSxtREFDYjtBQUFBO0FBQUEsVUFBQztBQUFBO0FBQUE7QUFBQSxZQUNDLE1BQU07QUFBQSxZQUNOLFdBQVU7QUFBQTtBQUFBLFVBRlo7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLFFBRWlEO0FBQUEsUUFHakQsdUJBQUMsa0VBQUcsV0FBVSxnQkFBZSw2Q0FBN0I7QUFBQTtBQUFBO0FBQUE7QUFBQSxlQUEwRDtBQUFBLFFBRTFELHVCQUFDLG1FQUFJLFdBQVUsa0RBQ2IsaUNBQUMsbUVBQUksV0FBVSx5REFDWixlQUFLRCxNQUFNRSxPQUFPRyxTQURyQjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBRUEsS0FIRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGVBSUE7QUFBQSxRQUVBO0FBQUEsVUFBQztBQUFBO0FBQUE7QUFBQSxZQUNDLFNBQVMsTUFBTUMsT0FBT0MsU0FBU0MsT0FBTztBQUFBLFlBQ3RDLFdBQVdmO0FBQUFBLGNBQ1Q7QUFBQSxjQUNBO0FBQUEsY0FDQTtBQUFBLFlBQ0Y7QUFBQSxZQUVBO0FBQUEscUNBQUMsdUVBQVUsTUFBTSxNQUFqQjtBQUFBO0FBQUE7QUFBQTtBQUFBLHFCQUFvQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFVBUnRCO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQSxRQVVBO0FBQUEsV0F4QkY7QUFBQTtBQUFBO0FBQUE7QUFBQSxhQXlCQSxLQTFCRjtBQUFBO0FBQUE7QUFBQTtBQUFBLGFBMkJBO0FBQUEsSUFFSjtBQUVBLFdBQU8sS0FBS00sTUFBTVU7QUFBQUEsRUFDcEI7QUFDRjtBQUVBLGVBQWVaIiwibmFtZXMiOlsiY24iLCJBbGVydFRyaWFuZ2xlIiwiUm90YXRlQ2N3IiwiQ29tcG9uZW50IiwiRXJyb3JCb3VuZGFyeSIsImNvbnN0cnVjdG9yIiwicHJvcHMiLCJzdGF0ZSIsImhhc0Vycm9yIiwiZXJyb3IiLCJnZXREZXJpdmVkU3RhdGVGcm9tRXJyb3IiLCJyZW5kZXIiLCJzdGFjayIsIndpbmRvdyIsImxvY2F0aW9uIiwicmVsb2FkIiwiY2hpbGRyZW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiRXJyb3JCb3VuZGFyeS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgY24gfSBmcm9tIFwiQC9saWIvdXRpbHNcIjtcbmltcG9ydCB7IEFsZXJ0VHJpYW5nbGUsIFJvdGF0ZUNjdyB9IGZyb20gXCJsdWNpZGUtcmVhY3RcIjtcbmltcG9ydCB7IENvbXBvbmVudCwgUmVhY3ROb2RlIH0gZnJvbSBcInJlYWN0XCI7XG5cbmludGVyZmFjZSBQcm9wcyB7XG4gIGNoaWxkcmVuOiBSZWFjdE5vZGU7XG59XG5cbmludGVyZmFjZSBTdGF0ZSB7XG4gIGhhc0Vycm9yOiBib29sZWFuO1xuICBlcnJvcjogRXJyb3IgfCBudWxsO1xufVxuXG5jbGFzcyBFcnJvckJvdW5kYXJ5IGV4dGVuZHMgQ29tcG9uZW50PFByb3BzLCBTdGF0ZT4ge1xuICBjb25zdHJ1Y3Rvcihwcm9wczogUHJvcHMpIHtcbiAgICBzdXBlcihwcm9wcyk7XG4gICAgdGhpcy5zdGF0ZSA9IHsgaGFzRXJyb3I6IGZhbHNlLCBlcnJvcjogbnVsbCB9O1xuICB9XG5cbiAgc3RhdGljIGdldERlcml2ZWRTdGF0ZUZyb21FcnJvcihlcnJvcjogRXJyb3IpOiBTdGF0ZSB7XG4gICAgcmV0dXJuIHsgaGFzRXJyb3I6IHRydWUsIGVycm9yIH07XG4gIH1cblxuICByZW5kZXIoKSB7XG4gICAgaWYgKHRoaXMuc3RhdGUuaGFzRXJyb3IpIHtcbiAgICAgIHJldHVybiAoXG4gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiZmxleCBpdGVtcy1jZW50ZXIganVzdGlmeS1jZW50ZXIgbWluLWgtc2NyZWVuIHAtOCBiZy1iYWNrZ3JvdW5kXCI+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4IGZsZXgtY29sIGl0ZW1zLWNlbnRlciB3LWZ1bGwgbWF4LXctMnhsIHAtOFwiPlxuICAgICAgICAgICAgPEFsZXJ0VHJpYW5nbGVcbiAgICAgICAgICAgICAgc2l6ZT17NDh9XG4gICAgICAgICAgICAgIGNsYXNzTmFtZT1cInRleHQtZGVzdHJ1Y3RpdmUgbWItNiBmbGV4LXNocmluay0wXCJcbiAgICAgICAgICAgIC8+XG5cbiAgICAgICAgICAgIDxoMiBjbGFzc05hbWU9XCJ0ZXh0LXhsIG1iLTRcIj5BbiB1bmV4cGVjdGVkIGVycm9yIG9jY3VycmVkLjwvaDI+XG5cbiAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwicC00IHctZnVsbCByb3VuZGVkIGJnLW11dGVkIG92ZXJmbG93LWF1dG8gbWItNlwiPlxuICAgICAgICAgICAgICA8cHJlIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1tdXRlZC1mb3JlZ3JvdW5kIHdoaXRlc3BhY2UtYnJlYWstc3BhY2VzXCI+XG4gICAgICAgICAgICAgICAge3RoaXMuc3RhdGUuZXJyb3I/LnN0YWNrfVxuICAgICAgICAgICAgICA8L3ByZT5cbiAgICAgICAgICAgIDwvZGl2PlxuXG4gICAgICAgICAgICA8YnV0dG9uXG4gICAgICAgICAgICAgIG9uQ2xpY2s9eygpID0+IHdpbmRvdy5sb2NhdGlvbi5yZWxvYWQoKX1cbiAgICAgICAgICAgICAgY2xhc3NOYW1lPXtjbihcbiAgICAgICAgICAgICAgICBcImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIHB4LTQgcHktMiByb3VuZGVkLWxnXCIsXG4gICAgICAgICAgICAgICAgXCJiZy1wcmltYXJ5IHRleHQtcHJpbWFyeS1mb3JlZ3JvdW5kXCIsXG4gICAgICAgICAgICAgICAgXCJob3ZlcjpvcGFjaXR5LTkwIGN1cnNvci1wb2ludGVyXCJcbiAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgID5cbiAgICAgICAgICAgICAgPFJvdGF0ZUNjdyBzaXplPXsxNn0gLz5cbiAgICAgICAgICAgICAgUmVsb2FkIFBhZ2VcbiAgICAgICAgICAgIDwvYnV0dG9uPlxuICAgICAgICAgIDwvZGl2PlxuICAgICAgICA8L2Rpdj5cbiAgICAgICk7XG4gICAgfVxuXG4gICAgcmV0dXJuIHRoaXMucHJvcHMuY2hpbGRyZW47XG4gIH1cbn1cblxuZXhwb3J0IGRlZmF1bHQgRXJyb3JCb3VuZGFyeTtcbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL2NvbXBvbmVudHMvRXJyb3JCb3VuZGFyeS50c3gifQ==

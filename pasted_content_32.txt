@@ -1,0 +1,389 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/components/AdminAuditLog.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+var _s = $RefreshSig$();
+import __vite__cjsImport1_react from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react.js?v=912602c9";
+const useState = __vite__cjsImport1_react["useState"];
+const useEffect = __vite__cjsImport1_react["useEffect"];
+import {Card, CardContent} from "/src/components/ui/card.tsx";
+import {toast} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/sonner.js?v=912602c9";
+import {History, FileText, Image, Users} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/lucide-react.js?v=912602c9";
+export default function AdminAuditLog() {
+    _s();
+    const [logs,setLogs] = useState([]);
+    const [loading,setLoading] = useState(true);
+    useEffect( () => {
+        fetchAuditLogs();
+    }
+    , []);
+    const fetchAuditLogs = async () => {
+        try {
+            const response = await fetch("/api/audit-log");
+            if (!response.ok)
+                throw new Error("Failed to fetch audit logs");
+            const data = await response.json();
+            setLogs(data);
+        } catch (error) {
+            toast.error(error.message || "監査ログの取得に失敗しました");
+        } finally {
+            setLoading(false);
+        }
+    }
+    ;
+    const getActionName = (action) => {
+        const actions = {
+            create: "作成",
+            update: "更新",
+            delete: "削除",
+            approve: "承認",
+            reject: "却下"
+        };
+        return actions[action] || action;
+    }
+    ;
+    const getActionColor = (action) => {
+        const colors = {
+            create: "text-green-600",
+            update: "text-blue-600",
+            delete: "text-red-600",
+            approve: "text-green-600",
+            reject: "text-red-600"
+        };
+        return colors[action] || "text-gray-600";
+    }
+    ;
+    const getEntityTypeName = (entityType) => {
+        const types = {
+            announcement: "お知らせ",
+            gallery: "ギャラリー",
+            pageContent: "ページコンテンツ",
+            user: "ユーザー"
+        };
+        return types[entityType] || entityType;
+    }
+    ;
+    const getEntityIcon = (entityType) => {
+        switch (entityType) {
+        case "announcement":
+            return /* @__PURE__ */
+            jsxDEV(FileText, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:75",
+                className: "h-4 w-4"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 75,
+                columnNumber: 16
+            }, this);
+        case "gallery":
+            return /* @__PURE__ */
+            jsxDEV(Image, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:77",
+                className: "h-4 w-4"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 77,
+                columnNumber: 16
+            }, this);
+        case "pageContent":
+            return /* @__PURE__ */
+            jsxDEV(FileText, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:79",
+                className: "h-4 w-4"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 79,
+                columnNumber: 16
+            }, this);
+        case "user":
+            return /* @__PURE__ */
+            jsxDEV(Users, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:81",
+                className: "h-4 w-4"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 81,
+                columnNumber: 16
+            }, this);
+        default:
+            return /* @__PURE__ */
+            jsxDEV(FileText, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:83",
+                className: "h-4 w-4"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 83,
+                columnNumber: 16
+            }, this);
+        }
+    }
+    ;
+    const getFacilityName = (facility) => {
+        if (!facility)
+            return "";
+        const facilities = {
+            organization: "法人",
+            mirai: "MIRAI",
+            hikari: "HIKARI",
+            studio_m: "studio M"
+        };
+        return facilities[facility] || facility;
+    }
+    ;
+    if (loading) {
+        return /* @__PURE__ */
+        jsxDEV("div", {
+            "data-loc": "client/src/components/AdminAuditLog.tsx:99",
+            className: "text-center py-8",
+            children: "読み込み中..."
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+            lineNumber: 99,
+            columnNumber: 12
+        }, this);
+    }
+    return /* @__PURE__ */
+    jsxDEV("div", {
+        "data-loc": "client/src/components/AdminAuditLog.tsx:103",
+        className: "space-y-6",
+        children: [/* @__PURE__ */
+        jsxDEV("div", {
+            "data-loc": "client/src/components/AdminAuditLog.tsx:104",
+            children: [/* @__PURE__ */
+            jsxDEV("h2", {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:105",
+                className: "text-2xl font-bold",
+                children: "監査ログ"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 105,
+                columnNumber: 9
+            }, this), /* @__PURE__ */
+            jsxDEV("p", {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:106",
+                className: "text-gray-600",
+                children: "すべての編集履歴を確認できます"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 106,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+            lineNumber: 104,
+            columnNumber: 7
+        }, this), /* @__PURE__ */
+        jsxDEV("div", {
+            "data-loc": "client/src/components/AdminAuditLog.tsx:109",
+            className: "space-y-2",
+            children: logs.length === 0 ? /* @__PURE__ */
+            jsxDEV(Card, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:111",
+                children: /* @__PURE__ */
+                jsxDEV(CardContent, {
+                    "data-loc": "client/src/components/AdminAuditLog.tsx:112",
+                    className: "text-center py-12",
+                    children: [/* @__PURE__ */
+                    jsxDEV(History, {
+                        "data-loc": "client/src/components/AdminAuditLog.tsx:113",
+                        className: "h-12 w-12 text-gray-400 mx-auto mb-4"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                        lineNumber: 113,
+                        columnNumber: 15
+                    }, this), /* @__PURE__ */
+                    jsxDEV("p", {
+                        "data-loc": "client/src/components/AdminAuditLog.tsx:114",
+                        className: "text-gray-600",
+                        children: "監査ログはありません"
+                    }, void 0, false, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                        lineNumber: 114,
+                        columnNumber: 15
+                    }, this)]
+                }, void 0, true, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                    lineNumber: 112,
+                    columnNumber: 13
+                }, this)
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 111,
+                columnNumber: 9
+            }, this) : logs.map( (log) => /* @__PURE__ */
+            jsxDEV(Card, {
+                "data-loc": "client/src/components/AdminAuditLog.tsx:119",
+                children: /* @__PURE__ */
+                jsxDEV(CardContent, {
+                    "data-loc": "client/src/components/AdminAuditLog.tsx:120",
+                    className: "p-4",
+                    children: /* @__PURE__ */
+                    jsxDEV("div", {
+                        "data-loc": "client/src/components/AdminAuditLog.tsx:121",
+                        className: "flex items-start gap-4",
+                        children: [/* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/components/AdminAuditLog.tsx:122",
+                            className: "h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0",
+                            children: getEntityIcon(log.entityType)
+                        }, void 0, false, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                            lineNumber: 122,
+                            columnNumber: 19
+                        }, this), /* @__PURE__ */
+                        jsxDEV("div", {
+                            "data-loc": "client/src/components/AdminAuditLog.tsx:125",
+                            className: "flex-1 min-w-0",
+                            children: [/* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/components/AdminAuditLog.tsx:126",
+                                className: "flex items-center gap-2 flex-wrap",
+                                children: [/* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:127",
+                                    className: "font-semibold",
+                                    children: log.userName || "Unknown"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 127,
+                                    columnNumber: 23
+                                }, this), /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:128",
+                                    className: "text-gray-500",
+                                    children: "が"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 128,
+                                    columnNumber: 23
+                                }, this), /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:129",
+                                    className: `font-semibold ${getActionColor(log.action)}`,
+                                    children: getActionName(log.action)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 129,
+                                    columnNumber: 23
+                                }, this), /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:132",
+                                    className: "text-gray-500",
+                                    children: "しました"
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 132,
+                                    columnNumber: 23
+                                }, this), /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:133",
+                                    className: "text-sm text-gray-500",
+                                    children: ["(", getEntityTypeName(log.entityType), ")"]
+                                }, void 0, true, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 133,
+                                    columnNumber: 23
+                                }, this), log.facility && /* @__PURE__ */
+                                jsxDEV("span", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:137",
+                                    className: "text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded",
+                                    children: getFacilityName(log.facility)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 137,
+                                    columnNumber: 19
+                                }, this)]
+                            }, void 0, true, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                lineNumber: 126,
+                                columnNumber: 21
+                            }, this), log.changes && /* @__PURE__ */
+                            jsxDEV("div", {
+                                "data-loc": "client/src/components/AdminAuditLog.tsx:143",
+                                className: "mt-2 text-sm text-gray-600 bg-gray-50 p-2 rounded",
+                                children: /* @__PURE__ */
+                                jsxDEV("pre", {
+                                    "data-loc": "client/src/components/AdminAuditLog.tsx:144",
+                                    className: "whitespace-pre-wrap font-mono text-xs",
+                                    children: JSON.stringify(JSON.parse(log.changes), null, 2)
+                                }, void 0, false, {
+                                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                    lineNumber: 144,
+                                    columnNumber: 25
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                lineNumber: 143,
+                                columnNumber: 17
+                            }, this), /* @__PURE__ */
+                            jsxDEV("p", {
+                                "data-loc": "client/src/components/AdminAuditLog.tsx:149",
+                                className: "text-xs text-gray-400 mt-2",
+                                children: new Date(log.createdAt).toLocaleString("ja-JP")
+                            }, void 0, false, {
+                                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                                lineNumber: 149,
+                                columnNumber: 21
+                            }, this)]
+                        }, void 0, true, {
+                            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                            lineNumber: 125,
+                            columnNumber: 19
+                        }, this)]
+                    }, void 0, true, {
+                        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                        lineNumber: 121,
+                        columnNumber: 17
+                    }, this)
+                }, void 0, false, {
+                    fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                    lineNumber: 120,
+                    columnNumber: 15
+                }, this)
+            }, log.id, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+                lineNumber: 119,
+                columnNumber: 9
+            }, this))
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+            lineNumber: 109,
+            columnNumber: 7
+        }, this)]
+    }, void 0, true, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx",
+        lineNumber: 103,
+        columnNumber: 5
+    }, this);
+}
+_s(AdminAuditLog, "lYx/TOoNu7KeE6EXJa8Z4htpyYA=");
+_c = AdminAuditLog;
+var _c;
+$RefreshReg$(_c, "AdminAuditLog");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/AdminAuditLog.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUFBQTtBQUFBO0FBQUE7QUFBQSxXQWlEQTtBQUFBLE9BdkRGO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0F3REE7QUFFSjtBQUFDbEQsR0EvSXVCRCxlQUFhO0FBQUFvRCxLQUFicEQ7QUFBYSxJQUFBb0Q7QUFBQUMsYUFBQUQsSUFBQSIsIm5hbWVzIjpbInVzZVN0YXRlIiwidXNlRWZmZWN0IiwiQ2FyZCIsIkNhcmRDb250ZW50IiwidG9hc3QiLCJIaXN0b3J5IiwiRmlsZVRleHQiLCJJbWFnZSIsIlVzZXJzIiwiQWRtaW5BdWRpdExvZyIsIl9zIiwibG9ncyIsInNldExvZ3MiLCJsb2FkaW5nIiwic2V0TG9hZGluZyIsImZldGNoQXVkaXRMb2dzIiwicmVzcG9uc2UiLCJmZXRjaCIsIm9rIiwiRXJyb3IiLCJkYXRhIiwianNvbiIsImVycm9yIiwibWVzc2FnZSIsImdldEFjdGlvbk5hbWUiLCJhY3Rpb24iLCJhY3Rpb25zIiwiY3JlYXRlIiwidXBkYXRlIiwiZGVsZXRlIiwiYXBwcm92ZSIsInJlamVjdCIsImdldEFjdGlvbkNvbG9yIiwiY29sb3JzIiwiZ2V0RW50aXR5VHlwZU5hbWUiLCJlbnRpdHlUeXBlIiwidHlwZXMiLCJhbm5vdW5jZW1lbnQiLCJnYWxsZXJ5IiwicGFnZUNvbnRlbnQiLCJ1c2VyIiwiZ2V0RW50aXR5SWNvbiIsImdldEZhY2lsaXR5TmFtZSIsImZhY2lsaXR5IiwiZmFjaWxpdGllcyIsIm9yZ2FuaXphdGlvbiIsIm1pcmFpIiwiaGlrYXJpIiwic3R1ZGlvX20iLCJsZW5ndGgiLCJtYXAiLCJsb2ciLCJ1c2VyTmFtZSIsImNoYW5nZXMiLCJKU09OIiwic3RyaW5naWZ5IiwicGFyc2UiLCJEYXRlIiwiY3JlYXRlZEF0IiwidG9Mb2NhbGVTdHJpbmciLCJpZCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkFkbWluQXVkaXRMb2cudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IHVzZVN0YXRlLCB1c2VFZmZlY3QgfSBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IENhcmQsIENhcmRDb250ZW50IH0gZnJvbSBcIkAvY29tcG9uZW50cy91aS9jYXJkXCI7XG5pbXBvcnQgeyB0b2FzdCB9IGZyb20gXCJzb25uZXJcIjtcbmltcG9ydCB7IEhpc3RvcnksIFVzZXIsIEZpbGVUZXh0LCBJbWFnZSwgVXNlcnMgfSBmcm9tIFwibHVjaWRlLXJlYWN0XCI7XG5cbmludGVyZmFjZSBBdWRpdExvZyB7XG4gIGlkOiBzdHJpbmc7XG4gIHVzZXJJZDogc3RyaW5nO1xuICB1c2VyTmFtZTogc3RyaW5nIHwgbnVsbDtcbiAgYWN0aW9uOiBzdHJpbmc7XG4gIGVudGl0eVR5cGU6IHN0cmluZztcbiAgZW50aXR5SWQ6IHN0cmluZztcbiAgZmFjaWxpdHk6IHN0cmluZyB8IG51bGw7XG4gIGNoYW5nZXM6IHN0cmluZyB8IG51bGw7XG4gIGNyZWF0ZWRBdDogc3RyaW5nO1xufVxuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBBZG1pbkF1ZGl0TG9nKCkge1xuICBjb25zdCBbbG9ncywgc2V0TG9nc10gPSB1c2VTdGF0ZTxBdWRpdExvZ1tdPihbXSk7XG4gIGNvbnN0IFtsb2FkaW5nLCBzZXRMb2FkaW5nXSA9IHVzZVN0YXRlKHRydWUpO1xuXG5cbiAgdXNlRWZmZWN0KCgpID0+IHtcbiAgICBmZXRjaEF1ZGl0TG9ncygpO1xuICB9LCBbXSk7XG5cbiAgY29uc3QgZmV0Y2hBdWRpdExvZ3MgPSBhc3luYyAoKSA9PiB7XG4gICAgdHJ5IHtcbiAgICAgIGNvbnN0IHJlc3BvbnNlID0gYXdhaXQgZmV0Y2goXCIvYXBpL2F1ZGl0LWxvZ1wiKTtcbiAgICAgIGlmICghcmVzcG9uc2Uub2spIHRocm93IG5ldyBFcnJvcihcIkZhaWxlZCB0byBmZXRjaCBhdWRpdCBsb2dzXCIpO1xuICAgICAgY29uc3QgZGF0YSA9IGF3YWl0IHJlc3BvbnNlLmpzb24oKTtcbiAgICAgIHNldExvZ3MoZGF0YSk7XG4gICAgfSBjYXRjaCAoZXJyb3I6IGFueSkge1xuICAgICAgdG9hc3QuZXJyb3IoZXJyb3IubWVzc2FnZSB8fCBcIuebo+afu+ODreOCsOOBruWPluW+l+OBq+WkseaVl+OBl+OBvuOBl+OBn1wiKTtcbiAgICB9IGZpbmFsbHkge1xuICAgICAgc2V0TG9hZGluZyhmYWxzZSk7XG4gICAgfVxuICB9O1xuXG4gIGNvbnN0IGdldEFjdGlvbk5hbWUgPSAoYWN0aW9uOiBzdHJpbmcpID0+IHtcbiAgICBjb25zdCBhY3Rpb25zOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge1xuICAgICAgY3JlYXRlOiBcIuS9nOaIkFwiLFxuICAgICAgdXBkYXRlOiBcIuabtOaWsFwiLFxuICAgICAgZGVsZXRlOiBcIuWJiumZpFwiLFxuICAgICAgYXBwcm92ZTogXCLmib/oqo1cIixcbiAgICAgIHJlamVjdDogXCLljbTkuItcIixcbiAgICB9O1xuICAgIHJldHVybiBhY3Rpb25zW2FjdGlvbl0gfHwgYWN0aW9uO1xuICB9O1xuXG4gIGNvbnN0IGdldEFjdGlvbkNvbG9yID0gKGFjdGlvbjogc3RyaW5nKSA9PiB7XG4gICAgY29uc3QgY29sb3JzOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge1xuICAgICAgY3JlYXRlOiBcInRleHQtZ3JlZW4tNjAwXCIsXG4gICAgICB1cGRhdGU6IFwidGV4dC1ibHVlLTYwMFwiLFxuICAgICAgZGVsZXRlOiBcInRleHQtcmVkLTYwMFwiLFxuICAgICAgYXBwcm92ZTogXCJ0ZXh0LWdyZWVuLTYwMFwiLFxuICAgICAgcmVqZWN0OiBcInRleHQtcmVkLTYwMFwiLFxuICAgIH07XG4gICAgcmV0dXJuIGNvbG9yc1thY3Rpb25dIHx8IFwidGV4dC1ncmF5LTYwMFwiO1xuICB9O1xuXG4gIGNvbnN0IGdldEVudGl0eVR5cGVOYW1lID0gKGVudGl0eVR5cGU6IHN0cmluZykgPT4ge1xuICAgIGNvbnN0IHR5cGVzOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge1xuICAgICAgYW5ub3VuY2VtZW50OiBcIuOBiuefpeOCieOBm1wiLFxuICAgICAgZ2FsbGVyeTogXCLjgq7jg6Pjg6njg6rjg7xcIixcbiAgICAgIHBhZ2VDb250ZW50OiBcIuODmuODvOOCuOOCs+ODs+ODhuODs+ODhFwiLFxuICAgICAgdXNlcjogXCLjg6bjg7zjgrbjg7xcIixcbiAgICB9O1xuICAgIHJldHVybiB0eXBlc1tlbnRpdHlUeXBlXSB8fCBlbnRpdHlUeXBlO1xuICB9O1xuXG4gIGNvbnN0IGdldEVudGl0eUljb24gPSAoZW50aXR5VHlwZTogc3RyaW5nKSA9PiB7XG4gICAgc3dpdGNoIChlbnRpdHlUeXBlKSB7XG4gICAgICBjYXNlIFwiYW5ub3VuY2VtZW50XCI6XG4gICAgICAgIHJldHVybiA8RmlsZVRleHQgY2xhc3NOYW1lPVwiaC00IHctNFwiIC8+O1xuICAgICAgY2FzZSBcImdhbGxlcnlcIjpcbiAgICAgICAgcmV0dXJuIDxJbWFnZSBjbGFzc05hbWU9XCJoLTQgdy00XCIgLz47XG4gICAgICBjYXNlIFwicGFnZUNvbnRlbnRcIjpcbiAgICAgICAgcmV0dXJuIDxGaWxlVGV4dCBjbGFzc05hbWU9XCJoLTQgdy00XCIgLz47XG4gICAgICBjYXNlIFwidXNlclwiOlxuICAgICAgICByZXR1cm4gPFVzZXJzIGNsYXNzTmFtZT1cImgtNCB3LTRcIiAvPjtcbiAgICAgIGRlZmF1bHQ6XG4gICAgICAgIHJldHVybiA8RmlsZVRleHQgY2xhc3NOYW1lPVwiaC00IHctNFwiIC8+O1xuICAgIH1cbiAgfTtcblxuICBjb25zdCBnZXRGYWNpbGl0eU5hbWUgPSAoZmFjaWxpdHk6IHN0cmluZyB8IG51bGwpID0+IHtcbiAgICBpZiAoIWZhY2lsaXR5KSByZXR1cm4gXCJcIjtcbiAgICBjb25zdCBmYWNpbGl0aWVzOiBSZWNvcmQ8c3RyaW5nLCBzdHJpbmc+ID0ge1xuICAgICAgb3JnYW5pemF0aW9uOiBcIuazleS6ulwiLFxuICAgICAgbWlyYWk6IFwiTUlSQUlcIixcbiAgICAgIGhpa2FyaTogXCJISUtBUklcIixcbiAgICAgIHN0dWRpb19tOiBcInN0dWRpbyBNXCIsXG4gICAgfTtcbiAgICByZXR1cm4gZmFjaWxpdGllc1tmYWNpbGl0eV0gfHwgZmFjaWxpdHk7XG4gIH07XG5cbiAgaWYgKGxvYWRpbmcpIHtcbiAgICByZXR1cm4gPGRpdiBjbGFzc05hbWU9XCJ0ZXh0LWNlbnRlciBweS04XCI+6Kqt44G/6L6844G/5LitLi4uPC9kaXY+O1xuICB9XG5cbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInNwYWNlLXktNlwiPlxuICAgICAgPGRpdj5cbiAgICAgICAgPGgyIGNsYXNzTmFtZT1cInRleHQtMnhsIGZvbnQtYm9sZFwiPuebo+afu+ODreOCsDwvaDI+XG4gICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS02MDBcIj7jgZnjgbnjgabjga7nt6jpm4blsaXmrbTjgpLnorroqo3jgafjgY3jgb7jgZk8L3A+XG4gICAgICA8L2Rpdj5cblxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJzcGFjZS15LTJcIj5cbiAgICAgICAge2xvZ3MubGVuZ3RoID09PSAwID8gKFxuICAgICAgICAgIDxDYXJkPlxuICAgICAgICAgICAgPENhcmRDb250ZW50IGNsYXNzTmFtZT1cInRleHQtY2VudGVyIHB5LTEyXCI+XG4gICAgICAgICAgICAgIDxIaXN0b3J5IGNsYXNzTmFtZT1cImgtMTIgdy0xMiB0ZXh0LWdyYXktNDAwIG14LWF1dG8gbWItNFwiIC8+XG4gICAgICAgICAgICAgIDxwIGNsYXNzTmFtZT1cInRleHQtZ3JheS02MDBcIj7nm6Pmn7vjg63jgrDjga/jgYLjgorjgb7jgZvjgpM8L3A+XG4gICAgICAgICAgICA8L0NhcmRDb250ZW50PlxuICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgKSA6IChcbiAgICAgICAgICBsb2dzLm1hcCgobG9nKSA9PiAoXG4gICAgICAgICAgICA8Q2FyZCBrZXk9e2xvZy5pZH0+XG4gICAgICAgICAgICAgIDxDYXJkQ29udGVudCBjbGFzc05hbWU9XCJwLTRcIj5cbiAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtc3RhcnQgZ2FwLTRcIj5cbiAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3NOYW1lPVwiaC0xMCB3LTEwIHJvdW5kZWQtZnVsbCBiZy1ncmF5LTEwMCBmbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBmbGV4LXNocmluay0wXCI+XG4gICAgICAgICAgICAgICAgICAgIHtnZXRFbnRpdHlJY29uKGxvZy5lbnRpdHlUeXBlKX1cbiAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJmbGV4LTEgbWluLXctMFwiPlxuICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cImZsZXggaXRlbXMtY2VudGVyIGdhcC0yIGZsZXgtd3JhcFwiPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cImZvbnQtc2VtaWJvbGRcIj57bG9nLnVzZXJOYW1lIHx8IFwiVW5rbm93blwifTwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNTAwXCI+44GMPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT17YGZvbnQtc2VtaWJvbGQgJHtnZXRBY3Rpb25Db2xvcihsb2cuYWN0aW9uKX1gfT5cbiAgICAgICAgICAgICAgICAgICAgICAgIHtnZXRBY3Rpb25OYW1lKGxvZy5hY3Rpb24pfVxuICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzc05hbWU9XCJ0ZXh0LWdyYXktNTAwXCI+44GX44G+44GX44GfPC9zcGFuPlxuICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQtc20gdGV4dC1ncmF5LTUwMFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgKHtnZXRFbnRpdHlUeXBlTmFtZShsb2cuZW50aXR5VHlwZSl9KVxuICAgICAgICAgICAgICAgICAgICAgIDwvc3Bhbj5cbiAgICAgICAgICAgICAgICAgICAgICB7bG9nLmZhY2lsaXR5ICYmIChcbiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzTmFtZT1cInRleHQteHMgYmctZ3JheS0xMDAgdGV4dC1ncmF5LTcwMCBweC0yIHB5LTEgcm91bmRlZFwiPlxuICAgICAgICAgICAgICAgICAgICAgICAgICB7Z2V0RmFjaWxpdHlOYW1lKGxvZy5mYWNpbGl0eSl9XG4gICAgICAgICAgICAgICAgICAgICAgICA8L3NwYW4+XG4gICAgICAgICAgICAgICAgICAgICAgKX1cbiAgICAgICAgICAgICAgICAgICAgPC9kaXY+XG4gICAgICAgICAgICAgICAgICAgIHtsb2cuY2hhbmdlcyAmJiAoXG4gICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtdC0yIHRleHQtc20gdGV4dC1ncmF5LTYwMCBiZy1ncmF5LTUwIHAtMiByb3VuZGVkXCI+XG4gICAgICAgICAgICAgICAgICAgICAgICA8cHJlIGNsYXNzTmFtZT1cIndoaXRlc3BhY2UtcHJlLXdyYXAgZm9udC1tb25vIHRleHQteHNcIj5cbiAgICAgICAgICAgICAgICAgICAgICAgICAge0pTT04uc3RyaW5naWZ5KEpTT04ucGFyc2UobG9nLmNoYW5nZXMpLCBudWxsLCAyKX1cbiAgICAgICAgICAgICAgICAgICAgICAgIDwvcHJlPlxuICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PlxuICAgICAgICAgICAgICAgICAgICApfVxuICAgICAgICAgICAgICAgICAgICA8cCBjbGFzc05hbWU9XCJ0ZXh0LXhzIHRleHQtZ3JheS00MDAgbXQtMlwiPlxuICAgICAgICAgICAgICAgICAgICAgIHtuZXcgRGF0ZShsb2cuY3JlYXRlZEF0KS50b0xvY2FsZVN0cmluZyhcImphLUpQXCIpfVxuICAgICAgICAgICAgICAgICAgICA8L3A+XG4gICAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgICA8L2Rpdj5cbiAgICAgICAgICAgICAgPC9DYXJkQ29udGVudD5cbiAgICAgICAgICAgIDwvQ2FyZD5cbiAgICAgICAgICApKVxuICAgICAgICApfVxuICAgICAgPC9kaXY+XG4gICAgPC9kaXY+XG4gICk7XG59XG5cbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL2NvbXBvbmVudHMvQWRtaW5BdWRpdExvZy50c3gifQ==
