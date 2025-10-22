@@ -29,23 +29,33 @@ async function verifyToken(token: string): Promise<{ userId: string } | null> {
 
 // Get database connection
 async function getDbConnection() {
-  if (!process.env.DATABASE_URL) {
-    throw new Error("DATABASE_URL is not set");
+  const dbUrl = process.env.DATABASE_URL;
+  
+  if (!dbUrl) {
+    throw new Error("DATABASE_URL environment variable is not set");
   }
 
-  // Parse MySQL URL
-  const url = new URL(process.env.DATABASE_URL);
-  
-  return await mysql.createConnection({
-    host: url.hostname,
-    port: parseInt(url.port) || 3306,
-    user: url.username,
-    password: url.password,
-    database: url.pathname.slice(1),
-    ssl: {
-      rejectUnauthorized: true,
-    },
-  });
+  try {
+    // Parse MySQL URL: mysql://user:pass@host:port/database
+    const url = new URL(dbUrl);
+    
+    const connection = await mysql.createConnection({
+      host: url.hostname,
+      port: parseInt(url.port) || 3306,
+      user: url.username,
+      password: url.password,
+      database: url.pathname.slice(1), // Remove leading slash
+      ssl: {
+        rejectUnauthorized: true,
+      },
+      connectTimeout: 10000,
+    });
+
+    return connection;
+  } catch (error: any) {
+    console.error("Database connection error:", error);
+    throw new Error(`Database connection failed: ${error.message}`);
+  }
 }
 
 // Parse cookies from request
@@ -53,8 +63,10 @@ function parseCookies(cookieHeader: string | undefined): Record<string, string> 
   if (!cookieHeader) return {};
   
   return cookieHeader.split(';').reduce((cookies, cookie) => {
-    const [name, value] = cookie.trim().split('=');
-    cookies[name] = decodeURIComponent(value);
+    const parts = cookie.trim().split('=');
+    if (parts.length === 2) {
+      cookies[parts[0]] = decodeURIComponent(parts[1]);
+    }
     return cookies;
   }, {} as Record<string, string>);
 }
@@ -69,9 +81,17 @@ function setCookie(res: VercelResponse, name: string, value: string, options: an
     path = '/',
   } = options;
 
-  const cookieValue = `${name}=${encodeURIComponent(value)}; Path=${path}; Max-Age=${Math.floor(maxAge / 1000)}; ${httpOnly ? 'HttpOnly; ' : ''}${secure ? 'Secure; ' : ''}SameSite=${sameSite}`;
-  
-  res.setHeader('Set-Cookie', cookieValue);
+  const cookieParts = [
+    `${name}=${encodeURIComponent(value)}`,
+    `Path=${path}`,
+    `Max-Age=${Math.floor(maxAge / 1000)}`,
+  ];
+
+  if (httpOnly) cookieParts.push('HttpOnly');
+  if (secure) cookieParts.push('Secure');
+  cookieParts.push(`SameSite=${sameSite}`);
+
+  res.setHeader('Set-Cookie', cookieParts.join('; '));
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -90,15 +110,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     // POST /api/auth/login
     if (req.method === 'POST' && path === '/api/auth/login') {
-      const { email, password } = req.body;
+      const { email, password } = req.body || {};
 
       if (!email || !password) {
         return res.status(400).json({ error: "メールアドレスとパスワードを入力してください" });
       }
 
-      const connection = await getDbConnection();
-
+      let connection;
       try {
+        connection = await getDbConnection();
+
         const [rows] = await connection.execute(
           'SELECT * FROM users WHERE email = ? LIMIT 1',
           [email]
@@ -134,7 +155,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Set cookie
         setCookie(res, 'auth_token', token);
 
-        return res.json({
+        return res.status(200).json({
           success: true,
           user: {
             id: user.id,
@@ -145,14 +166,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           },
         });
       } finally {
-        await connection.end();
+        if (connection) {
+          await connection.end();
+        }
       }
     }
 
     // POST /api/auth/logout
     if (req.method === 'POST' && path === '/api/auth/logout') {
       setCookie(res, 'auth_token', '', { maxAge: -1 });
-      return res.json({ success: true, message: "ログアウトしました" });
+      return res.status(200).json({ success: true, message: "ログアウトしました" });
     }
 
     // GET /api/auth/me
@@ -169,9 +192,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(401).json({ error: "無効なトークンです" });
       }
 
-      const connection = await getDbConnection();
-
+      let connection;
       try {
+        connection = await getDbConnection();
+
         const [rows] = await connection.execute(
           'SELECT * FROM users WHERE id = ? LIMIT 1',
           [payload.userId]
@@ -185,7 +209,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         const user = users[0];
 
-        return res.json({
+        return res.status(200).json({
           id: user.id,
           name: user.name,
           email: user.email,
@@ -193,21 +217,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           facility: user.facility,
         });
       } finally {
-        await connection.end();
+        if (connection) {
+          await connection.end();
+        }
       }
     }
 
     // POST /api/auth/register/public
     if (req.method === 'POST' && path === '/api/auth/register/public') {
-      const { name, email, password, facility } = req.body;
+      const { name, email, password, facility } = req.body || {};
 
       if (!name || !email || !password) {
         return res.status(400).json({ error: "必須項目が不足しています" });
       }
 
-      const connection = await getDbConnection();
-
+      let connection;
       try {
+        connection = await getDbConnection();
+
         // Check if email already exists
         const [existing] = await connection.execute(
           'SELECT * FROM users WHERE email = ? LIMIT 1',
@@ -230,19 +257,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           [userId, name, email, hashedPassword, 'user', facility || null, 'password']
         );
 
-        return res.json({
+        return res.status(200).json({
           success: true,
           message: "ユーザーを登録しました",
         });
       } finally {
-        await connection.end();
+        if (connection) {
+          await connection.end();
+        }
       }
     }
 
     return res.status(404).json({ error: "Not found" });
   } catch (error: any) {
     console.error("Auth API error:", error);
-    return res.status(500).json({ error: error.message || "Internal server error" });
+    return res.status(500).json({ 
+      error: "Internal server error",
+      message: error.message,
+      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
+    });
   }
 }
 
