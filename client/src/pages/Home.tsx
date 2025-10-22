@@ -125,12 +125,14 @@ export default function Home() {
             {/* MIRAI - ブルー */}
             <Link href="/mirai">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な同心円リング */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {/* 外側のリング */}
-                  <div className="absolute w-64 h-64 md:w-72 md:h-72 rounded-full border-2 border-sky-300/30 transition-all duration-500 group-hover:scale-110 group-hover:border-sky-400/50"></div>
-                  {/* 内側のリング */}
-                  <div className="absolute w-56 h-56 md:w-64 md:h-64 rounded-full border-2 border-sky-400/40 transition-all duration-500 group-hover:scale-105 group-hover:border-sky-500/60"></div>
+                {/* 装飾的な外枝 */}
+                <div className="absolute inset-0 pointer-events-none overflow-visible">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-sky-200/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-sky-300/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-sky-400/50" style={{filter: 'blur(40px)'}} />
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sky-300/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-sky-400/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-sky-500/50" style={{filter: 'blur(40px)'}} />
                 </div>
                 
                 {/* メインボタン */}
@@ -162,12 +164,14 @@ export default function Home() {
             {/* HIKARI - 黄緑 */}
             <Link href="/hikari">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な同心円リング */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {/* 外側のリング */}
-                  <div className="absolute w-64 h-64 md:w-72 md:h-72 rounded-full border-2 border-emerald-300/30 transition-all duration-500 group-hover:scale-110 group-hover:border-emerald-400/50"></div>
-                  {/* 内側のリング */}
-                  <div className="absolute w-56 h-56 md:w-64 md:h-64 rounded-full border-2 border-emerald-400/40 transition-all duration-500 group-hover:scale-105 group-hover:border-emerald-500/60"></div>
+                {/* 装飾的な外枝 */}
+                <div className="absolute inset-0 pointer-events-none overflow-visible">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-emerald-200/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-emerald-300/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-400/50" style={{filter: 'blur(40px)'}} />
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-emerald-300/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-emerald-400/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-emerald-500/50" style={{filter: 'blur(40px)'}} />
                 </div>
                 
                 {/* メインボタン */}
@@ -199,12 +203,14 @@ export default function Home() {
             {/* studio M - ブラウン */}
             <Link href="/studio-m">
               <div className="group cursor-pointer relative">
-                {/* 装飾的な同心円リング */}
-                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  {/* 外側のリング */}
-                  <div className="absolute w-64 h-64 md:w-72 md:h-72 rounded-full border-2 border-yellow-300/30 transition-all duration-500 group-hover:scale-110 group-hover:border-yellow-400/50"></div>
-                  {/* 内側のリング */}
-                  <div className="absolute w-56 h-56 md:w-64 md:h-64 rounded-full border-2 border-yellow-400/40 transition-all duration-500 group-hover:scale-105 group-hover:border-yellow-500/60"></div>
+                {/* 装飾的な外枝 */}
+                <div className="absolute inset-0 pointer-events-none overflow-visible">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-yellow-200/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -top-8 -left-8 w-28 h-28 bg-yellow-300/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-yellow-400/50" style={{filter: 'blur(40px)'}} />
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-yellow-300/50 rounded-full transition-all duration-300" style={{filter: 'blur(40px)'}} />
+                  <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-yellow-400/30 rounded-full transition-all duration-300 group-hover:scale-125 group-hover:bg-yellow-500/50" style={{filter: 'blur(40px)'}} />
                 </div>
                 
                 {/* メインボタン */}
