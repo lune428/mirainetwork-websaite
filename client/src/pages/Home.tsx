@@ -126,11 +126,13 @@ export default function Home() {
             <Link href="/mirai">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-sky-400/60 rounded-full blur-lg"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-sky-500/60 rounded-full blur-lg"></div>
+                <div className="absolute -inset-12 transition-all duration-500">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-32 h-32 bg-sky-300/40 rounded-full blur-2xl group-hover:bg-sky-400/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-sky-400/40 rounded-full blur-2xl group-hover:bg-sky-500/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 左下の装飾 */}
+                  <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-sky-200/30 rounded-full blur-xl group-hover:bg-sky-300/50 group-hover:scale-110 transition-all duration-500"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -163,11 +165,13 @@ export default function Home() {
             <Link href="/hikari">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-400/60 rounded-full blur-lg"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-500/60 rounded-full blur-lg"></div>
+                <div className="absolute -inset-12 transition-all duration-500">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-32 h-32 bg-emerald-300/40 rounded-full blur-2xl group-hover:bg-emerald-400/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-emerald-400/40 rounded-full blur-2xl group-hover:bg-emerald-500/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 左下の装飾 */}
+                  <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-emerald-200/30 rounded-full blur-xl group-hover:bg-emerald-300/50 group-hover:scale-110 transition-all duration-500"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -200,11 +204,13 @@ export default function Home() {
             <Link href="/studio-m">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-500/60 rounded-full blur-lg"></div>
-                  {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-yellow-600/60 rounded-full blur-lg"></div>
+                <div className="absolute -inset-12 transition-all duration-500">
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-8 -left-8 w-32 h-32 bg-yellow-300/40 rounded-full blur-2xl group-hover:bg-yellow-400/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-8 -right-8 w-40 h-40 bg-yellow-400/40 rounded-full blur-2xl group-hover:bg-yellow-500/60 group-hover:scale-110 transition-all duration-500"></div>
+                  {/* 左下の装飾 */}
+                  <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-yellow-200/30 rounded-full blur-xl group-hover:bg-yellow-300/50 group-hover:scale-110 transition-all duration-500"></div>
                 </div>
                 
                 {/* メインボタン */}
