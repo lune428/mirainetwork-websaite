@@ -23,6 +23,62 @@ declare global {
 }
 
 /**
+ * POST /api/auth/register/public
+ * Public user registration (no authentication required)
+ */
+router.post("/register/public", async (req: Request, res: Response) => {
+  try {
+    const db = await getDb();
+    if (!db) {
+      return res.status(503).json({ error: "データベースが利用できません" });
+    }
+
+    const { name, email, password, facility } = req.body;
+
+    // Validate required fields
+    if (!name || !email || !password) {
+      return res.status(400).json({ error: "必須項目が不足しています" });
+    }
+
+    // Check if email already exists
+    const existingUser = await db
+      .select()
+      .from(users)
+      .where(eq(users.email, email))
+      .limit(1);
+
+    if (existingUser.length > 0) {
+      return res.status(400).json({ error: "このメールアドレスは既に登録されています" });
+    }
+
+    // Hash password
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    // Generate user ID
+    const userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+
+    // Insert user with default 'user' role
+    await db.insert(users).values({
+      id: userId,
+      name,
+      email,
+      password: hashedPassword,
+      role: "user",
+      facility: facility || null,
+      loginMethod: "password",
+    });
+
+    res.json({
+      success: true,
+      message: "ユーザーを登録しました",
+    });
+  } catch (error) {
+    console.error("Error registering user:", error);
+    res.status(500).json({ error: "ユーザー登録に失敗しました" });
+  }
+});
+
+/**
  * POST /api/auth/register
  * Register a new user (admin only)
  */
