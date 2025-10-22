@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import express from "express";
-import session from "express-session";
+import cookieParser from "cookie-parser";
 import authRouter from "../server/routes/auth";
 
 const app = express();
@@ -8,21 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-// Session middleware
-app.use(
-  session({
-    secret: process.env.SESSION_SECRET || "mirai-network-secret-key-change-in-production",
-    resave: false,
-    saveUninitialized: false,
-    cookie: {
-      secure: process.env.NODE_ENV === "production",
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
-      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
-    },
-  })
-);
+app.use(cookieParser());
 
 // Auth routes
 app.use("/", authRouter);

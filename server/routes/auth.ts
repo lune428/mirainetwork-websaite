@@ -1,25 +1,51 @@
 import { Router, Request, Response } from "express";
 import bcrypt from "bcryptjs";
+import { SignJWT, jwtVerify } from "jose";
 import { getDb } from "../db";
 import { users } from "../../drizzle/schema";
 import { eq } from "drizzle-orm";
-import session from "express-session";
 
 const router = Router();
 
-// Extend Express Request type for session
-declare module "express-session" {
-  interface SessionData {
-    userId: string;
+// JWT secret key
+const JWT_SECRET = new TextEncoder().encode(
+  process.env.JWT_SECRET || "mirai-network-jwt-secret-change-in-production"
+);
+
+// Helper function to create JWT token
+async function createToken(userId: string): Promise<string> {
+  return await new SignJWT({ userId })
+    .setProtectedHeader({ alg: "HS256" })
+    .setIssuedAt()
+    .setExpirationTime("7d")
+    .sign(JWT_SECRET);
+}
+
+// Helper function to verify JWT token
+async function verifyToken(token: string): Promise<{ userId: string } | null> {
+  try {
+    const { payload } = await jwtVerify(token, JWT_SECRET);
+    return payload as { userId: string };
+  } catch {
+    return null;
   }
 }
 
-declare global {
-  namespace Express {
-    interface Request {
-      session: session.Session & Partial<session.SessionData>;
-    }
+// Middleware to check authentication
+export async function requireAuth(req: any, res: Response, next: any) {
+  const token = req.cookies?.auth_token;
+  
+  if (!token) {
+    return res.status(401).json({ error: "認証が必要です" });
   }
+
+  const payload = await verifyToken(token);
+  if (!payload) {
+    return res.status(401).json({ error: "無効なトークンです" });
+  }
+
+  req.userId = payload.userId;
+  next();
 }
 
 /**
@@ -82,22 +108,18 @@ router.post("/register/public", async (req: Request, res: Response) => {
  * POST /api/auth/register
  * Register a new user (admin only)
  */
-router.post("/register", async (req: Request, res: Response) => {
+router.post("/register", requireAuth, async (req: any, res: Response) => {
   try {
     const db = await getDb();
     if (!db) {
       return res.status(503).json({ error: "データベースが利用できません" });
     }
 
-    // Check if user is authenticated and is admin
-    if (!req.session.userId) {
-      return res.status(401).json({ error: "認証が必要です" });
-    }
-
+    // Check if user is admin
     const currentUser = await db
       .select()
       .from(users)
-      .where(eq(users.id, req.session.userId))
+      .where(eq(users.id, req.userId))
       .limit(1);
 
     if (currentUser.length === 0 || currentUser[0].role !== "admin") {
@@ -198,25 +220,27 @@ router.post("/login", async (req: Request, res: Response) => {
       .set({ lastSignedIn: new Date() })
       .where(eq(users.id, user.id));
 
-    // Set session
-    req.session.userId = user.id;
+    // Create JWT token
+    const token = await createToken(user.id);
 
-    // Save session explicitly
-    req.session.save((err: any) => {      if (err) {
-        console.error("Error saving session:", err);
-        return res.status(500).json({ error: "セッションの保存に失敗しました" });
-      }
+    // Set cookie
+    res.cookie("auth_token", token, {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+      maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+      path: "/",
+    });
 
-      res.json({
-        success: true,
-        user: {
-          id: user.id,
-          name: user.name,
-          email: user.email,
-          role: user.role,
-          facility: user.facility,
-        },
-      });
+    res.json({
+      success: true,
+      user: {
+        id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        facility: user.facility,
+      },
     });
   } catch (error) {
     console.error("Error logging in:", error);
@@ -229,23 +253,25 @@ router.post("/login", async (req: Request, res: Response) => {
  * Logout current user
  */
 router.post("/logout", (req: Request, res: Response) => {
-  req.session.destroy((err: any) => {
-    if (err) {
-      console.error("Error destroying session:", err);
-      return res.status(500).json({ error: "ログアウトに失敗しました" });
-    }
-    res.json({ success: true, message: "ログアウトしました" });
-  });
+  res.clearCookie("auth_token", { path: "/" });
+  res.json({ success: true, message: "ログアウトしました" });
 });
 
 /**
  * GET /api/auth/me
  * Get current user info
  */
-router.get("/me", async (req: Request, res: Response) => {
+router.get("/me", async (req: any, res: Response) => {
   try {
-    if (!req.session.userId) {
+    const token = req.cookies?.auth_token;
+    
+    if (!token) {
       return res.status(401).json({ error: "認証が必要です" });
+    }
+
+    const payload = await verifyToken(token);
+    if (!payload) {
+      return res.status(401).json({ error: "無効なトークンです" });
     }
 
     const db = await getDb();
@@ -256,11 +282,10 @@ router.get("/me", async (req: Request, res: Response) => {
     const userResult = await db
       .select()
       .from(users)
-      .where(eq(users.id, req.session.userId))
+      .where(eq(users.id, payload.userId))
       .limit(1);
 
     if (userResult.length === 0) {
-      req.session.destroy(() => {});
       return res.status(401).json({ error: "ユーザーが見つかりません" });
     }
 
