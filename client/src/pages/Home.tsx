@@ -126,11 +126,11 @@ export default function Home() {
             <Link href="/mirai">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-sky-200 rounded-full blur-md"></div>
+                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-sky-400/60 rounded-full blur-lg"></div>
                   {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-sky-300 rounded-full blur-md"></div>
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-sky-500/60 rounded-full blur-lg"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -163,11 +163,11 @@ export default function Home() {
             <Link href="/hikari">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-200 rounded-full blur-md"></div>
+                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-emerald-400/60 rounded-full blur-lg"></div>
                   {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-300 rounded-full blur-md"></div>
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-emerald-500/60 rounded-full blur-lg"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -200,11 +200,11 @@ export default function Home() {
             <Link href="/studio-m">
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
-                <div className="absolute -inset-8 opacity-70 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute -inset-8 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   {/* 左上の葉 */}
-                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-700/40 rounded-full blur-md"></div>
+                  <div className="absolute -top-4 -left-4 w-16 h-16 bg-yellow-500/60 rounded-full blur-lg"></div>
                   {/* 右下の葉 */}
-                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-yellow-800/40 rounded-full blur-md"></div>
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-yellow-600/60 rounded-full blur-lg"></div>
                 </div>
                 
                 {/* メインボタン */}
