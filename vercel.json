@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/public",
+  "installCommand": "pnpm install",
+  "framework": null,
+  "routes": [
+    {
+      "src": "/api/trpc/(.*)",
+      "dest": "/api/trpc"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
+
