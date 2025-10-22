@@ -1,0 +1,327 @@
+Text file: pasted_content_65.txt
+Reading lines: 1-500 (file has 664 lines)
+Latest content with line numbers:
+1	import { injectQuery as __vite__injectQuery } from "/@vite/client";/* global window */
+2	/* eslint-disable eqeqeq, prefer-const, @typescript-eslint/no-empty-function */
+3	
+4	/*! Copyright (c) Meta Platforms, Inc. and affiliates. **/
+5	/**
+6	 * This is simplified pure-js version of https://github.com/facebook/react/blob/main/packages/react-refresh/src/ReactFreshRuntime.js
+7	 * without IE11 compatibility and verbose isDev checks.
+8	 * Some utils are appended at the bottom for HMR integration.
+9	 */
+10	
+11	const REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref')
+12	const REACT_MEMO_TYPE = Symbol.for('react.memo')
+13	
+14	// We never remove these associations.
+15	// It's OK to reference families, but use WeakMap/Set for types.
+16	let allFamiliesByID = new Map()
+17	let allFamiliesByType = new WeakMap()
+18	let allSignaturesByType = new WeakMap()
+19	
+20	// This WeakMap is read by React, so we only put families
+21	// that have actually been edited here. This keeps checks fast.
+22	const updatedFamiliesByType = new WeakMap()
+23	
+24	// This is cleared on every performReactRefresh() call.
+25	// It is an array of [Family, NextType] tuples.
+26	let pendingUpdates = []
+27	
+28	// This is injected by the renderer via DevTools global hook.
+29	const helpersByRendererID = new Map()
+30	
+31	const helpersByRoot = new Map()
+32	
+33	// We keep track of mounted roots so we can schedule updates.
+34	const mountedRoots = new Set()
+35	// If a root captures an error, we remember it so we can retry on edit.
+36	const failedRoots = new Set()
+37	
+38	// We also remember the last element for every root.
+39	// It needs to be weak because we do this even for roots that failed to mount.
+40	// If there is no WeakMap, we won't attempt to do retrying.
+41	let rootElements = new WeakMap()
+42	let isPerformingRefresh = false
+43	
+44	function computeFullKey(signature) {
+45	  if (signature.fullKey !== null) {
+46	    return signature.fullKey
+47	  }
+48	
+49	  let fullKey = signature.ownKey
+50	  let hooks
+51	  try {
+52	    hooks = signature.getCustomHooks()
+53	  } catch (err) {
+54	    // This can happen in an edge case, e.g. if expression like Foo.useSomething
+55	    // depends on Foo which is lazily initialized during rendering.
+56	    // In that case just assume we'll have to remount.
+57	    signature.forceReset = true
+58	    signature.fullKey = fullKey
+59	    return fullKey
+60	  }
+61	
+62	  for (let i = 0; i < hooks.length; i++) {
+63	    const hook = hooks[i]
+64	    if (typeof hook !== 'function') {
+65	      // Something's wrong. Assume we need to remount.
+66	      signature.forceReset = true
+67	      signature.fullKey = fullKey
+68	      return fullKey
+69	    }
+70	    const nestedHookSignature = allSignaturesByType.get(hook)
+71	    if (nestedHookSignature === undefined) {
+72	      // No signature means Hook wasn't in the source code, e.g. in a library.
+73	      // We'll skip it because we can assume it won't change during this session.
+74	      continue
+75	    }
+76	    const nestedHookKey = computeFullKey(nestedHookSignature)
+77	    if (nestedHookSignature.forceReset) {
+78	      signature.forceReset = true
+79	    }
+80	    fullKey += '\n---\n' + nestedHookKey
+81	  }
+82	
+83	  signature.fullKey = fullKey
+84	  return fullKey
+85	}
+86	
+87	function haveEqualSignatures(prevType, nextType) {
+88	  const prevSignature = allSignaturesByType.get(prevType)
+89	  const nextSignature = allSignaturesByType.get(nextType)
+90	
+91	  if (prevSignature === undefined && nextSignature === undefined) {
+92	    return true
+93	  }
+94	  if (prevSignature === undefined || nextSignature === undefined) {
+95	    return false
+96	  }
+97	  if (computeFullKey(prevSignature) !== computeFullKey(nextSignature)) {
+98	    return false
+99	  }
+100	  if (nextSignature.forceReset) {
+101	    return false
+102	  }
+103	
+104	  return true
+105	}
+106	
+107	function isReactClass(type) {
+108	  return type.prototype && type.prototype.isReactComponent
+109	}
+110	
+111	function canPreserveStateBetween(prevType, nextType) {
+112	  if (isReactClass(prevType) || isReactClass(nextType)) {
+113	    return false
+114	  }
+115	  if (haveEqualSignatures(prevType, nextType)) {
+116	    return true
+117	  }
+118	  return false
+119	}
+120	
+121	function resolveFamily(type) {
+122	  // Only check updated types to keep lookups fast.
+123	  return updatedFamiliesByType.get(type)
+124	}
+125	
+126	// This is a safety mechanism to protect against rogue getters and Proxies.
+127	function getProperty(object, property) {
+128	  try {
+129	    return object[property]
+130	  } catch (err) {
+131	    // Intentionally ignore.
+132	    return undefined
+133	  }
+134	}
+135	
+136	function performReactRefresh() {
+137	  if (pendingUpdates.length === 0) {
+138	    return null
+139	  }
+140	  if (isPerformingRefresh) {
+141	    return null
+142	  }
+143	
+144	  isPerformingRefresh = true
+145	  try {
+146	    const staleFamilies = new Set()
+147	    const updatedFamilies = new Set()
+148	
+149	    const updates = pendingUpdates
+150	    pendingUpdates = []
+151	    updates.forEach(([family, nextType]) => {
+152	      // Now that we got a real edit, we can create associations
+153	      // that will be read by the React reconciler.
+154	      const prevType = family.current
+155	      updatedFamiliesByType.set(prevType, family)
+156	      updatedFamiliesByType.set(nextType, family)
+157	      family.current = nextType
+158	
+159	      // Determine whether this should be a re-render or a re-mount.
+160	      if (canPreserveStateBetween(prevType, nextType)) {
+161	        updatedFamilies.add(family)
+162	      } else {
+163	        staleFamilies.add(family)
+164	      }
+165	    })
+166	
+167	    // TODO: rename these fields to something more meaningful.
+168	    const update = {
+169	      updatedFamilies, // Families that will re-render preserving state
+170	      staleFamilies, // Families that will be remounted
+171	    }
+172	
+173	    helpersByRendererID.forEach((helpers) => {
+174	      // Even if there are no roots, set the handler on first update.
+175	      // This ensures that if *new* roots are mounted, they'll use the resolve handler.
+176	      helpers.setRefreshHandler(resolveFamily)
+177	    })
+178	
+179	    let didError = false
+180	    let firstError = null
+181	
+182	    // We snapshot maps and sets that are mutated during commits.
+183	    // If we don't do this, there is a risk they will be mutated while
+184	    // we iterate over them. For example, trying to recover a failed root
+185	    // may cause another root to be added to the failed list -- an infinite loop.
+186	    const failedRootsSnapshot = new Set(failedRoots)
+187	    const mountedRootsSnapshot = new Set(mountedRoots)
+188	    const helpersByRootSnapshot = new Map(helpersByRoot)
+189	
+190	    failedRootsSnapshot.forEach((root) => {
+191	      const helpers = helpersByRootSnapshot.get(root)
+192	      if (helpers === undefined) {
+193	        throw new Error(
+194	          'Could not find helpers for a root. This is a bug in React Refresh.',
+195	        )
+196	      }
+197	      if (!failedRoots.has(root)) {
+198	        // No longer failed.
+199	      }
+200	      if (rootElements === null) {
+201	        return
+202	      }
+203	      if (!rootElements.has(root)) {
+204	        return
+205	      }
+206	      const element = rootElements.get(root)
+207	      try {
+208	        helpers.scheduleRoot(root, element)
+209	      } catch (err) {
+210	        if (!didError) {
+211	          didError = true
+212	          firstError = err
+213	        }
+214	        // Keep trying other roots.
+215	      }
+216	    })
+217	    mountedRootsSnapshot.forEach((root) => {
+218	      const helpers = helpersByRootSnapshot.get(root)
+219	      if (helpers === undefined) {
+220	        throw new Error(
+221	          'Could not find helpers for a root. This is a bug in React Refresh.',
+222	        )
+223	      }
+224	      if (!mountedRoots.has(root)) {
+225	        // No longer mounted.
+226	      }
+227	      try {
+228	        helpers.scheduleRefresh(root, update)
+229	      } catch (err) {
+230	        if (!didError) {
+231	          didError = true
+232	          firstError = err
+233	        }
+234	        // Keep trying other roots.
+235	      }
+236	    })
+237	    if (didError) {
+238	      throw firstError
+239	    }
+240	    return update
+241	  } finally {
+242	    isPerformingRefresh = false
+243	  }
+244	}
+245	
+246	export function register(type, id) {
+247	  if (type === null) {
+248	    return
+249	  }
+250	  if (typeof type !== 'function' && typeof type !== 'object') {
+251	    return
+252	  }
+253	
+254	  // This can happen in an edge case, e.g. if we register
+255	  // return value of a HOC but it returns a cached component.
+256	  // Ignore anything but the first registration for each type.
+257	  if (allFamiliesByType.has(type)) {
+258	    return
+259	  }
+260	  // Create family or remember to update it.
+261	  // None of this bookkeeping affects reconciliation
+262	  // until the first performReactRefresh() call above.
+263	  let family = allFamiliesByID.get(id)
+264	  if (family === undefined) {
+265	    family = { current: type }
+266	    allFamiliesByID.set(id, family)
+267	  } else {
+268	    pendingUpdates.push([family, type])
+269	  }
+270	  allFamiliesByType.set(type, family)
+271	
+272	  // Visit inner types because we might not have registered them.
+273	  if (typeof type === 'object' && type !== null) {
+274	    switch (getProperty(type, '$$typeof')) {
+275	      case REACT_FORWARD_REF_TYPE:
+276	        register(type.render, id + '$render')
+277	        break
+278	      case REACT_MEMO_TYPE:
+279	        register(type.type, id + '$type')
+280	        break
+281	    }
+282	  }
+283	}
+284	
+285	function setSignature(type, key, forceReset, getCustomHooks) {
+286	  if (!allSignaturesByType.has(type)) {
+287	    allSignaturesByType.set(type, {
+288	      forceReset,
+289	      ownKey: key,
+290	      fullKey: null,
+291	      getCustomHooks: getCustomHooks || (() => []),
+292	    })
+293	  }
+294	  // Visit inner types because we might not have signed them.
+295	  if (typeof type === 'object' && type !== null) {
+296	    switch (getProperty(type, '$$typeof')) {
+297	      case REACT_FORWARD_REF_TYPE:
+298	        setSignature(type.render, key, forceReset, getCustomHooks)
+299	        break
+300	      case REACT_MEMO_TYPE:
+301	        setSignature(type.type, key, forceReset, getCustomHooks)
+302	        break
+303	    }
+304	  }
+305	}
+306	
+307	// This is lazily called during first render for a type.
+308	// It captures Hook list at that time so inline requires don't break comparisons.
+309	function collectCustomHooksForSignature(type) {
+310	  const signature = allSignaturesByType.get(type)
+311	  if (signature !== undefined) {
+312	    computeFullKey(signature)
+313	  }
+314	}
+315	
+316	export function injectIntoGlobalHook(globalObject) {
+317	  // For React Native, the global hook will be set up by require('react-devtools-core').
+318	  // That code will run before us. So we need to monkeypatch functions on existing hook.
+319	
+320	  // For React Web, the global hook will be set up by the extension.
+321	  // This will also run before us.
+322	  let hook = globalObject.__REACT_DEVTOOLS_GLOBAL_HOOK__
+323	  if (hook === undefined) {
+324	(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)

@@ -1,0 +1,51 @@
+Text file: pasted_content_66.txt
+Latest content with line numbers:
+2	/* global window */
+3	/* eslint-disable eqeqeq, prefer-const, @typescript-eslint/no-empty-function */
+4	
+5	/*! Copyright (c) Meta Platforms, Inc. and affiliates. **/
+6	/**
+7	 * This is simplified pure-js version of https://github.com/facebook/react/blob/main/packages/react-refresh/src/ReactFreshRuntime.js
+8	 * without IE11 compatibility and verbose isDev checks.
+9	 * Some utils are appended at the bottom for HMR integration.
+10	 */
+11	
+12	const REACT_FORWARD_REF_TYPE = Symbol.for('react.forward_ref')
+13	const REACT_MEMO_TYPE = Symbol.for('react.memo')
+14	
+15	// We never remove these associations.
+16	// It's OK to reference families, but use WeakMap/Set for types.
+17	let allFamiliesByID = new Map()
+18	let allFamiliesByType = new WeakMap()
+19	let allSignaturesByType = new WeakMap()
+20	
+21	// This WeakMap is read by React, so we only put families
+22	// that have actually been edited here. This keeps checks fast.
+23	const updatedFamiliesByType = new WeakMap()
+24	
+25	// This is cleared on every performReactRefresh() call.
+26	// It is an array of [Family, NextType] tuples.
+27	let pendingUpdates = []
+28	
+29	// This is injected by the renderer via DevTools global hook.
+30	const helpersByRendererID = new Map()
+31	
+32	const helpersByRoot = new Map()
+33	
+34	// We keep track of mounted roots so we can schedule updates.
+35	const mountedRoots = new Set()
+36	// If a root captures an error, we remember it so we can retry on edit.
+37	const failedRoots = new Set()
+38	
+39	// We also remember the last element for every root.
+40	// It needs to be weak because we do this even for roots that failed to mount.
+41	// If there is no WeakMap, we won't attempt to do retrying.
+42	let rootElements = new WeakMap()
+43	let isPerformingRefresh = false
+44	
+45	function computeFullKey(signature) {
+46	    if (signature.fullKey !== null) {
+47	        return signature.fullKey
+48	    }
+49	
+50	    let fullKey = signature.ownKey

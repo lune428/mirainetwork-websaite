@@ -1,0 +1,57 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/ui/label.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as LabelPrimitive from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/@radix-ui_react-label.js?v=912602c9";
+import { cn } from "/src/lib/utils.ts";
+function Label({
+  className,
+  ...props
+}) {
+  return /* @__PURE__ */ jsxDEV(
+    LabelPrimitive.Root,
+    {
+      "data-loc": "client/src/components/ui/label.tsx:11",
+      "data-slot": "label",
+      className: cn(
+        "flex items-center gap-2 text-sm leading-none font-medium select-none group-data-[disabled=true]:pointer-events-none group-data-[disabled=true]:opacity-50 peer-disabled:cursor-not-allowed peer-disabled:opacity-50",
+        className
+      ),
+      ...props
+    },
+    void 0,
+    false,
+    {
+      fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/label.tsx",
+      lineNumber: 11,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_c = Label;
+export { Label };
+var _c;
+$RefreshReg$(_c, "Label");
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/ui/label.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/ui/label.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+function $RefreshReg$(type, id) {
+  return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/ui/label.tsx " + id);
+}
+function $RefreshSig$() {
+  return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBVUk7QUFUSixZQUFZQSxvQkFBb0I7QUFFaEMsU0FBU0MsVUFBVTtBQUVuQixTQUFTQyxNQUFNO0FBQUEsRUFDYkM7QUFBQUEsRUFDQSxHQUFHQztBQUM2QyxHQUFHO0FBQ25ELFNBQ0U7QUFBQSxJQUFDLGVBQWU7QUFBQSxJQUFmO0FBQUEsTUFBZTtBQUFBLE1BQ2QsYUFBVTtBQUFBLE1BQ1YsV0FBV0g7QUFBQUEsUUFDVDtBQUFBLFFBQ0FFO0FBQUFBLE1BQ0Y7QUFBQSxNQUNBLEdBQUlDO0FBQUFBO0FBQUFBLElBTk47QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBTVk7QUFHaEI7QUFBQ0MsS0FkUUg7QUFnQlQsU0FBU0E7QUFBUSxJQUFBRztBQUFBQyxhQUFBRCxJQUFBIiwibmFtZXMiOlsiTGFiZWxQcmltaXRpdmUiLCJjbiIsIkxhYmVsIiwiY2xhc3NOYW1lIiwicHJvcHMiLCJfYyIsIiRSZWZyZXNoUmVnJCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJsYWJlbC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0ICogYXMgUmVhY3QgZnJvbSBcInJlYWN0XCI7XG5pbXBvcnQgKiBhcyBMYWJlbFByaW1pdGl2ZSBmcm9tIFwiQHJhZGl4LXVpL3JlYWN0LWxhYmVsXCI7XG5cbmltcG9ydCB7IGNuIH0gZnJvbSBcIkAvbGliL3V0aWxzXCI7XG5cbmZ1bmN0aW9uIExhYmVsKHtcbiAgY2xhc3NOYW1lLFxuICAuLi5wcm9wc1xufTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIExhYmVsUHJpbWl0aXZlLlJvb3Q+KSB7XG4gIHJldHVybiAoXG4gICAgPExhYmVsUHJpbWl0aXZlLlJvb3RcbiAgICAgIGRhdGEtc2xvdD1cImxhYmVsXCJcbiAgICAgIGNsYXNzTmFtZT17Y24oXG4gICAgICAgIFwiZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIgdGV4dC1zbSBsZWFkaW5nLW5vbmUgZm9udC1tZWRpdW0gc2VsZWN0LW5vbmUgZ3JvdXAtZGF0YS1bZGlzYWJsZWQ9dHJ1ZV06cG9pbnRlci1ldmVudHMtbm9uZSBncm91cC1kYXRhLVtkaXNhYmxlZD10cnVlXTpvcGFjaXR5LTUwIHBlZXItZGlzYWJsZWQ6Y3Vyc29yLW5vdC1hbGxvd2VkIHBlZXItZGlzYWJsZWQ6b3BhY2l0eS01MFwiLFxuICAgICAgICBjbGFzc05hbWVcbiAgICAgICl9XG4gICAgICB7Li4ucHJvcHN9XG4gICAgLz5cbiAgKTtcbn1cblxuZXhwb3J0IHsgTGFiZWwgfTtcbiJdLCJmaWxlIjoiL2hvbWUvdWJ1bnR1L21pcmFpLW5ldHdvcmstd2Vic2l0ZS9jbGllbnQvc3JjL2NvbXBvbmVudHMvdWkvbGFiZWwudHN4In0=

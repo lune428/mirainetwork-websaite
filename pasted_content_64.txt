@@ -1,0 +1,119 @@
+import {createHotContext as __vite__createHotContext} from "/@vite/client";
+import.meta.hot = __vite__createHotContext("/src/components/ui/tooltip.tsx");
+import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import*as TooltipPrimitive from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=912602c9";
+import {cn} from "/src/lib/utils.ts";
+function TooltipProvider({delayDuration=0, ...props}) {
+    return /* @__PURE__ */
+    jsxDEV(TooltipPrimitive.Provider, {
+        "data-loc": "client/src/components/ui/tooltip.tsx:11",
+        "data-slot": "tooltip-provider",
+        delayDuration,
+        ...props
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, this);
+}
+_c = TooltipProvider;
+function Tooltip({...props}) {
+    return /* @__PURE__ */
+    jsxDEV(TooltipProvider, {
+        "data-loc": "client/src/components/ui/tooltip.tsx:23",
+        children: /* @__PURE__ */
+        jsxDEV(TooltipPrimitive.Root, {
+            "data-loc": "client/src/components/ui/tooltip.tsx:24",
+            "data-slot": "tooltip",
+            ...props
+        }, void 0, false, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+            lineNumber: 24,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+        lineNumber: 23,
+        columnNumber: 5
+    }, this);
+}
+_c2 = Tooltip;
+function TooltipTrigger({...props}) {
+    return /* @__PURE__ */
+    jsxDEV(TooltipPrimitive.Trigger, {
+        "data-loc": "client/src/components/ui/tooltip.tsx:32",
+        "data-slot": "tooltip-trigger",
+        ...props
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+        lineNumber: 32,
+        columnNumber: 10
+    }, this);
+}
+_c3 = TooltipTrigger;
+function TooltipContent({className, sideOffset=0, children, ...props}) {
+    return /* @__PURE__ */
+    jsxDEV(TooltipPrimitive.Portal, {
+        "data-loc": "client/src/components/ui/tooltip.tsx:42",
+        children: /* @__PURE__ */
+        jsxDEV(TooltipPrimitive.Content, {
+            "data-loc": "client/src/components/ui/tooltip.tsx:43",
+            "data-slot": "tooltip-content",
+            sideOffset,
+            className: cn("bg-foreground text-background animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded-md px-3 py-1.5 text-xs text-balance", className),
+            ...props,
+            children: [children, /* @__PURE__ */
+            jsxDEV(TooltipPrimitive.Arrow, {
+                "data-loc": "client/src/components/ui/tooltip.tsx:53",
+                className: "bg-foreground fill-foreground z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]"
+            }, void 0, false, {
+                fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+                lineNumber: 53,
+                columnNumber: 9
+            }, this)]
+        }, void 0, true, {
+            fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+            lineNumber: 43,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx",
+        lineNumber: 42,
+        columnNumber: 5
+    }, this);
+}
+_c4 = TooltipContent;
+export {Tooltip, TooltipTrigger, TooltipContent, TooltipProvider};
+var _c, _c2, _c3, _c4;
+$RefreshReg$(_c, "TooltipProvider");
+$RefreshReg$(_c2, "Tooltip");
+$RefreshReg$(_c3, "TooltipTrigger");
+$RefreshReg$(_c4, "TooltipContent");
+import*as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+if (import.meta.hot && !inWebWorker) {
+    if (!window.$RefreshReg$) {
+        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+    }
+    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx", currentExports);
+        import.meta.hot.accept( (nextExports) => {
+            if (!nextExports)
+                return;
+            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx", currentExports, nextExports);
+            if (invalidateMessage)
+                import.meta.hot.invalidate(invalidateMessage);
+        }
+        );
+    }
+    );
+}
+function $RefreshReg$(type, id) {
+    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/ui/tooltip.tsx " + id);
+}
+function $RefreshSig$() {
+    return RefreshRuntime.createSignatureFunctionForTransform();
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBVUk7QUFUSixZQUFZQSxzQkFBc0I7QUFFbEMsU0FBU0MsVUFBVTtBQUVuQixTQUFTQyxnQkFBZ0I7QUFBQSxFQUN2QkMsZ0JBQWdCO0FBQUEsRUFDaEIsR0FBR0M7QUFDbUQsR0FBRztBQUN6RCxTQUNFO0FBQUEsSUFBQyxpQkFBaUI7QUFBQSxJQUFqQjtBQUFBLE1BQWlCO0FBQUEsTUFDaEIsYUFBVTtBQUFBLE1BQ1Y7QUFBQSxNQUNBLEdBQUlBO0FBQUFBO0FBQUFBLElBSE47QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBR1k7QUFHaEI7QUFBQ0MsS0FYUUg7QUFhVCxTQUFTSSxRQUFRO0FBQUEsRUFDZixHQUFHRjtBQUMrQyxHQUFHO0FBQ3JELFNBQ0UsdUJBQUMsMEVBQ0MsaUNBQUMsaUJBQWlCLE1BQWpCLEVBQWlCLHVEQUFLLGFBQVUsV0FBVSxHQUFJQSxTQUEvQztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQXFELEtBRHZEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FFQTtBQUVKO0FBQUNHLE1BUlFEO0FBVVQsU0FBU0UsZUFBZTtBQUFBLEVBQ3RCLEdBQUdKO0FBQ2tELEdBQUc7QUFDeEQsU0FBTyx1QkFBQyxpQkFBaUIsU0FBakIsRUFBaUIsdURBQVEsYUFBVSxtQkFBa0IsR0FBSUEsU0FBMUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFnRTtBQUN6RTtBQUFDSyxNQUpRRDtBQU1ULFNBQVNFLGVBQWU7QUFBQSxFQUN0QkM7QUFBQUEsRUFDQUMsYUFBYTtBQUFBLEVBQ2JDO0FBQUFBLEVBQ0EsR0FBR1Q7QUFDa0QsR0FBRztBQUN4RCxTQUNFLHVCQUFDLGlCQUFpQixRQUFqQixFQUFpQix1REFDaEI7QUFBQSxJQUFDLGlCQUFpQjtBQUFBLElBQWpCO0FBQUEsTUFBaUI7QUFBQSxNQUNoQixhQUFVO0FBQUEsTUFDVjtBQUFBLE1BQ0EsV0FBV0g7QUFBQUEsUUFDVDtBQUFBLFFBQ0FVO0FBQUFBLE1BQ0Y7QUFBQSxNQUNBLEdBQUlQO0FBQUFBLE1BRUhTO0FBQUFBO0FBQUFBLFFBQ0QsdUJBQUMsaUJBQWlCLE9BQWpCLEVBQWlCLHVEQUFNLFdBQVUsd0dBQWxDO0FBQUE7QUFBQTtBQUFBO0FBQUEsZUFBc0k7QUFBQTtBQUFBO0FBQUEsSUFWeEk7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBLEVBV0EsS0FaRjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBYUE7QUFFSjtBQUFDQyxNQXRCUUo7QUF3QlQsU0FBU0osU0FBU0UsZ0JBQWdCRSxnQkFBZ0JSO0FBQWtCLElBQUFHLElBQUFFLEtBQUFFLEtBQUFLO0FBQUFDLGFBQUFWLElBQUE7QUFBQVUsYUFBQVIsS0FBQTtBQUFBUSxhQUFBTixLQUFBO0FBQUFNLGFBQUFELEtBQUEiLCJuYW1lcyI6WyJUb29sdGlwUHJpbWl0aXZlIiwiY24iLCJUb29sdGlwUHJvdmlkZXIiLCJkZWxheUR1cmF0aW9uIiwicHJvcHMiLCJfYyIsIlRvb2x0aXAiLCJfYzIiLCJUb29sdGlwVHJpZ2dlciIsIl9jMyIsIlRvb2x0aXBDb250ZW50IiwiY2xhc3NOYW1lIiwic2lkZU9mZnNldCIsImNoaWxkcmVuIiwiX2M0IiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbInRvb2x0aXAudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCAqIGFzIFJlYWN0IGZyb20gXCJyZWFjdFwiO1xuaW1wb3J0ICogYXMgVG9vbHRpcFByaW1pdGl2ZSBmcm9tIFwiQHJhZGl4LXVpL3JlYWN0LXRvb2x0aXBcIjtcblxuaW1wb3J0IHsgY24gfSBmcm9tIFwiQC9saWIvdXRpbHNcIjtcblxuZnVuY3Rpb24gVG9vbHRpcFByb3ZpZGVyKHtcbiAgZGVsYXlEdXJhdGlvbiA9IDAsXG4gIC4uLnByb3BzXG59OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgVG9vbHRpcFByaW1pdGl2ZS5Qcm92aWRlcj4pIHtcbiAgcmV0dXJuIChcbiAgICA8VG9vbHRpcFByaW1pdGl2ZS5Qcm92aWRlclxuICAgICAgZGF0YS1zbG90PVwidG9vbHRpcC1wcm92aWRlclwiXG4gICAgICBkZWxheUR1cmF0aW9uPXtkZWxheUR1cmF0aW9ufVxuICAgICAgey4uLnByb3BzfVxuICAgIC8+XG4gICk7XG59XG5cbmZ1bmN0aW9uIFRvb2x0aXAoe1xuICAuLi5wcm9wc1xufTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIFRvb2x0aXBQcmltaXRpdmUuUm9vdD4pIHtcbiAgcmV0dXJuIChcbiAgICA8VG9vbHRpcFByb3ZpZGVyPlxuICAgICAgPFRvb2x0aXBQcmltaXRpdmUuUm9vdCBkYXRhLXNsb3Q9XCJ0b29sdGlwXCIgey4uLnByb3BzfSAvPlxuICAgIDwvVG9vbHRpcFByb3ZpZGVyPlxuICApO1xufVxuXG5mdW5jdGlvbiBUb29sdGlwVHJpZ2dlcih7XG4gIC4uLnByb3BzXG59OiBSZWFjdC5Db21wb25lbnRQcm9wczx0eXBlb2YgVG9vbHRpcFByaW1pdGl2ZS5UcmlnZ2VyPikge1xuICByZXR1cm4gPFRvb2x0aXBQcmltaXRpdmUuVHJpZ2dlciBkYXRhLXNsb3Q9XCJ0b29sdGlwLXRyaWdnZXJcIiB7Li4ucHJvcHN9IC8+O1xufVxuXG5mdW5jdGlvbiBUb29sdGlwQ29udGVudCh7XG4gIGNsYXNzTmFtZSxcbiAgc2lkZU9mZnNldCA9IDAsXG4gIGNoaWxkcmVuLFxuICAuLi5wcm9wc1xufTogUmVhY3QuQ29tcG9uZW50UHJvcHM8dHlwZW9mIFRvb2x0aXBQcmltaXRpdmUuQ29udGVudD4pIHtcbiAgcmV0dXJuIChcbiAgICA8VG9vbHRpcFByaW1pdGl2ZS5Qb3J0YWw+XG4gICAgICA8VG9vbHRpcFByaW1pdGl2ZS5Db250ZW50XG4gICAgICAgIGRhdGEtc2xvdD1cInRvb2x0aXAtY29udGVudFwiXG4gICAgICAgIHNpZGVPZmZzZXQ9e3NpZGVPZmZzZXR9XG4gICAgICAgIGNsYXNzTmFtZT17Y24oXG4gICAgICAgICAgXCJiZy1mb3JlZ3JvdW5kIHRleHQtYmFja2dyb3VuZCBhbmltYXRlLWluIGZhZGUtaW4tMCB6b29tLWluLTk1IGRhdGEtW3N0YXRlPWNsb3NlZF06YW5pbWF0ZS1vdXQgZGF0YS1bc3RhdGU9Y2xvc2VkXTpmYWRlLW91dC0wIGRhdGEtW3N0YXRlPWNsb3NlZF06em9vbS1vdXQtOTUgZGF0YS1bc2lkZT1ib3R0b21dOnNsaWRlLWluLWZyb20tdG9wLTIgZGF0YS1bc2lkZT1sZWZ0XTpzbGlkZS1pbi1mcm9tLXJpZ2h0LTIgZGF0YS1bc2lkZT1yaWdodF06c2xpZGUtaW4tZnJvbS1sZWZ0LTIgZGF0YS1bc2lkZT10b3BdOnNsaWRlLWluLWZyb20tYm90dG9tLTIgei01MCB3LWZpdCBvcmlnaW4tKC0tcmFkaXgtdG9vbHRpcC1jb250ZW50LXRyYW5zZm9ybS1vcmlnaW4pIHJvdW5kZWQtbWQgcHgtMyBweS0xLjUgdGV4dC14cyB0ZXh0LWJhbGFuY2VcIixcbiAgICAgICAgICBjbGFzc05hbWVcbiAgICAgICAgKX1cbiAgICAgICAgey4uLnByb3BzfVxuICAgICAgPlxuICAgICAgICB7Y2hpbGRyZW59XG4gICAgICAgIDxUb29sdGlwUHJpbWl0aXZlLkFycm93IGNsYXNzTmFtZT1cImJnLWZvcmVncm91bmQgZmlsbC1mb3JlZ3JvdW5kIHotNTAgc2l6ZS0yLjUgdHJhbnNsYXRlLXktW2NhbGMoLTUwJV8tXzJweCldIHJvdGF0ZS00NSByb3VuZGVkLVsycHhdXCIgLz5cbiAgICAgIDwvVG9vbHRpcFByaW1pdGl2ZS5Db250ZW50PlxuICAgIDwvVG9vbHRpcFByaW1pdGl2ZS5Qb3J0YWw+XG4gICk7XG59XG5cbmV4cG9ydCB7IFRvb2x0aXAsIFRvb2x0aXBUcmlnZ2VyLCBUb29sdGlwQ29udGVudCwgVG9vbHRpcFByb3ZpZGVyIH07XG4iXSwiZmlsZSI6Ii9ob21lL3VidW50dS9taXJhaS1uZXR3b3JrLXdlYnNpdGUvY2xpZW50L3NyYy9jb21wb25lbnRzL3VpL3Rvb2x0aXAudHN4In0=

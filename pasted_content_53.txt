@@ -1,0 +1,87 @@
+Text file: pasted_content_53.txt
+Latest content with line numbers:
+1	import {createHotContext as __vite__createHotContext} from "/@vite/client";
+2	import.meta.hot = __vite__createHotContext("/src/components/ui/input.tsx");
+3	import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+4	const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+5	var _s = $RefreshSig$();
+6	import {useDialogComposition} from "/src/components/ui/dialog.tsx";
+7	import {useComposition} from "/src/hooks/useComposition.ts";
+8	import {cn} from "/src/lib/utils.ts";
+9	function Input({className, type, onKeyDown, onCompositionStart, onCompositionEnd, ...props}) {
+10	    _s();
+11	    const dialogComposition = useDialogComposition();
+12	    const {onCompositionStart: handleCompositionStart, onCompositionEnd: handleCompositionEnd, onKeyDown: handleKeyDown} = useComposition({
+13	        onKeyDown: (e) => {
+14	            const isComposing = e.nativeEvent.isComposing || dialogComposition.justEndedComposing();
+15	            if (e.key === "Enter" && isComposing) {
+16	                return;
+17	            }
+18	            onKeyDown?.(e);
+19	        }
+20	        ,
+21	        onCompositionStart: (e) => {
+22	            dialogComposition.setComposing(true);
+23	            onCompositionStart?.(e);
+24	        }
+25	        ,
+26	        onCompositionEnd: (e) => {
+27	            dialogComposition.markCompositionEnd();
+28	            setTimeout( () => {
+29	                dialogComposition.setComposing(false);
+30	            }
+31	            , 100);
+32	            onCompositionEnd?.(e);
+33	        }
+34	    });
+35	    return /* @__PURE__ */
+36	    jsxDEV("input", {
+37	        "data-loc": "client/src/components/ui/input.tsx:53",
+38	        type,
+39	        "data-slot": "input",
+40	        className: cn("file:text-foreground placeholder:text-muted-foreground selection:bg-primary selection:text-primary-foreground dark:bg-input/30 border-input h-9 w-full min-w-0 rounded-md border bg-transparent px-3 py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm", "focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]", "aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive", className),
+41	        onCompositionStart: handleCompositionStart,
+42	        onCompositionEnd: handleCompositionEnd,
+43	        onKeyDown: handleKeyDown,
+44	        ...props
+45	    }, void 0, false, {
+46	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/input.tsx",
+47	        lineNumber: 53,
+48	        columnNumber: 5
+49	    }, this);
+50	}
+51	_s(Input, "IABLPwNL33WHS2eRw3EF1kzqEao=", false, function() {
+52	    return [useDialogComposition, useComposition];
+53	});
+54	_c = Input;
+55	export {Input};
+56	var _c;
+57	$RefreshReg$(_c, "Input");
+58	import*as RefreshRuntime from "/@react-refresh";
+59	const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+60	if (import.meta.hot && !inWebWorker) {
+61	    if (!window.$RefreshReg$) {
+62	        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+63	    }
+64	    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+65	        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/ui/input.tsx", currentExports);
+66	        import.meta.hot.accept( (nextExports) => {
+67	            if (!nextExports)
+68	                return;
+69	            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/ui/input.tsx", currentExports, nextExports);
+70	            if (invalidateMessage)
+71	                import.meta.hot.invalidate(invalidateMessage);
+72	        }
+73	        );
+74	    }
+75	    );
+76	}
+77	function $RefreshReg$(type, id) {
+78	    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/ui/input.tsx " + id);
+79	}
+80	function $RefreshSig$() {
+81	    return RefreshRuntime.createSignatureFunctionForTransform();
+82	}
+83	
+84	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBb0RJOztBQXBESixTQUFTQSw0QkFBNEI7QUFDckMsU0FBU0Msc0JBQXNCO0FBQy9CLFNBQVNDLFVBQVU7QUFHbkIsU0FBU0MsTUFBTTtBQUFBLEVBQ2JDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0FDO0FBQUFBLEVBQ0EsR0FBR0M7QUFDMEIsR0FBRztBQUFBQyxLQUFBO0FBRWhDLFFBQU1DLG9CQUFvQlgscUJBQXFCO0FBRy9DLFFBQU07QUFBQSxJQUNKTyxvQkFBb0JLO0FBQUFBLElBQ3BCSixrQkFBa0JLO0FBQUFBLElBQ2xCUCxXQUFXUTtBQUFBQSxFQUNiLElBQUliLGVBQWlDO0FBQUEsSUFDbkNLLFdBQVdBLENBQUNTLE1BQU07QUFFaEIsWUFBTUMsY0FBZUQsRUFBRUUsWUFBb0JELGVBQWVMLGtCQUFrQk8sbUJBQW1CO0FBSS9GLFVBQUlILEVBQUVJLFFBQVEsV0FBV0gsYUFBYTtBQUNwQztBQUFBLE1BQ0Y7QUFHQVYsa0JBQVlTLENBQUM7QUFBQSxJQUNmO0FBQUEsSUFDQVIsb0JBQW9CQSxDQUFBUSxNQUFLO0FBQ3ZCSix3QkFBa0JTLGFBQWEsSUFBSTtBQUNuQ2IsMkJBQXFCUSxDQUFDO0FBQUEsSUFDeEI7QUFBQSxJQUNBUCxrQkFBa0JBLENBQUFPLE1BQUs7QUFFckJKLHdCQUFrQlUsbUJBQW1CO0FBR3JDQyxpQkFBVyxNQUFNO0FBQ2ZYLDBCQUFrQlMsYUFBYSxLQUFLO0FBQUEsTUFDdEMsR0FBRyxHQUFHO0FBQ05aLHlCQUFtQk8sQ0FBQztBQUFBLElBQ3RCO0FBQUEsRUFDRixDQUFDO0FBRUQsU0FDRTtBQUFBLElBQUM7QUFBQTtBQUFBO0FBQUEsTUFDQztBQUFBLE1BQ0EsYUFBVTtBQUFBLE1BQ1YsV0FBV2I7QUFBQUEsUUFDVDtBQUFBLFFBQ0E7QUFBQSxRQUNBO0FBQUEsUUFDQUU7QUFBQUEsTUFDRjtBQUFBLE1BQ0Esb0JBQW9CUTtBQUFBQSxNQUNwQixrQkFBa0JDO0FBQUFBLE1BQ2xCLFdBQVdDO0FBQUFBLE1BQ1gsR0FBSUw7QUFBQUE7QUFBQUEsSUFaTjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFZWTtBQUdoQjtBQUFDQyxHQTlEUVAsT0FBSztBQUFBLFVBU2NILHNCQU90QkMsY0FBYztBQUFBO0FBQUFzQixLQWhCWHBCO0FBZ0VULFNBQVNBO0FBQVEsSUFBQW9CO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJ1c2VEaWFsb2dDb21wb3NpdGlvbiIsInVzZUNvbXBvc2l0aW9uIiwiY24iLCJJbnB1dCIsImNsYXNzTmFtZSIsInR5cGUiLCJvbktleURvd24iLCJvbkNvbXBvc2l0aW9uU3RhcnQiLCJvbkNvbXBvc2l0aW9uRW5kIiwicHJvcHMiLCJfcyIsImRpYWxvZ0NvbXBvc2l0aW9uIiwiaGFuZGxlQ29tcG9zaXRpb25TdGFydCIsImhhbmRsZUNvbXBvc2l0aW9uRW5kIiwiaGFuZGxlS2V5RG93biIsImUiLCJpc0NvbXBvc2luZyIsIm5hdGl2ZUV2ZW50IiwianVzdEVuZGVkQ29tcG9zaW5nIiwia2V5Iiwic2V0Q29tcG9zaW5nIiwibWFya0NvbXBvc2l0aW9uRW5kIiwic2V0VGltZW91dCIsIl9jIiwiJFJlZnJlc2hSZWckIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImlucHV0LnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyB1c2VEaWFsb2dDb21wb3NpdGlvbiB9IGZyb20gXCJAL2NvbXBvbmVudHMvdWkvZGlhbG9nXCI7XG5pbXBvcnQgeyB1c2VDb21wb3NpdGlvbiB9IGZyb20gXCJAL2hvb2tzL3VzZUNvbXBvc2l0aW9uXCI7XG5pbXBvcnQgeyBjbiB9IGZyb20gXCJAL2xpYi91dGlsc1wiO1xuaW1wb3J0ICogYXMgUmVhY3QgZnJvbSBcInJlYWN0XCI7XG5cbmZ1bmN0aW9uIElucHV0KHtcbiAgY2xhc3NOYW1lLFxuICB0eXBlLFxuICBvbktleURvd24sXG4gIG9uQ29tcG9zaXRpb25TdGFydCxcbiAgb25Db21wb3NpdGlvbkVuZCxcbiAgLi4ucHJvcHNcbn06IFJlYWN0LkNvbXBvbmVudFByb3BzPFwiaW5wdXRcIj4pIHtcbiAgLy8gR2V0IGRpYWxvZyBjb21wb3NpdGlvbiBjb250ZXh0IGlmIGF2YWlsYWJsZSAod2lsbCBiZSBuby1vcCBpZiBub3QgaW5zaWRlIERpYWxvZylcbiAgY29uc3QgZGlhbG9nQ29tcG9zaXRpb24gPSB1c2VEaWFsb2dDb21wb3NpdGlvbigpO1xuXG4gIC8vIEFkZCBjb21wb3NpdGlvbiBldmVudCBoYW5kbGVycyB0byBzdXBwb3J0IGlucHV0IG1ldGhvZCBlZGl0b3IgKElNRSkgZm9yIENKSyBsYW5ndWFnZXMuXG4gIGNvbnN0IHtcbiAgICBvbkNvbXBvc2l0aW9uU3RhcnQ6IGhhbmRsZUNvbXBvc2l0aW9uU3RhcnQsXG4gICAgb25Db21wb3NpdGlvbkVuZDogaGFuZGxlQ29tcG9zaXRpb25FbmQsXG4gICAgb25LZXlEb3duOiBoYW5kbGVLZXlEb3duLFxuICB9ID0gdXNlQ29tcG9zaXRpb248SFRNTElucHV0RWxlbWVudD4oe1xuICAgIG9uS2V5RG93bjogKGUpID0+IHtcbiAgICAgIC8vIENoZWNrIGlmIHRoaXMgaXMgYW4gRW50ZXIga2V5IHRoYXQgc2hvdWxkIGJlIGJsb2NrZWRcbiAgICAgIGNvbnN0IGlzQ29tcG9zaW5nID0gKGUubmF0aXZlRXZlbnQgYXMgYW55KS5pc0NvbXBvc2luZyB8fCBkaWFsb2dDb21wb3NpdGlvbi5qdXN0RW5kZWRDb21wb3NpbmcoKTtcblxuICAgICAgLy8gSWYgRW50ZXIga2V5IGlzIHByZXNzZWQgd2hpbGUgY29tcG9zaW5nIG9yIGp1c3QgYWZ0ZXIgY29tcG9zaXRpb24gZW5kZWQsXG4gICAgICAvLyBkb24ndCBjYWxsIHRoZSB1c2VyJ3Mgb25LZXlEb3duICh0aGlzIGJsb2NrcyB0aGUgYnVzaW5lc3MgbG9naWMpXG4gICAgICBpZiAoZS5rZXkgPT09IFwiRW50ZXJcIiAmJiBpc0NvbXBvc2luZykge1xuICAgICAgICByZXR1cm47XG4gICAgICB9XG5cbiAgICAgIC8vIE90aGVyd2lzZSwgY2FsbCB0aGUgdXNlcidzIG9uS2V5RG93blxuICAgICAgb25LZXlEb3duPy4oZSk7XG4gICAgfSxcbiAgICBvbkNvbXBvc2l0aW9uU3RhcnQ6IGUgPT4ge1xuICAgICAgZGlhbG9nQ29tcG9zaXRpb24uc2V0Q29tcG9zaW5nKHRydWUpO1xuICAgICAgb25Db21wb3NpdGlvblN0YXJ0Py4oZSk7XG4gICAgfSxcbiAgICBvbkNvbXBvc2l0aW9uRW5kOiBlID0+IHtcbiAgICAgIC8vIE1hcmsgdGhhdCBjb21wb3NpdGlvbiBqdXN0IGVuZGVkIC0gdGhpcyBoZWxwcyBoYW5kbGUgdGhlIEVudGVyIGtleSB0aGF0IGNvbmZpcm1zIGlucHV0XG4gICAgICBkaWFsb2dDb21wb3NpdGlvbi5tYXJrQ29tcG9zaXRpb25FbmQoKTtcbiAgICAgIC8vIERlbGF5IHNldHRpbmcgY29tcG9zaW5nIHRvIGZhbHNlIHRvIGhhbmRsZSBTYWZhcmkncyBldmVudCBvcmRlclxuICAgICAgLy8gSW4gU2FmYXJpLCBjb21wb3NpdGlvbkVuZCBmaXJlcyBiZWZvcmUgdGhlIEVTQyBrZXlkb3duIGV2ZW50XG4gICAgICBzZXRUaW1lb3V0KCgpID0+IHtcbiAgICAgICAgZGlhbG9nQ29tcG9zaXRpb24uc2V0Q29tcG9zaW5nKGZhbHNlKTtcbiAgICAgIH0sIDEwMCk7XG4gICAgICBvbkNvbXBvc2l0aW9uRW5kPy4oZSk7XG4gICAgfSxcbiAgfSk7XG5cbiAgcmV0dXJuIChcbiAgICA8aW5wdXRcbiAgICAgIHR5cGU9e3R5cGV9XG4gICAgICBkYXRhLXNsb3Q9XCJpbnB1dFwiXG4gICAgICBjbGFzc05hbWU9e2NuKFxuICAgICAgICBcImZpbGU6dGV4dC1mb3JlZ3JvdW5kIHBsYWNlaG9sZGVyOnRleHQtbXV0ZWQtZm9yZWdyb3VuZCBzZWxlY3Rpb246YmctcHJpbWFyeSBzZWxlY3Rpb246dGV4dC1wcmltYXJ5LWZvcmVncm91bmQgZGFyazpiZy1pbnB1dC8zMCBib3JkZXItaW5wdXQgaC05IHctZnVsbCBtaW4tdy0wIHJvdW5kZWQtbWQgYm9yZGVyIGJnLXRyYW5zcGFyZW50IHB4LTMgcHktMSB0ZXh0LWJhc2Ugc2hhZG93LXhzIHRyYW5zaXRpb24tW2NvbG9yLGJveC1zaGFkb3ddIG91dGxpbmUtbm9uZSBmaWxlOmlubGluZS1mbGV4IGZpbGU6aC03IGZpbGU6Ym9yZGVyLTAgZmlsZTpiZy10cmFuc3BhcmVudCBmaWxlOnRleHQtc20gZmlsZTpmb250LW1lZGl1bSBkaXNhYmxlZDpwb2ludGVyLWV2ZW50cy1ub25lIGRpc2FibGVkOmN1cnNvci1ub3QtYWxsb3dlZCBkaXNhYmxlZDpvcGFjaXR5LTUwIG1kOnRleHQtc21cIixcbiAgICAgICAgXCJmb2N1cy12aXNpYmxlOmJvcmRlci1yaW5nIGZvY3VzLXZpc2libGU6cmluZy1yaW5nLzUwIGZvY3VzLXZpc2libGU6cmluZy1bM3B4XVwiLFxuICAgICAgICBcImFyaWEtaW52YWxpZDpyaW5nLWRlc3RydWN0aXZlLzIwIGRhcms6YXJpYS1pbnZhbGlkOnJpbmctZGVzdHJ1Y3RpdmUvNDAgYXJpYS1pbnZhbGlkOmJvcmRlci1kZXN0cnVjdGl2ZVwiLFxuICAgICAgICBjbGFzc05hbWVcbiAgICAgICl9XG4gICAgICBvbkNvbXBvc2l0aW9uU3RhcnQ9e2hhbmRsZUNvbXBvc2l0aW9uU3RhcnR9XG4gICAgICBvbkNvbXBvc2l0aW9uRW5kPXtoYW5kbGVDb21wb3NpdGlvbkVuZH1cbiAgICAgIG9uS2V5RG93bj17aGFuZGxlS2V5RG93bn1cbiAgICAgIHsuLi5wcm9wc31cbiAgICAvPlxuICApO1xufVxuXG5leHBvcnQgeyBJbnB1dCB9O1xuIl0sImZpbGUiOiIvaG9tZS91YnVudHUvbWlyYWktbmV0d29yay13ZWJzaXRlL2NsaWVudC9zcmMvY29tcG9uZW50cy91aS9pbnB1dC50c3gifQ==
+85	

@@ -1,0 +1,151 @@
+Text file: pasted_content_20.txt
+Latest content with line numbers:
+2	import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+3	import { Building2, Clock, Users, MapPin, Phone, Mail, Calendar, Utensils, Bus, Briefcase, PartyPopper } from "lucide-react";
+4	import { Link } from "wouter";
+5	
+6	export default function Mirai() {
+7	  const basicInfo = [
+8	    { icon: Users, label: "定員", value: "20名（知的、精神の方）" },
+9	    { icon: Clock, label: "開所時間", value: "9時30分～15時30分" },
+10	    { icon: Calendar, label: "開所日", value: "平日（月1回程度祝日開所日あり）" },
+11	    { icon: Calendar, label: "休日", value: "土・日・祝（開所日あり）、年末年始" },
+12	    { icon: Bus, label: "交通", value: "昭島市内送迎対応（ご相談下さい）\n交通費支給あり（1日上限500円）" },
+13	    { icon: Utensils, label: "昼食", value: "基本提供サービスあります\n1食200円です" },
+14	  ];
+15	
+16	  const activities = [
+17	    { title: "缶バッジ作業", description: "オリジナルデザインの缶バッジを製作しています" },
+18	    { title: "ナフキン検品", description: "丁寧な検品作業を通じて品質管理を学びます" },
+19	    { title: "古本回収・販売", description: "リサイクル活動を通じて社会貢献を実践します" },
+20	    { title: "小物製作", description: "手作りの小物を製作し、創造性を育みます" },
+21	  ];
+22	
+23	  const events = [
+24	    "新年会", "バレンタインデー", "お花見", "ランチ会",
+25	    "日帰り旅行", "ハロウィン", "クリスマス", "年納め"
+26	  ];
+27	
+28	  return (
+29	    <div className="min-h-screen flex flex-col">
+30	      {/* Header */}
+31	      <header className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+32	        <div className="container py-4">
+33	          <div className="flex items-center justify-between">
+34	            <Link href="/">
+35	              <a className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+36	                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center p-1">
+37	                  <img src="/mirai-logo.webp" alt="未来ネットワーク" className="w-full h-full object-contain" />
+38	                </div>
+39	                <div>
+40	                  <h1 className="text-xl font-bold text-foreground">一般社団法人未来ネットワーク</h1>
+41	                  <p className="text-sm text-muted-foreground">障害福祉サービス</p>
+42	                </div>
+43	              </a>
+44	            </Link>
+45	            <nav className="hidden md:flex gap-6">
+46	              <Link href="/">
+47	                <a className="text-sm font-medium hover:text-primary transition-colors">ホーム</a>
+48	              </Link>
+49	              <Link href="/mirai">
+50	                <a className="text-sm font-medium text-primary">MIRAI</a>
+51	              </Link>
+52	              <Link href="/hikari">
+53	                <a className="text-sm font-medium hover:text-primary transition-colors">HIKARI</a>
+54	              </Link>
+55	              <Link href="/studio-m">
+56	                <a className="text-sm font-medium hover:text-primary transition-colors">studio M</a>
+57	              </Link>
+58	            </nav>
+59	          </div>
+60	        </div>
+61	      </header>
+62	
+63	      {/* Hero Section with Image */}
+64	      <section className="relative bg-gradient-to-br from-blue-50 to-cyan-50 py-16 md:py-24 overflow-hidden">
+65	        <div className="absolute inset-0 opacity-10">
+66	          <img src="/mirai-products.webp" alt="MIRAI製品" className="w-full h-full object-cover" />
+67	        </div>
+68	        <div className="container relative z-10">
+69	          <div className="max-w-4xl mx-auto text-center space-y-6">
+70	            <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-lg mb-4 p-3">
+71	              <img src="/mirai-icon.webp" alt="MIRAIアイコン" className="w-full h-full object-contain" />
+72	            </div>
+73	            <h2 className="text-4xl md:text-5xl font-bold text-foreground">MIRAI</h2>
+74	            <p className="text-xl text-primary font-semibold">就労継続支援B型事業所</p>
+75	            <p className="text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+76	              一人ひとりの個性と能力を大切にし、自立した生活を目指すための就労支援を行っています。
+77	              様々な作業活動を通じて、利用者様のスキルアップと社会参加をサポートします。
+78	            </p>
+79	          </div>
+80	        </div>
+81	      </section>
+82	
+83	      {/* Facility Images */}
+84	      <section className="py-12 bg-white">
+85	        <div className="container">
+86	          <div className="max-w-5xl mx-auto">
+87	            <div className="grid md:grid-cols-2 gap-6">
+88	              <div className="rounded-lg overflow-hidden shadow-md">
+89	                <img src="/mirai-entrance.webp" alt="MIRAI入口" className="w-full h-64 object-cover" />
+90	              </div>
+91	              <div className="rounded-lg overflow-hidden shadow-md">
+92	                <img src="/mirai-green-logo.webp" alt="MIRAI" className="w-full h-64 object-cover" />
+93	              </div>
+94	            </div>
+95	          </div>
+96	        </div>
+97	      </section>
+98	
+99	      {/* Basic Information */}
+100	      <section className="py-16 md:py-24 bg-white">
+101	        <div className="container">
+102	          <div className="max-w-5xl mx-auto">
+103	            <div className="text-center mb-12">
+104	              <h3 className="text-3xl md:text-4xl font-bold mb-4">基本情報</h3>
+105	              <div className="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+106	            </div>
+107	            <div className="grid md:grid-cols-2 gap-6">
+108	              {basicInfo.map((item, index) => {
+109	                const Icon = item.icon;
+110	                return (
+111	                  <Card key={index} className="border-2 hover:shadow-md transition-shadow">
+112	                    <CardContent className="p-6">
+113	                      <div className="flex items-start gap-4">
+114	                        <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center flex-shrink-0">
+115	                          <Icon className="w-6 h-6 text-primary" />
+116	                        </div>
+117	                        <div className="flex-1">
+118	                          <p className="text-sm text-muted-foreground mb-1">{item.label}</p>
+119	                          <p className="font-semibold whitespace-pre-line">{item.value}</p>
+120	                        </div>
+121	                      </div>
+122	                    </CardContent>
+123	                  </Card>
+124	                );
+125	              })}
+126	            </div>
+127	          </div>
+128	        </div>
+129	      </section>
+130	
+131	      {/* Work Activities */}
+132	      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+133	        <div className="container">
+134	          <div className="max-w-5xl mx-auto">
+135	            <div className="text-center mb-12">
+136	              <h3 className="text-3xl md:text-4xl font-bold mb-4">作業活動</h3>
+137	              <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+138	              <p className="text-lg text-muted-foreground">
+139	                多様な作業を通じて、それぞれのペースでスキルを身につけることができます
+140	              </p>
+141	            </div>
+142	            <div className="mb-8 rounded-lg overflow-hidden shadow-lg">
+143	              <img src="/mirai-craft-work.webp" alt="作業風景" className="w-full h-80 object-cover" />
+144	            </div>
+145	            <div className="grid md:grid-cols-2 gap-6">
+146	              {activities.map((activity, index) => (
+147	                <Card key={index} className="border-2 bg-white hover:shadow-lg transition-shadow">
+148	                  <CardHeader>
+149	                    <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-3">
+150	                      <Briefcase className="w-6 h-6 text-primary" />

@@ -1,0 +1,78 @@
+Text file: pasted_content_3.txt
+Latest content with line numbers:
+458	                  <tbody className="divide-y divide-gray-200">
+459	                    {[
+460	                      { label: "法人名", value: "一般社団法人未来ネットワーク" },
+461	                      { label: "設立", value: "2016年7月" },
+462	                      { label: "代表理事", value: "北村 陽朗" },
+463	                      { label: "所在地", value: "東京都昭島市" },
+464	                      { label: "事業内容", value: ["就労継続支援B型事業（MIRAI、studio M）", "生活介護事業（HIKARI）", "障害福祉サービス事業"] },
+465	                      { label: "事業所", value: ["MIRAI（就労継続支援B型）", "HIKARI（生活介護）", "studio M（就労継続支援B型）"] }
+466	                    ].map((row, index) => (
+467	                      <tr key={index}>
+468	                        <td className="py-6 pr-8 text-gray-600 font-bold whitespace-nowrap align-top text-lg">
+469	                          {row.label}
+470	                        </td>
+471	                        <td className="py-6 text-gray-800">
+472	                          {Array.isArray(row.value) ? (
+473	                            <ul className="space-y-2">
+474	                              {row.value.map((item, i) => (
+475	                                <li key={i} className="flex items-start gap-2">
+476	                                  <span className="text-blue-600 mt-1">•</span>
+477	                                  <span>{item}</span>
+478	                                </li>
+479	                              ))}
+480	                            </ul>
+481	                          ) : (
+482	                            row.value
+483	                          )}
+484	                        </td>
+485	                      </tr>
+486	                    ))}
+487	                  </tbody>
+488	                </table>
+489	              </div>
+490	            </div>
+491	          </div>
+492	        </div>
+493	      </section>
+494	
+495	      {/* CTAセクション */}
+496	      <section className="py-24 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-700 text-white relative overflow-hidden">
+497	        <div className="absolute inset-0 opacity-20">
+498	          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl"></div>
+499	          <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+500	        </div>
+501	        
+502	        <div className="container mx-auto px-4 relative z-10">
+503	          <div className="max-w-3xl mx-auto text-center">
+504	            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+505	              一緒に未来を創りませんか？
+506	            </h2>
+507	            <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+508	              見学・ご相談はいつでも承っております。<br />
+509	              お気軽にお問い合わせください。
+510	            </p>
+511	            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+512	              <a
+513	                href="mailto:mirainet2017@gmail.com"
+514	                className="group bg-white text-blue-600 px-10 py-5 rounded-full font-bold hover:bg-blue-50 transition-all shadow-2xl flex items-center justify-center gap-2"
+515	              >
+516	                お問い合わせ
+517	                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+518	              </a>
+519	              <a
+520	                href="/"
+521	                className="bg-white/10 backdrop-blur-sm text-white px-10 py-5 rounded-full font-bold hover:bg-white/20 transition-all border-2 border-white/30"
+522	              >
+523	                トップページへ
+524	              </a>
+525	            </div>
+526	          </div>
+527	        </div>
+528	      </section>
+529	    </div>
+530	  );
+531	}
+532	
+533	

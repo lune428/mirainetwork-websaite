@@ -1,0 +1,83 @@
+Text file: pasted_content_50.txt
+Latest content with line numbers:
+1	import {createHotContext as __vite__createHotContext} from "/@vite/client";
+2	import.meta.hot = __vite__createHotContext("/src/components/ui/button.tsx");
+3	import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9";
+4	const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+5	import {Slot} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/@radix-ui_react-slot.js?v=912602c9";
+6	import {cva} from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/class-variance-authority.js?v=912602c9";
+7	import {cn} from "/src/lib/utils.ts";
+8	const buttonVariants = cva("inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive", {
+9	    variants: {
+10	        variant: {
+11	            default: "bg-primary text-primary-foreground hover:bg-primary/90",
+12	            destructive: "bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
+13	            outline: "border bg-transparent shadow-xs hover:bg-accent dark:bg-transparent dark:border-input dark:hover:bg-input/50",
+14	            secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+15	            ghost: "hover:bg-accent dark:hover:bg-accent/50",
+16	            link: "text-primary underline-offset-4 hover:underline"
+17	        },
+18	        size: {
+19	            default: "h-9 px-4 py-2 has-[>svg]:px-3",
+20	            sm: "h-8 rounded-md gap-1.5 px-3 has-[>svg]:px-2.5",
+21	            lg: "h-10 rounded-md px-6 has-[>svg]:px-4",
+22	            icon: "size-9",
+23	            "icon-sm": "size-8",
+24	            "icon-lg": "size-10"
+25	        }
+26	    },
+27	    defaultVariants: {
+28	        variant: "default",
+29	        size: "default"
+30	    }
+31	});
+32	function Button({className, variant, size, asChild=false, ...props}) {
+33	    const Comp = asChild ? Slot : "button";
+34	    return /* @__PURE__ */
+35	    jsxDEV(Comp, {
+36	        "data-loc": "client/src/components/ui/button.tsx:52",
+37	        "data-slot": "button",
+38	        className: cn(buttonVariants({
+39	            variant,
+40	            size,
+41	            className
+42	        })),
+43	        ...props
+44	    }, void 0, false, {
+45	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/ui/button.tsx",
+46	        lineNumber: 52,
+47	        columnNumber: 5
+48	    }, this);
+49	}
+50	_c = Button;
+51	export {Button, buttonVariants};
+52	var _c;
+53	$RefreshReg$(_c, "Button");
+54	import*as RefreshRuntime from "/@react-refresh";
+55	const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+56	if (import.meta.hot && !inWebWorker) {
+57	    if (!window.$RefreshReg$) {
+58	        throw new Error("@vitejs/plugin-react can't detect preamble. Something is wrong.");
+59	    }
+60	    RefreshRuntime.__hmr_import(import.meta.url).then( (currentExports) => {
+61	        RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/ui/button.tsx", currentExports);
+62	        import.meta.hot.accept( (nextExports) => {
+63	            if (!nextExports)
+64	                return;
+65	            const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/ui/button.tsx", currentExports, nextExports);
+66	            if (invalidateMessage)
+67	                import.meta.hot.invalidate(invalidateMessage);
+68	        }
+69	        );
+70	    }
+71	    );
+72	}
+73	function $RefreshReg$(type, id) {
+74	    return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/ui/button.tsx " + id);
+75	}
+76	function $RefreshSig$() {
+77	    return RefreshRuntime.createSignatureFunctionForTransform();
+78	}
+79	
+80	//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbURJO0FBbERKLFNBQVNBLFlBQVk7QUFDckIsU0FBU0MsV0FBOEI7QUFFdkMsU0FBU0MsVUFBVTtBQUVuQixNQUFNQyxpQkFBaUJGO0FBQUFBLEVBQ3JCO0FBQUEsRUFDQTtBQUFBLElBQ0VHLFVBQVU7QUFBQSxNQUNSQyxTQUFTO0FBQUEsUUFDUEMsU0FBUztBQUFBLFFBQ1RDLGFBQ0U7QUFBQSxRQUNGQyxTQUNFO0FBQUEsUUFDRkMsV0FDRTtBQUFBLFFBQ0ZDLE9BQ0U7QUFBQSxRQUNGQyxNQUFNO0FBQUEsTUFDUjtBQUFBLE1BQ0FDLE1BQU07QUFBQSxRQUNKTixTQUFTO0FBQUEsUUFDVE8sSUFBSTtBQUFBLFFBQ0pDLElBQUk7QUFBQSxRQUNKQyxNQUFNO0FBQUEsUUFDTixXQUFXO0FBQUEsUUFDWCxXQUFXO0FBQUEsTUFDYjtBQUFBLElBQ0Y7QUFBQSxJQUNBQyxpQkFBaUI7QUFBQSxNQUNmWCxTQUFTO0FBQUEsTUFDVE8sTUFBTTtBQUFBLElBQ1I7QUFBQSxFQUNGO0FBQ0Y7QUFFQSxTQUFTSyxPQUFPO0FBQUEsRUFDZEM7QUFBQUEsRUFDQWI7QUFBQUEsRUFDQU87QUFBQUEsRUFDQU8sVUFBVTtBQUFBLEVBQ1YsR0FBR0M7QUFJSCxHQUFHO0FBQ0gsUUFBTUMsT0FBT0YsVUFBVW5CLE9BQU87QUFFOUIsU0FDRTtBQUFBLElBQUM7QUFBQTtBQUFBO0FBQUEsTUFDQyxhQUFVO0FBQUEsTUFDVixXQUFXRSxHQUFHQyxlQUFlLEVBQUVFLFNBQVNPLE1BQU1NLFVBQVUsQ0FBQyxDQUFDO0FBQUEsTUFDMUQsR0FBSUU7QUFBQUE7QUFBQUEsSUFITjtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUE7QUFBQTtBQUFBO0FBQUEsRUFHWTtBQUdoQjtBQUFDRSxLQW5CUUw7QUFxQlQsU0FBU0EsUUFBUWQ7QUFBaUIsSUFBQW1CO0FBQUFDLGFBQUFELElBQUEiLCJuYW1lcyI6WyJTbG90IiwiY3ZhIiwiY24iLCJidXR0b25WYXJpYW50cyIsInZhcmlhbnRzIiwidmFyaWFudCIsImRlZmF1bHQiLCJkZXN0cnVjdGl2ZSIsIm91dGxpbmUiLCJzZWNvbmRhcnkiLCJnaG9zdCIsImxpbmsiLCJzaXplIiwic20iLCJsZyIsImljb24iLCJkZWZhdWx0VmFyaWFudHMiLCJCdXR0b24iLCJjbGFzc05hbWUiLCJhc0NoaWxkIiwicHJvcHMiLCJDb21wIiwiX2MiLCIkUmVmcmVzaFJlZyQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiYnV0dG9uLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgKiBhcyBSZWFjdCBmcm9tIFwicmVhY3RcIjtcbmltcG9ydCB7IFNsb3QgfSBmcm9tIFwiQHJhZGl4LXVpL3JlYWN0LXNsb3RcIjtcbmltcG9ydCB7IGN2YSwgdHlwZSBWYXJpYW50UHJvcHMgfSBmcm9tIFwiY2xhc3MtdmFyaWFuY2UtYXV0aG9yaXR5XCI7XG5cbmltcG9ydCB7IGNuIH0gZnJvbSBcIkAvbGliL3V0aWxzXCI7XG5cbmNvbnN0IGJ1dHRvblZhcmlhbnRzID0gY3ZhKFxuICBcImlubGluZS1mbGV4IGl0ZW1zLWNlbnRlciBqdXN0aWZ5LWNlbnRlciBnYXAtMiB3aGl0ZXNwYWNlLW5vd3JhcCByb3VuZGVkLW1kIHRleHQtc20gZm9udC1tZWRpdW0gdHJhbnNpdGlvbi1hbGwgZGlzYWJsZWQ6cG9pbnRlci1ldmVudHMtbm9uZSBkaXNhYmxlZDpvcGFjaXR5LTUwIFsmX3N2Z106cG9pbnRlci1ldmVudHMtbm9uZSBbJl9zdmc6bm90KFtjbGFzcyo9J3NpemUtJ10pXTpzaXplLTQgc2hyaW5rLTAgWyZfc3ZnXTpzaHJpbmstMCBvdXRsaW5lLW5vbmUgZm9jdXMtdmlzaWJsZTpib3JkZXItcmluZyBmb2N1cy12aXNpYmxlOnJpbmctcmluZy81MCBmb2N1cy12aXNpYmxlOnJpbmctWzNweF0gYXJpYS1pbnZhbGlkOnJpbmctZGVzdHJ1Y3RpdmUvMjAgZGFyazphcmlhLWludmFsaWQ6cmluZy1kZXN0cnVjdGl2ZS80MCBhcmlhLWludmFsaWQ6Ym9yZGVyLWRlc3RydWN0aXZlXCIsXG4gIHtcbiAgICB2YXJpYW50czoge1xuICAgICAgdmFyaWFudDoge1xuICAgICAgICBkZWZhdWx0OiBcImJnLXByaW1hcnkgdGV4dC1wcmltYXJ5LWZvcmVncm91bmQgaG92ZXI6YmctcHJpbWFyeS85MFwiLFxuICAgICAgICBkZXN0cnVjdGl2ZTpcbiAgICAgICAgICBcImJnLWRlc3RydWN0aXZlIHRleHQtd2hpdGUgaG92ZXI6YmctZGVzdHJ1Y3RpdmUvOTAgZm9jdXMtdmlzaWJsZTpyaW5nLWRlc3RydWN0aXZlLzIwIGRhcms6Zm9jdXMtdmlzaWJsZTpyaW5nLWRlc3RydWN0aXZlLzQwIGRhcms6YmctZGVzdHJ1Y3RpdmUvNjBcIixcbiAgICAgICAgb3V0bGluZTpcbiAgICAgICAgICBcImJvcmRlciBiZy10cmFuc3BhcmVudCBzaGFkb3cteHMgaG92ZXI6YmctYWNjZW50IGRhcms6YmctdHJhbnNwYXJlbnQgZGFyazpib3JkZXItaW5wdXQgZGFyazpob3ZlcjpiZy1pbnB1dC81MFwiLFxuICAgICAgICBzZWNvbmRhcnk6XG4gICAgICAgICAgXCJiZy1zZWNvbmRhcnkgdGV4dC1zZWNvbmRhcnktZm9yZWdyb3VuZCBob3ZlcjpiZy1zZWNvbmRhcnkvODBcIixcbiAgICAgICAgZ2hvc3Q6XG4gICAgICAgICAgXCJob3ZlcjpiZy1hY2NlbnQgZGFyazpob3ZlcjpiZy1hY2NlbnQvNTBcIixcbiAgICAgICAgbGluazogXCJ0ZXh0LXByaW1hcnkgdW5kZXJsaW5lLW9mZnNldC00IGhvdmVyOnVuZGVybGluZVwiLFxuICAgICAgfSxcbiAgICAgIHNpemU6IHtcbiAgICAgICAgZGVmYXVsdDogXCJoLTkgcHgtNCBweS0yIGhhcy1bPnN2Z106cHgtM1wiLFxuICAgICAgICBzbTogXCJoLTggcm91bmRlZC1tZCBnYXAtMS41IHB4LTMgaGFzLVs+c3ZnXTpweC0yLjVcIixcbiAgICAgICAgbGc6IFwiaC0xMCByb3VuZGVkLW1kIHB4LTYgaGFzLVs+c3ZnXTpweC00XCIsXG4gICAgICAgIGljb246IFwic2l6ZS05XCIsXG4gICAgICAgIFwiaWNvbi1zbVwiOiBcInNpemUtOFwiLFxuICAgICAgICBcImljb24tbGdcIjogXCJzaXplLTEwXCIsXG4gICAgICB9LFxuICAgIH0sXG4gICAgZGVmYXVsdFZhcmlhbnRzOiB7XG4gICAgICB2YXJpYW50OiBcImRlZmF1bHRcIixcbiAgICAgIHNpemU6IFwiZGVmYXVsdFwiLFxuICAgIH0sXG4gIH1cbik7XG5cbmZ1bmN0aW9uIEJ1dHRvbih7XG4gIGNsYXNzTmFtZSxcbiAgdmFyaWFudCxcbiAgc2l6ZSxcbiAgYXNDaGlsZCA9IGZhbHNlLFxuICAuLi5wcm9wc1xufTogUmVhY3QuQ29tcG9uZW50UHJvcHM8XCJidXR0b25cIj4gJlxuICBWYXJpYW50UHJvcHM8dHlwZW9mIGJ1dHRvblZhcmlhbnRzPiAmIHtcbiAgICBhc0NoaWxkPzogYm9vbGVhbjtcbiAgfSkge1xuICBjb25zdCBDb21wID0gYXNDaGlsZCA/IFNsb3QgOiBcImJ1dHRvblwiO1xuXG4gIHJldHVybiAoXG4gICAgPENvbXBcbiAgICAgIGRhdGEtc2xvdD1cImJ1dHRvblwiXG4gICAgICBjbGFzc05hbWU9e2NuKGJ1dHRvblZhcmlhbnRzKHsgdmFyaWFudCwgc2l6ZSwgY2xhc3NOYW1lIH0pKX1cbiAgICAgIHsuLi5wcm9wc31cbiAgICAvPlxuICApO1xufVxuXG5leHBvcnQgeyBCdXR0b24sIGJ1dHRvblZhcmlhbnRzIH07XG4iXSwiZmlsZSI6Ii9ob21lL3VidW50dS9taXJhaS1uZXR3b3JrLXdlYnNpdGUvY2xpZW50L3NyYy9jb21wb25lbnRzL3VpL2J1dHRvbi50c3gifQ==
+81	

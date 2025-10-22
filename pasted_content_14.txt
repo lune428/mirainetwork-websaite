@@ -1,0 +1,152 @@
+Text file: pasted_content_14.txt
+Latest content with line numbers:
+251	          <AnnouncementsList />
+252	        </div>
+253	      </section>
+254	
+255	      {/* About Section */}
+256	      <section id="about" className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+257	        <div className="container">
+258	          <div className="max-w-4xl mx-auto text-center">
+259	            <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mb-6">
+260	              <Building2 className="w-10 h-10 text-primary" />
+261	            </div>
+262	            <h3 className="text-3xl md:text-4xl font-bold mb-6">法人概要</h3>
+263	            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+264	              <p>
+265	                一般社団法人未来ネットワークは、2016年7月に設立され、障害福祉サービス事業を通じて、<br />
+266	                利用者様一人ひとりの個性を大切にし、自立した生活と社会参加を支援しています。<br />
+267	                東京都昭島市を中心に、3つの事業所（MIRAI、HIKARI、studio M）を運営しております。
+268	              </p>
+269	            </div>
+270	            <Button size="lg" asChild>
+271	              <Link href="/about" className="flex items-center gap-2">
+272	                詳しい法人情報を見る
+273	                <ChevronRight className="w-4 h-4" />
+274	              </Link>
+275	            </Button>
+276	          </div>
+277	        </div>
+278	      </section>
+279	
+280	      {/* Facilities Section */}
+281	      <section id="facilities" className="py-16 md:py-24 bg-white">
+282	        <div className="container">
+283	          <div className="text-center mb-12">
+284	            <h3 className="text-3xl md:text-4xl font-bold mb-4">運営事業所</h3>
+285	            <p className="text-lg text-muted-foreground">
+286	              3つの事業所で、それぞれの特色を活かした支援を提供しています
+287	            </p>
+288	          </div>
+289	
+290	          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+291	            {facilities.map((facility) => (
+292	              <div key={facility.name} className="group">
+293	                <Card className={`${facility.color} border-2 ${facility.hoverColor} transition-all duration-300 hover:shadow-xl overflow-hidden h-full`}>
+294	                  <div className="relative h-64 overflow-hidden">
+295	                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 z-10"></div>
+296	                    <img
+297	                      src={facility.image}
+298	                      alt={facility.name}
+299	                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+300	                    />
+301	                  </div>
+302	                  <div className="p-6">
+303	                    <CardHeader className="p-0 mb-4">
+304	                      <div className="flex items-center gap-3 mb-2">
+305	                        <div className="p-2 rounded-full bg-white">
+306	                          <facility.icon className="w-6 h-6 text-primary" />
+307	                        </div>
+308	                        <CardTitle className="text-2xl">{facility.name}</CardTitle>
+309	                      </div>
+310	                      <CardDescription className="text-base">{facility.type}</CardDescription>
+311	                    </CardHeader>
+312	                    <CardContent className="p-0 space-y-4">
+313	                      <p className="text-sm text-muted-foreground leading-relaxed">
+314	                        {facility.description}
+315	                      </p>
+316	
+317	                      <div className="space-y-2 text-sm">
+318	                        <div className="flex items-start gap-2">
+319	                          <MapPin className="w-4 h-4 mt-0.5 text-muted-foreground flex-shrink-0" />
+320	                          <span className="text-muted-foreground">{facility.address}</span>
+321	                        </div>
+322	                        <div className="flex items-center gap-2">
+323	                          <Phone className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+324	                          <div className="text-muted-foreground">
+325	                            <span>Tel: {facility.tel}</span>
+326	                            {facility.fax && (
+327	                              <>
+328	                                <span className="mx-2">/</span>
+329	                                <span>Fax: {facility.fax}</span>
+330	                              </>
+331	                            )}
+332	                          </div>
+333	                        </div>
+334	                      </div>
+335	
+336	                      <div className="pt-4">
+337	                        <Button variant="default" className="group/btn" asChild>
+338	                          <Link href={facility.link} className="flex items-center gap-2">
+339	                            詳しく見る
+340	                            <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+341	                          </Link>
+342	                        </Button>
+343	                      </div>
+344	                    </CardContent>
+345	                  </div>
+346	                </Card>
+347	              </div>
+348	            ))}
+349	          </div>
+350	        </div>
+351	      </section>
+352	
+353	      {/* Contact Section */}
+354	      <section id="contact" className="py-16 md:py-24 bg-white">
+355	        <div className="container">
+356	          <div className="max-w-4xl mx-auto">
+357	            <div className="text-center mb-12">
+358	              <h3 className="text-3xl md:text-4xl font-bold mb-4">お問い合わせ</h3>
+359	              <p className="text-lg text-muted-foreground">
+360	                ご質問やご相談がございましたら、お気軽にお問い合わせください。
+361	              </p>
+362	            </div>
+363	
+364	            <div className="mb-12">
+365	              <h4 className="text-xl font-semibold mb-6 text-center">各事業所へのお問い合わせ</h4>
+366	              <p className="text-center text-muted-foreground mb-8">
+367	                各事業所ごとに、見学や体験を随時受け付けております。
+368	              </p>
+369	              <div className="grid gap-6 md:grid-cols-3">
+370	                {facilities.map((facility) => (
+371	                  <Card key={facility.name} className="text-center p-6">
+372	                    <div className="mb-4">
+373	                      <facility.icon className="w-12 h-12 mx-auto text-primary mb-2" />
+374	                      <h5 className="font-bold text-lg">{facility.name}</h5>
+375	                      <p className="text-sm text-muted-foreground">{facility.type}</p>
+376	                    </div>
+377	
+378	                    <Button variant="outline" asChild className="w-full">
+379	                      <Link href="/contact">
+380	                        <a>お問い合わせ</a>
+381	                      </Link>
+382	                    </Button>
+383	                  </Card>
+384	                ))}
+385	              </div>
+386	            </div>
+387	          </div>
+388	        </div>
+389	      </section>
+390	
+391	      {/* Footer */}
+392	      <footer className="bg-gray-900 text-gray-300 py-12">
+393	        <div className="container">
+394	          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+395	            <div>
+396	              <h5 className="font-bold text-white mb-4">一般社団法人未来ネットワーク</h5>
+397	              <p className="text-sm leading-relaxed">
+398	                障害福祉サービスを通じて、利用者様の自立と社会参加を支援しています。
+399	              </p>
+400	            </div>

@@ -1,0 +1,208 @@
+Text file: pasted_content_42.txt
+Latest content with line numbers:
+1	import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/components/Header.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=912602c9"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+2	var _s = $RefreshSig$();
+3	import { APP_TITLE } from "/src/const.ts";
+4	import { Link } from "/@fs/home/ubuntu/mirai-network-website/node_modules/.vite/deps/wouter.js?v=912602c9";
+5	import NotificationPanel from "/src/components/NotificationPanel.tsx";
+6	import { useUser } from "/src/hooks/use-user.ts";
+7	export default function Header({ currentPage = "home" }) {
+8	  _s();
+9	  const isActive = (page) => currentPage === page;
+10	  const { user } = useUser();
+11	  return /* @__PURE__ */ jsxDEV("header", { "data-loc": "client/src/components/Header.tsx:15", className: "bg-white border-b sticky top-0 z-50 shadow-sm", children: /* @__PURE__ */ jsxDEV("div", { "data-loc": "client/src/components/Header.tsx:16", className: "container", children: /* @__PURE__ */ jsxDEV("div", { "data-loc": "client/src/components/Header.tsx:17", className: "flex items-center justify-between h-20", children: [
+12	    /* @__PURE__ */ jsxDEV(Link, { "data-loc": "client/src/components/Header.tsx:18", href: "/", className: "flex items-center gap-3", children: [
+13	      /* @__PURE__ */ jsxDEV("div", { "data-loc": "client/src/components/Header.tsx:19", className: "w-12 h-12 rounded-xl bg-white shadow-md flex items-center justify-center p-1", children: /* @__PURE__ */ jsxDEV("img", { "data-loc": "client/src/components/Header.tsx:20", src: "/mirai-logo.webp", alt: "未来ネットワーク", className: "w-full h-full object-contain" }, void 0, false, {
+14	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+15	        lineNumber: 20,
+16	        columnNumber: 15
+17	      }, this) }, void 0, false, {
+18	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+19	        lineNumber: 19,
+20	        columnNumber: 13
+21	      }, this),
+22	      /* @__PURE__ */ jsxDEV("div", { "data-loc": "client/src/components/Header.tsx:22", children: [
+23	        /* @__PURE__ */ jsxDEV("h1", { "data-loc": "client/src/components/Header.tsx:23", className: "text-lg font-bold text-foreground", children: APP_TITLE }, void 0, false, {
+24	          fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+25	          lineNumber: 23,
+26	          columnNumber: 15
+27	        }, this),
+28	        /* @__PURE__ */ jsxDEV("p", { "data-loc": "client/src/components/Header.tsx:24", className: "text-xs text-muted-foreground", children: "障害福祉サービス" }, void 0, false, {
+29	          fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+30	          lineNumber: 24,
+31	          columnNumber: 15
+32	        }, this)
+33	      ] }, void 0, true, {
+34	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+35	        lineNumber: 22,
+36	        columnNumber: 13
+37	      }, this)
+38	    ] }, void 0, true, {
+39	      fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+40	      lineNumber: 18,
+41	      columnNumber: 11
+42	    }, this),
+43	    /* @__PURE__ */ jsxDEV("div", { "data-loc": "client/src/components/Header.tsx:27", className: "flex items-center gap-4", children: [
+44	      user && /* @__PURE__ */ jsxDEV(NotificationPanel, { "data-loc": "client/src/components/Header.tsx:28" }, void 0, false, {
+45	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+46	        lineNumber: 28,
+47	        columnNumber: 22
+48	      }, this),
+49	      /* @__PURE__ */ jsxDEV("nav", { "data-loc": "client/src/components/Header.tsx:29", className: "hidden md:flex items-center gap-8", children: [
+50	        /* @__PURE__ */ jsxDEV(
+51	          Link,
+52	          {
+53	            "data-loc": "client/src/components/Header.tsx:30",
+54	            href: "/",
+55	            className: `text-sm font-medium transition-colors ${isActive("home") ? "text-primary" : "hover:text-primary"}`,
+56	            children: "ホーム"
+57	          },
+58	          void 0,
+59	          false,
+60	          {
+61	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+62	            lineNumber: 30,
+63	            columnNumber: 13
+64	          },
+65	          this
+66	        ),
+67	        /* @__PURE__ */ jsxDEV(
+68	          Link,
+69	          {
+70	            "data-loc": "client/src/components/Header.tsx:38",
+71	            href: "/about",
+72	            className: `text-sm font-medium transition-colors ${isActive("about") ? "text-primary" : "hover:text-primary"}`,
+73	            children: "未来ネットワークについて"
+74	          },
+75	          void 0,
+76	          false,
+77	          {
+78	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+79	            lineNumber: 38,
+80	            columnNumber: 13
+81	          },
+82	          this
+83	        ),
+84	        /* @__PURE__ */ jsxDEV(
+85	          Link,
+86	          {
+87	            "data-loc": "client/src/components/Header.tsx:46",
+88	            href: "/mirai",
+89	            className: `text-sm font-medium transition-colors ${isActive("mirai") ? "text-primary" : "hover:text-primary"}`,
+90	            children: "MIRAI"
+91	          },
+92	          void 0,
+93	          false,
+94	          {
+95	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+96	            lineNumber: 46,
+97	            columnNumber: 13
+98	          },
+99	          this
+100	        ),
+101	        /* @__PURE__ */ jsxDEV(
+102	          Link,
+103	          {
+104	            "data-loc": "client/src/components/Header.tsx:54",
+105	            href: "/hikari",
+106	            className: `text-sm font-medium transition-colors ${isActive("hikari") ? "text-primary" : "hover:text-primary"}`,
+107	            children: "HIKARI"
+108	          },
+109	          void 0,
+110	          false,
+111	          {
+112	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+113	            lineNumber: 54,
+114	            columnNumber: 13
+115	          },
+116	          this
+117	        ),
+118	        /* @__PURE__ */ jsxDEV(
+119	          Link,
+120	          {
+121	            "data-loc": "client/src/components/Header.tsx:62",
+122	            href: "/studio-m",
+123	            className: `text-sm font-medium transition-colors ${isActive("studio-m") ? "text-primary" : "hover:text-primary"}`,
+124	            children: "studio M"
+125	          },
+126	          void 0,
+127	          false,
+128	          {
+129	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+130	            lineNumber: 62,
+131	            columnNumber: 13
+132	          },
+133	          this
+134	        ),
+135	        /* @__PURE__ */ jsxDEV(
+136	          Link,
+137	          {
+138	            "data-loc": "client/src/components/Header.tsx:70",
+139	            href: "/recruit",
+140	            className: `text-sm font-medium transition-colors ${isActive("recruit") ? "text-primary" : "hover:text-primary"}`,
+141	            children: "求人・採用"
+142	          },
+143	          void 0,
+144	          false,
+145	          {
+146	            fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+147	            lineNumber: 70,
+148	            columnNumber: 13
+149	          },
+150	          this
+151	        )
+152	      ] }, void 0, true, {
+153	        fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+154	        lineNumber: 29,
+155	        columnNumber: 13
+156	      }, this)
+157	    ] }, void 0, true, {
+158	      fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+159	      lineNumber: 27,
+160	      columnNumber: 11
+161	    }, this)
+162	  ] }, void 0, true, {
+163	    fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+164	    lineNumber: 17,
+165	    columnNumber: 9
+166	  }, this) }, void 0, false, {
+167	    fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+168	    lineNumber: 16,
+169	    columnNumber: 7
+170	  }, this) }, void 0, false, {
+171	    fileName: "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx",
+172	    lineNumber: 15,
+173	    columnNumber: 5
+174	  }, this);
+175	}
+176	_s(Header, "Q+JCVIy3JH0MXpFK+vm68eAxsAY=", false, function() {
+177	  return [useUser];
+178	});
+179	_c = Header;
+180	var _c;
+181	$RefreshReg$(_c, "Header");
+182	import * as RefreshRuntime from "/@react-refresh";
+183	const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+184	if (import.meta.hot && !inWebWorker) {
+185	  if (!window.$RefreshReg$) {
+186	    throw new Error(
+187	      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+188	    );
+189	  }
+190	  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+191	    RefreshRuntime.registerExportsForReactRefresh("/home/ubuntu/mirai-network-website/client/src/components/Header.tsx", currentExports);
+192	    import.meta.hot.accept((nextExports) => {
+193	      if (!nextExports) return;
+194	      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("/home/ubuntu/mirai-network-website/client/src/components/Header.tsx", currentExports, nextExports);
+195	      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+196	    });
+197	  });
+198	}
+199	function $RefreshReg$(type, id) {
+200	  return RefreshRuntime.register(type, "/home/ubuntu/mirai-network-website/client/src/components/Header.tsx " + id);
+201	}
+202	function $RefreshSig$() {
+203	  return RefreshRuntime.createSignatureFunctionForTransform();
+204	}
+205	
+206	(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)

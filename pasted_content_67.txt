@@ -1,0 +1,263 @@
+Text file: pasted_content_67.txt
+Latest content with line numbers:
+1	import { useAuth } from "@/_core/hooks/useAuth";
+2	import { Button } from "@/components/ui/button";
+3	import Header from "@/components/Header";
+4	import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+5	import { APP_TITLE } from "@/const";
+6	import { Building2, Heart, Users, Mail, Phone, MapPin, ChevronRight, Calendar, Clock, Megaphone } from "lucide-react";
+7	import { Link } from "wouter";
+8	import InstagramFeed from "@/components/InstagramFeed";
+9	import AnnouncementsList from "@/components/AnnouncementsList";
+10	
+11	export default function Home() {
+12	  // The userAuth hooks provides authentication state
+13	  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+14	  let { user, loading, error, isAuthenticated, logout } = useAuth();
+15	
+16	  const facilities = [
+17	    {
+18	      name: "MIRAI",
+19	      type: "就労継続支援B型事業所",
+20	      description: "一人ひとりの個性と能力を大切にし、自立した生活を目指すための就労支援を行っています。",
+21	      address: "東京都昭島市朝日町1-9-7 KKビル101",
+22	      tel: "042-519-2942",
+23	      fax: "042-519-4290",
+24	      email: "info@mirainetwork2017.com",
+25	      color: "bg-blue-50 border-blue-200",
+26	      hoverColor: "hover:border-blue-300",
+27	      icon: Building2,
+28	      image: "/mirai-products.webp",
+29	      link: "/mirai",
+30	    },
+31	    {
+32	      name: "HIKARI",
+33	      type: "生活介護事業所",
+34	      description: "日常生活の支援を通じて、利用者様が安心して充実した毎日を過ごせるようサポートいたします。",
+35	      address: "東京都昭島市緑町5-1-6",
+36	      tel: "042-519-1905",
+37	      fax: "042-519-1906",
+38	      email: "hikarinet2019@gmail.com",
+39	      color: "bg-cyan-50 border-cyan-200",
+40	      hoverColor: "hover:border-cyan-300",
+41	      icon: Heart,
+42	      image: "/hikari-main-room.webp",
+43	      link: "/hikari",
+44	    },
+45	    {
+46	      name: "studio M",
+47	      type: "就労継続支援B型事業所",
+48	      description: "創造的な活動を通じて、利用者様の可能性を広げ、社会参加を支援します。",
+49	      address: "東京都昭島市朝日町1-6-2 haramo cuprum 302号室",
+50	      tel: "042-519-7916",
+51	      fax: "042-519-7917",
+52	      email: "info@studiom.jp",
+53	      color: "bg-teal-50 border-teal-200",
+54	      hoverColor: "hover:border-teal-300",
+55	      icon: Users,
+56	      image: "/studio-m-main.webp",
+57	      link: "/studio-m",
+58	    },
+59	  ];
+60	
+61	  return (
+62	    <div className="min-h-screen flex flex-col">
+63	      <Header currentPage="home" />
+64	
+65	      {/* Hero Section with Background Image */}
+66	      <section className="relative bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 py-24 md:py-32 overflow-hidden">
+67	        <div className="absolute inset-0 opacity-5">
+68	          <div className="grid grid-cols-3 h-full">
+69	            <div className="relative h-full">
+70	              <img src="/mirai-green-logo.webp" alt="" className="w-full h-full object-cover" />
+71	            </div>
+72	            <div className="relative h-full">
+73	              <img src="/hikari-interior.webp" alt="" className="w-full h-full object-cover" />
+74	            </div>
+75	            <div className="relative h-full">
+76	              <img src="/studio-m-reception.webp" alt="" className="w-full h-full object-cover" />
+77	            </div>
+78	          </div>
+79	        </div>
+80	        <div className="container relative z-10">
+81	          <div className="max-w-3xl mx-auto text-center space-y-6">
+82	            <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white shadow-xl mb-4 p-3">
+83	              <img src="/mirai-logo.webp" alt="未来ネットワーク" className="w-full h-full object-contain" />
+84	            </div>
+85	            <h2 className="text-4xl md:text-5xl font-bold text-foreground leading-tight">
+86	              一人ひとりの未来を
+87	              <br />
+88	              共に創る
+89	            </h2>
+90	            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+91	              一般社団法人未来ネットワークは、障害福祉サービスを通じて、
+92	              <br className="hidden md:block" />
+93	              利用者様の自立と社会参加を支援しています。
+94	            </p>
+95	            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+96	              <Button size="lg" asChild>
+97	                <a href="#facilities">事業所を見る</a>
+98	              </Button>
+99	              <Button size="lg" variant="outline" asChild>
+100	                <a href="#contact">お問い合わせ</a>
+101	              </Button>
+102	            </div>
+103	          </div>
+104	        </div>
+105	      </section>
+106	
+107	      {/* About Section */}
+108	      <section id="about" className="py-16 md:py-24 bg-white">
+109	        <div className="container">
+110	          <div className="max-w-4xl mx-auto text-center">
+111	            <div className="mb-8">
+112	              <h3 className="text-3xl md:text-4xl font-bold mb-4">法人概要</h3>
+113	              <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+114	              <p className="text-lg text-muted-foreground leading-relaxed">
+115	                一般社団法人未来ネットワークは、2016年7月に設立され、障害福祉サービス事業を通じて、<br />
+116	                利用者様一人ひとりの個性を大切にし、自立した生活と社会参加を支援しています。<br />
+117	                東京都昭島市を中心に、3つの事業所（MIRAI、HIKARI、studio M）を運営しております。
+118	              </p>
+119	            </div>
+120	            <Button size="lg" asChild>
+121	              <Link href="/about">
+122	                <a className="flex items-center gap-2">
+123	                  詳しい法人情報を見る
+124	                  <ChevronRight className="w-4 h-4" />
+125	                </a>
+126	              </Link>
+127	            </Button>
+128	          </div>
+129	        </div>
+130	      </section>
+131	
+132	      {/* Facilities Section with Images */}
+133	      <section id="facilities" className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-blue-50/30">
+134	        <div className="container">
+135	          <div className="max-w-6xl mx-auto">
+136	            <div className="text-center mb-12">
+137	              <h3 className="text-3xl md:text-4xl font-bold mb-4">運営事業所</h3>
+138	              <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+139	              <p className="text-lg text-muted-foreground">
+140	                3つの事業所で、それぞれの特色を活かした支援を提供しています
+141	              </p>
+142	            </div>
+143	            <div className="grid gap-8">
+144	              {facilities.map((facility, index) => {
+145	                const Icon = facility.icon;
+146	                return (
+147	                  <Card
+148	                    key={index}
+149	                    className={`border-2 ${facility.color} ${facility.hoverColor} hover:shadow-xl transition-all duration-300 overflow-hidden group`}
+150	                  >
+151	                    <div className="grid md:grid-cols-5 gap-0">
+152	                      {/* Image Section */}
+153	                      <div className="md:col-span-2 relative h-64 md:h-auto overflow-hidden">
+154	                        <img
+155	                          src={facility.image}
+156	                          alt={facility.name}
+157	                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+158	                        />
+159	                        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10"></div>
+160	                      </div>
+161	                      
+162	                      {/* Content Section */}
+163	                      <div className="md:col-span-3">
+164	                        <CardHeader className="pb-4">
+165	                          <div className="flex items-start justify-between gap-4">
+166	                            <div className="flex-1">
+167	                              <div className="flex items-center gap-3 mb-2">
+168	                                <div className="w-12 h-12 rounded-full bg-white shadow-sm flex items-center justify-center">
+169	                                  <Icon className="w-6 h-6 text-primary" />
+170	                                </div>
+171	                                <div>
+172	                                  <CardTitle className="text-2xl">{facility.name}</CardTitle>
+173	                                  <CardDescription className="text-sm font-medium mt-1">
+174	                                    {facility.type}
+175	                                  </CardDescription>
+176	                                </div>
+177	                              </div>
+178	                            </div>
+179	                          </div>
+180	                        </CardHeader>
+181	                        <CardContent className="space-y-4">
+182	                          <p className="text-muted-foreground leading-relaxed">{facility.description}</p>
+183	                          
+184	                          <div className="space-y-2 text-sm">
+185	                            <div className="flex items-start gap-2">
+186	                              <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+187	                              <span className="text-muted-foreground">{facility.address}</span>
+188	                            </div>
+189	                            <div className="flex items-center gap-2">
+190	                              <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+191	                              <span className="text-muted-foreground">
+192	                                Tel: {facility.tel} / Fax: {facility.fax}
+193	                              </span>
+194	                            </div>
+195	                            <div className="flex items-center gap-2">
+196	                              <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+197	                              <a
+198	                                href={`mailto:${facility.email}`}
+199	                                className="text-primary hover:underline"
+200	                              >
+201	                                {facility.email}
+202	                              </a>
+203	                            </div>
+204	                          </div>
+205	
+206	                          <div className="pt-4">
+207	                            <Button variant="default" className="group/btn" asChild>
+208	                              <Link href={facility.link}>
+209	                                <a className="flex items-center gap-2">
+210	                                  詳しく見る
+211	                                  <ChevronRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+212	                                </a>
+213	                              </Link>
+214	                            </Button>
+215	                          </div>
+216	                        </CardContent>
+217	                      </div>
+218	                    </div>
+219	                  </Card>
+220	                );
+221	              })}
+222	            </div>
+223	          </div>
+224	        </div>
+225	      </section>
+226	
+227	      {/* Announcements Section */}
+228	      <section className="py-16 md:py-24 bg-white">
+229	        <div className="container">
+230	          <div className="max-w-4xl mx-auto">
+231	            <div className="text-center mb-12">
+232	              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-4">
+233	                <Megaphone className="w-8 h-8 text-blue-600" />
+234	              </div>
+235	              <h3 className="text-3xl md:text-4xl font-bold mb-4">お知らせ・ニュース</h3>
+236	              <div className="w-20 h-1 bg-primary mx-auto rounded-full mb-6"></div>
+237	              <p className="text-lg text-muted-foreground">
+238	                最新のお知らせやイベント情報をご確認いただけます
+239	              </p>
+240	            </div>
+241	            <AnnouncementsList />
+242	          </div>
+243	        </div>
+244	      </section>
+245	
+246	      {/* Instagram Section */}
+247	      <section className="py-16 md:py-24 bg-gradient-to-br from-purple-50 via-pink-50 to-orange-50">
+248	        <div className="container">
+249	          <div className="max-w-4xl mx-auto">
+250	            <InstagramFeed 
+251	              username="studio.m2022" 
+252	              title="Instagram - studio M"
+253	            />
+254	          </div>
+255	        </div>
+256	      </section>
+257	
+258	      {/* Contact Section */}
+259	      <section id="contact" className="py-16 md:py-24 bg-white">
+260	        <div className="container">
+261	(Content truncated due to size limit. Use page ranges or line ranges to read remaining content)
