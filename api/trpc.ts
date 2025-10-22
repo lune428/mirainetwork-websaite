@@ -21,7 +21,7 @@ const createContext = async ({
   req: express.Request;
   res: express.Response;
 }): Promise<Context> => {
-  const cookies = cookie.parse((req.headers as any).cookie || "");
+  const cookies = cookie.parse(req.get('cookie') || "");
   const sessionId = cookies[COOKIE_NAME];
   
   let user = undefined;
