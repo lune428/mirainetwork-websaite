@@ -127,12 +127,10 @@ export default function Home() {
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
                 <div className="absolute inset-0 pointer-events-none">
-                  {/* 左側の装飾 */}
-                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-sky-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-500/80"></div>
-                  {/* 右側の装飾 */}
-                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-sky-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-500/80"></div>
-                  {/* 下側の装飾 */}
-                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-sky-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-sky-400/70"></div>
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-12 -left-12 w-40 h-40 bg-sky-300/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-sky-400/60"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-sky-400/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-sky-500/60"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -166,12 +164,10 @@ export default function Home() {
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
                 <div className="absolute inset-0 pointer-events-none">
-                  {/* 左側の装飾 */}
-                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-emerald-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-500/80"></div>
-                  {/* 右側の装飾 */}
-                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-emerald-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-500/80"></div>
-                  {/* 下側の装飾 */}
-                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-emerald-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-emerald-400/70"></div>
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-12 -left-12 w-40 h-40 bg-emerald-300/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-400/60"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-emerald-400/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-emerald-500/60"></div>
                 </div>
                 
                 {/* メインボタン */}
@@ -205,12 +201,10 @@ export default function Home() {
               <div className="group cursor-pointer relative">
                 {/* 装飾的な外枝 */}
                 <div className="absolute inset-0 pointer-events-none">
-                  {/* 左側の装飾 */}
-                  <div className="absolute top-1/4 -left-16 w-32 h-32 bg-gradient-to-r from-yellow-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-500/80"></div>
-                  {/* 右側の装飾 */}
-                  <div className="absolute top-1/4 -right-16 w-32 h-32 bg-gradient-to-l from-yellow-400/60 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-500/80"></div>
-                  {/* 下側の装飾 */}
-                  <div className="absolute -bottom-16 left-1/4 w-32 h-32 bg-gradient-to-t from-yellow-300/50 to-transparent rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-125 group-hover:from-yellow-400/70"></div>
+                  {/* 左上の装飾 */}
+                  <div className="absolute -top-12 -left-12 w-40 h-40 bg-yellow-300/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-yellow-400/60"></div>
+                  {/* 右下の装飾 */}
+                  <div className="absolute -bottom-12 -right-12 w-48 h-48 bg-yellow-400/40 rounded-full filter blur-3xl transition-all duration-300 group-hover:scale-110 group-hover:bg-yellow-500/60"></div>
                 </div>
                 
                 {/* メインボタン */}
