@@ -1,25 +1,32 @@
 # デプロイ手順
 
-## Railway へのデプロイ
+## Vercel へのデプロイ（推奨）
 
 ### クイックスタート
 
-1. **Railwayにログイン**: https://railway.app/
-2. **新しいプロジェクトを作成**: 「Deploy from GitHub repo」を選択
+1. **Vercelにログイン**: https://vercel.com/
+2. **新しいプロジェクトをインポート**: 「Add New...」→「Project」を選択
 3. **リポジトリを選択**: `lune428/mirainetwork-websaite`
-4. **環境変数を設定**:
+4. **ビルド設定を確認**:
+   - Build Command: `pnpm build`
+   - Output Directory: `dist/public`
+   - Install Command: `pnpm install`
+5. **環境変数を設定**:
    ```
    DATABASE_URL=mysql://[your-database-url]
    NODE_ENV=production
-   PORT=3001
    JWT_SECRET=[your-secret-key]
    ```
-5. **デプロイを待つ**: 自動的にビルドとデプロイが開始されます
-6. **ドメインを設定**: 「Generate Domain」をクリック
+6. **デプロイをクリック**: 自動的にビルドとデプロイが開始されます
+7. **URLにアクセス**: デプロイ完了後、自動生成されたURLにアクセス
 
 ### 詳細な手順
 
-詳細なデプロイ手順については、プロジェクトルートの `railway-deployment-guide.md` を参照してください。
+詳細なデプロイ手順については、プロジェクトルートの `vercel-deployment-guide.md` を参照してください。
+
+## Railway へのデプロイ（代替）
+
+Railwayでもデプロイ可能です。詳細は `railway-deployment-guide.md` を参照してください。
 
 ## 環境変数
 
