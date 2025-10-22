@@ -1,18 +1,15 @@
-import { mysqlEnum, mysqlTable, text, timestamp, varchar, mediumtext } from "drizzle-orm/mysql-core";
+import { mysqlEnum, mysqlTable, text, timestamp, varchar, int, boolean } from "drizzle-orm/mysql-core";
 
 /**
  * Core user table backing auth flow.
- * Extend this file with additional tables as your product grows.
- * Columns use camelCase to match both database fields and generated types.
  */
 export const users = mysqlTable("users", {
   id: varchar("id", { length: 64 }).primaryKey(),
   name: text("name"),
   email: varchar("email", { length: 320 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
-  password: varchar("password", { length: 255 }), // Hashed password for email/password login
   role: mysqlEnum("role", ["user", "admin", "mirai_admin", "hikari_admin", "studio_m_admin"]).default("user").notNull(),
-  facility: mysqlEnum("facility", ["organization", "mirai", "hikari", "studio_m"]),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]),
   createdAt: timestamp("createdAt").defaultNow(),
   lastSignedIn: timestamp("lastSignedIn").defaultNow(),
 });
@@ -22,94 +19,109 @@ export type InsertUser = typeof users.$inferInsert;
 
 /**
  * Announcements table for news and updates
- * Each announcement can be associated with a specific facility or be organization-wide
  */
 export const announcements = mysqlTable("announcements", {
-  id: varchar("id", { length: 64 }).primaryKey(),
+  id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
   content: text("content").notNull(),
-  facility: mysqlEnum("facility", ["organization", "mirai", "hikari", "studio_m"]).notNull(),
-  authorId: varchar("authorId", { length: 64 }).notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
-  publishedAt: timestamp("publishedAt"),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
   isPublished: mysqlEnum("isPublished", ["draft", "pending", "published", "rejected"]).default("draft").notNull(),
-  imageUrls: mediumtext("imageUrls"), // JSON array of image URLs (base64 or URLs)
+  images: text("images"), // JSON array of image URLs
+  authorId: varchar("authorId", { length: 64 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
+  publishedAt: timestamp("publishedAt"),
+  updatedAt: timestamp("updatedAt").defaultNow(),
 });
 
 export type Announcement = typeof announcements.$inferSelect;
 export type InsertAnnouncement = typeof announcements.$inferInsert;
 
 /**
- * Gallery table for work and activity photos
- * Each facility can upload photos of their daily work and activities
+ * Gallery images for each facility
  */
-export const gallery = mysqlTable("gallery", {
-  id: varchar("id", { length: 64 }).primaryKey(),
+export const galleryImages = mysqlTable("galleryImages", {
+  id: int("id").primaryKey().autoincrement(),
   facility: mysqlEnum("facility", ["mirai", "hikari", "studio_m"]).notNull(),
+  category: mysqlEnum("category", ["work", "activity", "program", "event"]).notNull(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description"),
-  imageUrl: varchar("imageUrl", { length: 512 }).notNull(),
-  category: mysqlEnum("category", ["work", "activity", "program", "event"]).notNull(),
+  imageUrl: text("imageUrl").notNull(),
   uploadedBy: varchar("uploadedBy", { length: 64 }).notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
 });
 
-export type Gallery = typeof gallery.$inferSelect;
-export type InsertGallery = typeof gallery.$inferInsert;
+export type GalleryImage = typeof galleryImages.$inferSelect;
+export type InsertGalleryImage = typeof galleryImages.$inferInsert;
 
 /**
- * Page content table for editable facility page content
- * Allows managers to edit their facility page descriptions and programs
+ * Page content for each facility
  */
-export const pageContent = mysqlTable("pageContent", {
-  id: varchar("id", { length: 64 }).primaryKey(),
-  facility: mysqlEnum("facility", ["mirai", "hikari", "studio_m"]).notNull(),
-  section: varchar("section", { length: 100 }).notNull(), // e.g., "description", "program", "work_content"
+export const pageContents = mysqlTable("pageContents", {
+  id: int("id").primaryKey().autoincrement(),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
+  section: varchar("section", { length: 100 }).notNull(), // e.g., "about", "programs", "activities"
   content: text("content").notNull(),
   updatedBy: varchar("updatedBy", { length: 64 }).notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
-  updatedAt: timestamp("updatedAt").defaultNow().notNull(),
+  updatedAt: timestamp("updatedAt").defaultNow(),
 });
 
-export type PageContent = typeof pageContent.$inferSelect;
-export type InsertPageContent = typeof pageContent.$inferInsert;
-
+export type PageContent = typeof pageContents.$inferSelect;
+export type InsertPageContent = typeof pageContents.$inferInsert;
 
 /**
- * Audit log table for tracking all content changes
- * Records who made what changes and when
+ * Audit log for tracking all changes
  */
 export const auditLog = mysqlTable("auditLog", {
-  id: varchar("id", { length: 64 }).primaryKey(),
-  action: varchar("action", { length: 50 }).notNull(), // e.g., "create", "update", "delete", "approve", "reject"
-  entityType: varchar("entityType", { length: 50 }).notNull(), // e.g., "announcement", "gallery", "pageContent", "user"
-  entityId: varchar("entityId", { length: 64 }).notNull(),
+  id: int("id").primaryKey().autoincrement(),
   userId: varchar("userId", { length: 64 }).notNull(),
   userName: varchar("userName", { length: 255 }),
-  details: text("details"), // JSON string with additional details
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  action: varchar("action", { length: 100 }).notNull(), // e.g., "create", "update", "delete", "approve", "reject"
+  entityType: varchar("entityType", { length: 100 }).notNull(), // e.g., "announcement", "gallery", "page"
+  entityId: varchar("entityId", { length: 100 }),
+  details: text("details"), // JSON with change details
+  createdAt: timestamp("createdAt").defaultNow(),
 });
 
 export type AuditLog = typeof auditLog.$inferSelect;
 export type InsertAuditLog = typeof auditLog.$inferInsert;
 
 /**
- * Notifications table for user notifications
- * Used for approval requests, status updates, etc.
+ * Notifications for users
  */
 export const notifications = mysqlTable("notifications", {
-  id: varchar("id", { length: 64 }).primaryKey(),
+  id: int("id").primaryKey().autoincrement(),
   userId: varchar("userId", { length: 64 }).notNull(),
-  type: varchar("type", { length: 50 }).notNull(), // e.g., "approval_request", "approved", "rejected"
   title: varchar("title", { length: 255 }).notNull(),
   message: text("message").notNull(),
-  relatedId: varchar("relatedId", { length: 64 }), // ID of related entity (e.g., announcement ID)
-  read: mysqlEnum("read", ["true", "false"]).default("false").notNull(),
-  createdAt: timestamp("createdAt").defaultNow().notNull(),
+  type: mysqlEnum("type", ["info", "success", "warning", "error"]).default("info").notNull(),
+  isRead: boolean("isRead").default(false).notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
 });
 
 export type Notification = typeof notifications.$inferSelect;
 export type InsertNotification = typeof notifications.$inferInsert;
+
+
+/**
+ * Job postings table for recruitment information
+ */
+export const jobPostings = mysqlTable("jobPostings", {
+  id: int("id").primaryKey().autoincrement(),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
+  title: varchar("title", { length: 255 }).notNull(),
+  employmentType: varchar("employmentType", { length: 100 }).notNull(), // 正社員・パート等
+  jobDescription: text("jobDescription").notNull(), // 仕事の内容
+  baseSalary: text("baseSalary").notNull(), // 基本給
+  workSchedule: text("workSchedule").notNull(), // 勤務形態
+  holidays: text("holidays").notNull(), // 休日・休暇
+  socialInsurance: text("socialInsurance").notNull(), // 社会保険
+  contractPeriod: text("contractPeriod").notNull(), // 契約期間
+  isPublished: boolean("isPublished").default(false).notNull(),
+  createdBy: varchar("createdBy", { length: 64 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
+  updatedAt: timestamp("updatedAt").defaultNow(),
+});
+
+export type JobPosting = typeof jobPostings.$inferSelect;
+export type InsertJobPosting = typeof jobPostings.$inferInsert;
 

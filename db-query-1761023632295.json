@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO jobPostings (\n  facility,\n  title,\n  employmentType,\n  jobDescription,\n  baseSalary,\n  workSchedule,\n  holidays,\n  socialInsurance,\n  contractPeriod,\n  isPublished,\n  createdBy\n) VALUES (\n  'studio_m',\n  'studio M 非常勤職員・パート募集',\n  '非常勤職員・パート',\n  '創造的な活動を通じて、利用者様の可能性を広げ、社会参加を支援します。\n\n【主な業務内容】\n・利用者様の作業支援（革製品制作、PC作業など）\n・日常生活動作の支援\n・活動プログラムの企画・実施\n・記録作成、報告書作成\n・送迎業務（運転免許必須）',\n  '時給 1,200円〜1,500円\n※経験・資格により優遇\n※交通費支給（上限3万円/月）',\n  '週2日〜5日勤務\n9:00〜18:00の間で4時間〜8時間\n※シフト制、パートは応相談\n※土日祝は休み',\n  '週休2日制（土日祝）\n年次有給休暇（法定通り付与）\n年末年始休暇\n夏季休暇',\n  '雇用保険、労災保険\n※週20時間以上勤務の場合：健康保険、厚生年金加入',\n  '期間の定めなし\n※試用期間3ヶ月（条件変更なし）',\n  1,\n  'admin'\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2ipNL7siLRixuQ5.2cb5763fa8de --database ji5exBiwxg8gdwBg4tmzdw --execute INSERT INTO jobPostings (\n  facility,\n  title,\n  employmentType,\n  jobDescription,\n  baseSalary,\n  workSchedule,\n  holidays,\n  socialInsurance,\n  contractPeriod,\n  isPublished,\n  createdBy\n) VALUES (\n  'studio_m',\n  'studio M 非常勤職員・パート募集',\n  '非常勤職員・パート',\n  '創造的な活動を通じて、利用者様の可能性を広げ、社会参加を支援します。\n\n【主な業務内容】\n・利用者様の作業支援（革製品制作、PC作業など）\n・日常生活動作の支援\n・活動プログラムの企画・実施\n・記録作成、報告書作成\n・送迎業務（運転免許必須）',\n  '時給 1,200円〜1,500円\n※経験・資格により優遇\n※交通費支給（上限3万円/月）',\n  '週2日〜5日勤務\n9:00〜18:00の間で4時間〜8時間\n※シフト制、パートは応相談\n※土日祝は休み',\n  '週休2日制（土日祝）\n年次有給休暇（法定通り付与）\n年末年始休暇\n夏季休暇',\n  '雇用保険、労災保険\n※週20時間以上勤務の場合：健康保険、厚生年金加入',\n  '期間の定めなし\n※試用期間3ヶ月（条件変更なし）',\n  1,\n  'admin'\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1717
+}

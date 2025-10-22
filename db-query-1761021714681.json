@@ -1,0 +1,9 @@
+{
+  "query": "INSERT INTO announcements (title, content, facility, isPublished, authorId, publishedAt, createdAt) VALUES\n('ホームページをリニューアルしました', 'より使いやすく、わかりやすいホームページにリニューアルいたしました。各事業所の情報や活動内容をご覧いただけます。', 'corporate', 'published', 'system', NOW(), NOW()),\n('見学・体験随時受付中', '各事業所では随時見学・体験を受け付けております。お気軽にお問い合わせください。施設の雰囲気や活動内容を実際にご覧いただけます。', 'corporate', 'published', 'system', NOW() - INTERVAL 5 DAY, NOW() - INTERVAL 5 DAY),\n('MIRAI 新しいプログラムを開始しました', 'MIRAIでは、利用者様のスキルアップを目指した新しいプログラムを開始しました。詳しくはMIRAIのページをご覧ください。', 'mirai', 'published', 'system', NOW() - INTERVAL 10 DAY, NOW() - INTERVAL 10 DAY)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway02.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 2ipNL7siLRixuQ5.2cb5763fa8de --database ji5exBiwxg8gdwBg4tmzdw --execute INSERT INTO announcements (title, content, facility, isPublished, authorId, publishedAt, createdAt) VALUES\n('ホームページをリニューアルしました', 'より使いやすく、わかりやすいホームページにリニューアルいたしました。各事業所の情報や活動内容をご覧いただけます。', 'corporate', 'published', 'system', NOW(), NOW()),\n('見学・体験随時受付中', '各事業所では随時見学・体験を受け付けております。お気軽にお問い合わせください。施設の雰囲気や活動内容を実際にご覧いただけます。', 'corporate', 'published', 'system', NOW() - INTERVAL 5 DAY, NOW() - INTERVAL 5 DAY),\n('MIRAI 新しいプログラムを開始しました', 'MIRAIでは、利用者様のスキルアップを目指した新しいプログラムを開始しました。詳しくはMIRAIのページをご覧ください。', 'mirai', 'published', 'system', NOW() - INTERVAL 10 DAY, NOW() - INTERVAL 10 DAY)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1687
+}

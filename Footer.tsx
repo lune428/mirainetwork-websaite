@@ -1,6 +1,5 @@
 import { Link } from "wouter";
 import { Building2, Heart, Users, Mail, Phone, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 export default function Footer() {
   return (
@@ -93,14 +92,6 @@ export default function Footer() {
                   info@mirainetwork2017.com
                 </a>
               </div>
-              <Link href="/contact">
-                <a>
-                  <Button className="w-full mt-4" variant="outline">
-                    <Mail className="w-4 h-4 mr-2" />
-                    お問い合わせフォーム
-                  </Button>
-                </a>
-              </Link>
             </div>
           </div>
         </div>

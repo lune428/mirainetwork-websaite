@@ -1,38 +1,67 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { trpc } from "@/lib/trpc";
-import { Calendar } from "lucide-react";
-import { Link } from "wouter";
+import { useQuery } from "@tanstack/react-query";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, Building2, Heart, Users } from "lucide-react";
+import { format } from "date-fns";
+import { ja } from "date-fns/locale";
+
+interface Announcement {
+  id: number;
+  title: string;
+  content: string;
+  facility: "corporate" | "mirai" | "hikari" | "studio_m";
+  isPublished: string;
+  createdAt: string;
+  publishedAt: string | null;
+}
+
+const facilityConfig = {
+  corporate: {
+    label: "法人全体",
+    color: "bg-gray-100 text-gray-800 border-gray-300",
+    icon: Building2,
+  },
+  mirai: {
+    label: "MIRAI",
+    color: "bg-sky-100 text-sky-800 border-sky-300",
+    icon: Building2,
+  },
+  hikari: {
+    label: "HIKARI",
+    color: "bg-emerald-100 text-emerald-800 border-emerald-300",
+    icon: Heart,
+  },
+  studio_m: {
+    label: "studio M",
+    color: "bg-yellow-100 text-yellow-800 border-yellow-300",
+    icon: Users,
+  },
+};
 
 export default function AnnouncementsList() {
-  const { data: announcements, isLoading } = trpc.announcements.list.useQuery({ publishedOnly: true });
-
-  const facilityNames: Record<string, string> = {
-    organization: "法人",
-    mirai: "MIRAI",
-    hikari: "HIKARI",
-    studio_m: "studio M",
-  };
-
-  const getFacilityColor = (facility: string) => {
-    const colors: Record<string, string> = {
-      organization: "bg-yellow-100 text-yellow-700",
-      mirai: "bg-blue-100 text-blue-700",
-      hikari: "bg-lime-100 text-lime-700",
-      studio_m: "bg-orange-100 text-orange-700",
-    };
-    return colors[facility] || "bg-gray-100 text-gray-700";
-  };
+  const { data: announcements, isLoading } = useQuery<Announcement[]>({
+    queryKey: ["/api/announcements"],
+    queryFn: async () => {
+      const response = await fetch("/api/announcements");
+      if (!response.ok) {
+        throw new Error("お知らせの取得に失敗しました");
+      }
+      return response.json();
+    },
+  });
 
   if (isLoading) {
     return (
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="space-y-4">
         {[1, 2, 3].map((i) => (
           <Card key={i} className="animate-pulse">
-            <div className="h-48 bg-slate-200"></div>
-            <CardContent className="p-6">
-              <div className="h-6 bg-slate-200 rounded w-3/4 mb-2"></div>
-              <div className="h-4 bg-slate-200 rounded w-full mb-2"></div>
-              <div className="h-4 bg-slate-200 rounded w-5/6"></div>
+            <CardHeader>
+              <div className="h-6 bg-gray-200 rounded w-3/4"></div>
+              <div className="h-4 bg-gray-200 rounded w-1/2 mt-2"></div>
+            </CardHeader>
+            <CardContent>
+              <div className="h-4 bg-gray-200 rounded w-full"></div>
+              <div className="h-4 bg-gray-200 rounded w-5/6 mt-2"></div>
             </CardContent>
           </Card>
         ))}
@@ -43,46 +72,48 @@ export default function AnnouncementsList() {
   if (!announcements || announcements.length === 0) {
     return (
       <Card>
-        <CardContent className="py-12 text-center text-muted-foreground">
-          現在、お知らせはありません
+        <CardContent className="py-12 text-center">
+          <p className="text-muted-foreground">現在、お知らせはありません。</p>
         </CardContent>
       </Card>
     );
   }
 
   return (
-    <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-      {announcements.slice(0, 6).map((announcement) => {
-        const images = announcement.imageUrls ? JSON.parse(announcement.imageUrls) : [];
-        const thumbnailImage = images.length > 0 ? images[0] : null;
+    <div className="space-y-6">
+      {announcements.map((announcement) => {
+        const config = facilityConfig[announcement.facility];
+        const Icon = config.icon;
+        const date = announcement.publishedAt || announcement.createdAt;
 
         return (
-          <Link key={announcement.id} href={`/announcements/${announcement.id}`}>
-            <Card className="cursor-pointer hover:shadow-lg transition-shadow h-full overflow-hidden">
-              {thumbnailImage && (
-                <div className="w-full h-48 overflow-hidden">
-                  <img
-                    src={thumbnailImage}
-                    alt={announcement.title}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-              )}
-              <CardContent className="p-6">
-                <div className="flex items-center gap-2 mb-3 flex-wrap">
-                  <span className={`text-xs px-3 py-1 rounded-full font-medium ${getFacilityColor(announcement.facility)}`}>
-                    {facilityNames[announcement.facility] || announcement.facility}
-                  </span>
-                  <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                    <Calendar className="w-3 h-3" />
-                    {new Date(announcement.publishedAt || announcement.createdAt).toLocaleDateString("ja-JP")}
+          <Card
+            key={announcement.id}
+            className="hover:shadow-lg transition-shadow duration-300 border-2"
+          >
+            <CardHeader>
+              <div className="flex items-start justify-between gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Badge variant="outline" className={`${config.color} border`}>
+                      <Icon className="w-3 h-3 mr-1" />
+                      {config.label}
+                    </Badge>
+                    <div className="flex items-center text-sm text-muted-foreground">
+                      <Calendar className="w-4 h-4 mr-1" />
+                      {format(new Date(date), "yyyy年MM月dd日", { locale: ja })}
+                    </div>
                   </div>
+                  <CardTitle className="text-xl">{announcement.title}</CardTitle>
                 </div>
-                <h3 className="text-lg font-semibold mb-2 line-clamp-2">{announcement.title}</h3>
-                <p className="text-gray-600 text-sm line-clamp-3">{announcement.content}</p>
-              </CardContent>
-            </Card>
-          </Link>
+              </div>
+            </CardHeader>
+            <CardContent>
+              <CardDescription className="text-base leading-relaxed whitespace-pre-wrap">
+                {announcement.content}
+              </CardDescription>
+            </CardContent>
+          </Card>
         );
       })}
     </div>
