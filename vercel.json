@@ -27,6 +27,10 @@
       "dest": "/api/job-postings"
     },
     {
+      "src": "/api/upload/(.*)",
+      "dest": "/api/upload/$1"
+    },
+    {
       "handle": "filesystem"
     },
     {
