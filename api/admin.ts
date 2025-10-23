@@ -17,9 +17,20 @@ async function verifyToken(token: string): Promise<{ userId: string } | null> {
   }
 }
 
+function parseCookies(cookieHeader: string | undefined): Record<string, string> {
+  if (!cookieHeader) return {};
+  return cookieHeader.split(';').reduce((cookies, cookie) => {
+    const [name, value] = cookie.trim().split('=');
+    cookies[name] = decodeURIComponent(value);
+    return cookies;
+  }, {} as Record<string, string>);
+}
+
 async function getUserFromRequest(req: VercelRequest) {
-  const token = req.cookies?.auth_token;
+  const cookies = parseCookies(req.headers.cookie);
+  const token = cookies.auth_token;
   if (!token) {
+    console.error("No auth_token cookie found");
     return null;
   }
 
@@ -65,8 +76,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // Check authentication
     const user = await getUserFromRequest(req);
     if (!user) {
+      console.error("Authentication failed: No user found");
+      console.error("Cookies:", req.cookies);
       return res.status(401).json({ error: "認証が必要です" });
     }
+    console.log("User authenticated:", user.id, user.role);
 
     // Check if user is admin or facility admin
     const role = user.role;
