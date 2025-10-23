@@ -146,6 +146,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       let connection;
       try {
+        console.log("[Login] Starting login process for email:", email);
         connection = await getDbConnection();
 
         const [rows] = await connection.execute(
@@ -183,6 +184,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         // Set cookie
         setCookie(res, 'auth_token', token);
 
+        console.log("[Login] Login successful for user:", user.id);
+        
         return res.status(200).json({
           success: true,
           user: {
@@ -192,6 +195,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
             role: user.role,
             facility: user.facility,
           },
+        });
+      } catch (error: any) {
+        console.error("[Login] Error during login:", error);
+        return res.status(500).json({ 
+          error: "ログイン処理中にエラーが発生しました",
+          message: error.message,
+          stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
         });
       } finally {
         if (connection) {
