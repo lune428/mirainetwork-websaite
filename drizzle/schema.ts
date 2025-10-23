@@ -1,16 +1,16 @@
-import { mysqlTable, varchar, text, timestamp, int, mysqlEnum } from "drizzle-orm/mysql-core";
+import { mysqlTable, mysqlEnum, varchar, text, int, timestamp } from "drizzle-orm/mysql-core";
 
 // Users table
 export const users = mysqlTable("users", {
-  id: varchar("id", { length: 255 }).primaryKey(),
-  name: varchar("name", { length: 255 }),
-  email: varchar("email", { length: 255 }),
+  id: varchar("id", { length: 64 }).primaryKey(),
+  name: text("name"),
+  email: varchar("email", { length: 320 }),
   password: varchar("password", { length: 255 }), // Hashed password
-  loginMethod: varchar("login_method", { length: 50 }),
-  role: mysqlEnum("role", ["user", "admin"]).default("user"),
+  loginMethod: varchar("loginMethod", { length: 64 }),
+  role: mysqlEnum("role", ["user", "admin", "mirai_admin", "hikari_admin", "studio_m_admin"]).default("user"),
   facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]),
-  lastSignedIn: timestamp("last_signed_in"),
-  createdAt: timestamp("created_at").defaultNow(),
+  lastSignedIn: timestamp("lastSignedIn"),
+  createdAt: timestamp("createdAt").defaultNow(),
 });
 
 export type User = typeof users.$inferSelect;
@@ -55,7 +55,9 @@ export const benefits = mysqlTable("benefits", {
   id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description").notNull(),
+  category: varchar("category", { length: 100 }),
   icon: varchar("icon", { length: 100 }),
+  isActive: int("is_active").default(1),
   createdAt: timestamp("created_at").defaultNow(),
   updatedAt: timestamp("updated_at").defaultNow(),
 });
@@ -63,18 +65,19 @@ export const benefits = mysqlTable("benefits", {
 export type Benefit = typeof benefits.$inferSelect;
 export type InsertBenefit = typeof benefits.$inferInsert;
 
-// Contact messages table
-export const contactMessages = mysqlTable("contact_messages", {
+// Contact submissions table
+export const contactSubmissions = mysqlTable("contact_submissions", {
   id: int("id").primaryKey().autoincrement(),
   name: varchar("name", { length: 255 }).notNull(),
   email: varchar("email", { length: 255 }).notNull(),
   phone: varchar("phone", { length: 50 }),
-  facility: varchar("facility", { length: 100 }),
-  subject: varchar("subject", { length: 255 }).notNull(),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).default("corporate"),
+  subject: varchar("subject", { length: 255 }),
   message: text("message").notNull(),
+  status: mysqlEnum("status", ["new", "read", "replied"]).default("new"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
-export type ContactMessage = typeof contactMessages.$inferSelect;
-export type InsertContactMessage = typeof contactMessages.$inferInsert;
+export type ContactSubmission = typeof contactSubmissions.$inferSelect;
+export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
 
