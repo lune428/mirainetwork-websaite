@@ -24,7 +24,7 @@ export function useUser() {
       }
 
       const data = await response.json();
-      return data.user;
+      return data;
     },
     retry: false,
     staleTime: 5 * 60 * 1000, // 5 minutes
