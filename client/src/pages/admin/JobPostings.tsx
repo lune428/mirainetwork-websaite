@@ -42,11 +42,7 @@ export default function JobPostingsAdmin() {
       setJobPostings(data);
     } catch (error) {
       console.error("Error fetching job postings:", error);
-      toast({
-        title: "エラー",
-        description: "募集職種の取得に失敗しました",
-        variant: "destructive",
-      });
+      toast.error("募集職種の取得に失敗しました");
     } finally {
       setLoading(false);
     }
@@ -63,18 +59,11 @@ export default function JobPostingsAdmin() {
 
       if (!response.ok) throw new Error("Failed to delete job posting");
 
-      toast({
-        title: "成功",
-        description: "募集職種を削除しました",
-      });
+      toast.success("募集職種を削除しました");
       fetchJobPostings();
     } catch (error) {
       console.error("Error deleting job posting:", error);
-      toast({
-        title: "エラー",
-        description: "募集職種の削除に失敗しました",
-        variant: "destructive",
-      });
+      toast.error("募集職種の削除に失敗しました");
     }
   };
 
@@ -91,18 +80,11 @@ export default function JobPostingsAdmin() {
 
       if (!response.ok) throw new Error("Failed to update job posting");
 
-      toast({
-        title: "成功",
-        description: `募集職種を${!currentStatus ? "公開" : "非公開"}にしました`,
-      });
+      toast.success(`募集職種を${!currentStatus ? "公開" : "非公開"}にしました`);
       fetchJobPostings();
     } catch (error) {
       console.error("Error updating job posting:", error);
-      toast({
-        title: "エラー",
-        description: "募集職種の更新に失敗しました",
-        variant: "destructive",
-      });
+      toast.error("募集職種の更新に失敗しました");
     }
   };
 
