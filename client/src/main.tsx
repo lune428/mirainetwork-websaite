@@ -20,6 +20,10 @@ const queryClient = new QueryClient({
         }
         return response.json();
       },
+      staleTime: 1000 * 60 * 5, // 5分間はキャッシュを使用
+      cacheTime: 1000 * 60 * 10, // 10分間キャッシュを保持
+      refetchOnWindowFocus: false, // ウィンドウフォーカス時の再フェッチを無効化
+      retry: 1, // リトライ回数を1回に制限
     },
   },
 });

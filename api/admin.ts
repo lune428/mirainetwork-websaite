@@ -134,6 +134,25 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.json(posts);
     }
 
+    // GET /api/admin/announcements - Get all announcements
+    if (req.method === "GET" && path.includes("/announcements")) {
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      let announcementsList;
+      
+      if (!isAdmin && userFacility) {
+        // Facility admin can only see their facility's announcements
+        announcementsList = await db.select().from(announcements)
+          .where(eq(announcements.facility, userFacility as any));
+      } else {
+        // Admin can see all announcements
+        announcementsList = await db.select().from(announcements);
+      }
+      
+      return res.json(announcementsList);
+    }
+
     // Method or path not found
     return res.status(404).json({ error: "Not found" });
   } catch (error: any) {
