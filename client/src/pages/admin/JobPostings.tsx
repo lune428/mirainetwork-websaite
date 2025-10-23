@@ -109,7 +109,12 @@ export default function JobPostingsAdmin() {
   return (
     <div className="container mx-auto py-8">
       <div className="flex justify-between items-center mb-6">
-        <h1 className="text-3xl font-bold">募集職種管理</h1>
+        <div className="flex items-center gap-4">
+          <Button variant="outline" onClick={() => setLocation("/admin")}>
+            ← 管理画面に戻る
+          </Button>
+          <h1 className="text-3xl font-bold">募集職種管理</h1>
+        </div>
         <Button onClick={() => setLocation("/admin/job-postings/new")}>
           <Plus className="mr-2 h-4 w-4" />
           新規作成
