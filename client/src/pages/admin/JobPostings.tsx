@@ -16,7 +16,8 @@ interface JobPosting {
   holidays: string;
   socialInsurance: string;
   contractPeriod: string;
-  isPublished: boolean;
+  isPublished: number;
+  createdBy: string;
   createdAt: string;
   updatedAt: string;
 }
