@@ -19,6 +19,14 @@
       "dest": "/api/trpc"
     },
     {
+      "src": "/api/admin/(.*)",
+      "dest": "/api/admin"
+    },
+    {
+      "src": "/api/job-postings",
+      "dest": "/api/job-postings"
+    },
+    {
       "handle": "filesystem"
     },
     {
