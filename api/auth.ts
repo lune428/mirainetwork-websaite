@@ -108,6 +108,34 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const path = req.url?.split('?')[0] || '';
 
   try {
+    // GET /api/auth/test - Database connection test
+    if (req.method === 'GET' && path === '/api/auth/test') {
+      try {
+        const connection = await getDbConnection();
+        
+        // Test query
+        const [rows] = await connection.execute('SELECT 1 as test');
+        
+        await connection.end();
+        
+        return res.status(200).json({ 
+          success: true, 
+          message: "Database connection OK",
+          test: rows,
+          env: {
+            hasDatabaseUrl: !!process.env.DATABASE_URL,
+            hasJwtSecret: !!process.env.JWT_SECRET,
+          }
+        });
+      } catch (error: any) {
+        return res.status(500).json({ 
+          error: "Database connection failed",
+          message: error.message,
+          stack: error.stack
+        });
+      }
+    }
+
     // POST /api/auth/login
     if (req.method === 'POST' && path === '/api/auth/login') {
       const { email, password } = req.body || {};
