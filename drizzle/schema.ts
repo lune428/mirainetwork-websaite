@@ -21,13 +21,13 @@ export const announcements = mysqlTable("announcements", {
   id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
   content: text("content").notNull(),
-  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).default("corporate"),
-  isPublished: mysqlEnum("is_published", ["draft", "pending", "published", "rejected"]).default("draft"),
-  authorId: varchar("author_id", { length: 255 }),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
+  isPublished: mysqlEnum("isPublished", ["draft", "pending", "published", "rejected"]).default("draft"),
+  authorId: varchar("authorId", { length: 64 }).notNull(),
   images: text("images"), // JSON array of image URLs
-  publishedAt: timestamp("published_at"),
-  createdAt: timestamp("created_at").defaultNow(),
-  updatedAt: timestamp("updated_at").defaultNow(),
+  publishedAt: timestamp("publishedAt"),
+  createdAt: timestamp("createdAt").defaultNow(),
+  updatedAt: timestamp("updatedAt").defaultNow(),
 });
 
 export type Announcement = typeof announcements.$inferSelect;
