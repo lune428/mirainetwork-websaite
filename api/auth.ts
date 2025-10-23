@@ -76,7 +76,7 @@ function setCookie(res: VercelResponse, name: string, value: string, options: an
   const {
     httpOnly = true,
     secure = true,
-    sameSite = 'none',
+    sameSite = 'lax',
     maxAge = 1000 * 60 * 60 * 24 * 7, // 7 days
     path = '/',
   } = options;
