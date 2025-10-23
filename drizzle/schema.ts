@@ -34,17 +34,21 @@ export type Announcement = typeof announcements.$inferSelect;
 export type InsertAnnouncement = typeof announcements.$inferInsert;
 
 // Job postings table
-export const jobPostings = mysqlTable("job_postings", {
+export const jobPostings = mysqlTable("jobPostings", {
   id: int("id").primaryKey().autoincrement(),
+  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
   title: varchar("title", { length: 255 }).notNull(),
-  description: text("description").notNull(),
-  requirements: text("requirements"),
-  location: varchar("location", { length: 255 }),
-  employmentType: varchar("employment_type", { length: 100 }),
-  salary: varchar("salary", { length: 255 }),
-  isActive: int("is_active").default(1),
-  createdAt: timestamp("created_at").defaultNow(),
-  updatedAt: timestamp("updated_at").defaultNow(),
+  employmentType: varchar("employmentType", { length: 100 }).notNull(),
+  jobDescription: text("jobDescription").notNull(),
+  baseSalary: text("baseSalary").notNull(),
+  workSchedule: text("workSchedule").notNull(),
+  holidays: text("holidays").notNull(),
+  socialInsurance: text("socialInsurance").notNull(),
+  contractPeriod: text("contractPeriod").notNull(),
+  isPublished: int("isPublished").default(0),
+  createdBy: varchar("createdBy", { length: 64 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
+  updatedAt: timestamp("updatedAt").defaultNow(),
 });
 
 export type JobPosting = typeof jobPostings.$inferSelect;
@@ -54,12 +58,13 @@ export type InsertJobPosting = typeof jobPostings.$inferInsert;
 export const benefits = mysqlTable("benefits", {
   id: int("id").primaryKey().autoincrement(),
   title: varchar("title", { length: 255 }).notNull(),
-  description: text("description").notNull(),
-  category: varchar("category", { length: 100 }),
-  icon: varchar("icon", { length: 100 }),
-  isActive: int("is_active").default(1),
-  createdAt: timestamp("created_at").defaultNow(),
-  updatedAt: timestamp("updated_at").defaultNow(),
+  description: text("description"),
+  category: mysqlEnum("category", ["welfare", "insurance", "allowance", "facility", "other"]).notNull(),
+  displayOrder: int("displayOrder").default(0).notNull(),
+  isPublished: int("isPublished").default(1).notNull(),
+  createdBy: varchar("createdBy", { length: 64 }).notNull(),
+  createdAt: timestamp("createdAt").defaultNow(),
+  updatedAt: timestamp("updatedAt").defaultNow(),
 });
 
 export type Benefit = typeof benefits.$inferSelect;
