@@ -102,16 +102,9 @@ export default function AdminAnnouncementForm() {
         images: [...(formData.images || []), ...data.urls],
       });
 
-      toast({
-        title: "画像をアップロードしました",
-        description: `${files.length}枚の画像をアップロードしました。`,
-      });
+      toast.success(`${files.length}枚の画像をアップロードしました`);
     } catch (error) {
-      toast({
-        title: "エラー",
-        description: "画像のアップロードに失敗しました。",
-        variant: "destructive",
-      });
+      toast.error("画像のアップロードに失敗しました");
     } finally {
       setUploadingImages(false);
     }
@@ -147,18 +140,11 @@ export default function AdminAnnouncementForm() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/admin/announcements"] });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/stats"] });
-      toast({
-        title: "下書き保存しました",
-        description: "お知らせを下書きとして保存しました。",
-      });
+      toast.success("お知らせを下書きとして保存しました");
       setLocation("/admin/announcements");
     },
     onError: () => {
-      toast({
-        title: "エラー",
-        description: "保存に失敗しました。",
-        variant: "destructive",
-      });
+      toast.error("保存に失敗しました");
     },
   });
 
@@ -185,20 +171,11 @@ export default function AdminAnnouncementForm() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["/api/admin/announcements"] });
       queryClient.invalidateQueries({ queryKey: ["/api/admin/stats"] });
-      toast({
-        title: isAdmin ? "公開しました" : "承認申請しました",
-        description: isAdmin
-          ? "お知らせを公開しました。"
-          : "お知らせを承認待ちとして送信しました。",
-      });
+      toast.success(isAdmin ? "お知らせを公開しました" : "お知らせを承認待ちとして送信しました");
       setLocation("/admin/announcements");
     },
     onError: () => {
-      toast({
-        title: "エラー",
-        description: "送信に失敗しました。",
-        variant: "destructive",
-      });
+      toast.error("送信に失敗しました");
     },
   });
 
