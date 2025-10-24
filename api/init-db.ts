@@ -6,77 +6,70 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     console.log("[init-db] Starting database initialization...");
     
-    // Create users table
+    // Drop existing tables to recreate with correct schema
+    await sql`DROP TABLE IF EXISTS announcements CASCADE`;
+    await sql`DROP TABLE IF EXISTS users CASCADE`;
+    console.log("[init-db] Dropped existing tables");
+    
+    // Create users table matching schema.ts
     await sql`
-      CREATE TABLE IF NOT EXISTS users (
-        id TEXT PRIMARY KEY,
-        name TEXT NOT NULL,
-        email TEXT UNIQUE NOT NULL,
-        password TEXT,
-        role TEXT NOT NULL DEFAULT 'user',
-        facility TEXT,
-        login_method TEXT DEFAULT 'password',
-        last_signed_in TIMESTAMP,
-        created_at TIMESTAMP DEFAULT NOW() NOT NULL,
-        updated_at TIMESTAMP DEFAULT NOW() NOT NULL
+      CREATE TABLE users (
+        id VARCHAR(64) PRIMARY KEY,
+        name TEXT,
+        email VARCHAR(320),
+        password VARCHAR(255),
+        "loginMethod" VARCHAR(64),
+        role VARCHAR(64) DEFAULT 'user',
+        facility VARCHAR(64),
+        "lastSignedIn" TIMESTAMP,
+        "createdAt" TIMESTAMP DEFAULT NOW()
       )
     `;
     
     console.log("[init-db] Users table created successfully");
 
-    // Create admin user if not exists
+    // Create admin user
     const adminEmail = 'admin@mirainetwork.jp';
-    const adminPassword = 'mirai2024'; // デフォルトパスワード
+    const adminPassword = 'mirai2024';
     const hashedPassword = await bcrypt.hash(adminPassword, 10);
     
     await sql`
-      INSERT INTO users (id, name, email, password, role, facility, login_method)
-      VALUES ('admin_001', '管理者', ${adminEmail}, ${hashedPassword}, 'admin', 'ALL', 'password')
-      ON CONFLICT (email) DO NOTHING
+      INSERT INTO users (id, name, email, password, role, facility, "loginMethod")
+      VALUES ('admin_001', '管理者', ${adminEmail}, ${hashedPassword}, 'admin', 'corporate', 'password')
     `;
     
     console.log("[init-db] Admin user created successfully");
 
-    // Create announcements table
+    // Create announcements table matching schema.ts
     await sql`
-      CREATE TABLE IF NOT EXISTS announcements (
+      CREATE TABLE announcements (
         id SERIAL PRIMARY KEY,
-        title TEXT NOT NULL,
+        title VARCHAR(255) NOT NULL,
         content TEXT NOT NULL,
-        image_url TEXT,
-        facility TEXT NOT NULL,
-        is_published BOOLEAN DEFAULT FALSE NOT NULL,
-        is_approved BOOLEAN DEFAULT FALSE NOT NULL,
-        created_at TIMESTAMP DEFAULT NOW() NOT NULL,
-        updated_at TIMESTAMP DEFAULT NOW() NOT NULL,
-        published_at TIMESTAMP,
-        approved_at TIMESTAMP,
-        approved_by TEXT
+        facility VARCHAR(64) NOT NULL,
+        "isPublished" VARCHAR(64) DEFAULT 'draft',
+        "authorId" VARCHAR(64) NOT NULL,
+        images TEXT,
+        "publishedAt" TIMESTAMP,
+        "createdAt" TIMESTAMP DEFAULT NOW(),
+        "updatedAt" TIMESTAMP DEFAULT NOW()
       )
     `;
     
     console.log("[init-db] Announcements table created successfully");
-
-    // Insert sample data
-    await sql`
-      INSERT INTO announcements (title, content, facility, is_published, is_approved)
-      VALUES ('テストお知らせ', 'これはテストのお知らせです。', 'MIRAI', true, true)
-      ON CONFLICT DO NOTHING
-    `;
-    
-    console.log("[init-db] Sample data inserted");
 
     // Get table info
     const tables = await sql`
       SELECT table_name 
       FROM information_schema.tables 
       WHERE table_schema = 'public'
+      ORDER BY table_name
     `;
 
     return res.status(200).json({
       success: true,
       message: "Database initialized successfully",
-      tables: tables.rows,
+      tables: tables.rows.map(r => r.table_name),
       timestamp: new Date().toISOString()
     });
 
