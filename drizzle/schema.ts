@@ -46,6 +46,7 @@ export const jobPostings = mysqlTable("jobPostings", {
   socialInsurance: text("socialInsurance").notNull(),
   contractPeriod: text("contractPeriod").notNull(),
   isPublished: int("isPublished").default(0),
+  isActive: int("isActive").default(1).notNull(),
   createdBy: varchar("createdBy", { length: 64 }).notNull(),
   createdAt: timestamp("createdAt").defaultNow(),
   updatedAt: timestamp("updatedAt").defaultNow(),

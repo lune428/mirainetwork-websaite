@@ -1,10 +1,10 @@
 import { eq } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/mysql2";
+import { drizzle, MySql2Database } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
 import { InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
-let _db: ReturnType<typeof drizzle> | null = null;
+let _db: MySql2Database<Record<string, never>> | null = null;
 let _pool: mysql.Pool | null = null;
 
 // Lazily create the drizzle instance so local tooling can run without a DB.
