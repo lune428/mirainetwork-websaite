@@ -24,6 +24,15 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
+    // Check if BLOB_READ_WRITE_TOKEN is set
+    if (!process.env.BLOB_READ_WRITE_TOKEN) {
+      console.error("BLOB_READ_WRITE_TOKEN is not set");
+      return res.status(500).json({ 
+        error: "画像アップロード機能が設定されていません。管理者に連絡してください。",
+        details: "BLOB_READ_WRITE_TOKEN environment variable is missing"
+      });
+    }
+
     // Parse multipart form data
     const contentType = req.headers["content-type"] || "";
     if (!contentType.includes("multipart/form-data")) {
@@ -43,21 +52,32 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
     const body = Buffer.concat(chunks);
 
+    console.log(`Received ${body.length} bytes of data`);
+
     // Parse multipart data manually
     const parts = parseMultipartData(body, boundary);
+    console.log(`Parsed ${parts.length} parts from multipart data`);
+
+    if (parts.length === 0) {
+      return res.status(400).json({ error: "No files found in request" });
+    }
+
     const urls: string[] = [];
 
     // Upload each file to Vercel Blob
     for (const part of parts) {
       if (part.filename && part.data) {
         const timestamp = Date.now();
-        const filename = `${timestamp}-${part.filename}`;
+        const filename = `announcements/${timestamp}-${part.filename}`;
         
+        console.log(`Uploading file: ${filename}, size: ${part.data.length} bytes`);
+
         const blob = await put(filename, part.data, {
           access: "public",
           contentType: part.contentType || "image/jpeg",
         });
 
+        console.log(`Upload successful: ${blob.url}`);
         urls.push(blob.url);
       }
     }
@@ -65,7 +85,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.json({ urls });
   } catch (error: any) {
     console.error("Error uploading images:", error);
-    return res.status(500).json({ error: "画像のアップロードに失敗しました" });
+    console.error("Error stack:", error.stack);
+    console.error("Error message:", error.message);
+    
+    return res.status(500).json({ 
+      error: "画像のアップロードに失敗しました",
+      details: error.message || "Unknown error"
+    });
   }
 }
 

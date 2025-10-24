@@ -1,5 +1,5 @@
-import { getDb } from "../server/db";
-import { users } from "../drizzle/schema";
+import { getDb } from "./server/db";
+import { users } from "./drizzle/schema";
 import { eq } from "drizzle-orm";
 
 async function checkUser() {
