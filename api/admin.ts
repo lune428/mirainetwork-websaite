@@ -177,8 +177,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           facility,
           isPublished: isPublished || "draft",
           authorId: user.id,
-          images: images ? JSON.stringify(images) : null,
-          publishedAt: isPublished === "published" ? new Date() : null,
+          images: images && images.length > 0 ? JSON.stringify(images) : null,
+          publishedAt: isPublished === "published" ? sql`NOW()` : null,
         });
         console.log("Announcement created successfully:", newAnnouncement.insertId);
         return res.json({ id: newAnnouncement.insertId, message: "お知らせを作成しました" });
@@ -221,7 +221,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           content,
           facility,
           isPublished: isPublished || "draft",
-          images: images ? JSON.stringify(images) : null,
+          images: images && images.length > 0 ? JSON.stringify(images) : null,
           publishedAt: isPublished === "published" ? new Date() : existing[0].publishedAt,
           updatedAt: new Date(),
         })
