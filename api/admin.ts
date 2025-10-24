@@ -190,9 +190,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           authorId: user.id,
           images: imagesJson,
           publishedAt,
-        });
+        }).returning();
         console.log("Announcement created successfully:", result);
-        return res.json({ message: "お知らせを作成しました" });
+        return res.json({ message: "お知らせを作成しました", announcement: result[0] });
       } catch (error: any) {
         console.error("Error creating announcement:", error);
         console.error("Error stack:", error.stack);
