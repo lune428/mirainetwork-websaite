@@ -4,7 +4,7 @@ import { createExpressMiddleware } from "@trpc/server/adapters/express";
 import { appRouter } from "../server/routers";
 import type { Context } from "../server/_core/trpc";
 import { COOKIE_NAME } from "../shared/const";
-import { getUser } from "../server/db";
+// import { getUser } from "../server/db";
 import * as cookie from "cookie";
 
 const app = express();
@@ -26,10 +26,8 @@ const createContext = async ({
   const sessionId = cookies[COOKIE_NAME];
   
   let user = undefined;
-  if (sessionId) {
-    user = await getUser(sessionId);
-  }
-
+// TODO: Implement simple session management if needed
+// For now, authentication is handled by api/admin.ts and api/auth.ts
   return {
     req,
     res,
