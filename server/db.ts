@@ -1,18 +1,25 @@
 import { eq } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/mysql2";
+import mysql from "mysql2/promise";
 import { InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
+let _connection: mysql.Connection | null = null;
 
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
-      _db = drizzle(process.env.DATABASE_URL);
+      // Create a proper mysql2 connection
+      if (!_connection) {
+        _connection = await mysql.createConnection(process.env.DATABASE_URL);
+      }
+      _db = drizzle(_connection);
     } catch (error) {
       console.warn("[Database] Failed to connect:", error);
       _db = null;
+      _connection = null;
     }
   }
   return _db;
@@ -33,6 +40,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
     const values: InsertUser = {
       id: user.id,
     };
+
     const updateSet: Record<string, unknown> = {};
 
     const textFields = ["name", "email", "loginMethod"] as const;
@@ -52,6 +60,7 @@ export async function upsertUser(user: InsertUser): Promise<void> {
       values.lastSignedIn = user.lastSignedIn;
       updateSet.lastSignedIn = user.lastSignedIn;
     }
+
     if (user.role === undefined) {
       if (user.id === ENV.ownerId) {
         user.role = 'admin';
@@ -81,7 +90,6 @@ export async function getUser(id: string) {
   }
 
   const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
-
   return result.length > 0 ? result[0] : undefined;
 }
 
