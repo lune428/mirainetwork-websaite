@@ -4,7 +4,7 @@ import { appRouter } from "../routers";
 import { ENV } from "./env";
 import type { Context } from "./trpc";
 import { COOKIE_NAME } from "../../shared/const";
-import { getUser } from "../db";
+// import { getUser } from "../db"; // Removed for now
 import * as cookie from "cookie";
 import cors from "cors";
 
@@ -32,9 +32,10 @@ const createContext = async ({
   const sessionId = cookies[COOKIE_NAME];
   
   let user = undefined;
-  if (sessionId) {
-    user = await getUser(sessionId);
-  }
+  // TODO: Implement user authentication
+  // if (sessionId) {
+  //   user = await getUser(sessionId);
+  // }
 
   return {
     req,
