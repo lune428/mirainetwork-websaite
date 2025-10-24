@@ -153,6 +153,103 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.json(announcementsList);
     }
 
+    // POST /api/admin/announcements - Create new announcement
+    if (req.method === "POST" && path.includes("/announcements")) {
+      const { title, content, facility, isPublished, images } = req.body;
+      
+      if (!title || !content || !facility) {
+        return res.status(400).json({ error: "必須項目が不足しています" });
+      }
+
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      // Facility admin can only create announcements for their facility
+      if (!isAdmin && facility !== userFacility) {
+        return res.status(403).json({ error: "他の事業所のお知らせを作成する権限がありません" });
+      }
+
+      const newAnnouncement = await db.insert(announcements).values({
+        title,
+        content,
+        facility,
+        isPublished: isPublished || "draft",
+        authorId: user.id,
+        images: images ? JSON.stringify(images) : null,
+        publishedAt: isPublished === "published" ? new Date() : null,
+      });
+
+      return res.json({ id: newAnnouncement.insertId, message: "お知らせを作成しました" });
+    }
+
+    // PUT /api/admin/announcements/:id - Update announcement
+    if (req.method === "PUT" && path.includes("/announcements/")) {
+      const id = parseInt(path.split("/announcements/")[1]);
+      if (isNaN(id)) {
+        return res.status(400).json({ error: "無効なIDです" });
+      }
+
+      const { title, content, facility, isPublished, images } = req.body;
+      
+      if (!title || !content || !facility) {
+        return res.status(400).json({ error: "必須項目が不足しています" });
+      }
+
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      // Check if announcement exists and user has permission
+      const existing = await db.select().from(announcements).where(eq(announcements.id, id)).limit(1);
+      if (existing.length === 0) {
+        return res.status(404).json({ error: "お知らせが見つかりません" });
+      }
+
+      // Facility admin can only update their facility's announcements
+      if (!isAdmin && existing[0].facility !== userFacility) {
+        return res.status(403).json({ error: "他の事業所のお知らせを編集する権限がありません" });
+      }
+
+      await db.update(announcements)
+        .set({
+          title,
+          content,
+          facility,
+          isPublished: isPublished || "draft",
+          images: images ? JSON.stringify(images) : null,
+          publishedAt: isPublished === "published" ? new Date() : existing[0].publishedAt,
+          updatedAt: new Date(),
+        })
+        .where(eq(announcements.id, id));
+
+      return res.json({ message: "お知らせを更新しました" });
+    }
+
+    // DELETE /api/admin/announcements/:id - Delete announcement
+    if (req.method === "DELETE" && path.includes("/announcements/")) {
+      const id = parseInt(path.split("/announcements/")[1]);
+      if (isNaN(id)) {
+        return res.status(400).json({ error: "無効なIDです" });
+      }
+
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      // Check if announcement exists and user has permission
+      const existing = await db.select().from(announcements).where(eq(announcements.id, id)).limit(1);
+      if (existing.length === 0) {
+        return res.status(404).json({ error: "お知らせが見つかりません" });
+      }
+
+      // Facility admin can only delete their facility's announcements
+      if (!isAdmin && existing[0].facility !== userFacility) {
+        return res.status(403).json({ error: "他の事業所のお知らせを削除する権限がありません" });
+      }
+
+      await db.delete(announcements).where(eq(announcements.id, id));
+
+      return res.json({ message: "お知らせを削除しました" });
+    }
+
     // Method or path not found
     return res.status(404).json({ error: "Not found" });
   } catch (error: any) {
