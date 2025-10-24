@@ -169,17 +169,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(403).json({ error: "他の事業所のお知らせを作成する権限がありません" });
       }
 
-      const newAnnouncement = await db.insert(announcements).values({
-        title,
-        content,
-        facility,
-        isPublished: isPublished || "draft",
-        authorId: user.id,
-        images: images ? JSON.stringify(images) : null,
-        publishedAt: isPublished === "published" ? new Date() : null,
-      });
-
-      return res.json({ id: newAnnouncement.insertId, message: "お知らせを作成しました" });
+      try {
+        console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id });
+        const newAnnouncement = await db.insert(announcements).values({
+          title,
+          content,
+          facility,
+          isPublished: isPublished || "draft",
+          authorId: user.id,
+          images: images ? JSON.stringify(images) : null,
+          publishedAt: isPublished === "published" ? new Date() : null,
+        });
+        console.log("Announcement created successfully:", newAnnouncement.insertId);
+        return res.json({ id: newAnnouncement.insertId, message: "お知らせを作成しました" });
+      } catch (error: any) {
+        console.error("Error creating announcement:", error);
+        return res.status(500).json({ error: "お知らせの作成に失敗しました", details: error.message });
+      }
     }
 
     // PUT /api/admin/announcements/:id - Update announcement
