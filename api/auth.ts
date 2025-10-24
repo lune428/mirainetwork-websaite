@@ -1,7 +1,7 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import bcrypt from "bcryptjs";
 import { SignJWT, jwtVerify } from "jose";
-import mysql from "mysql2/promise";
+import { sql } from "@vercel/postgres";
 
 // JWT secret key
 const JWT_SECRET = new TextEncoder().encode(
@@ -24,37 +24,6 @@ async function verifyToken(token: string): Promise<{ userId: string } | null> {
     return payload as { userId: string };
   } catch {
     return null;
-  }
-}
-
-// Get database connection
-async function getDbConnection() {
-  const dbUrl = process.env.DATABASE_URL;
-  
-  if (!dbUrl) {
-    throw new Error("DATABASE_URL environment variable is not set");
-  }
-
-  try {
-    // Parse MySQL URL: mysql://user:pass@host:port/database
-    const url = new URL(dbUrl);
-    
-    const connection = await mysql.createConnection({
-      host: url.hostname,
-      port: parseInt(url.port) || 3306,
-      user: url.username,
-      password: url.password,
-      database: url.pathname.slice(1), // Remove leading slash
-      ssl: {
-        rejectUnauthorized: true,
-      },
-      connectTimeout: 10000,
-    });
-
-    return connection;
-  } catch (error: any) {
-    console.error("Database connection error:", error);
-    throw new Error(`Database connection failed: ${error.message}`);
   }
 }
 
@@ -111,19 +80,14 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     // GET /api/auth/test - Database connection test
     if (req.method === 'GET' && path === '/api/auth/test') {
       try {
-        const connection = await getDbConnection();
-        
-        // Test query
-        const [rows] = await connection.execute('SELECT 1 as test');
-        
-        await connection.end();
+        const result = await sql`SELECT 1 as test`;
         
         return res.status(200).json({ 
           success: true, 
           message: "Database connection OK",
-          test: rows,
+          test: result.rows,
           env: {
-            hasDatabaseUrl: !!process.env.DATABASE_URL,
+            hasPostgresUrl: !!process.env.POSTGRES_URL,
             hasJwtSecret: !!process.env.JWT_SECRET,
           }
         });
@@ -131,7 +95,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(500).json({ 
           error: "Database connection failed",
           message: error.message,
-          stack: error.stack
         });
       }
     }
@@ -144,23 +107,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: "メールアドレスとパスワードを入力してください" });
       }
 
-      let connection;
       try {
         console.log("[Login] Starting login process for email:", email);
-        connection = await getDbConnection();
+        
+        const result = await sql`
+          SELECT * FROM users WHERE email = ${email} LIMIT 1
+        `;
 
-        const [rows] = await connection.execute(
-          'SELECT * FROM users WHERE email = ? LIMIT 1',
-          [email]
-        );
-
-        const users = rows as any[];
-
-        if (users.length === 0) {
+        if (result.rows.length === 0) {
           return res.status(401).json({ error: "メールアドレスまたはパスワードが正しくありません" });
         }
 
-        const user = users[0];
+        const user = result.rows[0];
 
         if (!user.password) {
           return res.status(401).json({ error: "このアカウントはパスワードログインに対応していません" });
@@ -173,10 +131,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
 
         // Update last signed in
-        await connection.execute(
-          'UPDATE users SET lastSignedIn = NOW() WHERE id = ?',
-          [user.id]
-        );
+        await sql`
+          UPDATE users SET last_signed_in = NOW() WHERE id = ${user.id}
+        `;
 
         // Create JWT token
         const token = await createToken(user.id);
@@ -201,12 +158,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(500).json({ 
           error: "ログイン処理中にエラーが発生しました",
           message: error.message,
-          stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
         });
-      } finally {
-        if (connection) {
-          await connection.end();
-        }
       }
     }
 
@@ -230,22 +182,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(401).json({ error: "無効なトークンです" });
       }
 
-      let connection;
       try {
-        connection = await getDbConnection();
+        const result = await sql`
+          SELECT * FROM users WHERE id = ${payload.userId} LIMIT 1
+        `;
 
-        const [rows] = await connection.execute(
-          'SELECT * FROM users WHERE id = ? LIMIT 1',
-          [payload.userId]
-        );
-
-        const users = rows as any[];
-
-        if (users.length === 0) {
+        if (result.rows.length === 0) {
           return res.status(401).json({ error: "ユーザーが見つかりません" });
         }
 
-        const user = users[0];
+        const user = result.rows[0];
 
         return res.status(200).json({
           id: user.id,
@@ -254,10 +200,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           role: user.role,
           facility: user.facility,
         });
-      } finally {
-        if (connection) {
-          await connection.end();
-        }
+      } catch (error: any) {
+        console.error("[Me] Error:", error);
+        return res.status(500).json({ error: "ユーザー情報の取得に失敗しました" });
       }
     }
 
@@ -269,17 +214,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(400).json({ error: "必須項目が不足しています" });
       }
 
-      let connection;
       try {
-        connection = await getDbConnection();
-
         // Check if email already exists
-        const [existing] = await connection.execute(
-          'SELECT * FROM users WHERE email = ? LIMIT 1',
-          [email]
-        );
+        const existing = await sql`
+          SELECT * FROM users WHERE email = ${email} LIMIT 1
+        `;
 
-        if ((existing as any[]).length > 0) {
+        if (existing.rows.length > 0) {
           return res.status(400).json({ error: "このメールアドレスは既に登録されています" });
         }
 
@@ -290,19 +231,18 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         const userId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
         // Insert user
-        await connection.execute(
-          'INSERT INTO users (id, name, email, password, role, facility, loginMethod) VALUES (?, ?, ?, ?, ?, ?, ?)',
-          [userId, name, email, hashedPassword, 'user', facility || null, 'password']
-        );
+        await sql`
+          INSERT INTO users (id, name, email, password, role, facility, login_method)
+          VALUES (${userId}, ${name}, ${email}, ${hashedPassword}, 'user', ${facility || null}, 'password')
+        `;
 
         return res.status(200).json({
           success: true,
           message: "ユーザーを登録しました",
         });
-      } finally {
-        if (connection) {
-          await connection.end();
-        }
+      } catch (error: any) {
+        console.error("[Register] Error:", error);
+        return res.status(500).json({ error: "ユーザー登録に失敗しました" });
       }
     }
 
@@ -312,7 +252,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(500).json({ 
       error: "Internal server error",
       message: error.message,
-      stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
     });
   }
 }

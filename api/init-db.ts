@@ -1,10 +1,42 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { sql } from "@vercel/postgres";
+import bcrypt from "bcryptjs";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     console.log("[init-db] Starting database initialization...");
     
+    // Create users table
+    await sql`
+      CREATE TABLE IF NOT EXISTS users (
+        id TEXT PRIMARY KEY,
+        name TEXT NOT NULL,
+        email TEXT UNIQUE NOT NULL,
+        password TEXT,
+        role TEXT NOT NULL DEFAULT 'user',
+        facility TEXT,
+        login_method TEXT DEFAULT 'password',
+        last_signed_in TIMESTAMP,
+        created_at TIMESTAMP DEFAULT NOW() NOT NULL,
+        updated_at TIMESTAMP DEFAULT NOW() NOT NULL
+      )
+    `;
+    
+    console.log("[init-db] Users table created successfully");
+
+    // Create admin user if not exists
+    const adminEmail = 'admin@mirainetwork.jp';
+    const adminPassword = 'mirai2024'; // デフォルトパスワード
+    const hashedPassword = await bcrypt.hash(adminPassword, 10);
+    
+    await sql`
+      INSERT INTO users (id, name, email, password, role, facility, login_method)
+      VALUES ('admin_001', '管理者', ${adminEmail}, ${hashedPassword}, 'admin', 'ALL', 'password')
+      ON CONFLICT (email) DO NOTHING
+    `;
+    
+    console.log("[init-db] Admin user created successfully");
+
     // Create announcements table
     await sql`
       CREATE TABLE IF NOT EXISTS announcements (
