@@ -178,21 +178,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       try {
-        console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id, images });
-        
-        // Prepare images field
-        let imagesValue = null;
-        if (images && Array.isArray(images) && images.length > 0) {
-          imagesValue = JSON.stringify(images);
-        }
-        
-        // Prepare publishedAt field
-        let publishedAtValue: Date | null = null;
-        if (isPublished === "published") {
-          publishedAtValue = new Date();
-        }
-        
-        console.log("Prepared values:", { imagesValue, publishedAtValue });
+        console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id });
         
         const result = await db.insert(announcements).values({
           title,
@@ -200,8 +186,6 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           facility,
           isPublished: isPublished || "draft",
           authorId: user.id,
-          images: imagesValue,
-          publishedAt: publishedAtValue,
         });
         console.log("Announcement created successfully:", result);
         return res.json({ message: "お知らせを作成しました" });
