@@ -87,12 +87,9 @@ export async function updateAnnouncement(id: number, data: {
   
   updates.push(`updated_at = NOW()`);
   
-  const result = await sql.query(
-    `UPDATE announcements SET ${updates.join(', ')} WHERE id = $${updates.length + 1} RETURNING *`,
-    [...values, id]
-  );
-  
-  return result.rows[0];
+  // Note: This function uses raw SQL and is not currently used
+  // If needed, should be migrated to Drizzle ORM
+  throw new Error("updateAnnouncement is deprecated. Use Drizzle ORM in api/admin.ts instead.");
 }
 
 /**

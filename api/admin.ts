@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getDb } from "../server/db";
+import { sql as vercelSql } from "@vercel/postgres";
+import { drizzle } from "drizzle-orm/vercel-postgres";
 import { announcements, users, jobPostings } from "../drizzle/schema";
 import { eq, count, sql } from "drizzle-orm";
 import { jwtVerify } from "jose";
@@ -41,11 +42,7 @@ async function getUserFromRequest(req: VercelRequest) {
       return null;
     }
 
-    const db = await getDb();
-    if (!db) {
-      console.error("Database connection failed");
-      return null;
-    }
+    const db = drizzle(vercelSql);
 
     const userResult = await db
       .select()
@@ -96,10 +93,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(403).json({ error: "管理者権限が必要です" });
     }
 
-    const db = await getDb();
-    if (!db) {
-      return res.status(500).json({ error: "データベース接続エラー" });
-    }
+    const db = drizzle(vercelSql);
 
     const path = req.url?.split("?")[0] || "";
     
