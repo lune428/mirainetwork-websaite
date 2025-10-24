@@ -135,7 +135,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // GET /api/admin/announcements - Get all announcements
-    if (req.method === "GET" && path.includes("/announcements")) {
+    if (req.method === "GET" && path.includes("/announcements") && !path.includes("/announcements/")) {
       const isAdmin = user.role === "admin";
       const userFacility = user.facility;
 
@@ -154,7 +154,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     }
 
     // POST /api/admin/announcements - Create new announcement
-    if (req.method === "POST" && path.includes("/announcements")) {
+    if (req.method === "POST" && path.includes("/announcements") && !path.includes("/announcements/")) {
       const { title, content, facility, isPublished, images } = req.body;
       
       if (!title || !content || !facility) {
