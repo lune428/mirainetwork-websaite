@@ -187,9 +187,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         }
         
         // Prepare publishedAt field
-        let publishedAtValue = null;
+        let publishedAtValue: Date | null = null;
         if (isPublished === "published") {
-          publishedAtValue = new Date().toISOString().slice(0, 19).replace('T', ' ');
+          publishedAtValue = new Date();
         }
         
         console.log("Prepared values:", { imagesValue, publishedAtValue });
