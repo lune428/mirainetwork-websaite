@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getDb } from "../server/db";
+import { sql } from "@vercel/postgres";
+import { drizzle } from "drizzle-orm/vercel-postgres";
 import { jobPostings } from "../drizzle/schema";
 import { eq } from "drizzle-orm";
 
@@ -19,10 +20,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const db = await getDb();
-    if (!db) {
-      return res.status(500).json({ error: "データベース接続エラー" });
-    }
+    const db = drizzle(sql);
 
     // GET /api/job-postings - Get all published job postings
     if (req.method === "GET") {
