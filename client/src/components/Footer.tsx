@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Building2, Heart, Users, Mail, Phone, MapPin } from "lucide-react";
+import { Building2, Heart, Users, Mail, Phone, MapPin, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Footer() {
@@ -106,8 +106,17 @@ export default function Footer() {
         </div>
 
         {/* Copyright */}
-        <div className="pt-8 border-t border-gray-800 text-center text-sm text-gray-400">
-          <p>© 2016-2025 一般社団法人未来ネットワーク All rights reserved.</p>
+        <div className="pt-8 border-t border-gray-800 text-center">
+          <p className="text-sm text-gray-400 mb-2">
+            © 2016-2025 一般社団法人未来ネットワーク All rights reserved.
+          </p>
+          {/* 管理者ログインリンク */}
+          <Link href="/login">
+            <a className="inline-flex items-center gap-1 text-xs text-gray-500 hover:text-gray-300 transition-colors">
+              <Lock className="w-3 h-3" />
+              <span>管理者ログイン</span>
+            </a>
+          </Link>
         </div>
       </div>
     </footer>
