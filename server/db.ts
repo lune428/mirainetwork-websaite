@@ -2,11 +2,33 @@ import mysql from "mysql2/promise";
 import { drizzle, MySql2Database } from "drizzle-orm/mysql2";
 
 let _db: MySql2Database<Record<string, never>> | null = null;
-let _pool: mysql.Pool | null = null;
+
+/**
+ * Parse DATABASE_URL and create connection config
+ */
+function parseDatabaseUrl(url: string) {
+  // Remove mysql:// prefix
+  const withoutProtocol = url.replace('mysql://', '');
+  
+  // Split into auth and host parts
+  const [authPart, hostPart] = withoutProtocol.split('@');
+  const [user, password] = authPart.split(':');
+  
+  // Split host part
+  const [hostAndPort, database] = hostPart.split('/');
+  const [host, port] = hostAndPort.split(':');
+  
+  return {
+    host,
+    port: parseInt(port || '3306'),
+    user,
+    password,
+    database,
+  };
+}
 
 /**
  * Get database instance
- * Creates a connection pool if it doesn't exist
  */
 export async function getDb(): Promise<MySql2Database<Record<string, never>> | null> {
   if (_db) {
@@ -21,45 +43,39 @@ export async function getDb(): Promise<MySql2Database<Record<string, never>> | n
   }
 
   try {
-    // Create connection pool if it doesn't exist
-    if (!_pool) {
-      _pool = mysql.createPool({
-        uri: databaseUrl,
-        waitForConnections: true,
-        connectionLimit: 1,
-        queueLimit: 0,
-      });
-      
-      // Test the connection
-      const connection = await _pool.getConnection();
-      await connection.ping();
-      connection.release();
-      
-      console.log("[Database] Connection pool created successfully");
-    }
+    console.log("[Database] Parsing DATABASE_URL...");
+    const config = parseDatabaseUrl(databaseUrl);
+    
+    console.log("[Database] Creating connection pool...");
+    const pool = mysql.createPool({
+      host: config.host,
+      port: config.port,
+      user: config.user,
+      password: config.password,
+      database: config.database,
+      waitForConnections: true,
+      connectionLimit: 1,
+      queueLimit: 0,
+      enableKeepAlive: true,
+      keepAliveInitialDelay: 0,
+    });
+
+    // Test the connection
+    console.log("[Database] Testing connection...");
+    const connection = await pool.getConnection();
+    await connection.ping();
+    connection.release();
+    console.log("[Database] Connection test successful");
 
     // Create Drizzle instance
-    _db = drizzle(_pool);
+    _db = drizzle(pool);
     console.log("[Database] Drizzle ORM initialized successfully");
     
     return _db;
   } catch (error) {
     console.error("[Database] Failed to connect:", error);
     _db = null;
-    _pool = null;
     return null;
-  }
-}
-
-/**
- * Close database connection
- */
-export async function closeDb(): Promise<void> {
-  if (_pool) {
-    await _pool.end();
-    _pool = null;
-    _db = null;
-    console.log("[Database] Connection pool closed");
   }
 }
 
