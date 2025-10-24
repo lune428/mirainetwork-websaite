@@ -27,34 +27,42 @@ function parseCookies(cookieHeader: string | undefined): Record<string, string> 
 }
 
 async function getUserFromRequest(req: VercelRequest) {
-  const cookies = parseCookies(req.headers.cookie);
-  const token = cookies.auth_token;
-  if (!token) {
-    console.error("No auth_token cookie found");
+  try {
+    const cookies = parseCookies(req.headers.cookie);
+    const token = cookies.auth_token;
+    if (!token) {
+      console.error("No auth_token cookie found");
+      return null;
+    }
+
+    const payload = await verifyToken(token);
+    if (!payload) {
+      console.error("Token verification failed");
+      return null;
+    }
+
+    const db = await getDb();
+    if (!db) {
+      console.error("Database connection failed");
+      return null;
+    }
+
+    const userResult = await db
+      .select()
+      .from(users)
+      .where(eq(users.id, payload.userId))
+      .limit(1);
+
+    if (userResult.length === 0) {
+      console.error("User not found:", payload.userId);
+      return null;
+    }
+
+    return userResult[0];
+  } catch (error) {
+    console.error("Error in getUserFromRequest:", error);
     return null;
   }
-
-  const payload = await verifyToken(token);
-  if (!payload) {
-    return null;
-  }
-
-  const db = await getDb();
-  if (!db) {
-    return null;
-  }
-
-  const userResult = await db
-    .select()
-    .from(users)
-    .where(eq(users.id, payload.userId))
-    .limit(1);
-
-  if (userResult.length === 0) {
-    return null;
-  }
-
-  return userResult[0];
 }
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
