@@ -8,7 +8,7 @@ import type { Context } from "./trpc";
 import { COOKIE_NAME } from "../../shared/const";
 // import { getUser } from "../db"; // Removed for now
 import * as cookie from "cookie";
-import authRouter from "../routes/auth";
+// import authRouter from "../routes/auth"; // Removed - using api/auth.ts instead
 
 const app = express();
 
@@ -41,8 +41,8 @@ const createContext = async ({
   };
 };
 
-// Auth routes (Express router)
-app.use("/api/auth", authRouter);
+// Auth routes are handled by api/auth.ts serverless function in Vercel
+// app.use("/api/auth", authRouter);
 
 // tRPC endpoint
 app.use(
