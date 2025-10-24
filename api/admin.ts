@@ -178,21 +178,41 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }
 
       try {
-        console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id });
+        console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id, images });
+        
+        // Prepare images field
+        let imagesValue = null;
+        if (images && Array.isArray(images) && images.length > 0) {
+          imagesValue = JSON.stringify(images);
+        }
+        
+        // Prepare publishedAt field
+        let publishedAtValue = null;
+        if (isPublished === "published") {
+          publishedAtValue = new Date().toISOString().slice(0, 19).replace('T', ' ');
+        }
+        
+        console.log("Prepared values:", { imagesValue, publishedAtValue });
+        
         const result = await db.insert(announcements).values({
           title,
           content,
           facility,
           isPublished: isPublished || "draft",
           authorId: user.id,
-          images: images && images.length > 0 ? JSON.stringify(images) : null,
-          publishedAt: isPublished === "published" ? new Date() : null,
+          images: imagesValue,
+          publishedAt: publishedAtValue,
         });
         console.log("Announcement created successfully:", result);
         return res.json({ message: "お知らせを作成しました" });
       } catch (error: any) {
         console.error("Error creating announcement:", error);
-        return res.status(500).json({ error: "お知らせの作成に失敗しました", details: error.message });
+        console.error("Error stack:", error.stack);
+        return res.status(500).json({ 
+          error: "お知らせの作成に失敗しました", 
+          details: error.message,
+          stack: error.stack 
+        });
       }
     }
 
