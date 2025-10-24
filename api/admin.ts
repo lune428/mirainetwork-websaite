@@ -179,17 +179,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
       try {
         console.log("Creating announcement:", { title, content, facility, isPublished, authorId: user.id });
-        const newAnnouncement = await db.insert(announcements).values({
+        const result = await db.insert(announcements).values({
           title,
           content,
           facility,
           isPublished: isPublished || "draft",
           authorId: user.id,
           images: images && images.length > 0 ? JSON.stringify(images) : null,
-          publishedAt: isPublished === "published" ? sql`NOW()` : null,
+          publishedAt: isPublished === "published" ? new Date() : null,
         });
-        console.log("Announcement created successfully:", newAnnouncement.insertId);
-        return res.json({ id: newAnnouncement.insertId, message: "お知らせを作成しました" });
+        console.log("Announcement created successfully:", result);
+        return res.json({ message: "お知らせを作成しました" });
       } catch (error: any) {
         console.error("Error creating announcement:", error);
         return res.status(500).json({ error: "お知らせの作成に失敗しました", details: error.message });
