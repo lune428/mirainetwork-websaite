@@ -1,35 +1,20 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
-import { getDb } from "../server/db";
-import { announcements } from "../drizzle/schema";
+import { sql } from "@vercel/postgres";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
-    console.log("[test-db] Starting database connection test...");
+    console.log("[test-db] Starting Vercel Postgres connection test...");
     
-    // Get database instance
-    const db = await getDb();
+    // Test query
+    const result = await sql`SELECT NOW() as current_time, version() as pg_version`;
     
-    if (!db) {
-      console.error("[test-db] Failed to get database instance");
-      return res.status(500).json({
-        success: false,
-        error: "Failed to connect to database",
-        message: "DATABASE_URL may not be configured correctly"
-      });
-    }
-
-    console.log("[test-db] Database instance obtained");
-
-    // Test query: count announcements
-    const result = await db.select().from(announcements);
-    const count = result.length;
-
-    console.log(`[test-db] Query successful. Found ${count} announcements`);
+    console.log("[test-db] Query successful");
 
     return res.status(200).json({
       success: true,
-      message: "Database connection test passed",
-      announcements_count: count,
+      message: "Vercel Postgres connection test passed",
+      current_time: result.rows[0]?.current_time,
+      postgres_version: result.rows[0]?.pg_version,
       timestamp: new Date().toISOString()
     });
 
