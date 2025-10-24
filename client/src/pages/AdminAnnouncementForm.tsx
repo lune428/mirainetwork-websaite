@@ -165,7 +165,11 @@ export default function AdminAnnouncementForm() {
         }),
       });
 
-      if (!response.ok) throw new Error("送信に失敗しました");
+      if (!response.ok) {
+        const errorData = await response.json().catch(() => ({ error: "不明なエラー" }));
+        console.error("API Error:", response.status, errorData);
+        throw new Error(errorData.error || errorData.details || "送信に失敗しました");
+      }
       return response.json();
     },
     onSuccess: () => {
@@ -174,8 +178,9 @@ export default function AdminAnnouncementForm() {
       toast(isAdmin ? "お知らせを公開しました" : "お知らせを承認待ちとして送信しました");
       setLocation("/admin/announcements");
     },
-    onError: () => {
-      toast("送信に失敗しました", { description: "もう一度お試しください" });
+    onError: (error: Error) => {
+      console.error("Submission error:", error);
+      toast("送信に失敗しました", { description: error.message || "もう一度お試しください" });
     },
   });
 
