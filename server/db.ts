@@ -1,97 +1,65 @@
-import { eq } from "drizzle-orm";
-import { drizzle, MySql2Database } from "drizzle-orm/mysql2";
 import mysql from "mysql2/promise";
-import { InsertUser, users } from "../drizzle/schema";
-import { ENV } from './_core/env';
+import { drizzle, MySql2Database } from "drizzle-orm/mysql2";
 
 let _db: MySql2Database<Record<string, never>> | null = null;
 let _pool: mysql.Pool | null = null;
 
-// Lazily create the drizzle instance so local tooling can run without a DB.
-export async function getDb() {
-  if (!_db && process.env.DATABASE_URL) {
-    try {
-      // Create a proper mysql2 connection pool
-      if (!_pool) {
-        _pool = mysql.createPool(process.env.DATABASE_URL);
-      }
-      _db = drizzle(_pool);
-    } catch (error) {
-      console.warn("[Database] Failed to connect:", error);
-      _db = null;
-      _pool = null;
-    }
-  }
-  return _db;
-}
-
-export async function upsertUser(user: InsertUser): Promise<void> {
-  if (!user.id) {
-    throw new Error("User ID is required for upsert");
+/**
+ * Get database instance
+ * Creates a connection pool if it doesn't exist
+ */
+export async function getDb(): Promise<MySql2Database<Record<string, never>> | null> {
+  if (_db) {
+    return _db;
   }
 
-  const db = await getDb();
-  if (!db) {
-    console.warn("[Database] Cannot upsert user: database not available");
-    return;
+  const databaseUrl = process.env.DATABASE_URL;
+  
+  if (!databaseUrl) {
+    console.error("[Database] DATABASE_URL environment variable is not set");
+    return null;
   }
 
   try {
-    const values: InsertUser = {
-      id: user.id,
-    };
-
-    const updateSet: Record<string, unknown> = {};
-
-    const textFields = ["name", "email", "loginMethod"] as const;
-    type TextField = (typeof textFields)[number];
-
-    const assignNullable = (field: TextField) => {
-      const value = user[field];
-      if (value === undefined) return;
-      const normalized = value ?? null;
-      values[field] = normalized;
-      updateSet[field] = normalized;
-    };
-
-    textFields.forEach(assignNullable);
-
-    if (user.lastSignedIn !== undefined) {
-      values.lastSignedIn = user.lastSignedIn;
-      updateSet.lastSignedIn = user.lastSignedIn;
+    // Create connection pool if it doesn't exist
+    if (!_pool) {
+      _pool = mysql.createPool({
+        uri: databaseUrl,
+        waitForConnections: true,
+        connectionLimit: 1,
+        queueLimit: 0,
+      });
+      
+      // Test the connection
+      const connection = await _pool.getConnection();
+      await connection.ping();
+      connection.release();
+      
+      console.log("[Database] Connection pool created successfully");
     }
 
-    if (user.role === undefined) {
-      if (user.id === ENV.ownerId) {
-        user.role = 'admin';
-        values.role = 'admin';
-        updateSet.role = 'admin';
-      }
-    }
-
-    if (Object.keys(updateSet).length === 0) {
-      updateSet.lastSignedIn = new Date();
-    }
-
-    await db.insert(users).values(values).onDuplicateKeyUpdate({
-      set: updateSet,
-    });
+    // Create Drizzle instance
+    _db = drizzle(_pool);
+    console.log("[Database] Drizzle ORM initialized successfully");
+    
+    return _db;
   } catch (error) {
-    console.error("[Database] Failed to upsert user:", error);
-    throw error;
+    console.error("[Database] Failed to connect:", error);
+    _db = null;
+    _pool = null;
+    return null;
   }
 }
 
-export async function getUser(id: string) {
-  const db = await getDb();
-  if (!db) {
-    console.warn("[Database] Cannot get user: database not available");
-    return undefined;
+/**
+ * Close database connection
+ */
+export async function closeDb(): Promise<void> {
+  if (_pool) {
+    await _pool.end();
+    _pool = null;
+    _db = null;
+    console.log("[Database] Connection pool closed");
   }
-
-  const result = await db.select().from(users).where(eq(users.id, id)).limit(1);
-  return result.length > 0 ? result[0] : undefined;
 }
-
-// TODO: add feature queries here as your schema grows.
 
