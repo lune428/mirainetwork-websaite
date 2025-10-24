@@ -1,14 +1,14 @@
-import { mysqlTable, mysqlEnum, varchar, text, int, timestamp } from "drizzle-orm/mysql-core";
+import { pgTable, varchar, text, integer, timestamp, serial } from "drizzle-orm/pg-core";
 
 // Users table
-export const users = mysqlTable("users", {
+export const users = pgTable("users", {
   id: varchar("id", { length: 64 }).primaryKey(),
   name: text("name"),
   email: varchar("email", { length: 320 }),
-  password: varchar("password", { length: 255 }), // Hashed password
+  password: varchar("password", { length: 255 }),
   loginMethod: varchar("loginMethod", { length: 64 }),
-  role: mysqlEnum("role", ["user", "admin", "mirai_admin", "hikari_admin", "studio_m_admin"]).default("user"),
-  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]),
+  role: varchar("role", { length: 64 }).default("user"),
+  facility: varchar("facility", { length: 64 }),
   lastSignedIn: timestamp("lastSignedIn"),
   createdAt: timestamp("createdAt").defaultNow(),
 });
@@ -17,14 +17,14 @@ export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
 // Announcements table
-export const announcements = mysqlTable("announcements", {
-  id: int("id").primaryKey().autoincrement(),
+export const announcements = pgTable("announcements", {
+  id: serial("id").primaryKey(),
   title: varchar("title", { length: 255 }).notNull(),
   content: text("content").notNull(),
-  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
-  isPublished: mysqlEnum("isPublished", ["draft", "pending", "published", "rejected"]).default("draft"),
+  facility: varchar("facility", { length: 64 }).notNull(),
+  isPublished: varchar("isPublished", { length: 64 }).default("draft"),
   authorId: varchar("authorId", { length: 64 }).notNull(),
-  images: text("images"), // JSON array of image URLs
+  images: text("images"),
   publishedAt: timestamp("publishedAt"),
   createdAt: timestamp("createdAt").defaultNow(),
   updatedAt: timestamp("updatedAt").defaultNow(),
@@ -34,9 +34,9 @@ export type Announcement = typeof announcements.$inferSelect;
 export type InsertAnnouncement = typeof announcements.$inferInsert;
 
 // Job postings table
-export const jobPostings = mysqlTable("jobPostings", {
-  id: int("id").primaryKey().autoincrement(),
-  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).notNull(),
+export const jobPostings = pgTable("jobPostings", {
+  id: serial("id").primaryKey(),
+  facility: varchar("facility", { length: 64 }).notNull(),
   title: varchar("title", { length: 255 }).notNull(),
   employmentType: varchar("employmentType", { length: 100 }).notNull(),
   jobDescription: text("jobDescription").notNull(),
@@ -45,7 +45,7 @@ export const jobPostings = mysqlTable("jobPostings", {
   holidays: text("holidays").notNull(),
   socialInsurance: text("socialInsurance").notNull(),
   contractPeriod: text("contractPeriod").notNull(),
-  isPublished: int("isPublished").default(0),
+  isPublished: integer("isPublished").default(0),
   createdBy: varchar("createdBy", { length: 64 }).notNull(),
   createdAt: timestamp("createdAt").defaultNow(),
   updatedAt: timestamp("updatedAt").defaultNow(),
@@ -55,13 +55,13 @@ export type JobPosting = typeof jobPostings.$inferSelect;
 export type InsertJobPosting = typeof jobPostings.$inferInsert;
 
 // Benefits table
-export const benefits = mysqlTable("benefits", {
-  id: int("id").primaryKey().autoincrement(),
+export const benefits = pgTable("benefits", {
+  id: serial("id").primaryKey(),
   title: varchar("title", { length: 255 }).notNull(),
   description: text("description"),
-  category: mysqlEnum("category", ["welfare", "insurance", "allowance", "facility", "other"]).notNull(),
-  displayOrder: int("displayOrder").default(0).notNull(),
-  isPublished: int("isPublished").default(1).notNull(),
+  category: varchar("category", { length: 64 }).notNull(),
+  displayOrder: integer("displayOrder").default(0).notNull(),
+  isPublished: integer("isPublished").default(1).notNull(),
   createdBy: varchar("createdBy", { length: 64 }).notNull(),
   createdAt: timestamp("createdAt").defaultNow(),
   updatedAt: timestamp("updatedAt").defaultNow(),
@@ -71,18 +71,17 @@ export type Benefit = typeof benefits.$inferSelect;
 export type InsertBenefit = typeof benefits.$inferInsert;
 
 // Contact submissions table
-export const contactSubmissions = mysqlTable("contact_submissions", {
-  id: int("id").primaryKey().autoincrement(),
+export const contactSubmissions = pgTable("contact_submissions", {
+  id: serial("id").primaryKey(),
   name: varchar("name", { length: 255 }).notNull(),
   email: varchar("email", { length: 255 }).notNull(),
   phone: varchar("phone", { length: 50 }),
-  facility: mysqlEnum("facility", ["corporate", "mirai", "hikari", "studio_m"]).default("corporate"),
+  facility: varchar("facility", { length: 64 }).default("corporate"),
   subject: varchar("subject", { length: 255 }),
   message: text("message").notNull(),
-  status: mysqlEnum("status", ["new", "read", "replied"]).default("new"),
+  status: varchar("status", { length: 64 }).default("new"),
   createdAt: timestamp("created_at").defaultNow(),
 });
 
 export type ContactSubmission = typeof contactSubmissions.$inferSelect;
 export type InsertContactSubmission = typeof contactSubmissions.$inferInsert;
-
