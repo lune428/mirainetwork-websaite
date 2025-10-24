@@ -29,7 +29,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       const posts = await db
         .select()
         .from(jobPostings)
-        .where(eq(jobPostings.isActive, 1));
+        .where(eq(jobPostings.isPublished, 1));
       
       return res.json(posts);
     }
