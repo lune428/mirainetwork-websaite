@@ -17,16 +17,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     
     console.log("[TEST] DATABASE_URL exists");
     
-    const connection = await mysql.createConnection(process.env.DATABASE_URL);
-    console.log("[TEST] MySQL connection created");
+    // Use Pool instead of Connection for better compatibility
+    const pool = mysql.createPool(process.env.DATABASE_URL);
+    console.log("[TEST] MySQL pool created");
     
-    const db = drizzle(connection);
+    const db = drizzle(pool);
     console.log("[TEST] Drizzle instance created");
     
     const result = await db.select().from(announcements).limit(1);
     console.log("[TEST] Query successful, found:", result.length, "announcements");
     
-    await connection.end();
+    await pool.end();
     
     return res.json({ 
       success: true, 
@@ -42,3 +43,4 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     });
   }
 }
+

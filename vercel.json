@@ -6,10 +6,16 @@
   "framework": null,
   "functions": {
     "api/**/*.ts": {
-      "includeFiles": "server/**"
+      "memory": 1024,
+      "maxDuration": 10,
+      "includeFiles": "{server/**,drizzle/**,shared/**}"
     }
   },
   "routes": [
+    {
+      "src": "/api/test-db",
+      "dest": "/api/test-db"
+    },
     {
       "src": "/api/auth/(.*)",
       "dest": "/api/auth"
