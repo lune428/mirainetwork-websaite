@@ -34,7 +34,7 @@ export default function JobPostingsAdmin() {
 
   const fetchJobPostings = async () => {
     try {
-      const response = await fetch("/api/admin/jobpostings", {
+      const response = await fetch("/api/admin/jobs", {
         credentials: "include",
       });
       if (!response.ok) throw new Error("Failed to fetch job postings");
@@ -52,7 +52,7 @@ export default function JobPostingsAdmin() {
     if (!confirm("この募集職種を削除してもよろしいですか?")) return;
 
     try {
-      const response = await fetch(`/api/admin/jobpostings?id=${id}`, {
+      const response = await fetch(`/api/admin/jobs?id=${id}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -69,7 +69,7 @@ export default function JobPostingsAdmin() {
 
   const togglePublish = async (id: number, currentStatus: boolean) => {
     try {
-      const response = await fetch(`/api/admin/jobpostings`, {
+      const response = await fetch(`/api/admin/jobs`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
