@@ -132,7 +132,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         // Update last signed in
         await sql`
-          UPDATE users SET last_signed_in = NOW() WHERE id = ${user.id}
+          UPDATE users SET "lastSignedIn" = NOW() WHERE id = ${user.id}
         `;
 
         // Create JWT token
