@@ -16,38 +16,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    console.log("=== Public Announcements API ===");
-    console.log("Fetching published announcements...");
-
-    // Get published announcements
+    // Get published announcements with simple query
     const result = await sql`
-      SELECT 
-        id,
-        title,
-        content,
-        facility,
-        images,
-        "publishedAt",
-        "createdAt"
-      FROM announcements
+      SELECT * FROM announcements
       WHERE "isPublished" = 'published'
-      ORDER BY "publishedAt" DESC, "createdAt" DESC
+      ORDER BY "createdAt" DESC
       LIMIT 10
     `;
 
-    console.log(\`Found \${result.rows.length} published announcements\`);
-
-    // Return announcements as-is
     return res.status(200).json(result.rows);
 
   } catch (error: any) {
-    console.error("=== Public Announcements API Error ===");
-    console.error("Error message:", error.message);
-    console.error("Error stack:", error.stack);
-
+    console.error("Public Announcements API Error:", error);
     return res.status(500).json({
       error: 'Failed to fetch announcements',
-      message: error.message
+      message: error.message,
+      details: error.toString()
     });
   }
 }
+
