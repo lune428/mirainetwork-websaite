@@ -13,10 +13,6 @@
   },
   "routes": [
     {
-      "src": "/api/admin/job-postings(.*)",
-      "dest": "/api/admin"
-    },
-    {
       "handle": "filesystem"
     },
     {
