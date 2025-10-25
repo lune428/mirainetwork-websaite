@@ -13,35 +13,6 @@
   },
   "routes": [
     {
-      "src": "/api/test-db",
-      "dest": "/api/test-db"
-    },
-    {
-      "src": "/api/auth/(.*)",
-      "dest": "/api/auth"
-    },
-    {
-      "src": "/api/trpc/(.*)",
-      "dest": "/api/trpc"
-    },
-
-    {
-      "src": "/api/job-postings",
-      "dest": "/api/job-postings"
-    },
-    {
-      "src": "/api/admin/announcements",
-      "dest": "/api/admin/announcements"
-    },
-    {
-      "src": "/api/admin/job-postings",
-      "dest": "/api/admin/job-postings"
-    },
-    {
-      "src": "/api/upload/(.*)",
-      "dest": "/api/upload/$1"
-    },
-    {
       "handle": "filesystem"
     },
     {
