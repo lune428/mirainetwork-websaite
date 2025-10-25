@@ -8,6 +8,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     
     // Drop existing tables to recreate with correct schema
     await sql`DROP TABLE IF EXISTS announcements CASCADE`;
+    await sql`DROP TABLE IF EXISTS "jobPostings" CASCADE`;
     await sql`DROP TABLE IF EXISTS users CASCADE`;
     console.log("[init-db] Dropped existing tables");
     
