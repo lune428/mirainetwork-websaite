@@ -30,6 +30,14 @@
       "dest": "/api/job-postings"
     },
     {
+      "src": "/api/admin/announcements",
+      "dest": "/api/admin/announcements"
+    },
+    {
+      "src": "/api/admin/job-postings",
+      "dest": "/api/admin/job-postings"
+    },
+    {
       "src": "/api/upload/(.*)",
       "dest": "/api/upload/$1"
     },
