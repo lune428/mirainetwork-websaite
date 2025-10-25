@@ -122,7 +122,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(200).json({
       success: true,
       message: "Database reset successfully with correct schema",
-      tables: tables.rows.map(r => r.table_name),
+      tables: tables.rows.map((r: any) => r.table_name),
       timestamp: new Date().toISOString()
     });
 
