@@ -79,8 +79,8 @@ export default function JobPostingForm() {
 
     try {
       const url = isEdit
-        ? `/api/admin/job-postings/${id}`
-        : "/api/admin/job-postings";
+        ? `/api/admin/job_postings/${id}`
+        : "/api/admin/job_postings";
       const method = isEdit ? "PUT" : "POST";
 
       const response = await fetch(url, {
