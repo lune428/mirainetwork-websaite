@@ -1,3 +1,4 @@
+// Job Postings Admin API - Handles CRUD operations for job postings
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { sql } from "@vercel/postgres";
 import { jwtVerify } from "jose";
