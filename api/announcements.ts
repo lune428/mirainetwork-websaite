@@ -24,7 +24,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       LIMIT 10
     `;
 
-    return res.status(200).json(result.rows);
+    // Parse images JSON string to array
+    const announcements = result.rows.map(row => {
+      let images = null;
+      if (row.images) {
+        try {
+          images = JSON.parse(row.images);
+        } catch (e) {
+          console.error('Failed to parse images for announcement', row.id, e);
+          images = null;
+        }
+      }
+      return {
+        ...row,
+        images
+      };
+    });
+
+    return res.status(200).json(announcements);
 
   } catch (error: any) {
     console.error("Public Announcements API Error:", error);
