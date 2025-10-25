@@ -58,6 +58,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     
     console.log("[init-db] Announcements table created successfully");
 
+    // Create jobPostings table
+    await sql`
+      CREATE TABLE "jobPostings" (
+        id SERIAL PRIMARY KEY,
+        facility VARCHAR(64) NOT NULL,
+        title VARCHAR(255) NOT NULL,
+        "employmentType" VARCHAR(255),
+        description TEXT,
+        "baseSalary" VARCHAR(255),
+        "workingHours" TEXT,
+        holidays TEXT,
+        insurance VARCHAR(255),
+        "contractPeriod" VARCHAR(255),
+        "isPublished" INTEGER DEFAULT 0,
+        "createdAt" TIMESTAMP DEFAULT NOW(),
+        "updatedAt" TIMESTAMP DEFAULT NOW()
+      )
+    `;
+    
+    console.log("[init-db] JobPostings table created successfully");
+
     // Get table info
     const tables = await sql`
       SELECT table_name 
