@@ -1,33 +1,127 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { sql } from "@vercel/postgres";
+import { jwtVerify } from "jose";
+
+const JWT_SECRET = new TextEncoder().encode(
+  process.env.JWT_SECRET || "mirai-network-jwt-secret-change-in-production"
+);
+
+async function verifyToken(token: string): Promise<{ userId: string } | null> {
+  try {
+    const { payload } = await jwtVerify(token, JWT_SECRET);
+    return payload as { userId: string };
+  } catch {
+    return null;
+  }
+}
+
+function parseCookies(cookieHeader: string | undefined): Record<string, string> {
+  if (!cookieHeader) return {};
+  return cookieHeader.split(';').reduce((cookies, cookie) => {
+    const [name, value] = cookie.trim().split('=');
+    cookies[name] = decodeURIComponent(value);
+    return cookies;
+  }, {} as Record<string, string>);
+}
+
+async function getUserFromRequest(req: VercelRequest) {
+  try {
+    const cookies = parseCookies(req.headers.cookie);
+    const token = cookies.auth_token;
+    if (!token) return null;
+
+    const payload = await verifyToken(token);
+    if (!payload) return null;
+
+    const result = await sql`
+      SELECT * FROM users WHERE id = ${payload.userId} LIMIT 1
+    `;
+
+    return result.rows[0] || null;
+  } catch (error) {
+    console.error("Error getting user from request:", error);
+    return null;
+  }
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   // Set CORS headers
   res.setHeader("Access-Control-Allow-Credentials", "true");
-  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Origin", req.headers.origin || "https://mirainetwork-websaite.vercel.app");
   res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
   res.setHeader(
     "Access-Control-Allow-Headers",
-    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, Authorization"
+    "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version"
   );
 
   if (req.method === "OPTIONS") {
-    return res.status(200).end();
+    res.status(200).end();
+    return;
   }
 
   try {
-    // GET - Get all job postings (admin view)
-    if (req.method === "GET") {
-      const result = await sql`
-        SELECT * FROM "jobPostings"
-        ORDER BY "createdAt" DESC
-      `;
-      
-      return res.status(200).json(result.rows);
+    // Check authentication
+    const user = await getUserFromRequest(req);
+    if (!user) {
+      return res.status(401).json({ error: "認証が必要です" });
     }
 
-    // POST - Create new job posting
-    if (req.method === "POST") {
+    const role = user.role;
+    if (role !== "admin" && !role?.includes("_admin")) {
+      return res.status(403).json({ error: "管理者権限が必要です" });
+    }
+
+    const url = new URL(req.url!, `http://${req.headers.host}`);
+    const path = url.pathname;
+    const pathParts = path.split("/").filter(Boolean);
+    const jobPostingId = pathParts[pathParts.length - 1];
+
+    console.log("Request:", req.method, path, "User:", user.id, "Role:", user.role);
+
+    // GET /api/admin/job-postings - Get all job postings for admin
+    if (req.method === "GET" && !path.match(/\/\d+$/)) {
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      let query;
+      if (isAdmin) {
+        query = sql`
+          SELECT *
+          FROM "jobPostings"
+          ORDER BY "createdAt" DESC
+        `;
+      } else {
+        query = sql`
+          SELECT *
+          FROM "jobPostings"
+          WHERE facility = ${userFacility}
+          ORDER BY "createdAt" DESC
+        `;
+      }
+
+      const result = await query;
+      console.log(`Found ${result.rows.length} job postings`);
+      return res.json(result.rows);
+    }
+
+    // GET /api/admin/job-postings/:id - Get single job posting
+    if (req.method === "GET" && path.match(/\/\d+$/)) {
+      const result = await sql`
+        SELECT *
+        FROM "jobPostings"
+        WHERE id = ${jobPostingId}
+        LIMIT 1
+      `;
+
+      if (result.rows.length === 0) {
+        return res.status(404).json({ error: "求人情報が見つかりません" });
+      }
+
+      return res.json(result.rows[0]);
+    }
+
+    // POST /api/admin/job-postings - Create new job posting
+    if (req.method === "POST" && !path.match(/\/\d+/)) {
       const {
         facility,
         title,
@@ -41,14 +135,23 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         isPublished
       } = req.body;
 
-      console.log("Creating job posting:", req.body);
+      console.log("Creating job posting:", { facility, title, employmentType, isPublished });
 
-      // Validate required fields
       if (!facility || !title) {
-        return res.status(400).json({ error: "必須項目が入力されていません" });
+        return res.status(400).json({ error: "必須項目が不足しています" });
       }
 
-      // Insert job posting
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      if (!isAdmin && facility !== userFacility) {
+        return res.status(403).json({ error: "他の事業所の求人情報を作成する権限がありません" });
+      }
+
+      const publishedValue = isPublished === "published" || isPublished === true ? 1 : 0;
+
+      console.log("Inserting into database:", { facility, title, publishedValue });
+
       const result = await sql`
         INSERT INTO "jobPostings" (
           facility,
@@ -63,7 +166,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           "isPublished",
           "createdAt",
           "updatedAt"
-        ) VALUES (
+        )
+        VALUES (
           ${facility},
           ${title},
           ${employmentType || ''},
@@ -73,21 +177,24 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           ${holidays || ''},
           ${insurance || ''},
           ${contractPeriod || ''},
-          ${isPublished ? 1 : 0},
+          ${publishedValue},
           NOW(),
           NOW()
         )
         RETURNING *
       `;
 
-      console.log("Job posting created:", result.rows[0]);
-      return res.status(201).json(result.rows[0]);
+      console.log("Insert successful:", result.rows[0].id);
+
+      return res.json({ 
+        message: "求人情報を作成しました", 
+        jobPosting: result.rows[0] 
+      });
     }
 
-    // PUT - Update job posting
-    if (req.method === "PUT") {
+    // PUT /api/admin/job-postings/:id - Update job posting
+    if (req.method === "PUT" && path.match(/\/\d+$/)) {
       const {
-        id,
         facility,
         title,
         employmentType,
@@ -100,15 +207,17 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         isPublished
       } = req.body;
 
-      console.log("Updating job posting:", id, req.body);
+      console.log("Updating job posting:", jobPostingId, { facility, title, isPublished });
 
-      if (!id) {
-        return res.status(400).json({ error: "IDが指定されていません" });
+      if (!facility || !title) {
+        return res.status(400).json({ error: "必須項目が不足しています" });
       }
+
+      const publishedValue = isPublished === "published" || isPublished === true ? 1 : 0;
 
       const result = await sql`
         UPDATE "jobPostings"
-        SET
+        SET 
           facility = ${facility},
           title = ${title},
           "employmentType" = ${employmentType || ''},
@@ -118,9 +227,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           holidays = ${holidays || ''},
           insurance = ${insurance || ''},
           "contractPeriod" = ${contractPeriod || ''},
-          "isPublished" = ${isPublished ? 1 : 0},
+          "isPublished" = ${publishedValue},
           "updatedAt" = NOW()
-        WHERE id = ${id}
+        WHERE id = ${jobPostingId}
         RETURNING *
       `;
 
@@ -128,36 +237,43 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         return res.status(404).json({ error: "求人情報が見つかりません" });
       }
 
-      console.log("Job posting updated:", result.rows[0]);
-      return res.status(200).json(result.rows[0]);
+      console.log("Update successful");
+
+      return res.json({ 
+        message: "求人情報を更新しました", 
+        jobPosting: result.rows[0] 
+      });
     }
 
-    // DELETE - Delete job posting
-    if (req.method === "DELETE") {
-      const { id } = req.query;
+    // DELETE /api/admin/job-postings/:id - Delete job posting
+    if (req.method === "DELETE" && path.match(/\/\d+$/)) {
+      console.log("Deleting job posting:", jobPostingId);
 
-      console.log("Deleting job posting:", id);
-
-      if (!id) {
-        return res.status(400).json({ error: "IDが指定されていません" });
-      }
-
-      await sql`
+      const result = await sql`
         DELETE FROM "jobPostings"
-        WHERE id = ${id as string}
+        WHERE id = ${jobPostingId}
+        RETURNING *
       `;
 
-      console.log("Job posting deleted:", id);
-      return res.status(200).json({ message: "求人情報を削除しました" });
+      if (result.rows.length === 0) {
+        return res.status(404).json({ error: "求人情報が見つかりません" });
+      }
+
+      console.log("Delete successful");
+
+      return res.json({ message: "求人情報を削除しました" });
     }
 
-    return res.status(405).json({ error: "Method not allowed" });
+    return res.status(404).json({ error: "エンドポイントが見つかりません" });
 
   } catch (error: any) {
-    console.error("Admin Job Postings API Error:", error);
-    return res.status(500).json({
-      error: "求人情報の処理に失敗しました",
-      details: error.message
+    console.error("Error in admin job postings API:", error);
+    console.error("Error stack:", error.stack);
+    
+    return res.status(500).json({ 
+      error: "サーバーエラーが発生しました",
+      details: error.message,
+      stack: process.env.NODE_ENV === "development" ? error.stack : undefined
     });
   }
 }
