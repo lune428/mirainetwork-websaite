@@ -92,18 +92,11 @@ export default function JobPostingForm() {
 
       if (!response.ok) throw new Error("Failed to save job posting");
 
-      toast({
-        title: "成功",
-        description: `募集職種を${isEdit ? "更新" : "作成"}しました`,
-      });
+      toast.success(`募集職種を${isEdit ? "更新" : "作成"}しました`);
       setLocation("/admin/job-postings");
     } catch (error) {
       console.error("Error saving job posting:", error);
-      toast({
-        title: "エラー",
-        description: `募集職種の${isEdit ? "更新" : "作成"}に失敗しました`,
-        variant: "destructive",
-      });
+      toast.error(`募集職種の${isEdit ? "更新" : "作成"}に失敗しました`);
     } finally {
       setLoading(false);
     }
