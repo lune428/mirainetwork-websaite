@@ -74,10 +74,197 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const url = new URL(req.url!, `http://${req.headers.host}`);
     const path = url.pathname;
     const pathParts = path.split("/").filter(Boolean);
-    const announcementId = pathParts[pathParts.length - 1];
+    const resourceId = pathParts[pathParts.length - 1];
+    
+    // Check if this is a job postings request
+    const type = url.searchParams.get('type');
+    const isJobsRequest = type === 'jobs';
 
-    console.log("Request:", req.method, path, "User:", user.id, "Role:", user.role);
+    console.log("Request:", req.method, path, "Type:", type, "User:", user.id, "Role:", user.role);
 
+    // ========== JOB POSTINGS ENDPOINTS ==========
+    if (isJobsRequest) {
+      const isAdmin = user.role === "admin";
+      const userFacility = user.facility;
+
+      // GET - Get all job postings
+      if (req.method === "GET") {
+        let query;
+        if (isAdmin) {
+          query = sql`
+            SELECT *
+            FROM "jobPostings"
+            ORDER BY "createdAt" DESC
+          `;
+        } else {
+          query = sql`
+            SELECT *
+            FROM "jobPostings"
+            WHERE facility = ${userFacility}
+            ORDER BY "createdAt" DESC
+          `;
+        }
+
+        const result = await query;
+        console.log(`Found ${result.rows.length} job postings`);
+        return res.json(result.rows);
+      }
+
+      // POST - Create new job posting
+      if (req.method === "POST") {
+        const {
+          facility,
+          title,
+          employmentType,
+          description,
+          baseSalary,
+          workingHours,
+          holidays,
+          insurance,
+          contractPeriod,
+          isPublished
+        } = req.body;
+
+        console.log("Creating job posting:", { facility, title, employmentType, isPublished });
+
+        if (!facility || !title) {
+          return res.status(400).json({ error: "必須項目が不足しています" });
+        }
+
+        if (!isAdmin && facility !== userFacility) {
+          return res.status(403).json({ error: "他の事業所の求人情報を作成する権限がありません" });
+        }
+
+        const publishedValue = isPublished === "published" || isPublished === true ? 1 : 0;
+
+        const result = await sql`
+          INSERT INTO "jobPostings" (
+            facility,
+            title,
+            "employmentType",
+            description,
+            "baseSalary",
+            "workingHours",
+            holidays,
+            insurance,
+            "contractPeriod",
+            "isPublished",
+            "createdAt",
+            "updatedAt"
+          )
+          VALUES (
+            ${facility},
+            ${title},
+            ${employmentType || ''},
+            ${description || ''},
+            ${baseSalary || ''},
+            ${workingHours || ''},
+            ${holidays || ''},
+            ${insurance || ''},
+            ${contractPeriod || ''},
+            ${publishedValue},
+            NOW(),
+            NOW()
+          )
+          RETURNING *
+        `;
+
+        console.log("Job posting created:", result.rows[0].id);
+
+        return res.json({ 
+          message: "求人情報を作成しました", 
+          jobPosting: result.rows[0] 
+        });
+      }
+
+      // PUT - Update job posting
+      if (req.method === "PUT") {
+        const {
+          id,
+          facility,
+          title,
+          employmentType,
+          description,
+          baseSalary,
+          workingHours,
+          holidays,
+          insurance,
+          contractPeriod,
+          isPublished
+        } = req.body;
+
+        console.log("Updating job posting:", id, { facility, title, isPublished });
+
+        if (!id) {
+          return res.status(400).json({ error: "IDが指定されていません" });
+        }
+
+        if (!facility || !title) {
+          return res.status(400).json({ error: "必須項目が不足しています" });
+        }
+
+        const publishedValue = isPublished === "published" || isPublished === true ? 1 : 0;
+
+        const result = await sql`
+          UPDATE "jobPostings"
+          SET 
+            facility = ${facility},
+            title = ${title},
+            "employmentType" = ${employmentType || ''},
+            description = ${description || ''},
+            "baseSalary" = ${baseSalary || ''},
+            "workingHours" = ${workingHours || ''},
+            holidays = ${holidays || ''},
+            insurance = ${insurance || ''},
+            "contractPeriod" = ${contractPeriod || ''},
+            "isPublished" = ${publishedValue},
+            "updatedAt" = NOW()
+          WHERE id = ${id}
+          RETURNING *
+        `;
+
+        if (result.rows.length === 0) {
+          return res.status(404).json({ error: "求人情報が見つかりません" });
+        }
+
+        console.log("Job posting updated");
+
+        return res.json({ 
+          message: "求人情報を更新しました", 
+          jobPosting: result.rows[0] 
+        });
+      }
+
+      // DELETE - Delete job posting
+      if (req.method === "DELETE") {
+        const id = url.searchParams.get('id');
+
+        console.log("Deleting job posting:", id);
+
+        if (!id) {
+          return res.status(400).json({ error: "IDが指定されていません" });
+        }
+
+        const result = await sql`
+          DELETE FROM "jobPostings"
+          WHERE id = ${id}
+          RETURNING *
+        `;
+
+        if (result.rows.length === 0) {
+          return res.status(404).json({ error: "求人情報が見つかりません" });
+        }
+
+        console.log("Job posting deleted");
+
+        return res.json({ message: "求人情報を削除しました" });
+      }
+
+      return res.status(405).json({ error: "Method not allowed" });
+    }
+
+    // ========== ANNOUNCEMENTS ENDPOINTS (ORIGINAL) ==========
+    
     // GET /api/admin/announcements - Get all announcements for admin
     if (req.method === "GET" && !path.match(/\/\d+$/)) {
       const isAdmin = user.role === "admin";
@@ -112,7 +299,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         SELECT a.*, u.name as "authorName"
         FROM announcements a
         LEFT JOIN users u ON a."authorId" = u.id
-        WHERE a.id = ${announcementId}
+        WHERE a.id = ${resourceId}
         LIMIT 1
       `;
 
@@ -171,7 +358,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (req.method === "PUT" && path.match(/\/\d+$/)) {
       const { title, content, facility, isPublished, images } = req.body;
 
-      console.log("Updating announcement:", announcementId, { title, facility, isPublished });
+      console.log("Updating announcement:", resourceId, { title, facility, isPublished });
 
       if (!title || !content || !facility) {
         return res.status(400).json({ error: "必須項目が不足しています" });
@@ -193,7 +380,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
           images = ${imagesJson},
           "publishedAt" = ${publishedAt},
           "updatedAt" = NOW()
-        WHERE id = ${announcementId}
+        WHERE id = ${resourceId}
         RETURNING *
       `;
 
@@ -211,11 +398,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
     // DELETE /api/admin/announcements/:id - Delete announcement
     if (req.method === "DELETE" && path.match(/\/\d+$/)) {
-      console.log("Deleting announcement:", announcementId);
+      console.log("Deleting announcement:", resourceId);
 
       const result = await sql`
         DELETE FROM announcements
-        WHERE id = ${announcementId}
+        WHERE id = ${resourceId}
         RETURNING *
       `;
 
@@ -231,7 +418,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(404).json({ error: "エンドポイントが見つかりません" });
 
   } catch (error: any) {
-    console.error("Error in admin announcements API:", error);
+    console.error("Error in admin API:", error);
     console.error("Error stack:", error.stack);
     
     return res.status(500).json({ 
