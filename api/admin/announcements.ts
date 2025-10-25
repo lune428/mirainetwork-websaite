@@ -107,7 +107,16 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
         const result = await query;
         console.log(`Found ${result.rows.length} job postings`);
-        return res.json(result.rows);
+        
+        // Transform field names to match frontend expectations
+        const transformedRows = result.rows.map((row: any) => ({
+          ...row,
+          jobDescription: row.description || '',
+          workSchedule: row.workingHours || '',
+          socialInsurance: row.insurance || ''
+        }));
+        
+        return res.json(transformedRows);
       }
 
       // POST - Create new job posting
